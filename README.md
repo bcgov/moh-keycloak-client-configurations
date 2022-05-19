@@ -1,6 +1,23 @@
 # Automate Keycloak client management with GitHub Actions and Terraform
 
-This repository holds Keycloak client configuration files for the Ministry of Health Keycloak instance. A GitHub Actions workflow is used to apply the configurations to the Keycloak instance using Terraform Cloud.
+This repository holds Keycloak client configuration files for the Ministry of Health Keycloak instance. Developers can open pull requests to change their client configuration files. 
+
+## How to update a client configuration
+
+1. Get permission from the Access Management Team to make pull requests to this repo.
+2. Create a pull request with your proposed changes to a client configuration file.
+3. An automatic process will compare your changes to the current state of Keycloak.
+4. A bot will add a comparison report to your pull request.
+5. An Access Management Team member merge your changes into the `main` branch.
+6. An automatic process will apply your changes to the Keycloak instance.
+
+## Clients currently managed
+
+* [FMDB](/fmdb.tf)
+
+## Automatation description
+
+A GitHub Actions workflow is used to apply the configurations to the Keycloak instance using Terraform Cloud.
 
 ![image](https://user-images.githubusercontent.com/1767127/169346578-be0c2c46-deb5-4ceb-879f-9710534e3eeb.png)
 
@@ -10,9 +27,9 @@ The workflow will:
 2. generate a plan for every pull requests
 3. apply the configuration when you update the main branch
 
-This repo is a companion repo to the [Automate Terraform with GitHub Actions](https://learn.hashicorp.com/tutorials/terraform/github-actions?in=terraform/automation).
-
 ![image](https://user-images.githubusercontent.com/1767127/169342125-20158f98-8094-4430-b2b3-4f3f539bd367.png)
+
+### Detailed description
 
 1. **Checkout** check outs the current configuration. Uses defines the action/Docker image to run that specific step. The checkout step "uses" GitHub's actions/checkout@v2 action.
 1. **Setup Terraform** retrieves the Terraform CLI used in the GitHub action workflow.
@@ -28,4 +45,4 @@ This repo is a companion repo to the [Automate Terraform with GitHub Actions](ht
 
 ## Acknowledgements
 
-This README uses some text verbatim and diagrams from [Terraform's documentation]([url](https://learn.hashicorp.com/tutorials/terraform/github-actions)).
+This README uses some text verbatim and diagrams from [Terraform's documentation](https://learn.hashicorp.com/tutorials/terraform/github-actions).
