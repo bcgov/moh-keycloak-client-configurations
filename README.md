@@ -13,11 +13,13 @@ This repository holds Keycloak client configuration files for the Ministry of He
 
 ## Clients currently managed
 
-* [FMDB](/fmdb.tf), DEV only
+* [FMDB](/fmdb.tf), development environment only
 
-## Automatation description
+## Automation description
 
 A GitHub Actions workflow is used to apply the configurations to the Keycloak instance using Terraform Cloud.
+
+### Overview
 
 ![image](https://user-images.githubusercontent.com/1767127/169346578-be0c2c46-deb5-4ceb-879f-9710534e3eeb.png)
 
@@ -27,9 +29,9 @@ The workflow will:
 2. generate a plan for every pull requests
 3. apply the configuration when you update the main branch
 
-![image](https://user-images.githubusercontent.com/1767127/169342125-20158f98-8094-4430-b2b3-4f3f539bd367.png)
-
 ### Detailed description
+
+![image](https://user-images.githubusercontent.com/1767127/169342125-20158f98-8094-4430-b2b3-4f3f539bd367.png)
 
 1. **Checkout** check outs the current configuration. Uses defines the action/Docker image to run that specific step. The checkout step "uses" GitHub's actions/checkout@v2 action.
 1. **Setup Terraform** retrieves the Terraform CLI used in the GitHub action workflow.
