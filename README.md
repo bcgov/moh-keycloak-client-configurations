@@ -1,4 +1,4 @@
-# Automate Keycloak client management with GitHub Actions and Terraform
+# MoH Keycloak client configuration change requests
 
 This repository holds Keycloak client configuration files for the Ministry of Health Keycloak instance. Developers can open pull requests to change their client configuration files. 
 
@@ -13,7 +13,7 @@ This repository holds Keycloak client configuration files for the Ministry of He
 
 ## Clients currently managed
 
-* [FMDB](/fmdb.tf)
+* [FMDB](/fmdb.tf), DEV only
 
 ## Automatation description
 
