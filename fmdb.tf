@@ -44,13 +44,6 @@ resource "keycloak_role" "PSDADMIN" {
   description = "Admin role for FMDB provides access to code table management"
 }
 
-resource "keycloak_role" "NEWROLE" {
-  realm_id    = "moh_applications"
-  client_id   = keycloak_openid_client.FMDB.id
-  name        = "NEWROLE"
-  description = "NEWROLE"
-}
-
 #resource "keycloak_openid_client_default_scopes" "FMDB_client_default_scopes" {
 #  realm_id  = keycloak_openid_client.FMDB.realm_id
 #  client_id = keycloak_openid_client.FMDB.id
