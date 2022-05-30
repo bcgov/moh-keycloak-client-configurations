@@ -66,31 +66,19 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = []
   admin_url   = ""
 }
-#
-#resource "keycloak_role" "MOHUSER" {
-#  realm_id    = "moh_applications"
-#  client_id   = keycloak_openid_client.CLIENT.id
-#  name        = "MOHUSER"
-#  description = "The base user permission for FMDB"
-#}
-#
-#resource "keycloak_role" "PSDADMIN" {
-#  realm_id    = "moh_applications"
-#  client_id   = keycloak_openid_client.CLIENT.id
-#  name        = "PSDADMIN"
-#  description = "Admin role for FMDB provides access to code table management"
-#}
 
-resource "keycloak_role" "ROLE" {
+resource "keycloak_role" "ROLES" {
   realm_id    = "moh_applications"
   client_id   = keycloak_openid_client.CLIENT.id
   for_each =    var.roles
   name        = each.value.name
   description = each.value.description
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
-
-resource "keycloak_openid_user_client_role_protocol_mapper" "FMDB_Role_user_client_role_mapper" {
+resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {
   realm_id   = keycloak_openid_client.CLIENT.realm_id
   client_id  = keycloak_openid_client.CLIENT.id
   name       = "Role mapper"
