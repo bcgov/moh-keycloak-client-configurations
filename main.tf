@@ -16,15 +16,18 @@ terraform {
   }
 }
 
-variable "TERRAFORM_CLIENT_SECRET" {
-  description = "The client secret"
-  type        = string
-  sensitive   = true
+module "keycloak_dev" {
+  source = "./keycloak-dev"
+
+  client_id     = var.dev_client_id
+  client_secret = var.dev_client_secret
+  keycloak_url  = var.dev_keycloak_url
 }
 
-provider "keycloak" {
-  client_id     = "terraform"
-  client_secret = var.TERRAFORM_CLIENT_SECRET
-  url           = "https://common-logon-dev.hlth.gov.bc.ca"
-  realm         = "moh_applications"
+module "keycloak_test" {
+  source = "./keycloak-test"
+
+  client_id     = var.test_client_id
+  client_secret = var.test_client_secret
+  keycloak_url  = var.test_keycloak_url
 }

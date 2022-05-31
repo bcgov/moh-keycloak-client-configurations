@@ -13,7 +13,7 @@ This repository holds Keycloak client configuration files for the Ministry of He
 
 ## Clients currently managed
 
-* [FMDB](/fmdb.tf), development environment only
+* [FMDB](/keycloak-dev/realms/moh-applications/fmdb.tf), development environment only
 
 ## Automation description
 

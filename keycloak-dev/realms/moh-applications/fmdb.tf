@@ -1,5 +1,5 @@
 module "FMDB" {
-  source = "./modules/payara-client"
+  source = "../../../modules/payara-client"
 
   client_id   = "FMDB"
   claim_name  = "fmdb_role"

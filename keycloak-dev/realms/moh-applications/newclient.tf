@@ -1,5 +1,5 @@
-#module "newclient" {
-#  source = "./modules/payara-client"
+#module "NEWCLIENT" {
+#  source = "../../../modules/payara-client"
 #
 #  client_id   = "NEWCLIENT"
 #  claim_name  = "newclient_role"
