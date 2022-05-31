@@ -10,7 +10,7 @@ variable "dev_client_secret" {
 
 variable "dev_keycloak_url" {
   description = "The URL of the Keycloak instance"
-  default = "https://common-logon-dev.hlth.gov.bc.ca"
+  default     = "https://common-logon-dev.hlth.gov.bc.ca"
 }
 
 # KEYCLOAK_TEST
@@ -25,5 +25,5 @@ variable "test_client_secret" {
 
 variable "test_keycloak_url" {
   description = "The URL of the Keycloak instance"
-  default = "https://common-logon-test.hlth.gov.bc.ca"
+  default     = "https://common-logon-test.hlth.gov.bc.ca"
 }
