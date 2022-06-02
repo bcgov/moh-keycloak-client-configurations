@@ -4,7 +4,7 @@ module "FMDB" {
   client_id   = "FMDB"
   claim_name  = "fmdb_role"
   base_url    = "https://fmdbt.hlth.gov.bc.ca/FMDB"
-  description = "Formulary Management Database"
+  description = "Formulary Management Database v2"
   valid_redirect_uris = [
     "https://fmdbt.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*"
