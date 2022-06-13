@@ -8,23 +8,18 @@ terraform {
 }
 
 variable "client_id" {
-  description = "TODO"
   type        = string
-
 }
 
 variable "claim_name" {
-  description = "TODO"
   type        = string
 }
 
 variable "base_url" {
-  description = "TODO"
   type        = string
 }
 
 variable "description" {
-  description = "TODO"
   type        = string
 }
 

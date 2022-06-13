@@ -7,16 +7,14 @@ terraform {
   }
   required_version = ">= 1.1.0"
 
-  cloud {
-    organization = "example-org-f085f7"
-
-    workspaces {
-      name = "gh-actions-demo"
-    }
+  backend "s3" {
+    bucket     = "cey5wq-sandbox-moh-keycloak-terraform-state"
+    key        = "moh-keycloak-terraform-state"
+    region     = "ca-central-1"
   }
 }
 
-module "keycloak_dev" {
+module "KEYCLOAK_DEV" {
   source = "./keycloak-dev"
 
   client_id     = var.dev_client_id
@@ -24,7 +22,7 @@ module "keycloak_dev" {
   keycloak_url  = var.dev_keycloak_url
 }
 
-module "keycloak_test" {
+module "KEYCLOAK_TEST" {
   source = "./keycloak-test"
 
   client_id     = var.test_client_id

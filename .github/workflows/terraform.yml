@@ -28,7 +28,9 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init
+        env:
+          AWS_S3_BACKEND_ROLE_ARN: ${{ secrets.AWS_S3_BACKEND_ROLE_ARN }}
+        run: terraform init -backend-config="role_arn=$AWS_S3_BACKEND_ROLE_ARN"
       
       - name: Terraform Validate
         id: validate
