@@ -4,7 +4,7 @@ module "NEWCLIENT" {
   client_id   = "NEWCLIENT"
   claim_name  = "newclient_role"
   base_url    = "https://cgi.com"
-  description = "New client description"
+  description = "New client description. Even newer."
   valid_redirect_uris = [
     "http://localhost:8080/*",
     "https://cgi.com/*",
