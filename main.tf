@@ -8,9 +8,9 @@ terraform {
   required_version = ">= 1.1.0"
 
   backend "s3" {
-    bucket     = "cey5wq-sandbox-moh-keycloak-terraform-state"
-    key        = "moh-keycloak-terraform-state"
-    region     = "ca-central-1"
+    bucket = "cey5wq-sandbox-moh-keycloak-terraform-state"
+    key    = "moh-keycloak-terraform-state"
+    region = "ca-central-1"
   }
 }
 
