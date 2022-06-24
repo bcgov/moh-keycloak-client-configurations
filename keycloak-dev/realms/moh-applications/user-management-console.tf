@@ -16,10 +16,11 @@ resource "keycloak_openid_client" "USER-MANAGEMENT" {
   implicit_flow_enabled                      = false
   name                                       = "MoH User Management"
   oauth2_device_authorization_grant_enabled  = false
+  pkce_code_challenge_method                 = "S256"
   realm_id                                   = "moh_applications"
   service_accounts_enabled                   = false
   standard_flow_enabled                      = true
-  use_refresh_tokens                         = false
+  use_refresh_tokens                         = true
   valid_redirect_uris                        = [
     "http://localhost:*",
     "https://localhost:*",
@@ -57,7 +58,7 @@ resource "keycloak_openid_client_optional_scopes" "USER-MANAGEMENT" {
 resource "keycloak_role" "USER-MANAGEMENT_role_user-management-admin" {
   realm_id    = keycloak_openid_client.USER-MANAGEMENT.realm_id
   client_id   = keycloak_openid_client.USER-MANAGEMENT.id
-  name    = "user-management-admin"
+  name        = "user-management-admin"
   description = "User Management Admin can add/remove groups"
 }
 
