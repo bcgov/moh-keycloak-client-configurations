@@ -126,6 +126,12 @@ resource "keycloak_role" "UMS_role_view-client-mspdirect-service" {
   name      = "view-client-mspdirect-service"
 }
 
+resource "keycloak_role" "UMS_role_view-client-uci-sso" {
+  realm_id  = keycloak_openid_client.USER-MANAGEMENT-SERVICE.realm_id
+  client_id = keycloak_openid_client.USER-MANAGEMENT-SERVICE.id
+  name      = "view-client-uci-sso"
+}
+
 resource "keycloak_role" "UMS_role_view-client-pidp-service" {
   realm_id  = keycloak_openid_client.USER-MANAGEMENT-SERVICE.realm_id
   client_id = keycloak_openid_client.USER-MANAGEMENT-SERVICE.id
