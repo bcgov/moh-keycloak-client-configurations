@@ -17,6 +17,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       TF_VAR_dev_client_secret: ${{ secrets.TF_VAR_DEV_CLIENT_SECRET }}
       TF_VAR_test_client_secret: ${{ secrets.TF_VAR_TEST_CLIENT_SECRET }}
+      TF_VAR_prod_client_secret: ${{ secrets.TF_VAR_PROD_CLIENT_SECRET }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
