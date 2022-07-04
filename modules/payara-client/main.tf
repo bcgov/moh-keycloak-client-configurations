@@ -86,3 +86,7 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   client_id_for_role_mappings = var.client_id
   multivalued                 = true
 }
+
+output "CLIENT" {
+  value = keycloak_openid_client.CLIENT
+}
