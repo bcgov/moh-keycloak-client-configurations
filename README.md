@@ -88,7 +88,6 @@ The values for the `TF_VAR_ENV_client_secret` environment variables are Keycloak
 * [Terraform Backend Configuration](https://www.terraform.io/language/settings/backends/configuration)
 * [Terraform S3 backend](https://www.terraform.io/language/settings/backends/s3)
 * [Terraform Keycloak Provider](https://registry.terraform.io/providers/mrparkers/keycloak/latest/docs)
-* One more link.
 
 ## Acknowledgements
 
