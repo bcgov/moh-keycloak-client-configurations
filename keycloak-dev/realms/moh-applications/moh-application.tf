@@ -1,0 +1,3 @@
+module "MIWT" {
+  source = "./miwt"
+}
