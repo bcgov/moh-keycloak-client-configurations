@@ -5,3 +5,11 @@ module "MIWT" {
 module "FMDB" {
   source = "./fmdb"
 }
+
+module "PIDP-WEBAPP" {
+  source = "./pidp-webapp"
+}
+
+module "PIDP-SERVICE" {
+  source = "./pidp-service"
+}

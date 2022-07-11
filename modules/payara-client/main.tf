@@ -46,7 +46,7 @@ resource "keycloak_openid_client" "CLIENT" {
   description                         = var.description
   direct_access_grants_enabled        = false
   # display_on_consent_screen                  = false
-  enabled = true
+  enabled = true  
   # extra_config                               = {}
   frontchannel_logout_enabled = false
   full_scope_allowed          = false

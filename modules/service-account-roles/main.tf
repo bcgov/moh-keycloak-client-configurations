@@ -19,14 +19,28 @@ variable "client_id" {
   type        = string
 }
 
-variable "roles" {
+variable "realm_roles" {
   type        = map(string)
 }
 
-resource "keycloak_openid_client_service_account_role" "client2_service_account_role" {
+variable "client_roles" {
+    type = map(object({
+    client_id = string
+    role_id = string
+  }))
+}
+
+resource "keycloak_openid_client_service_account_realm_role" "ROLE" {
   realm_id                = var.realm_id
   service_account_user_id = var.service_account_user_id
-  client_id               = var.client_id
-  for_each                = var.roles
+  for_each                = var.realm_roles
   role                    = each.value
+}
+
+resource "keycloak_openid_client_service_account_role" "ROLE" {
+  realm_id                = var.realm_id
+  service_account_user_id = var.service_account_user_id
+  for_each                = var.client_roles
+  client_id               = each.value.client_id
+  role                    = each.value.role_id
 }
