@@ -1,15 +1,13 @@
-module "FMDB" {
-  source = "../../../modules/payara-client"
+module "payara_client" {
+  source = "../../../../modules/payara-client"
 
   client_id   = "FMDB"
   claim_name  = "fmdb_role"
-  base_url    = "https://fmdbd.hlth.gov.bc.ca/FMDB"
-  description = "Formulary Management Database"
+  base_url    = "https://fmdbt.hlth.gov.bc.ca/FMDB"
+  description = "Formulary Management Database v3"
   valid_redirect_uris = [
-    "http://localhost:8080/*",
-    "https://fmdbd.hlth.gov.bc.ca/*",
-    "https://localhost:8081/*",
-    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://fmdbt.hlth.gov.bc.ca/*",
+    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*"
   ]
   roles = {
     "MOHUSER" = {
