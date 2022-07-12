@@ -14,10 +14,13 @@ variable "realm_id" {
 variable "client_id" {
   type = string
 }
+
+
 variable "roles" {
   type = map(object({
     name = string
     description = string
+    composite_roles = list(string)
   }))
 }
 
@@ -27,5 +30,10 @@ resource "keycloak_role" "ROLES" {
   for_each    = var.roles
   name        = each.value.name
   description = each.value.description
+  composite_roles = "${length(each.value.composite_roles) > 0 ? each.value.composite_roles : null}"  
 
+}
+
+output "ROLES" {
+  value = keycloak_role.ROLES
 }

@@ -59,18 +59,22 @@ module "client-roles" {
 		"feature_pidp_demo" = {
 			"name"        = "feature_pidp_demo"
 			"description" = ""
+			composite_roles = []
 		},
 		"USER" = {
 			"name"        = "USER"
 			"description" = ""
+			composite_roles = []
 		},
 		"feature_amh_demo" = {
 			"name"        = "feature_amh_demo"
 			"description" = ""
+			composite_roles = []
 		},
 		"ADMIN" = {
 			"name"        = "ADMIN"
 			"description" = ""
+			composite_roles = []
 		},
 	}
 }
@@ -79,16 +83,16 @@ module "scope-mappings" {
 	realm_id = keycloak_openid_client.CLIENT.realm_id
 	client_id = keycloak_openid_client.CLIENT.id
 	roles = {
-		"USER-MANAGEMENT-SERVICE/create-user" = "2ea1ec2c-1603-46a2-a348-6d0c7ce559da",
-		"USER-MANAGEMENT-SERVICE/view-users" = "beddbeb0-650e-4bd9-8484-d05f789c61b6",
-		"USER-MANAGEMENT-SERVICE/manage-user-roles" = "f539f4bf-ba7a-4ba3-a8d4-a47f786e205d",
-		"USER-MANAGEMENT-SERVICE/view-client-pidp-service" = "8f6a5f08-bd8c-41b4-83a3-6c08553ac98f",
-		"USER-MANAGEMENT-SERVICE/view-client-hcimweb" = "5f854e07-fe45-497c-85e3-a3551b88ac66",
-		"USER-MANAGEMENT-SERVICE/view-client-uci-sso" = "17213d47-65a1-41e0-96bd-5b90878e33cf",
-		"USER-MANAGEMENT-SERVICE/view-clients" = "8742c7c0-664c-4321-8225-f70420d299f7",
-		"USER-MANAGEMENT-SERVICE/manage-user-details" = "1ba3bbcb-d2db-4cb3-be33-2f88062e0dac",
-		"USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = "751a33ed-9414-4537-9196-4c6055b9b514",
-		"USER-MANAGEMENT-SERVICE/view-client-hcimweb_huat" = "925e39fa-1941-4e25-9823-aded372533de",
+		"USER-MANAGEMENT-SERVICE/create-user" = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
+		"USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+		"USER-MANAGEMENT-SERVICE/manage-user-roles" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+		"USER-MANAGEMENT-SERVICE/view-client-pidp-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
+		"USER-MANAGEMENT-SERVICE/view-client-hcimweb" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb"].id,
+		"USER-MANAGEMENT-SERVICE/view-client-uci-sso" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-uci-sso"].id,
+		"USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+		"USER-MANAGEMENT-SERVICE/manage-user-details" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
+		"USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-eforms"].id,
+		"USER-MANAGEMENT-SERVICE/view-client-hcimweb_huat" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_huat"].id,
 	}
 }
 
@@ -102,44 +106,45 @@ module "service-account-roles" {
 	}
 	client_roles = {
 		"USER-MANAGEMENT-SERVICE/create-user"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "create-user"
 		},
 		"USER-MANAGEMENT-SERVICE/manage-user-roles"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "manage-user-roles"
 		},
 		"USER-MANAGEMENT-SERVICE/view-users"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "view-users"
 		},
 		"USER-MANAGEMENT-SERVICE/view-client-pidp-service"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "view-client-pidp-service"
 		},
 		"USER-MANAGEMENT-SERVICE/view-client-hcimweb"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "view-client-hcimweb"
 		},
 		"USER-MANAGEMENT-SERVICE/view-client-uci-sso"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "view-client-uci-sso"
 		},
 		"USER-MANAGEMENT-SERVICE/view-clients"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "view-clients"
 		},
 		"USER-MANAGEMENT-SERVICE/manage-user-details"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "manage-user-details"
 		},
 		"USER-MANAGEMENT-SERVICE/view-client-sat-eforms"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "view-client-sat-eforms"
 		},
 		"USER-MANAGEMENT-SERVICE/view-client-hcimweb_huat"= {
-			"client_id" = "2ddc7173-34f3-41ff-9beb-66c7802717ce",
+			"client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
 			"role_id" = "view-client-hcimweb_huat"
 		},
 	}
 }
+
