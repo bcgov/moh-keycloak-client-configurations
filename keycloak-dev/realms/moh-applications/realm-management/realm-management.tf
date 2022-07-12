@@ -177,6 +177,10 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address"
 	add_to_id_token = true
 }
 
+
+output "CLIENT" {
+  value = keycloak_openid_client.CLIENT
+}
 output "ROLES" {
   value = module.client-roles.ROLES
 }
