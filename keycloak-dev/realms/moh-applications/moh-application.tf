@@ -9,6 +9,7 @@ module "FMDB" {
 module "PIDP-WEBAPP" {
 	source = "./pidp-webapp"
 	PIDP-SERVICE= "${module.PIDP-SERVICE}"
+  account = "${module.account}"
 }
 
 module "PIDP-SERVICE" {
@@ -16,9 +17,9 @@ module "PIDP-SERVICE" {
 	USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
 
-
 module "USER-MANAGEMENT-SERVICE" {
   source = "./user-management-service"
+  account = "${module.account}"
   realm-management = "${module.realm-management}"
 }
 
@@ -29,4 +30,8 @@ module "USER-MANAGEMENT" {
 
 module "realm-management" {
   source = "./realm-management"
+}
+
+module "account" {
+  source = "./account"
 }

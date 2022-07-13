@@ -33,7 +33,7 @@ module "scope-mappings" {
 	realm_id = keycloak_openid_client.CLIENT.realm_id
 	client_id = keycloak_openid_client.CLIENT.id
 	roles = {
-		"account/view-profile" = "22f2f067-d74a-4108-bf1a-eb6bffd71736",
+		"account/view-profile" = var.account.ROLES["view-profile"].id,
 		"PIDP-SERVICE/feature_pidp_demo" = var.PIDP-SERVICE.ROLES["feature_pidp_demo"].id,
 		"PIDP-SERVICE/USER" = var.PIDP-SERVICE.ROLES["USER"].id,
 		"PIDP-SERVICE/feature_amh_demo" = var.PIDP-SERVICE.ROLES["feature_amh_demo"].id,
@@ -59,4 +59,7 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "given_names" {
 }
 
 variable "PIDP-SERVICE" {
+}
+
+variable "account" {
 }

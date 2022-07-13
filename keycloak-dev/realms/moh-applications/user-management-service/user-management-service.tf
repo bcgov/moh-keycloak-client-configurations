@@ -366,16 +366,19 @@ module "service-account-roles" {
 			"role_id" = "view-client-mspdirect-service"
 		},
 		"account/manage-account"= {
-			"client_id" = "2e52bc4c-f321-4bff-98d8-8ce89cd3e2e7",
+			"client_id" = var.account.CLIENT.id,
 			"role_id" = "manage-account"
 		},
 		"account/view-profile"= {
-			"client_id" = "2e52bc4c-f321-4bff-98d8-8ce89cd3e2e7",
+			"client_id" = var.account.CLIENT.id,
 			"role_id" = "view-profile"
 		},
 	}
 }
+
 variable "realm-management" {
+}
+variable "account" {
 }
 
 output "CLIENT" {
