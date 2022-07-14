@@ -79,10 +79,3 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
   }
 }
-variable "USER-MANAGEMENT-SERVICE" {
-}
-
-
-output "ROLES" {
-  value = module.client-roles.ROLES
-}

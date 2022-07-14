@@ -57,9 +57,3 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "given_names" {
 	user_attribute = "given_names"
 	realm_id  = keycloak_openid_client.CLIENT.realm_id
 }
-
-variable "PIDP-SERVICE" {
-}
-
-variable "account" {
-}

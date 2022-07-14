@@ -1,0 +1,2 @@
+variable "USER-MANAGEMENT-SERVICE" {
+}
