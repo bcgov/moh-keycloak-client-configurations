@@ -1,5 +1,2 @@
-variable "PIDP-SERVICE" {
-}
-
-variable "account" {
-}
+variable "account" {}
+variable "PIDP-SERVICE" {}

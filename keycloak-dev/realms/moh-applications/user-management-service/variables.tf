@@ -1,5 +1,2 @@
-variable "realm-management" {
-}
-variable "account" {
-}
-
+variable "realm-management" {}
+variable "account" {}

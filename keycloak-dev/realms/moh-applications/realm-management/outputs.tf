@@ -1,6 +1,6 @@
 output "CLIENT" {
-  value = data.keycloak_openid_client.CLIENT
+    value = data.keycloak_openid_client.CLIENT
 }
 output "ROLES" {
-  value = module.client-roles-data-source.ROLES
+    value = module.client-roles-data-source.ROLES
 }
