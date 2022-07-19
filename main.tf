@@ -22,13 +22,13 @@ module "KEYCLOAK_DEV" {
   keycloak_url  = var.dev_keycloak_url
 }
 
-module "KEYCLOAK_TEST" {
-  source = "./keycloak-test"
+# module "KEYCLOAK_TEST" {
+#   source = "./keycloak-test"
 
-  client_id     = var.test_client_id
-  client_secret = var.test_client_secret
-  keycloak_url  = var.test_keycloak_url
-}
+#   client_id     = var.test_client_id
+#   client_secret = var.test_client_secret
+#   keycloak_url  = var.test_keycloak_url
+# }
 
 module "KEYCLOAK_PROD" {
   source = "./keycloak-prod"
