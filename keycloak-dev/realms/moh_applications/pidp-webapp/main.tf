@@ -23,6 +23,7 @@ resource "keycloak_openid_client" "CLIENT" {
 		"http://localhost:*",
 		"https://dev.healthprovideridentityportal.gov.bc.ca/*",
 		"https://dev.healthprovideridentityportal.gov.bc.ca",
+        "https://pr-81.healthprovideridentityportal.gov.bc.ca/",
 	]
     web_origins = [
 		"*",
