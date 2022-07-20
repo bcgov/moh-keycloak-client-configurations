@@ -13,6 +13,7 @@ module "DMFT-SERVICE" {
 module "DMFT-WEBAPP" {
     source = "./dmft-webapp"
 }
+
 module "PIDP-SERVICE" {
     source = "./pidp-service"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"

@@ -14,10 +14,11 @@ resource "keycloak_openid_client" "CLIENT" {
     full_scope_allowed          = false
     implicit_flow_enabled       = false
     name = ""
+    pkce_code_challenge_method = ""
     realm_id = "moh_applications"
     service_accounts_enabled =false
     standard_flow_enabled = true
-    use_refresh_tokens = false
+    use_refresh_tokens = true
     valid_redirect_uris = [
 		"http://localhost:*",
 		"https://dev.healthprovideridentityportal.gov.bc.ca/*",

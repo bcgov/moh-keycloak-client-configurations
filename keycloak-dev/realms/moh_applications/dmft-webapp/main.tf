@@ -14,6 +14,7 @@ resource "keycloak_openid_client" "CLIENT" {
     full_scope_allowed          = false
     implicit_flow_enabled       = false
     name = "DMFT"
+    pkce_code_challenge_method = "S256"
     realm_id = "moh_applications"
     service_accounts_enabled =false
     standard_flow_enabled = true

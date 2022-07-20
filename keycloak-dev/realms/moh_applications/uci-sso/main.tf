@@ -14,6 +14,7 @@ resource "keycloak_openid_client" "CLIENT" {
     full_scope_allowed          = true
     implicit_flow_enabled       = false
     name = "UCI-SSO"
+    pkce_code_challenge_method = ""
     realm_id = "moh_applications"
     service_accounts_enabled =false
     standard_flow_enabled = true

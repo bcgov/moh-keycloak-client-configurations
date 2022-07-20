@@ -14,6 +14,7 @@ resource "keycloak_openid_client" "CLIENT" {
     full_scope_allowed          = false
     implicit_flow_enabled       = false
     name = "DMFT"
+    pkce_code_challenge_method = ""
     realm_id = "moh_applications"
     service_accounts_enabled =true
     standard_flow_enabled = true
@@ -60,5 +61,5 @@ module "service-account-roles" {
 	realm_roles = {
 		"default-roles-moh_applications" = "default-roles-moh_applications",
 	}
-	client_roles = {} 
+	client_roles = {}
 }
