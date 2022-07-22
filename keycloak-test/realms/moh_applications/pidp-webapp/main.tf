@@ -53,3 +53,15 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "identity_provider"
     realm_id = keycloak_openid_client.CLIENT.realm_id
     session_note = "identity_provider"
 }
+module "scope-mappings" {
+    source = "../../../../modules/scope-mappings"
+    realm_id = keycloak_openid_client.CLIENT.realm_id
+    client_id = keycloak_openid_client.CLIENT.id
+    roles = {
+		"account/view-profile" = var.account.ROLES["view-profile"].id,
+		"PIDP-SERVICE/USER" = var.PIDP-SERVICE.ROLES["USER"].id,
+		"PIDP-SERVICE/feature_amh_demo" = var.PIDP-SERVICE.ROLES["feature_amh_demo"].id,
+		"PIDP-SERVICE/ADMIN" = var.PIDP-SERVICE.ROLES["ADMIN"].id,
+		"PIDP-SERVICE/feature_pidp_demo" = var.PIDP-SERVICE.ROLES["feature_pidp_demo"].id,
+	}
+}
