@@ -1,8 +1,8 @@
 module "account" {
-    source = "./account"
+    source = "../../../modules/account"
 }
 module "realm-management" {
-    source = "./realm-management"
+    source = "../../../modules/realm-management"
 }
 module "FMDB" {
     source = "./fmdb"
