@@ -1,5 +1,8 @@
 module "account" {
-    source = "./account"
+    source = "../../../modules/account"
+}
+module "realm-management" {
+    source = "../../../modules/realm-management"
 }
 module "FMDB" {
     source = "./fmdb"
@@ -26,9 +29,7 @@ module "PIDP-WEBAPP" {
 module "UCI-SSO" {
     source = "./uci-sso"
 }
-module "realm-management" {
-    source = "./realm-management"
-}
+
 module "USER-MANAGEMENT" {
     source = "./user-management"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
