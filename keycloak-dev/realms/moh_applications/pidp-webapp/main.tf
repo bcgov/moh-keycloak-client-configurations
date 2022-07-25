@@ -22,8 +22,8 @@ resource "keycloak_openid_client" "CLIENT" {
     valid_redirect_uris = [
 		"http://localhost:*",
 		"https://dev.healthprovideridentityportal.gov.bc.ca/*",
+		"https://pr-81.healthprovideridentityportal.gov.bc.ca/",
 		"https://dev.healthprovideridentityportal.gov.bc.ca",
-        "https://pr-81.healthprovideridentityportal.gov.bc.ca/",
 	]
     web_origins = [
 		"*",
@@ -38,6 +38,7 @@ resource "keycloak_openid_audience_protocol_mapper" "PIDP-SERVICE-aud-mapper" {
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "given_names" {
     add_to_id_token = true
+    add_to_userinfo = true
     claim_name = "given_names"
     client_id = keycloak_openid_client.CLIENT.id
     name = "given_names"
