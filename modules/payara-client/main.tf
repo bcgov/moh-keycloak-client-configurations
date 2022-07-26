@@ -90,3 +90,7 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
 output "CLIENT" {
   value = keycloak_openid_client.CLIENT
 }
+
+output "ROLES" {
+  value = keycloak_role.ROLES
+}
