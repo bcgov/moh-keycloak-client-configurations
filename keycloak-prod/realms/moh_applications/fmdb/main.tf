@@ -2,6 +2,7 @@ module "payara-client" {
 	source = "../../../../modules/payara-client"
 	claim_name  = "fmdb_role"
 	client_id   = "FMDB"
+	mapper_name = "FMDB Role"
 	base_url    = "https://fmdb.hlth.gov.bc.ca/FMDB"
 	description = ""
 	valid_redirect_uris = [
