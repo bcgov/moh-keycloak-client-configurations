@@ -37,7 +37,7 @@ jobs:
         env:
           AWS_S3_BACKEND_ROLE_ARN: ${{ secrets.AWS_S3_BACKEND_ROLE_ARN }}
         run: terraform init -backend-config="role_arn=$AWS_S3_BACKEND_ROLE_ARN"
-      
+
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
@@ -47,6 +47,16 @@ jobs:
         if: github.event_name == 'pull_request'
         run: terraform plan -no-color -input=false
         continue-on-error: true
+
+      - name: Truncate Terraform Plan
+        run: |
+          plan=$(tail -n 500 <<'EOF'
+          ${{ steps.plan.outputs.stdout }}
+          EOF
+          )
+          echo "PLAN<<EOF" >> $GITHUB_ENV
+          echo "${plan}" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - uses: actions/github-script@v6
         if: github.event_name == 'pull_request'
