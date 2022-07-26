@@ -23,6 +23,10 @@ variable "description" {
   type        = string
 }
 
+variable "mapper_name" {
+  type        = string
+}
+
 variable "valid_redirect_uris" {
   type = list
 }
@@ -76,7 +80,7 @@ resource "keycloak_role" "ROLES" {
 resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {
   realm_id   = keycloak_openid_client.CLIENT.realm_id
   client_id  = keycloak_openid_client.CLIENT.id
-  name       = "Role mapper"
+  name       = var.mapper_name
   claim_name = var.claim_name
 
   add_to_access_token         = true
