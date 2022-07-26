@@ -1,0 +1,24 @@
+module "account" {
+    source = "../../../modules/account"
+}
+module "realm-management" {
+    source = "../../../modules/realm-management"
+}
+module "FMDB" {
+    source = "./fmdb"
+}
+module "MIWT" {
+    source = "./miwt"
+}
+module "GIS" {
+    source = "./gis"
+}
+module "USER-MANAGEMENT" {
+    source = "./user-management"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+}
+module "USER-MANAGEMENT-SERVICE" {
+    source = "./user-management-service"
+    realm-management= "${module.realm-management}"
+    account= "${module.account}"
+}

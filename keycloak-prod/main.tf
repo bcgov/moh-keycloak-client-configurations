@@ -8,7 +8,7 @@ terraform {
 }
 
 module "moh_applications" {
-  source = "./realms/moh-applications"
+  source = "./realms/moh_applications"
 }
 
 provider "keycloak" {
