@@ -7,6 +7,9 @@ module "realm-management" {
 module "FMDB" {
     source = "./fmdb"
 }
+module "GIS" {
+    source = "./gis"
+}
 module "MIWT" {
     source = "./miwt"
 }

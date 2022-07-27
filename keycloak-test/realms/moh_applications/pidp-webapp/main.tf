@@ -1,7 +1,6 @@
 resource "keycloak_openid_client" "CLIENT" {
     access_token_lifespan = "300"
     access_type = "PUBLIC"
-    admin_url   = ""
     backchannel_logout_session_required = true
     base_url    = ""
     client_authenticator_type = "client-secret"
@@ -38,6 +37,7 @@ resource "keycloak_openid_audience_protocol_mapper" "PIDP-SERVICE-aud-mapper" {
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "given_names" {
     add_to_id_token = true
+    add_to_userinfo = true
     claim_name = "given_names"
     client_id = keycloak_openid_client.CLIENT.id
     name = "given_names"

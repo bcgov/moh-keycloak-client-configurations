@@ -4,19 +4,21 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
-module "FMDB" {
-    source = "./fmdb"
-}
-module "MIWT" {
-    source = "./miwt"
-}
 module "DMFT-SERVICE" {
     source = "./dmft-service"
 }
 module "DMFT-WEBAPP" {
     source = "./dmft-webapp"
 }
-
+module "FMDB" {
+    source = "./fmdb"
+}
+module "GIS" {
+    source = "./gis"
+}
+module "MIWT" {
+    source = "./miwt"
+}
 module "PIDP-SERVICE" {
     source = "./pidp-service"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
@@ -29,7 +31,6 @@ module "PIDP-WEBAPP" {
 module "UCI-SSO" {
     source = "./uci-sso"
 }
-
 module "USER-MANAGEMENT" {
     source = "./user-management"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"

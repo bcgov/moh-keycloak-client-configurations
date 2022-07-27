@@ -1,8 +1,8 @@
 module "payara-client" {
 	source = "../../../../modules/payara-client"
+	mapper_name = "Role mapper"
 	claim_name  = "miwt_role"
 	client_id   = "MIWT"
-	mapper_name = "Role mapper"
 	base_url    = "https://miwtd.hlth.gov.bc.ca/MedicalImaging"
 	description = "Medical Imaging Wait Times"
 	valid_redirect_uris = [

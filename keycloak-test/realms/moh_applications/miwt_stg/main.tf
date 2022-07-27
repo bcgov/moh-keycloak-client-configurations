@@ -1,7 +1,6 @@
 resource "keycloak_openid_client" "CLIENT" {
     access_token_lifespan = ""
     access_type = "CONFIDENTIAL"
-    admin_url   = ""
     backchannel_logout_session_required = false
     base_url    = "https://miwtstg.hlth.gov.bc.ca/MedicalImaging"
     client_authenticator_type = "client-secret"
