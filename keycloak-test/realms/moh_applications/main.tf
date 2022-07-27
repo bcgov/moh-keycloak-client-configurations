@@ -25,6 +25,12 @@ module "PIDP-WEBAPP" {
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
 }
+
+module "USER-MANAGEMENT" {
+    source = "./user-management"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+
+}
 module "USER-MANAGEMENT-SERVICE" {
     source = "./user-management-service"
     realm-management= "${module.realm-management}"
