@@ -1,8 +1,8 @@
 module "payara-client" {
 	source = "../../../../modules/payara-client"
+	mapper_name = "GIS Role"
 	claim_name  = "gis_role"
 	client_id   = "GIS"
-	mapper_name = "GIS Role"
 	base_url    = "https://gis.hlth.gov.bc.ca/gis"
 	description = "Guaranteed Income Support"
 	valid_redirect_uris = [
