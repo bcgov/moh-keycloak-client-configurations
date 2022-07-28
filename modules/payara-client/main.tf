@@ -10,6 +10,9 @@ terraform {
 variable "client_id" {
   type        = string
 }
+variable "client_name" {
+  type        = string
+}
 
 variable "claim_name" {
   type        = string
@@ -29,6 +32,14 @@ variable "mapper_name" {
 
 variable "valid_redirect_uris" {
   type = list
+}
+
+variable "service_accounts_enabled" {
+  type = string
+}
+
+variable "use_refresh_token" {
+  type = string
 }
 
 variable "roles" {
@@ -55,12 +66,12 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled = false
   full_scope_allowed          = false
   implicit_flow_enabled       = false
-  name                        = var.client_id
+  name                        = var.client_name
   # oauth2_device_authorization_grant_enabled  = false
   realm_id                 = "moh_applications"
-  service_accounts_enabled = false
+  service_accounts_enabled = var.service_accounts_enabled
   standard_flow_enabled    = true
-  use_refresh_tokens       = false
+  use_refresh_tokens       = var.use_refresh_token
   valid_redirect_uris = var.valid_redirect_uris
   web_origins = []
   admin_url   = ""

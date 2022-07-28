@@ -1,20 +1,12 @@
 module "payara-client" {
+
 	source = "../../../../modules/payara-client"
 	mapper_name = "HCIMWEB Role"
 	claim_name  = "hcimweb_role"
 	client_id   = "HCIMWEB"
 	base_url    = "https://hcimweb-hd4.hlth.gov.bc.ca/HCIMWeb"
 	description = "HCIM Web App"
-	valid_redirect_uris = [
-		"https://hcimweb-dev-cl.hlth.gov.bc.ca/*",
-		"http://localhost:8080/*",
-		"https://hcimweb-hd2.hlth.gov.bc.ca/*",
-		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-		"https://qa-sts.healthbc.org/adfs/ls/*",
-		"https://hcimweb-hd1.hlth.gov.bc.ca/*",
-		"https://hcimweb-hd4.hlth.gov.bc.ca/*",
-		"https://localhost:8081/*",
-	]
+	client_name = "HCIMWEB"
 	roles = {	
         "READ_ONLY_ALL_SRC" = {
             "name" = "READ_ONLY_ALL_SRC"
@@ -61,6 +53,18 @@ module "payara-client" {
             "description" = ""
         },
 	}
+	service_accounts_enabled = false
+	use_refresh_token = true
+	valid_redirect_uris = [
+		"https://hcimweb-dev-cl.hlth.gov.bc.ca/*",
+		"http://localhost:8080/*",
+		"https://hcimweb-hd2.hlth.gov.bc.ca/*",
+		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+		"https://qa-sts.healthbc.org/adfs/ls/*",
+		"https://hcimweb-hd1.hlth.gov.bc.ca/*",
+		"https://hcimweb-hd4.hlth.gov.bc.ca/*",
+		"https://localhost:8081/*",
+	]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
     add_to_id_token = false

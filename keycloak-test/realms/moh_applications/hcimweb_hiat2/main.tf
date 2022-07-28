@@ -1,15 +1,12 @@
 module "payara-client" {
+
 	source = "../../../../modules/payara-client"
 	mapper_name = "HCIMWEB Role"
-	claim_name  = "hcimweb_hiat2_role"
+	claim_name  = "hcimweb_role"
 	client_id   = "HCIMWEB_HIAT2"
 	base_url    = "https://hcimweb-cl-hiat2.hlth.gov.bc.ca/HCIMWeb"
 	description = "HCIM Web App"
-	valid_redirect_uris = [
-		"https://sts.healthbc.org/adfs/ls/*",
-		"https://hcimweb-cl-hiat2.hlth.gov.bc.ca/*",
-		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-	]
+	client_name = "HCIMWEB HIAT2"
 	roles = {	
         "MAINTR_READ_ONLY" = {
             "name" = "MAINTR_READ_ONLY"
@@ -56,6 +53,13 @@ module "payara-client" {
             "description" = ""
         },
 	}
+	service_accounts_enabled = false
+	use_refresh_token = true
+	valid_redirect_uris = [
+		"https://sts.healthbc.org/adfs/ls/*",
+		"https://hcimweb-cl-hiat2.hlth.gov.bc.ca/*",
+		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+	]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
     add_to_id_token = false

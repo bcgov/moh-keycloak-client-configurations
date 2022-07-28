@@ -1,15 +1,12 @@
 module "payara-client" {
+
 	source = "../../../../modules/payara-client"
 	mapper_name = "MIWT Role"
 	claim_name  = "miwt_role"
 	client_id   = "MIWT"
 	base_url    = "https://miwt.hlth.gov.bc.ca/MedicalImaging"
 	description = "Medical Imaging Wait Times"
-	valid_redirect_uris = [
-		"https://miwt.hlth.gov.bc.ca/*",
-		"https://sts.healthbc.org/adfs/ls/*",
-		"https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
-	]
+	client_name = "MIWT"
 	roles = {	
         "MEDIMGA_HA_INTERIOR" = {
             "name" = "MEDIMGA_HA_INTERIOR"
@@ -44,6 +41,13 @@ module "payara-client" {
             "description" = ""
         },
 	}
+	service_accounts_enabled = false
+	use_refresh_token = true
+	valid_redirect_uris = [
+		"https://miwt.hlth.gov.bc.ca/*",
+		"https://sts.healthbc.org/adfs/ls/*",
+		"https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
+	]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
     add_to_id_token = false
