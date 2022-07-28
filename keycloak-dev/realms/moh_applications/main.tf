@@ -16,6 +16,12 @@ module "FMDB" {
 module "GIS" {
     source = "./gis"
 }
+module "HCIMWEB" {
+    source = "./hcimweb"
+}
+module "HCIMWEB_HD2" {
+    source = "./hcimweb_hd2"
+}
 module "MIWT" {
     source = "./miwt"
 }
