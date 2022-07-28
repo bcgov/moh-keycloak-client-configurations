@@ -22,6 +22,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Hi Trevor
+        env:
+          GREETINGS: ${{ secrets.AWS_S3_BACKEND_ROLE_ARN }}
+        run: echo "$GREETINGS"
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
