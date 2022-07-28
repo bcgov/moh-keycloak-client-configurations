@@ -1,5 +1,6 @@
 module "payara-client" {
 	source = "../../../../modules/payara-client"
+	mapper_name = "Role mapper"
 	claim_name  = "fmdb_role"
 	client_id   = "FMDB"
 	base_url    = "https://fmdbd.hlth.gov.bc.ca/FMDB"

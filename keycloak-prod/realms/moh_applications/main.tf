@@ -4,20 +4,14 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
-module "DMFT-SERVICE" {
-    source = "./dmft-service"
-}
-module "DMFT-WEBAPP" {
-    source = "./dmft-webapp"
-}
 module "FMDB" {
     source = "./fmdb"
 }
-module "GIS" {
-    source = "./gis"
-}
 module "MIWT" {
     source = "./miwt"
+}
+module "GIS" {
+    source = "./gis"
 }
 module "PIDP-SERVICE" {
     source = "./pidp-service"
@@ -27,9 +21,6 @@ module "PIDP-WEBAPP" {
     source = "./pidp-webapp"
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
-}
-module "UCI-SSO" {
-    source = "./uci-sso"
 }
 module "USER-MANAGEMENT" {
     source = "./user-management"

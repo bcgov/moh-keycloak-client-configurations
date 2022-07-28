@@ -1,24 +1,34 @@
 module "payara-client" {
 	source = "../../../../modules/payara-client"
-	mapper_name = "Role mapper"
+	mapper_name = "MIWT Role"
 	claim_name  = "miwt_role"
 	client_id   = "MIWT"
-	base_url    = "https://miwtd.hlth.gov.bc.ca/MedicalImaging"
+	base_url    = "https://miwt.hlth.gov.bc.ca/MedicalImaging"
 	description = "Medical Imaging Wait Times"
 	valid_redirect_uris = [
-		"http://localhost:8080/*",
-		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-		"https://qa-sts.healthbc.org/adfs/ls/*",
-		"https://miwtd.hlth.gov.bc.ca/*",
-		"https://localhost:8081/*",
+		"https://miwt.hlth.gov.bc.ca/*",
+		"https://sts.healthbc.org/adfs/ls/*",
+		"https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
 	]
 	roles = {	
-        "MEDIMSTAFF" = {
-            "name" = "MEDIMSTAFF"
+        "MEDIMGA_HA_INTERIOR" = {
+            "name" = "MEDIMGA_HA_INTERIOR"
+            "description" = ""
+        },
+        "MEDIMGA_HA_NORTHERN" = {
+            "name" = "MEDIMGA_HA_NORTHERN"
             "description" = ""
         },
         "MEDIMADMIN" = {
             "name" = "MEDIMADMIN"
+            "description" = ""
+        },
+        "MEDIMGA_HA_VAN_COSTL" = {
+            "name" = "MEDIMGA_HA_VAN_COSTL"
+            "description" = ""
+        },
+        "MEDIMSTAFF" = {
+            "name" = "MEDIMSTAFF"
             "description" = ""
         },
         "MEDIMGA_HA_FRASER" = {
@@ -29,20 +39,8 @@ module "payara-client" {
             "name" = "MEDIMGA_HA_PHSA"
             "description" = ""
         },
-        "MEDIMGA_HA_VAN_COSTL" = {
-            "name" = "MEDIMGA_HA_VAN_COSTL"
-            "description" = ""
-        },
-        "MEDIMGA_HA_INTERIOR" = {
-            "name" = "MEDIMGA_HA_INTERIOR"
-            "description" = ""
-        },
         "MEDIMGA_HA_VAN_ISLD" = {
             "name" = "MEDIMGA_HA_VAN_ISLD"
-            "description" = ""
-        },
-        "MEDIMGA_HA_NORTHERN" = {
-            "name" = "MEDIMGA_HA_NORTHERN"
             "description" = ""
         },
 	}

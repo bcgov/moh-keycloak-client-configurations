@@ -7,6 +7,9 @@ module "realm-management" {
 module "FMDB" {
     source = "./fmdb"
 }
+module "GIS" {
+    source = "./gis"
+}
 module "MIWT" {
     source = "./miwt"
 }
@@ -21,6 +24,12 @@ module "PIDP-WEBAPP" {
     source = "./pidp-webapp"
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
+}
+
+module "USER-MANAGEMENT" {
+    source = "./user-management"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+
 }
 module "USER-MANAGEMENT-SERVICE" {
     source = "./user-management-service"

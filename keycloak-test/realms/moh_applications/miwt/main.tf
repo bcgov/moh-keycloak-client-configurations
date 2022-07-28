@@ -1,5 +1,6 @@
 module "payara-client" {
 	source = "../../../../modules/payara-client"
+	mapper_name = "MIWT Role"
 	claim_name  = "miwt_role"
 	client_id   = "MIWT"
 	base_url    = "https://miwtuat.hlth.gov.bc.ca/MedicalImaging"
