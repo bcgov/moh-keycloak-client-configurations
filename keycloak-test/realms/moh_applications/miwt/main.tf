@@ -5,11 +5,7 @@ module "payara-client" {
 	client_id   = "MIWT"
 	base_url    = "https://miwtuat.hlth.gov.bc.ca/MedicalImaging"
 	description = "Medical Imaging Wait Times"
-	valid_redirect_uris = [
-		"https://miwtuat.hlth.gov.bc.ca/*",
-		"https://sts.healthbc.org/adfs/ls/*",
-		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-	]
+	client_name = "MIWT"
 	roles = {	
         "MEDIMADMIN" = {
             "name" = "MEDIMADMIN"
@@ -44,6 +40,12 @@ module "payara-client" {
             "description" = ""
         },
 	}
+	service_accounts_enabled = false
+	valid_redirect_uris = [
+		"https://miwtuat.hlth.gov.bc.ca/*",
+		"https://sts.healthbc.org/adfs/ls/*",
+		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+	]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
     add_to_id_token = false

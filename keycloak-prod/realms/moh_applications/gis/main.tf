@@ -5,15 +5,18 @@ module "payara-client" {
 	client_id   = "GIS"
 	base_url    = "https://gis.hlth.gov.bc.ca/gis"
 	description = "Guaranteed Income Support"
-	valid_redirect_uris = [
-		"https://sts.healthbc.org/adfs/ls/*",
-		"https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
-		"https://gis.hlth.gov.bc.ca/*",
-	]
+	client_name = "GIS"
 	roles = {	
         "GISUSER" = {
             "name" = "GISUSER"
             "description" = ""
         },
 	}
+	service_accounts_enabled = false
+	use_refresh_tokens = false
+	valid_redirect_uris = [
+		"https://sts.healthbc.org/adfs/ls/*",
+		"https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
+		"https://gis.hlth.gov.bc.ca/*",
+	]
 }

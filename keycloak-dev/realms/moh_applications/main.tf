@@ -16,6 +16,12 @@ module "FMDB" {
 module "GIS" {
     source = "./gis"
 }
+module "HCIMWEB" {
+    source = "./hcimweb"
+}
+module "HCIMWEB_HD2" {
+    source = "./hcimweb_hd2"
+}
 module "MIWT" {
     source = "./miwt"
 }
@@ -27,6 +33,14 @@ module "PIDP-WEBAPP" {
     source = "./pidp-webapp"
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
+}
+module "PLR" {
+    source = "./plr"
+    realm-management= "${module.realm-management}"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+}
+module "PLR-SHOPPERS" {
+    source = "./plr-shoppers"
 }
 module "UCI-SSO" {
     source = "./uci-sso"
