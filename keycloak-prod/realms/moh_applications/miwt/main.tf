@@ -1,5 +1,4 @@
 module "payara-client" {
-
 	source = "../../../../modules/payara-client"
 	mapper_name = "MIWT Role"
 	claim_name  = "miwt_role"
@@ -42,7 +41,6 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = false
-	use_refresh_token = true
 	valid_redirect_uris = [
 		"https://miwt.hlth.gov.bc.ca/*",
 		"https://sts.healthbc.org/adfs/ls/*",

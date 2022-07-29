@@ -1,5 +1,4 @@
 module "payara-client" {
-
 	source = "../../../../modules/payara-client"
 	mapper_name = "PLR Role"
 	claim_name  = "plr_role"
@@ -34,7 +33,6 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = true
-	use_refresh_token = true
 	valid_redirect_uris = [
 		"http://localhost:8080/*",
 		"https://plrmerge.hlth.gov.bc.ca/plr/*",

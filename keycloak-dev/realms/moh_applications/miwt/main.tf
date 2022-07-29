@@ -1,5 +1,4 @@
 module "payara-client" {
-
 	source = "../../../../modules/payara-client"
 	mapper_name = "Role mapper"
 	claim_name  = "miwt_role"
@@ -42,7 +41,6 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = false
-	use_refresh_token = true
 	valid_redirect_uris = [
 		"http://localhost:8080/*",
 		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",

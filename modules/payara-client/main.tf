@@ -38,8 +38,9 @@ variable "service_accounts_enabled" {
   type = string
 }
 
-variable "use_refresh_token" {
-  type = string
+variable "use_refresh_tokens" {
+  type = bool
+  default = false
 }
 
 variable "roles" {
@@ -71,7 +72,7 @@ resource "keycloak_openid_client" "CLIENT" {
   realm_id                 = "moh_applications"
   service_accounts_enabled = var.service_accounts_enabled
   standard_flow_enabled    = true
-  use_refresh_tokens       = var.use_refresh_token
+  use_refresh_tokens       = var.use_refresh_tokens
   valid_redirect_uris = var.valid_redirect_uris
   web_origins = []
   admin_url   = ""

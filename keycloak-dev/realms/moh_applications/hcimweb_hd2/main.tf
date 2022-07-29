@@ -1,5 +1,4 @@
 module "payara-client" {
-
 	source = "../../../../modules/payara-client"
 	mapper_name = "HCIMWEB Role"
 	claim_name  = "hcimweb_role"
@@ -54,7 +53,7 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = false
-	use_refresh_token = true
+	use_refresh_tokens = true
 	valid_redirect_uris = [
 		"http://localhost:8080/*",
 		"https://sts.healthbc.org/adfs/ls/*",

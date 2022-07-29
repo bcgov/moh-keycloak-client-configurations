@@ -17,7 +17,6 @@ resource "keycloak_openid_client" "CLIENT" {
     realm_id = "moh_applications"
     service_accounts_enabled =true
     standard_flow_enabled = false
-    use_refresh_tokens = true
     valid_redirect_uris = [
 	]
     web_origins = [

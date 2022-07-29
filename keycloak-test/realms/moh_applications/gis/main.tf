@@ -1,5 +1,4 @@
 module "payara-client" {
-
 	source = "../../../../modules/payara-client"
 	mapper_name = "GIS Role"
 	claim_name  = "gis_role"
@@ -14,7 +13,6 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = false
-	use_refresh_token = true
 	valid_redirect_uris = [
 		"https://sts.healthbc.org/adfs/ls/*",
 		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
