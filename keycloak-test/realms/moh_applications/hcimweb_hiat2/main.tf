@@ -53,6 +53,7 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = false
+	use_refresh_tokens = false
 	valid_redirect_uris = [
 		"https://sts.healthbc.org/adfs/ls/*",
 		"https://hcimweb-cl-hiat2.hlth.gov.bc.ca/*",

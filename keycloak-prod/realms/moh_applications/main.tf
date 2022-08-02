@@ -13,6 +13,9 @@ module "GIS" {
 module "HCIMWEB" {
     source = "./hcimweb"
 }
+module "HSCIS" {
+    source = "./hscis"
+}
 module "MIWT" {
     source = "./miwt"
 }
@@ -27,6 +30,9 @@ module "PIDP-WEBAPP" {
 }
 module "PLR" {
     source = "./plr"
+}
+module "SFDS" {
+    source = "./sfds"
 }
 module "USER-MANAGEMENT" {
     source = "./user-management"

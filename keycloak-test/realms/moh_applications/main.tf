@@ -4,6 +4,9 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
+module "SFDS" {
+    source = "./sfds"
+}
 module "FMDB" {
     source = "./fmdb"
 }
@@ -27,6 +30,9 @@ module "HCIMWEB_HSIT" {
 }
 module "HCIMWEB_HUAT" {
     source = "./hcimweb_huat"
+}
+module "HSCIS" {
+    source = "./hscis"
 }
 module "MIWT" {
     source = "./miwt"

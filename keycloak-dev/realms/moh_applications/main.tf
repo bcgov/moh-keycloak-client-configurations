@@ -22,6 +22,9 @@ module "HCIMWEB" {
 module "HCIMWEB_HD2" {
     source = "./hcimweb_hd2"
 }
+module "HSCIS" {
+    source = "./hscis"
+}
 module "MIWT" {
     source = "./miwt"
 }
@@ -41,6 +44,9 @@ module "PLR" {
 }
 module "PLR-SHOPPERS" {
     source = "./plr-shoppers"
+}
+module "SFDS" {
+    source = "./sfds"
 }
 module "UCI-SSO" {
     source = "./uci-sso"
