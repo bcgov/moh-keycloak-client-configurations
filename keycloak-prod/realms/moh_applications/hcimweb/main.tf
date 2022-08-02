@@ -2,11 +2,23 @@ module "payara-client" {
 	source = "../../../../modules/payara-client"
 	mapper_name = "HCIMWEB Role"
 	claim_name  = "hcimweb_role"
-	client_id   = "HCIMWEB_HUAT"
-	base_url    = "https://hcimweb-cl-huat.hlth.gov.bc.ca/HCIMWeb"
+	client_id   = "HCIMWEB"
+	base_url    = "https://hcimweb-cl.hlth.gov.bc.ca/HCIMWeb"
 	description = "HCIM Web App"
-	client_name = "HCIMWEB HUAT"
+	client_name = "HCIMWEB"
 	roles = {	
+        "MAINTR_READ_ONLY" = {
+            "name" = "MAINTR_READ_ONLY"
+            "description" = ""
+        },
+        "REGR_LTD" = {
+            "name" = "REGR_LTD"
+            "description" = ""
+        },
+        "HIBC_REG_NEWBORN" = {
+            "name" = "HIBC_REG_NEWBORN"
+            "description" = ""
+        },
         "REGR_FULL" = {
             "name" = "REGR_FULL"
             "description" = ""
@@ -15,50 +27,36 @@ module "payara-client" {
             "name" = "REG_INTEGRITY_CLERK"
             "description" = ""
         },
-        "MAINTR_UPDT" = {
-            "name" = "MAINTR_UPDT"
-            "description" = ""
-        },
-        "MAINTR_READ_ONLY" = {
-            "name" = "MAINTR_READ_ONLY"
-            "description" = ""
-        },
         "READ_ONLY_ALL_SRC" = {
             "name" = "READ_ONLY_ALL_SRC"
-            "description" = ""
-        },
-        "MAINTR_FULL" = {
-            "name" = "MAINTR_FULL"
-            "description" = ""
-        },
-        "HIBC_REG_NEWBORN" = {
-            "name" = "HIBC_REG_NEWBORN"
-            "description" = ""
-        },
-        "REGR_UPDT" = {
-            "name" = "REGR_UPDT"
-            "description" = ""
-        },
-        "REGR_UPDT_ADDR_ONLY" = {
-            "name" = "REGR_UPDT_ADDR_ONLY"
             "description" = ""
         },
         "REG_ADMIN_HCIM" = {
             "name" = "REG_ADMIN_HCIM"
             "description" = ""
         },
-        "REGR_LTD" = {
-            "name" = "REGR_LTD"
+        "REGR_UPDT_ADDR_ONLY" = {
+            "name" = "REGR_UPDT_ADDR_ONLY"
+            "description" = ""
+        },
+        "MAINTR_FULL" = {
+            "name" = "MAINTR_FULL"
+            "description" = ""
+        },
+        "REGR_UPDT" = {
+            "name" = "REGR_UPDT"
+            "description" = ""
+        },
+        "MAINTR_UPDT" = {
+            "name" = "MAINTR_UPDT"
             "description" = ""
         },
 	}
 	service_accounts_enabled = false
-	use_refresh_tokens = false
 	valid_redirect_uris = [
 		"https://sts.healthbc.org/adfs/ls/*",
-		"https://hcimweb-cl-huat.hlth.gov.bc.ca/*",
-		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-		"https://dmz1.hcimweb-cl-huat.hlth.gov.bc.ca/*",
+		"https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
+		"https://hcimweb-cl.hlth.gov.bc.ca/*",
 	]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
