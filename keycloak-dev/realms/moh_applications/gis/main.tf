@@ -13,6 +13,8 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = false
+	client_role_mapper_add_to_id_token = false
+	client_role_mapper_add_to_userinfo = false
 	valid_redirect_uris = [
 		"http://localhost:8081/*",
 		"http://localhost:8080/*",

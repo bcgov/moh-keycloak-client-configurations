@@ -54,6 +54,8 @@ module "payara-client" {
 	}
 	service_accounts_enabled = false
 	use_refresh_tokens = true
+	client_role_mapper_add_to_id_token = false
+	client_role_mapper_add_to_userinfo = false
 	valid_redirect_uris = [
 		"http://localhost:8080/*",
 		"https://sts.healthbc.org/adfs/ls/*",

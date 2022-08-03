@@ -10,6 +10,15 @@ module "DMFT-SERVICE" {
 module "DMFT-WEBAPP" {
     source = "./dmft-webapp"
 }
+module "EMCOD" {
+    source = "./emcod"
+}
+module "SA-SFDC" {
+    source = "./sa-sfdc"
+}
+module "EACL" {
+    source = "./eacl"
+}
 module "FMDB" {
     source = "./fmdb"
 }
