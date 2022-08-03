@@ -4,8 +4,15 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
-module "SFDS" {
-    source = "./sfds"
+module "EACL" {
+    source = "./eacl"
+}
+module "EMCOD" {
+    source = "./emcod"
+}
+module "HAMIS" {
+    source = "./hamis"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
 module "FMDB" {
     source = "./fmdb"
@@ -48,6 +55,12 @@ module "PIDP-WEBAPP" {
     source = "./pidp-webapp"
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
+}
+module "SA-SFDC" {
+    source = "./sa-sfdc"
+}
+module "SFDS" {
+    source = "./sfds"
 }
 module "USER-MANAGEMENT" {
     source = "./user-management"

@@ -53,6 +53,9 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = false
+	use_refresh_tokens = false
+	client_role_mapper_add_to_id_token = false
+	client_role_mapper_add_to_userinfo = false
 	valid_redirect_uris = [
 		"https://sts.healthbc.org/adfs/ls/*",
 		"https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",

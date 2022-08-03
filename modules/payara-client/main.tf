@@ -43,6 +43,14 @@ variable "use_refresh_tokens" {
   default = false
 }
 
+variable "client_role_mapper_add_to_id_token" {
+  type = bool
+  default = false
+}
+variable "client_role_mapper_add_to_userinfo" {
+  type = bool
+  default = false
+}
 variable "roles" {
   type = map(object({
     name = string
@@ -96,8 +104,8 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   claim_name = var.claim_name
 
   add_to_access_token         = true
-  add_to_id_token             = false
-  add_to_userinfo             = false
+  add_to_id_token             = var.client_role_mapper_add_to_id_token
+  add_to_userinfo             = var.client_role_mapper_add_to_userinfo
   claim_value_type            = "String"
   client_id_for_role_mappings = var.client_id
   multivalued                 = true

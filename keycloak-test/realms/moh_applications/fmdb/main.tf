@@ -18,6 +18,8 @@ module "payara-client" {
 	}
 	service_accounts_enabled = false
 	use_refresh_tokens = false
+	client_role_mapper_add_to_id_token = false
+	client_role_mapper_add_to_userinfo = false
 	valid_redirect_uris = [
 		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
 		"https://fmdbt.hlth.gov.bc.ca/*",
