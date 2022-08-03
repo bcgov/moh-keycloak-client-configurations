@@ -16,6 +16,10 @@ module "FMDB" {
 module "GIS" {
     source = "./gis"
 }
+module "HAMIS" {
+    source = "./hamis"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+}
 module "HCIMWEB" {
     source = "./hcimweb"
 }
