@@ -4,6 +4,12 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
+module "EACL" {
+    source = "./eacl"
+}
+module "EMCOD" {
+    source = "./emcod"
+}
 module "FMDB" {
     source = "./fmdb"
 }
@@ -30,6 +36,9 @@ module "PIDP-WEBAPP" {
 }
 module "PLR" {
     source = "./plr"
+}
+module "SA-SFDC" {
+    source = "./sa-sfdc"
 }
 module "SFDS" {
     source = "./sfds"

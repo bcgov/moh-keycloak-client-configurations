@@ -10,20 +10,21 @@ module "DMFT-SERVICE" {
 module "DMFT-WEBAPP" {
     source = "./dmft-webapp"
 }
-module "EMCOD" {
-    source = "./emcod"
-}
-module "SA-SFDC" {
-    source = "./sa-sfdc"
-}
 module "EACL" {
     source = "./eacl"
+}
+module "EMCOD" {
+    source = "./emcod"
 }
 module "FMDB" {
     source = "./fmdb"
 }
 module "GIS" {
     source = "./gis"
+}
+module "HAMIS" {
+    source = "./hamis"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
 module "HCIMWEB" {
     source = "./hcimweb"
@@ -53,6 +54,9 @@ module "PLR" {
 }
 module "PLR-SHOPPERS" {
     source = "./plr-shoppers"
+}
+module "SA-SFDC" {
+    source = "./sa-sfdc"
 }
 module "SFDS" {
     source = "./sfds"
