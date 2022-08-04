@@ -21,6 +21,7 @@ module "payara-client" {
         },
 	}
 	service_accounts_enabled = true
+	use_refresh_tokens = false
 	client_role_mapper_add_to_id_token = false
 	client_role_mapper_add_to_userinfo = false
 	valid_redirect_uris = [

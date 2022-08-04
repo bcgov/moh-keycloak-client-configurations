@@ -4,6 +4,9 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
+module "BCER-CP" {
+    source = "./bcer-cp"
+}
 module "EACL" {
     source = "./eacl"
 }
@@ -13,6 +16,9 @@ module "EMCOD" {
 module "HAMIS" {
     source = "./hamis"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+}
+module "HOOPC" {
+    source = "./hoopc"
 }
 module "FMDB" {
     source = "./fmdb"
@@ -41,6 +47,9 @@ module "HCIMWEB_HUAT" {
 module "HSCIS" {
     source = "./hscis"
 }
+module "IEN" {
+    source = "./ien"
+}
 module "MIWT" {
     source = "./miwt"
 }
@@ -55,6 +64,9 @@ module "PIDP-WEBAPP" {
     source = "./pidp-webapp"
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
+}
+module "SA-DBAAC-PORTAL" {
+    source = "./sa-dbaac-portal"
 }
 module "SA-SFDC" {
     source = "./sa-sfdc"

@@ -4,6 +4,9 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
+module "BCER-CP" {
+    source = "./bcer-cp"
+}
 module "EACL" {
     source = "./eacl"
 }
@@ -20,11 +23,17 @@ module "HAMIS" {
     source = "./hamis"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
+module "HOOPC" {
+    source = "./hoopc"
+}
 module "HCIMWEB" {
     source = "./hcimweb"
 }
 module "HSCIS" {
     source = "./hscis"
+}
+module "IEN" {
+    source = "./ien"
 }
 module "MIWT" {
     source = "./miwt"
@@ -40,6 +49,9 @@ module "PIDP-WEBAPP" {
 }
 module "PLR" {
     source = "./plr"
+}
+module "SA-DBAAC-PORTAL" {
+    source = "./sa-dbaac-portal"
 }
 module "SA-SFDC" {
     source = "./sa-sfdc"

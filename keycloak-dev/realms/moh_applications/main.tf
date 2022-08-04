@@ -4,6 +4,9 @@ module "account" {
 module "realm-management" {
     source = "../../../modules/realm-management"
 }
+module "BCER-CP" {
+    source = "./bcer-cp"
+}
 module "DMFT-SERVICE" {
     source = "./dmft-service"
 }
@@ -32,8 +35,14 @@ module "HCIMWEB" {
 module "HCIMWEB_HD2" {
     source = "./hcimweb_hd2"
 }
+module "HOOPC" {
+    source = "./hoopc"
+}
 module "HSCIS" {
     source = "./hscis"
+}
+module "IEN" {
+    source = "./ien"
 }
 module "MIWT" {
     source = "./miwt"
@@ -54,6 +63,9 @@ module "PLR" {
 }
 module "PLR-SHOPPERS" {
     source = "./plr-shoppers"
+}
+module "SA-DBAAC-PORTAL" {
+    source = "./sa-dbaac-portal"
 }
 module "SA-SFDC" {
     source = "./sa-sfdc"
