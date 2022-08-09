@@ -50,11 +50,24 @@ module "HSCIS" {
 module "IEN" {
     source = "./ien"
 }
+module "LDAP-ACC-TRANS" {
+    source = "./ldap-acc-trans"
+}
+module "LDAP-ACC-TRANS-SERVICE" {
+    source = "./ldap-acc-trans-service"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+}
 module "MIWT" {
     source = "./miwt"
 }
 module "MIWT_STG" {
     source = "./miwt_stg"
+}
+module "MOH-SERVICENOW" {
+    source = "./moh-servicenow"
+}
+module "MSPDIRECT-SERVICE" {
+    source = "./mspdirect-service"
 }
 module "PIDP-SERVICE" {
     source = "./pidp-service"

@@ -1,6 +1,7 @@
 resource "keycloak_openid_client" "CLIENT" {
     access_token_lifespan = ""
     access_type = "CONFIDENTIAL"
+    backchannel_logout_session_required = true
     base_url    = "https://public.healthideas.gov.bc.ca"
     client_authenticator_type = "client-secret"
     client_id   = "WEBCAPS"
@@ -16,6 +17,7 @@ resource "keycloak_openid_client" "CLIENT" {
     realm_id = "moh_applications"
     service_accounts_enabled =false
     standard_flow_enabled = true
+    use_refresh_tokens = true
     valid_redirect_uris = [
 		"https://public.healthideas.gov.bc.ca/*",
 	]

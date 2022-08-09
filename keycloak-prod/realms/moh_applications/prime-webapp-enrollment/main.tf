@@ -17,6 +17,7 @@ resource "keycloak_openid_client" "CLIENT" {
     realm_id = "moh_applications"
     service_accounts_enabled =false
     standard_flow_enabled = true
+    use_refresh_tokens = true
     valid_redirect_uris = [
 		"*",
 	]
@@ -30,4 +31,13 @@ resource "keycloak_openid_audience_protocol_mapper" "Prime-Audience-Mapper" {
     included_custom_audience = "prime-web-api"
     name = "Prime Audience Mapper"
     realm_id = keycloak_openid_client.CLIENT.realm_id
+}
+module "scope-mappings" {
+    source = "../../../../modules/scope-mappings"
+    realm_id = keycloak_openid_client.CLIENT.realm_id
+    client_id = keycloak_openid_client.CLIENT.id
+    roles = {
+		"account/view-profile" = var.account.ROLES["view-profile"].id,
+		"account/manage-account" = var.account.ROLES["manage-account"].id,
+	}
 }
