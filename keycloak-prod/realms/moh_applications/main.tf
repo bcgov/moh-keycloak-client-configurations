@@ -51,6 +51,10 @@ module "MOH-SERVICENOW" {
 module "MSPDIRECT-SERVICE" {
     source = "./mspdirect-service"
 }
+module "MSPDIRECT-WEB" {
+    source = "./mspdirect-web"
+    MSPDIRECT-SERVICE= "${module.MSPDIRECT-SERVICE}"
+}
 module "PIDP-SERVICE" {
     source = "./pidp-service"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"

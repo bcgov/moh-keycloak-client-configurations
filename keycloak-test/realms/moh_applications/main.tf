@@ -69,6 +69,17 @@ module "MOH-SERVICENOW" {
 module "MSPDIRECT-SERVICE" {
     source = "./mspdirect-service"
 }
+module "MSPDIRECT-SERVICE-UAT" {
+    source = "./mspdirect-service-uat"
+}
+module "MSPDIRECT-WEB" {
+    source = "./mspdirect-web"
+    MSPDIRECT-SERVICE= "${module.MSPDIRECT-SERVICE}"
+}
+module "MSPDIRECT-WEB-UAT" {
+    source = "./mspdirect-web-uat"
+    MSPDIRECT-SERVICE-UAT= "${module.MSPDIRECT-SERVICE-UAT}"
+}
 module "PIDP-SERVICE" {
     source = "./pidp-service"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
@@ -77,6 +88,9 @@ module "PIDP-WEBAPP" {
     source = "./pidp-webapp"
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
+}
+module "PLR-SHOPPERS" {
+    source = "./plr-shoppers"
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
     source = "./prime-webapp-enrollment"
