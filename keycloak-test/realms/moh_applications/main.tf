@@ -92,6 +92,27 @@ module "PIDP-WEBAPP" {
 module "PLR-SHOPPERS" {
     source = "./plr-shoppers"
 }
+module "PLR_CONF" {
+    source = "./plr_conf"
+}
+module "PLR_FLVR" {
+    source = "./plr_flvr"
+}
+module "PLR_IAT" {
+    source = "./plr_iat"
+}
+module "PLR_REV" {
+    source = "./plr_rev"
+}
+module "PLR_SIT" {
+    source = "./plr_sit"
+}
+module "PLR_STG" {
+    source = "./plr_stg"
+}
+module "PLR_UAT" {
+    source = "./plr_uat"
+}
 module "PRIME-WEBAPP-ENROLLMENT" {
     source = "./prime-webapp-enrollment"
     account= "${module.account}"
