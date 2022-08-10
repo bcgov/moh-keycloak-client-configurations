@@ -35,8 +35,25 @@ module "HSCIS" {
 module "IEN" {
     source = "./ien"
 }
+module "LDAP-ACC-TRANS" {
+    source = "./ldap-acc-trans"
+}
+module "LDAP-ACC-TRANS-SERVICE" {
+    source = "./ldap-acc-trans-service"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+}
 module "MIWT" {
     source = "./miwt"
+}
+module "MOH-SERVICENOW" {
+    source = "./moh-servicenow"
+}
+module "MSPDIRECT-SERVICE" {
+    source = "./mspdirect-service"
+}
+module "MSPDIRECT-WEB" {
+    source = "./mspdirect-web"
+    MSPDIRECT-SERVICE= "${module.MSPDIRECT-SERVICE}"
 }
 module "PIDP-SERVICE" {
     source = "./pidp-service"
@@ -52,9 +69,11 @@ module "PLR" {
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
     source = "./prime-webapp-enrollment"
+    account= "${module.account}"
 }
 module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
     source = "./prime-webapp-enrollment-service"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
 module "SAT-EFORMS" {
     source = "./sat-eforms"

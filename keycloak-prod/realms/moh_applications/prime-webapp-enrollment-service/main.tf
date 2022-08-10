@@ -17,6 +17,7 @@ resource "keycloak_openid_client" "CLIENT" {
     realm_id = "moh_applications"
     service_accounts_enabled =true
     standard_flow_enabled = false
+    use_refresh_tokens = true
     valid_redirect_uris = [
 	]
     web_origins = [
@@ -48,4 +49,52 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address"
     name = "Client IP Address"
     realm_id = keycloak_openid_client.CLIENT.realm_id
     session_note = "clientAddress"
+}
+module "scope-mappings" {
+    source = "../../../../modules/scope-mappings"
+    realm_id = keycloak_openid_client.CLIENT.realm_id
+    client_id = keycloak_openid_client.CLIENT.id
+    roles = {
+		"USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+		"USER-MANAGEMENT-SERVICE/manage-user-roles" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+		"USER-MANAGEMENT-SERVICE/manage-user-details" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
+		"USER-MANAGEMENT-SERVICE/view-client-gis" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-gis"].id,
+		"USER-MANAGEMENT-SERVICE/create-user" = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
+		"USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+	}
+}
+module "service-account-roles" {
+	source = "../../../../modules/service-account-roles"
+	realm_id = keycloak_openid_client.CLIENT.realm_id
+	client_id = keycloak_openid_client.CLIENT.id
+	service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
+	realm_roles = {
+		"default-roles-moh_applications" = "default-roles-moh_applications",
+	}
+	client_roles = {
+        "USER-MANAGEMENT-SERVICE/view-users" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-users"
+        }
+        "USER-MANAGEMENT-SERVICE/manage-user-roles" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "manage-user-roles"
+        }
+        "USER-MANAGEMENT-SERVICE/manage-user-details" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "manage-user-details"
+        }
+        "USER-MANAGEMENT-SERVICE/view-client-gis" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-client-gis"
+        }
+        "USER-MANAGEMENT-SERVICE/create-user" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "create-user"
+        }
+        "USER-MANAGEMENT-SERVICE/view-clients" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-clients"
+        }
+	}
 }

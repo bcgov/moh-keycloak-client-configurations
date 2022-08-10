@@ -1,6 +1,7 @@
 resource "keycloak_openid_client" "CLIENT" {
     access_token_lifespan = "1800"
     access_type = "CONFIDENTIAL"
+    backchannel_logout_session_required = true
     base_url    = ""
     client_authenticator_type = "client-secret"
     client_id   = "PRIME-WEBAPP-ENROLLMENT-SERVICE"
@@ -16,6 +17,7 @@ resource "keycloak_openid_client" "CLIENT" {
     realm_id = "moh_applications"
     service_accounts_enabled =true
     standard_flow_enabled = false
+    use_refresh_tokens = true
     valid_redirect_uris = [
 	]
     web_origins = [

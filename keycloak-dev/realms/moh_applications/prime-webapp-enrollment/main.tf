@@ -1,6 +1,7 @@
 resource "keycloak_openid_client" "CLIENT" {
     access_token_lifespan = "1800"
     access_type = "PUBLIC"
+    backchannel_logout_session_required = true
     base_url    = "https://dev.pharmanetenrolment.gov.bc.ca/gis"
     client_authenticator_type = "client-secret"
     client_id   = "PRIME-WEBAPP-ENROLLMENT"
@@ -16,6 +17,7 @@ resource "keycloak_openid_client" "CLIENT" {
     realm_id = "moh_applications"
     service_accounts_enabled =false
     standard_flow_enabled = true
+    use_refresh_tokens = true
     valid_redirect_uris = [
 		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
 		"http://localhost:*",

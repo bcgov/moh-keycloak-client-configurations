@@ -50,11 +50,35 @@ module "HSCIS" {
 module "IEN" {
     source = "./ien"
 }
+module "LDAP-ACC-TRANS" {
+    source = "./ldap-acc-trans"
+}
+module "LDAP-ACC-TRANS-SERVICE" {
+    source = "./ldap-acc-trans-service"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+}
 module "MIWT" {
     source = "./miwt"
 }
 module "MIWT_STG" {
     source = "./miwt_stg"
+}
+module "MOH-SERVICENOW" {
+    source = "./moh-servicenow"
+}
+module "MSPDIRECT-SERVICE" {
+    source = "./mspdirect-service"
+}
+module "MSPDIRECT-SERVICE-UAT" {
+    source = "./mspdirect-service-uat"
+}
+module "MSPDIRECT-WEB" {
+    source = "./mspdirect-web"
+    MSPDIRECT-SERVICE= "${module.MSPDIRECT-SERVICE}"
+}
+module "MSPDIRECT-WEB-UAT" {
+    source = "./mspdirect-web-uat"
+    MSPDIRECT-SERVICE-UAT= "${module.MSPDIRECT-SERVICE-UAT}"
 }
 module "PIDP-SERVICE" {
     source = "./pidp-service"
@@ -64,6 +88,30 @@ module "PIDP-WEBAPP" {
     source = "./pidp-webapp"
     account= "${module.account}"
     PIDP-SERVICE= "${module.PIDP-SERVICE}"
+}
+module "PLR-SHOPPERS" {
+    source = "./plr-shoppers"
+}
+module "PLR_CONF" {
+    source = "./plr_conf"
+}
+module "PLR_FLVR" {
+    source = "./plr_flvr"
+}
+module "PLR_IAT" {
+    source = "./plr_iat"
+}
+module "PLR_REV" {
+    source = "./plr_rev"
+}
+module "PLR_SIT" {
+    source = "./plr_sit"
+}
+module "PLR_STG" {
+    source = "./plr_stg"
+}
+module "PLR_UAT" {
+    source = "./plr_uat"
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
     source = "./prime-webapp-enrollment"
