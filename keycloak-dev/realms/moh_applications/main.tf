@@ -29,9 +29,6 @@ module "HAMIS" {
     source = "./hamis"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
-module "HOOPC" {
-    source = "./hoopc"
-}
 module "HCIMWEB" {
     source = "./hcimweb"
 }
@@ -40,6 +37,9 @@ module "HCIMWEB_HD2" {
 }
 module "HEM" {
     source = "./hem"
+}
+module "HOOPC" {
+    source = "./hoopc"
 }
 module "HSCIS" {
     source = "./hscis"
