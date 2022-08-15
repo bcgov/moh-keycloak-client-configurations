@@ -23,6 +23,13 @@ module "HAMIS" {
     source = "./hamis"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
+module "HEM" {
+    source = "./hem"
+}
+module "hnsesb_api_gateway_client_manager" {
+    source = "./hnsesb_api_gateway_client_manager"
+    realm-management= "${module.realm-management}"
+}
 module "HOOPC" {
     source = "./hoopc"
 }
@@ -81,11 +88,17 @@ module "SAT-EFORMS" {
 module "SA-DBAAC-PORTAL" {
     source = "./sa-dbaac-portal"
 }
+module "SA-HIBC-SERVICE-BC-PORTAL" {
+    source = "./sa-hibc-service-bc-portal"
+}
 module "SA-SFDC" {
     source = "./sa-sfdc"
 }
 module "SFDS" {
     source = "./sfds"
+}
+module "SWT" {
+    source = "./swt"
 }
 module "USER-MANAGEMENT" {
     source = "./user-management"

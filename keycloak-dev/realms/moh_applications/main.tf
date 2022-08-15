@@ -29,14 +29,17 @@ module "HAMIS" {
     source = "./hamis"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
+module "HOOPC" {
+    source = "./hoopc"
+}
 module "HCIMWEB" {
     source = "./hcimweb"
 }
 module "HCIMWEB_HD2" {
     source = "./hcimweb_hd2"
 }
-module "HOOPC" {
-    source = "./hoopc"
+module "HEM" {
+    source = "./hem"
 }
 module "HSCIS" {
     source = "./hscis"
@@ -96,11 +99,17 @@ module "SAT-EFORMS" {
 module "SA-DBAAC-PORTAL" {
     source = "./sa-dbaac-portal"
 }
+module "SA-HIBC-SERVICE-BC-PORTAL" {
+    source = "./sa-hibc-service-bc-portal"
+}
 module "SA-SFDC" {
     source = "./sa-sfdc"
 }
 module "SFDS" {
     source = "./sfds"
+}
+module "SWT" {
+    source = "./swt"
 }
 module "UCI-SSO" {
     source = "./uci-sso"
