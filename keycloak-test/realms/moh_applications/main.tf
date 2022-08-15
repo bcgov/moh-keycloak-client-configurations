@@ -23,9 +23,6 @@ module "HAMIS" {
     source = "./hamis"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
-module "HOOPC" {
-    source = "./hoopc"
-}
 module "HCIMWEB_HIAT1" {
     source = "./hcimweb_hiat1"
 }
@@ -51,6 +48,9 @@ module "hnsesb_api_gateway_client_manager" {
     source = "./hnsesb_api_gateway_client_manager"
     realm-management= "${module.realm-management}"
     account= "${module.account}"
+}
+module "HOOPC" {
+    source = "./hoopc"
 }
 module "HSCIS" {
     source = "./hscis"
