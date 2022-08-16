@@ -32,7 +32,7 @@ module "payara-client" {
             "description" = ""
         },
 	}
-	service_accounts_enabled = false
+	service_accounts_enabled = true
 	client_role_mapper_add_to_id_token = false
 	client_role_mapper_add_to_userinfo = false
 	valid_redirect_uris = [
@@ -58,4 +58,41 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
     name = "IDP"
     realm_id = module.payara-client.CLIENT.realm_id
     session_note = "identity_provider"
+}
+module "scope-mappings" {
+    source = "../../../../modules/scope-mappings"
+    realm_id = module.payara-client.CLIENT.realm_id
+    client_id = module.payara-client.CLIENT.id
+    roles = {
+		"USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+		"USER-MANAGEMENT-SERVICE/view-client-plr-conf" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_conf"].id,
+		"USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+	}
+}
+module "service-account-roles" {
+	source = "../../../../modules/service-account-roles"
+	realm_id = module.payara-client.CLIENT.realm_id
+	client_id = module.payara-client.CLIENT.id
+	service_account_user_id = module.payara-client.CLIENT.service_account_user_id
+	realm_roles = {
+		"default-roles-moh_applications" = "default-roles-moh_applications",
+	}
+	client_roles = {
+        "realm-management/view-users" = {
+            "client_id" = var.realm-management.CLIENT.id,
+            "role_id" = "view-users"
+        }
+        "USER-MANAGEMENT-SERVICE/view-users" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-users"
+        }
+        "USER-MANAGEMENT-SERVICE/view-client-plr" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-client-plr_conf"
+        }
+        "USER-MANAGEMENT-SERVICE/view-clients" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-clients"
+        }
+	}
 }
