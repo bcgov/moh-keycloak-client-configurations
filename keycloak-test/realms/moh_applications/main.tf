@@ -102,6 +102,8 @@ module "PLR-SHOPPERS" {
 }
 module "PLR_CONF" {
     source = "./plr_conf"
+    realm-management= "${module.realm-management}"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
 module "PLR_FLVR" {
     source = "./plr_flvr"
