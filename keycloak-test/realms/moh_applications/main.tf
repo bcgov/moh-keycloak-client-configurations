@@ -13,18 +13,15 @@ module "EACL" {
 module "EMCOD" {
     source = "./emcod"
 }
-module "HAMIS" {
-    source = "./hamis"
-    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
-}
-module "HOOPC" {
-    source = "./hoopc"
-}
 module "FMDB" {
     source = "./fmdb"
 }
 module "GIS" {
     source = "./gis"
+}
+module "HAMIS" {
+    source = "./hamis"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
 module "HCIMWEB_HIAT1" {
     source = "./hcimweb_hiat1"
@@ -43,6 +40,17 @@ module "HCIMWEB_HSIT" {
 }
 module "HCIMWEB_HUAT" {
     source = "./hcimweb_huat"
+}
+module "HEM" {
+    source = "./hem"
+}
+module "hnsesb_api_gateway_client_manager" {
+    source = "./hnsesb_api_gateway_client_manager"
+    realm-management= "${module.realm-management}"
+    account= "${module.account}"
+}
+module "HOOPC" {
+    source = "./hoopc"
 }
 module "HSCIS" {
     source = "./hscis"
@@ -94,6 +102,8 @@ module "PLR-SHOPPERS" {
 }
 module "PLR_CONF" {
     source = "./plr_conf"
+    realm-management= "${module.realm-management}"
+    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
 }
 module "PLR_FLVR" {
     source = "./plr_flvr"
@@ -127,11 +137,20 @@ module "SAT-EFORMS" {
 module "SA-DBAAC-PORTAL" {
     source = "./sa-dbaac-portal"
 }
+module "SA-HIBC-SERVICE-BC-PORTAL" {
+    source = "./sa-hibc-service-bc-portal"
+}
 module "SA-SFDC" {
     source = "./sa-sfdc"
 }
 module "SFDS" {
     source = "./sfds"
+}
+module "SWT" {
+    source = "./swt"
+}
+module "SWT_STG" {
+    source = "./swt_stg"
 }
 module "USER-MANAGEMENT" {
     source = "./user-management"

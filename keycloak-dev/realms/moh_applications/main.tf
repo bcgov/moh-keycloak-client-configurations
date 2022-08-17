@@ -35,6 +35,9 @@ module "HCIMWEB" {
 module "HCIMWEB_HD2" {
     source = "./hcimweb_hd2"
 }
+module "HEM" {
+    source = "./hem"
+}
 module "HOOPC" {
     source = "./hoopc"
 }
@@ -96,11 +99,17 @@ module "SAT-EFORMS" {
 module "SA-DBAAC-PORTAL" {
     source = "./sa-dbaac-portal"
 }
+module "SA-HIBC-SERVICE-BC-PORTAL" {
+    source = "./sa-hibc-service-bc-portal"
+}
 module "SA-SFDC" {
     source = "./sa-sfdc"
 }
 module "SFDS" {
     source = "./sfds"
+}
+module "SWT" {
+    source = "./swt"
 }
 module "UCI-SSO" {
     source = "./uci-sso"
