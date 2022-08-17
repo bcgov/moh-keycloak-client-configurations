@@ -95,7 +95,7 @@ module "service-account-roles" {
     service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
     realm_roles = {
         "offline_access" = "offline_access",
-        "uma_authorization" = "uma_authorization"
+        "uma_authorization" = "uma_authorization",
     }
     client_roles = {
         "USER-MANAGEMENT-SERVICE/manage-user-roles" = {
