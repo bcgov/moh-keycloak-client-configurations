@@ -152,6 +152,9 @@ module "SWT" {
 module "SWT_STG" {
     source = "./swt_stg"
 }
+module "UCI-SSO" {
+    source = "./uci-sso"
+}
 module "USER-MANAGEMENT" {
     source = "./user-management"
     USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
