@@ -79,6 +79,7 @@ module "scope-mappings" {
         "USER-MANAGEMENT-SERVICE/view-client-sfds" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sfds"].id,
         "USER-MANAGEMENT-SERVICE/view-client-swt" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-swt"].id,
         "USER-MANAGEMENT-SERVICE/view-client-swt_stg" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-swt_stg"].id,
+        "USER-MANAGEMENT-SERVICE/view-client-uci-sso" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-uci-sso"].id,
         "USER-MANAGEMENT-SERVICE/view-client-webcaps" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-webcaps"].id,
         "USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
         "USER-MANAGEMENT-SERVICE/view-events" = var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
