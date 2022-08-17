@@ -1,27 +1,27 @@
 resource "keycloak_openid_client" "CLIENT" {
-    access_token_lifespan = ""
-    access_type = "PUBLIC"
+    access_token_lifespan               = ""
+    access_type                         = "PUBLIC"
     backchannel_logout_session_required = true
-    base_url    = ""
-    client_authenticator_type = "client-secret"
-    client_id   = "USER-MANAGEMENT"
-    consent_required = false
-    description = ""
-    direct_access_grants_enabled = false
-    enabled = true
-    frontchannel_logout_enabled = false
-    full_scope_allowed          = false
-    implicit_flow_enabled       = false
-    name = "MoH User Management"
-    pkce_code_challenge_method = "S256"
-    realm_id = "moh_applications"
-    service_accounts_enabled =false
-    standard_flow_enabled = true
-    use_refresh_tokens = true
-    valid_redirect_uris = [
+    base_url                            = ""
+    client_authenticator_type           = "client-secret"
+    client_id                           = "USER-MANAGEMENT"
+    consent_required                    = false
+    description                         = ""
+    direct_access_grants_enabled        = false
+    enabled                             = true
+    frontchannel_logout_enabled         = false
+    full_scope_allowed                  = false
+    implicit_flow_enabled               = false
+    name                                = "MoH User Management"
+    pkce_code_challenge_method          = "S256"
+    realm_id                            = "moh_applications"
+    service_accounts_enabled            = false
+    standard_flow_enabled               = true
+    use_refresh_tokens                  = true
+    valid_redirect_uris                 = [
         "https://user-management.hlth.gov.bc.ca/*",
     ]
-    web_origins = [
+    web_origins                         = [
         "+",
     ]
 }
@@ -31,7 +31,7 @@ module "client-roles" {
     realm_id = keycloak_openid_client.CLIENT.realm_id
     roles = {
         "user-management-admin" = {
-            "name" = "user-management-admin",
+            "name" = "user-management-admin"
             "description" = "User Management Admin can add/remove groups"
         },
     }
@@ -69,6 +69,6 @@ module "scope-mappings" {
         "USER-MANAGEMENT-SERVICE/view-events" = var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
         "USER-MANAGEMENT-SERVICE/view-groups" = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
         "USER-MANAGEMENT-SERVICE/view-metrics" = var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
-        "USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id
+        "USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
     }
 }

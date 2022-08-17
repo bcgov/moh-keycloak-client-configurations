@@ -15,7 +15,7 @@ resource "keycloak_openid_client" "CLIENT" {
     name                                = "MoH User Management"
     pkce_code_challenge_method          = "S256"
     realm_id                            = "moh_applications"
-    service_accounts_enabled            =false
+    service_accounts_enabled            = false
     standard_flow_enabled               = true
     use_refresh_tokens                  = true
     valid_redirect_uris                 = [
@@ -33,9 +33,9 @@ module "client-roles" {
     realm_id = keycloak_openid_client.CLIENT.realm_id
     roles = {
         "user-management-admin" = {
-            "name" = "user-management-admin",
+            "name" = "user-management-admin"
             "description" = "User Management Admin can add/remove groups"
-        }
+        },
     }
 }
 module "scope-mappings" {
@@ -76,6 +76,6 @@ module "scope-mappings" {
         "USER-MANAGEMENT-SERVICE/view-events" = var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
         "USER-MANAGEMENT-SERVICE/view-groups" = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
         "USER-MANAGEMENT-SERVICE/view-metrics" = var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
-        "USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id
+        "USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
     }
 }

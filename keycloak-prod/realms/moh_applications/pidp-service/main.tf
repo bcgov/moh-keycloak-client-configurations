@@ -43,7 +43,7 @@ module "client-roles" {
         "feature_pidp_demo" = {
             "name" = "feature_pidp_demo"
             "description" = ""
-        }
+        },
     }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-ID" {
@@ -85,7 +85,7 @@ module "scope-mappings" {
         "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
         "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-eforms"].id,
         "USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
-        "USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id
+        "USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
     }
 }
 module "service-account-roles" {
@@ -101,27 +101,27 @@ module "service-account-roles" {
         "USER-MANAGEMENT-SERVICE/manage-user-roles" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "manage-user-roles"
-        },
+        }
         "USER-MANAGEMENT-SERVICE/manage-user-details" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "manage-user-details"
-        },
+        }
         "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "view-client-pidp-service"
-        },
+        }
         "USER-MANAGEMENT-SERVICE/view-client-hcimweb" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "view-client-hcimweb"
-        },
+        }
         "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "view-client-sat-eforms"
-        },
+        }
         "USER-MANAGEMENT-SERVICE/view-clients" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "view-clients"
-        },
+        }
         "USER-MANAGEMENT-SERVICE/view-users" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "view-users"
