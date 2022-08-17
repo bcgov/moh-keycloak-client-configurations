@@ -84,6 +84,7 @@ module "scope-mappings" {
         "USER-MANAGEMENT-SERVICE/view-client-hcimweb_huat" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_huat"].id,
         "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
         "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-eforms"].id,
+        "USER-MANAGEMENT-SERVICE/view-client-uci-sso" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-uci-sso"].id,
         "USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
         "USER-MANAGEMENT-SERVICE/view-users" = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
     }
@@ -120,6 +121,10 @@ module "service-account-roles" {
         "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "view-client-sat-eforms"
+        }
+        "USER-MANAGEMENT-SERVICE/view-client-uci-sso" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-client-uci-sso"
         }
         "USER-MANAGEMENT-SERVICE/view-clients" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,

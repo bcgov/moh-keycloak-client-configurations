@@ -98,21 +98,25 @@ module "service-account-roles" {
         "uma_authorization" = "uma_authorization",
     }
     client_roles = {
-        "USER-MANAGEMENT-SERVICE/manage-user-roles" = {
+        "USER-MANAGEMENT-SERVICE/create-user" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-            "role_id" = "manage-user-roles"
+            "role_id" = "create-user"
         }
         "USER-MANAGEMENT-SERVICE/manage-user-details" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "manage-user-details"
         }
-        "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = {
+        "USER-MANAGEMENT-SERVICE/manage-user-roles" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-            "role_id" = "view-client-pidp-service"
+            "role_id" = "manage-user-roles"
         }
         "USER-MANAGEMENT-SERVICE/view-client-hcimweb" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
             "role_id" = "view-client-hcimweb"
+        }
+        "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = {
+            "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+            "role_id" = "view-client-pidp-service"
         }
         "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = {
             "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
