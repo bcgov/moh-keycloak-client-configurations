@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type           = "client-secret"
     client_id                           = "USER-MANAGEMENT"
     consent_required                    = false
-    description                         = ""
+    description                         = "The Keycloak User Management Console is a web application that is used by application access teams (such as the ITSB access team) to manage user permissions to applications secured by Keycloak."
     direct_access_grants_enabled        = false
     enabled                             = true
     frontchannel_logout_enabled         = false

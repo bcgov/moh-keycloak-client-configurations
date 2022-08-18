@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "PLR-SHOPPERS"
     consent_required = false
-    description = ""
+    description = "Provider Location Registry"
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

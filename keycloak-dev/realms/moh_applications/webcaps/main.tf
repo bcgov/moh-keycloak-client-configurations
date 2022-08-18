@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "WEBCAPS"
     consent_required = false
-    description = "WebCAPS application"
+    description = "WebCAPS is a web application under the Health Ideas Portfolio"
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

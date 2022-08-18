@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "SAT-EFORMS"
     consent_required = false
-    description = ""
+    description = "Special Authority Eforms (PHSA)"
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

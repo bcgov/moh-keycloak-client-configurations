@@ -3,7 +3,7 @@ resource "keycloak_openid_client" "CLIENT" {
     access_type = "CONFIDENTIAL"
     base_url    = "https://mohsn.service-now.com"
     client_authenticator_type = "client-secret"
-    client_id   = "MOH-SERVICENOW"
+    client_id   = "MoH Health eServices Portal"
     consent_required = false
     description = ""
     direct_access_grants_enabled = false

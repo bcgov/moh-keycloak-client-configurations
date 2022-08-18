@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "roles"
 	client_id   = "SA-HIBC-SERVICE-BC-PORTAL"
 	base_url    = ""
-	description = "HIBC & Service BC Community Portal"
+	description = "Special Authority HIBC & Service BC Community Portal"
 	client_name = "SA Community Portal"
 	roles = {	
         "SERVICE_BC_USER" = {

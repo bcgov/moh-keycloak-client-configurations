@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "miwt_role"
 	client_id   = "MIWT"
 	base_url    = "https://miwt.hlth.gov.bc.ca/MedicalImaging"
-	description = "Medical Imaging Wait Times"
+	description = "The Medical Imaging Wait Times application allows the Ministry of Health (MoH) to track the wait times for various medical imaging procedure at different facilities in BC."
 	client_name = "MIWT"
 	roles = {	
         "MEDIMGA_HA_INTERIOR" = {

@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "hscis_role"
 	client_id   = "HSCIS"
 	base_url    = "https://hscisdev.hlth.gov.bc.ca"
-	description = "Health Sector Compensation Information System"
+	description = "The Health Sector Compensation Information System collects detailed payroll and funding information from all of the health sector employers in the province (excluding Doctors). It is intended to collect wage rates, paid hours, and benefits information"
 	client_name = "HSCIS"
 	roles = {	
         "DATA_ENTRY" = {

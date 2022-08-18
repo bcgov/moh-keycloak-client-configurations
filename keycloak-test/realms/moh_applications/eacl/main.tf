@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "eacl_role"
 	client_id   = "EACL"
 	base_url    = "https://eacluat.hlth.gov.bc.ca"
-	description = "Enhanced Audit Confirmation Letters"
+	description = "The Enhanced Audit Confirmation Letters applications is used to analyze Pharmacare Audit Information to generate letters to end users and process the returned letters."
 	client_name = "EACL"
 	roles = {	
         "Super_Auditor" = {

@@ -5,7 +5,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "MOH-SERVICENOW"
     consent_required = false
-    description = ""
+    description = "MoH Health eServices Portal"
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

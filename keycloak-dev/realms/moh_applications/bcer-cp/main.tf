@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "BCER-CP"
     consent_required = false
-    description = "B.C. E-Substances Reporting Common Portal"
+    description = "The BC E-Substance Reporting application (Data Portal). Collects and reports on information gathered from venders of e-cigarettes and vaping products."
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

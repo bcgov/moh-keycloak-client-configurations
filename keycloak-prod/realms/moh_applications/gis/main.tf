@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "gis_role"
 	client_id   = "GIS"
 	base_url    = "https://gis.hlth.gov.bc.ca/gis"
-	description = "Guaranteed Income Support"
+	description = "The Guaranteed Income Supplement is used by Health Authorities to determine the rate of service fees to be charged to the client for certain Home Care services (Home Support or Residential Care)."
 	client_name = "GIS"
 	roles = {	
         "GISUSER" = {

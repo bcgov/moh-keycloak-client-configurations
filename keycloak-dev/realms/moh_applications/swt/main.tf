@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "swt_role"
 	client_id   = "SWT"
 	base_url    = "https://swtadmind.hlth.gov.bc.ca/swt/admin"
-	description = "Surgical Wait Times"
+	description = "The Surgical Wait Times application allows the general public to view the wait list for each type of elective surgery in the province."
 	client_name = "SWT"
 	roles = {	
         "Analyst" = {

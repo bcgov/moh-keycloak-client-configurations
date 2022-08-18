@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "hamis_role"
 	client_id   = "HAMIS"
 	base_url    = "https://hamistst.hlth.gov.bc.ca/hamis"
-	description = "Health Authority Management Information System"
+	description = "Health Authority Management Information System is used to report Health Authority financial and statistical general ledger information."
 	client_name = "HAMIS"
 	roles = {	
         "HMS_STANDARD_USER" = {

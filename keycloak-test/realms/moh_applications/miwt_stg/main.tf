@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "MIWT_STG"
     consent_required = false
-    description = "Medical Imaging Wait Times"
+    description = "The Medical Imaging Wait Times application allows the Ministry of Health (MoH) to track the wait times for various medical imaging procedure at different facilities in BC."
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

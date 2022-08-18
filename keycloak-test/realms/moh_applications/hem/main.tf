@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "hem_role"
 	client_id   = "HEM"
 	base_url    = "https://hemuat.hlth.gov.bc.ca/HEM-web"
-	description = "Health Environment Manager"
+	description = "The Health Environment Manager application is used to schedule the change requests and server patching."
 	client_name = "HEM"
 	roles = {	
         "hem" = {

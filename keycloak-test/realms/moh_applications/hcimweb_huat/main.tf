@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "hcimweb_role"
 	client_id   = "HCIMWEB_HUAT"
 	base_url    = "https://hcimweb-cl-huat.hlth.gov.bc.ca/HCIMWeb"
-	description = "HCIM Web App"
+	description = "The Healthcare Client Identity Management Web Application provides a web interface to the HCIM system services, allowing point-of-service users to find, add or update health clients, view documented identity and confirm eligibility."
 	client_name = "HCIMWEB HUAT"
 	roles = {	
         "REGR_FULL" = {

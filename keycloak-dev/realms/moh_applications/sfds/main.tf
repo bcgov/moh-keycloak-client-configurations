@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "sfds_role"
 	client_id   = "SFDS"
 	base_url    = "https://sfdsdev.hlth.gov.bc.ca/sfds"
-	description = "Secure File Delivery Service"
+	description = "The Secure File Delivery Service is a web application for secure file transfer between the Ministry and participating health service providers and between individual health service providers."
 	client_name = "SFDS"
 	roles = {	
         "ADMIN" = {

@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type           = "client-secret"
     client_id                           = "USER-MANAGEMENT-SERVICE"
     consent_required                    = false
-    description                         = ""
+    description                         = "The purpose of the User Management API service is to extend the functionality of Keycloak to provide better security and functionality to the underlying Keycloak APIs."
     direct_access_grants_enabled        = false
     enabled                             = true
     frontchannel_logout_enabled         = false

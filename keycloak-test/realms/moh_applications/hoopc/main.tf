@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "HOOPC"
     consent_required = false
-    description = "Hospital Out Of Province Claims"
+    description = "The Hospital Out Of Province Claims is a web-based application that provides British Columbia hospitals with a secure method of submitting out-of-province (OOP) claims directly to the Ministry of Health through the Internet."
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

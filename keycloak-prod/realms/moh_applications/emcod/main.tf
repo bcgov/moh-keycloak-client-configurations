@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "EMCOD"
     consent_required = false
-    description = "Electronic Medical Certification of Death"
+    description = "Electronic Medical Certificate of Dying (Vital Stats)"
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false

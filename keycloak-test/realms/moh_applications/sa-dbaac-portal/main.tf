@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "roles"
 	client_id   = "SA-DBAAC-PORTAL"
 	base_url    = ""
-	description = "Drug Benefit Adjudication Advisory Committee Community Portal"
+	description = "Special Authority Drug Benefit Adjudication Advisory Committee Community Portal"
 	client_name = "SA DBAAC Portal"
 	roles = {	
         "USER" = {

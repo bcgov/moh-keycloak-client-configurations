@@ -4,7 +4,7 @@ module "payara-client" {
 	claim_name  = "fmdb_role"
 	client_id   = "FMDB"
 	base_url    = "https://fmdbt.hlth.gov.bc.ca/FMDB"
-	description = "Formulary Management Database v3"
+	description = "The Formulary Management DataBase application is a database of drugs which have been reviewed for inclusion as benefits under the PharmaCare program."
 	client_name = "FMDB"
 	roles = {	
         "PSDADMIN" = {

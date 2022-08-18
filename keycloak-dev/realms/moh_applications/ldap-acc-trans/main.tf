@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
     client_authenticator_type = "client-secret"
     client_id   = "LDAP-ACC-TRANS"
     consent_required = false
-    description = "LDAP Account Transfer for MSP Direct"
+    description = "An application used to transfer MSPDirect account information from LDAP into Keycloak"
     direct_access_grants_enabled = false
     enabled = true
     frontchannel_logout_enabled = false
