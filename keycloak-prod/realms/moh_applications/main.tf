@@ -1,101 +1,114 @@
 module "account" {
-    source = "../../../modules/account"
+  source = "../../../modules/account"
 }
 module "realm-management" {
-    source = "../../../modules/realm-management"
+  source = "../../../modules/realm-management"
 }
 module "BCER-CP" {
-    source = "./bcer-cp"
+  source = "./bcer-cp"
 }
 module "EACL" {
-    source = "./eacl"
+  source = "./eacl"
 }
 module "EMCOD" {
-    source = "./emcod"
+  source = "./emcod"
 }
 module "FMDB" {
-    source = "./fmdb"
+  source = "./fmdb"
 }
 module "GIS" {
-    source = "./gis"
+  source = "./gis"
 }
 module "HAMIS" {
-    source = "./hamis"
-    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
-}
-module "HOOPC" {
-    source = "./hoopc"
+  source                  = "./hamis"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "HCIMWEB" {
-    source = "./hcimweb"
+  source = "./hcimweb"
+}
+module "HEM" {
+  source = "./hem"
+}
+module "hnsesb_api_gateway_client_manager" {
+  source           = "./hnsesb_api_gateway_client_manager"
+  realm-management = module.realm-management
+}
+module "HOOPC" {
+  source = "./hoopc"
 }
 module "HSCIS" {
-    source = "./hscis"
+  source = "./hscis"
 }
 module "IEN" {
-    source = "./ien"
+  source = "./ien"
 }
 module "LDAP-ACC-TRANS" {
-    source = "./ldap-acc-trans"
+  source = "./ldap-acc-trans"
 }
 module "LDAP-ACC-TRANS-SERVICE" {
-    source = "./ldap-acc-trans-service"
-    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+  source                  = "./ldap-acc-trans-service"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "MIWT" {
-    source = "./miwt"
+  source = "./miwt"
 }
 module "MOH-SERVICENOW" {
-    source = "./moh-servicenow"
+  source = "./moh-servicenow"
 }
 module "MSPDIRECT-SERVICE" {
-    source = "./mspdirect-service"
+  source = "./mspdirect-service"
 }
 module "MSPDIRECT-WEB" {
-    source = "./mspdirect-web"
-    MSPDIRECT-SERVICE= "${module.MSPDIRECT-SERVICE}"
+  source            = "./mspdirect-web"
+  MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
 module "PIDP-SERVICE" {
-    source = "./pidp-service"
-    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+  source                  = "./pidp-service"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PIDP-WEBAPP" {
-    source = "./pidp-webapp"
-    account= "${module.account}"
-    PIDP-SERVICE= "${module.PIDP-SERVICE}"
+  source       = "./pidp-webapp"
+  account      = module.account
+  PIDP-SERVICE = module.PIDP-SERVICE
 }
 module "PLR" {
-    source = "./plr"
+  source = "./plr"
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
-    source = "./prime-webapp-enrollment"
-    account= "${module.account}"
+  source  = "./prime-webapp-enrollment"
+  account = module.account
 }
 module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
-    source = "./prime-webapp-enrollment-service"
-    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+  source                  = "./prime-webapp-enrollment-service"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "SAT-EFORMS" {
-    source = "./sat-eforms"
+  source = "./sat-eforms"
 }
 module "SA-DBAAC-PORTAL" {
-    source = "./sa-dbaac-portal"
+  source = "./sa-dbaac-portal"
+}
+module "SA-HIBC-SERVICE-BC-PORTAL" {
+  source = "./sa-hibc-service-bc-portal"
 }
 module "SA-SFDC" {
-    source = "./sa-sfdc"
+  source = "./sa-sfdc"
 }
 module "SFDS" {
-    source = "./sfds"
+  source = "./sfds"
+}
+module "SWT" {
+  source = "./swt"
 }
 module "USER-MANAGEMENT" {
-    source = "./user-management"
-    USER-MANAGEMENT-SERVICE= "${module.USER-MANAGEMENT-SERVICE}"
+  source                  = "./user-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "USER-MANAGEMENT-SERVICE" {
-    source = "./user-management-service"
-    realm-management= "${module.realm-management}"
-    account= "${module.account}"
+  source           = "./user-management-service"
+  realm-management = module.realm-management
+  account          = module.account
 }
 module "WEBCAPS" {
-    source = "./webcaps"
+  source = "./webcaps"
 }
