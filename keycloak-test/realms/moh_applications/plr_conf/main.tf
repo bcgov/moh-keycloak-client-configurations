@@ -42,15 +42,15 @@ module "payara-client" {
   ]
 }
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
-	realm_id = module.payara-client.CLIENT.realm_id
-	client_id = module.payara-client.CLIENT.id
+  realm_id = module.payara-client.CLIENT.realm_id
+  client_id = module.payara-client.CLIENT.id
 
-	default_scopes = [
-		"profile",
-		"email",
-		"roles",
-		"web-origins"
-	]
+  default_scopes = [
+    "profile",
+    "email",
+    "roles",
+    "web-origins"
+  ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
   add_to_id_token = false
