@@ -18,7 +18,7 @@ variable "client_id" {
 
 variable "roles" {
   type = map(object({
-    name = string
+    name        = string
     description = string
   }))
 }

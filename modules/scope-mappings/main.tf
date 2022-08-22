@@ -23,7 +23,7 @@ variable "roles" {
 resource "keycloak_generic_client_role_mapper" "SCOPE-MAPPING" {
   realm_id  = var.realm_id
   client_id = var.client_id
-  for_each =    var.roles
+  for_each  = var.roles
   role_id   = each.value
 
 }

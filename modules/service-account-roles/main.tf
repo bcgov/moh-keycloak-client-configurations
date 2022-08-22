@@ -8,25 +8,25 @@ terraform {
 }
 
 variable "realm_id" {
-  type        = string
+  type = string
 }
 
 variable "service_account_user_id" {
-  type        = string
+  type = string
 }
 
 variable "client_id" {
-  type        = string
+  type = string
 }
 
 variable "realm_roles" {
-  type        = map(string)
+  type = map(string)
 }
 
 variable "client_roles" {
-    type = map(object({
+  type = map(object({
     client_id = string
-    role_id = string
+    role_id   = string
   }))
 }
 

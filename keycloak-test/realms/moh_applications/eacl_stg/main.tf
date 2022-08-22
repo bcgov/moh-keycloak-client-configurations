@@ -1,9 +1,9 @@
 module "payara-client" {
   source                             = "../../../../modules/payara-client"
-  base_url                           = "https://eacl.hlth.gov.bc.ca"
+  base_url                           = "https://eaclstg.hlth.gov.bc.ca"
   claim_name                         = "eacl_role"
-  client_id                          = "EACL"
-  client_name                        = "EACL"
+  client_id                          = "EACL_STG"
+  client_name                        = "EACL STG"
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Enhanced Audit Confirmation Letters applications are used to analyze Pharmacare Audit Information to generate letters to end users and process the returned letters."
@@ -36,7 +36,7 @@ module "payara-client" {
   }
   service_accounts_enabled = false
   valid_redirect_uris = [
-    "https://eacl.hlth.gov.bc.ca/*",
-    "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://eaclstg.hlth.gov.bc.ca/*",
+    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
 }
