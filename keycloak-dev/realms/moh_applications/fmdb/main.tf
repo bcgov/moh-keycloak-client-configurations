@@ -12,7 +12,7 @@ module "payara-client" {
         "MOHUSER" = {
             "name" = "MOHUSER"
             "description" = "The base user permission for FMDB"
-        },                       = {
+        },
         "PSDADMIN" = {
             "name" = "PSDADMIN"
             "description" = "Admin role for FMDB provides access to code table management"
