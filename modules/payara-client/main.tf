@@ -8,30 +8,30 @@ terraform {
 }
 
 variable "client_id" {
-  type        = string
+  type = string
 }
 variable "client_name" {
-  type        = string
+  type = string
 }
 
 variable "claim_name" {
-  type        = string
+  type = string
 }
 
 variable "base_url" {
-  type        = string
+  type = string
 }
 
 variable "description" {
-  type        = string
+  type = string
 }
 
 variable "mapper_name" {
-  type        = string
+  type = string
 }
 
 variable "valid_redirect_uris" {
-  type = list
+  type = list(any)
 }
 
 variable "service_accounts_enabled" {
@@ -39,21 +39,21 @@ variable "service_accounts_enabled" {
 }
 
 variable "use_refresh_tokens" {
-  type = bool
+  type    = bool
   default = false
 }
 
 variable "client_role_mapper_add_to_id_token" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "client_role_mapper_add_to_userinfo" {
-  type = bool
+  type    = bool
   default = false
 }
 variable "roles" {
   type = map(object({
-    name = string
+    name        = string
     description = string
   }))
 }
@@ -81,15 +81,15 @@ resource "keycloak_openid_client" "CLIENT" {
   service_accounts_enabled = var.service_accounts_enabled
   standard_flow_enabled    = true
   use_refresh_tokens       = var.use_refresh_tokens
-  valid_redirect_uris = var.valid_redirect_uris
-  web_origins = []
-  admin_url   = ""
+  valid_redirect_uris      = var.valid_redirect_uris
+  web_origins              = []
+  admin_url                = ""
 }
 
 resource "keycloak_role" "ROLES" {
   realm_id    = "moh_applications"
   client_id   = keycloak_openid_client.CLIENT.id
-  for_each =    var.roles
+  for_each    = var.roles
   name        = each.value.name
   description = each.value.description
   lifecycle {
