@@ -1,22 +1,36 @@
 module "payara-client" {
-	source = "../../../../modules/payara-client"
-	mapper_name = "HCIMWEB Role"
-	claim_name  = "hcimweb_role"
-	client_id   = "HCIMWEB_HIAT1"
-	base_url    = "https://hcimweb-cl-hiat1.hlth.gov.bc.ca/HCIMWeb"
-	description = "The Healthcare Client Identity Management Web Application provides a web interface to the HCIM system services, allowing point-of-service users to find, add or update health clients, view documented identity and confirm eligibility."
-	client_name = "HCIMWEB HIAT1"
-	roles = {	
-        "MAINTR_UPDT" = {
-            "name" = "MAINTR_UPDT"
-            "description" = ""
-        },
-        "REGR_UPDT_ADDR_ONLY" = {
-            "name" = "REGR_UPDT_ADDR_ONLY"
+    source                             = "../../../../modules/payara-client"
+    base_url                           = "https://hcimweb-cl-hiat1.hlth.gov.bc.ca/HCIMWeb"
+    claim_name                         = "hcimweb_role"
+    client_id                          = "HCIMWEB_HIAT1"
+    client_name                        = "HCIMWEB HIAT1"
+    client_role_mapper_add_to_id_token = false
+    client_role_mapper_add_to_userinfo = false
+    description                        = "The Healthcare Client Identity Management Web Application provides a web interface to the HCIM system services, allowing point-of-service users to find, add or update health clients, view documented identity and confirm eligibility."
+    mapper_name                        = "HCIMWEB Role"
+    roles                              = {
+        "HIBC_REG_NEWBORN" = {
+            "name" = "HIBC_REG_NEWBORN"
             "description" = ""
         },
         "MAINTR_FULL" = {
             "name" = "MAINTR_FULL"
+            "description" = ""
+        },
+        "MAINTR_READ_ONLY" = {
+            "name" = "MAINTR_READ_ONLY"
+            "description" = ""
+        },
+        "MAINTR_UPDT" = {
+            "name" = "MAINTR_UPDT"
+            "description" = ""
+        },
+        "READ_ONLY_ALL_SRC" = {
+            "name" = "READ_ONLY_ALL_SRC"
+            "description" = ""
+        },
+        "REGR_FULL" = {
+            "name" = "REGR_FULL"
             "description" = ""
         },
         "REGR_LTD" = {
@@ -27,40 +41,26 @@ module "payara-client" {
             "name" = "REGR_UPDT"
             "description" = ""
         },
-        "READ_ONLY_ALL_SRC" = {
-            "name" = "READ_ONLY_ALL_SRC"
-            "description" = ""
-        },
-        "REG_INTEGRITY_CLERK" = {
-            "name" = "REG_INTEGRITY_CLERK"
-            "description" = ""
-        },
-        "REGR_FULL" = {
-            "name" = "REGR_FULL"
-            "description" = ""
-        },
-        "MAINTR_READ_ONLY" = {
-            "name" = "MAINTR_READ_ONLY"
+        "REGR_UPDT_ADDR_ONLY" = {
+            "name" = "REGR_UPDT_ADDR_ONLY"
             "description" = ""
         },
         "REG_ADMIN_HCIM" = {
             "name" = "REG_ADMIN_HCIM"
             "description" = ""
         },
-        "HIBC_REG_NEWBORN" = {
-            "name" = "HIBC_REG_NEWBORN"
+        "REG_INTEGRITY_CLERK" = {
+            "name" = "REG_INTEGRITY_CLERK"
             "description" = ""
         },
-	}
-	service_accounts_enabled = false
-	use_refresh_tokens = false
-	client_role_mapper_add_to_id_token = false
-	client_role_mapper_add_to_userinfo = false
-	valid_redirect_uris = [
-		"https://sts.healthbc.org/adfs/ls/*",
-		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-		"https://hcimweb-cl-hiat1.hlth.gov.bc.ca/*",
-	]
+    }
+    service_accounts_enabled           = false
+    use_refresh_tokens                 = false
+    valid_redirect_uris                = [
+        "https://hcimweb-cl-hiat1.hlth.gov.bc.ca/*",
+        "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+        "https://sts.healthbc.org/adfs/ls/*",
+    ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
     add_to_id_token = false

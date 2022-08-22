@@ -1,26 +1,25 @@
 module "payara-client" {
-	source = "../../../../modules/payara-client"
-	mapper_name = "GIS Role"
-	claim_name  = "gis_role"
-	client_id   = "GIS"
-	base_url    = "https://gisd.hlth.gov.bc.ca/gis"
-	description = "The Guaranteed Income Supplement is used by Health Authorities to determine the rate of service fees to be charged to the client for certain Home Care services (Home Support or Residential Care)."
-	client_name = "GIS"
-	roles = {	
+    source                             = "../../../../modules/payara-client"
+    base_url                           = "https://gisd.hlth.gov.bc.ca/gis"
+    claim_name                         = "gis_role"
+    client_id                          = "GIS"
+    client_name                        = "GIS"
+    client_role_mapper_add_to_id_token = false
+    client_role_mapper_add_to_userinfo = false
+    description                        = "The Guaranteed Income Supplement is used by Health Authorities to determine the rate of service fees to be charged to the client for certain Home Care services (Home Support or Residential Care)."
+    mapper_name                        = "GIS Role"
+    roles                              = {
         "GISUSER" = {
             "name" = "GISUSER"
             "description" = ""
         },
-	}
-	service_accounts_enabled = false
-	client_role_mapper_add_to_id_token = false
-	client_role_mapper_add_to_userinfo = false
-	valid_redirect_uris = [
-		"http://localhost:8081/*",
-		"http://localhost:8080/*",
-		"https://gisd.hlth.gov.bc.ca/*",
-		"https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-		"https://qa-sts.healthbc.org/adfs/ls/*",
-		"https://localhost:8081/*",
-	]
+    }
+    service_accounts_enabled           = false
+    valid_redirect_uris                = [
+        "http://localhost:8080/*",
+        "https://localhost:8081/*",
+        "https://gisd.hlth.gov.bc.ca/*",
+        "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+        "https://qa-sts.healthbc.org/adfs/ls/*",
+    ]
 }

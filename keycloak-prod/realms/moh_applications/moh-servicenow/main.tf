@@ -1,30 +1,30 @@
 resource "keycloak_openid_client" "CLIENT" {
-    access_token_lifespan = ""
-    access_type = "CONFIDENTIAL"
-    base_url    = "https://mohsn.service-now.com"
-    client_authenticator_type = "client-secret"
-    client_id   = "MOH-SERVICENOW"
-    consent_required = false
-    description = "MoH Health eServices Portal"
+    access_token_lifespan        = ""
+    access_type                  = "CONFIDENTIAL"
+    base_url                     = "https://mohsn.service-now.com"
+    client_authenticator_type    = "client-secret"
+    client_id                    = "MOH-SERVICENOW"
+    consent_required             = false
+    description                  = "MoH Health eServices Portal"
     direct_access_grants_enabled = false
-    enabled = true
-    frontchannel_logout_enabled = false
-    full_scope_allowed          = false
-    implicit_flow_enabled       = false
-    name = "MoH ServiceNow"
-    pkce_code_challenge_method = ""
-    realm_id = "moh_applications"
-    service_accounts_enabled =false
-    standard_flow_enabled = true
-    valid_redirect_uris = [
-		"https://HealthServicesPortal.gov.bc.ca/*",
-		"https://healthservicesportal.gov.bc.ca/*",
-		"https://mohsn.service-now.com/*",
-		"https://healthanalytics.gov.bc.ca/*",
-	]
-    web_origins = [
-		"+",
-	]
+    enabled                      = true
+    frontchannel_logout_enabled  = false
+    full_scope_allowed           = false
+    implicit_flow_enabled        = false
+    name                         = "MoH ServiceNow"
+    pkce_code_challenge_method   = ""
+    realm_id                     = "moh_applications"
+    service_accounts_enabled     = false
+    standard_flow_enabled        = true
+    valid_redirect_uris          = [
+        "https://mohsn.service-now.com/*",
+        "https://healthservicesportal.gov.bc.ca/*",
+        "https://HealthServicesPortal.gov.bc.ca/*",
+        "https://healthanalytics.gov.bc.ca/*",
+    ]
+    web_origins                  = [
+        "+",
+    ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "idir_company" {
     add_to_id_token = true

@@ -1,28 +1,28 @@
 resource "keycloak_openid_client" "CLIENT" {
-    access_token_lifespan = ""
-    access_type = "PUBLIC"
+    access_token_lifespan               = ""
+    access_type                         = "PUBLIC"
     backchannel_logout_session_required = true
-    base_url    = "https://mspdirect-uat.apps.silver.devops.gov.bc.ca/"
-    client_authenticator_type = "client-secret"
-    client_id   = "MSPDIRECT-WEB-UAT"
-    consent_required = false
-    description = "MSP Direct Vue Frontend"
-    direct_access_grants_enabled = false
-    enabled = true
-    frontchannel_logout_enabled = false
-    full_scope_allowed          = false
-    implicit_flow_enabled       = false
-    name = "MSPDirect UAT"
-    pkce_code_challenge_method = "S256"
-    realm_id = "moh_applications"
-    service_accounts_enabled =false
-    standard_flow_enabled = true
-    valid_redirect_uris = [
-		"https://mspdirect-uat.apps.silver.devops.gov.bc.ca/*",
-	]
-    web_origins = [
-		"*",
-	]
+    base_url                            = "https://mspdirect-uat.apps.silver.devops.gov.bc.ca/"
+    client_authenticator_type           = "client-secret"
+    client_id                           = "MSPDIRECT-WEB-UAT"
+    consent_required                    = false
+    description                         = "MSP Direct Vue Frontend"
+    direct_access_grants_enabled        = false
+    enabled                             = true
+    frontchannel_logout_enabled         = false
+    full_scope_allowed                  = false
+    implicit_flow_enabled               = false
+    name                                = "MSPDirect UAT"
+    pkce_code_challenge_method          = "S256"
+    realm_id                            = "moh_applications"
+    service_accounts_enabled            = false
+    standard_flow_enabled               = true
+    valid_redirect_uris                 = [
+        "https://mspdirect-uat.apps.silver.devops.gov.bc.ca/*",
+    ]
+    web_origins                         = [
+        "*",
+    ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
     add_to_id_token = false
@@ -47,12 +47,12 @@ module "scope-mappings" {
     realm_id = keycloak_openid_client.CLIENT.realm_id
     client_id = keycloak_openid_client.CLIENT.id
     roles = {
-		"MSPDIRECT-SERVICE-UAT/ELIGIBILITY" = var.MSPDIRECT-SERVICE-UAT.ROLES["ELIGIBILITY"].id,
-		"MSPDIRECT-SERVICE-UAT/PREMIUMADMINPLUS" = var.MSPDIRECT-SERVICE-UAT.ROLES["PREMIUMADMINPLUS"].id,
-		"MSPDIRECT-SERVICE-UAT/PREMIUMADMIN" = var.MSPDIRECT-SERVICE-UAT.ROLES["PREMIUMADMIN"].id,
-		"MSPDIRECT-SERVICE-UAT/VISARESIDENT" = var.MSPDIRECT-SERVICE-UAT.ROLES["VISARESIDENT"].id,
-		"MSPDIRECT-SERVICE-UAT/TRAININGHEALTHAUTH" = var.MSPDIRECT-SERVICE-UAT.ROLES["TRAININGHEALTHAUTH"].id,
-		"MSPDIRECT-SERVICE-UAT/PBFUSER" = var.MSPDIRECT-SERVICE-UAT.ROLES["PBFUSER"].id,
-		"MSPDIRECT-SERVICE-UAT/E45" = var.MSPDIRECT-SERVICE-UAT.ROLES["E45"].id,
-	}
+        "MSPDIRECT-SERVICE-UAT/E45" = var.MSPDIRECT-SERVICE-UAT.ROLES["E45"].id,
+        "MSPDIRECT-SERVICE-UAT/ELIGIBILITY" = var.MSPDIRECT-SERVICE-UAT.ROLES["ELIGIBILITY"].id,
+        "MSPDIRECT-SERVICE-UAT/PBFUSER" = var.MSPDIRECT-SERVICE-UAT.ROLES["PBFUSER"].id,
+        "MSPDIRECT-SERVICE-UAT/PREMIUMADMIN" = var.MSPDIRECT-SERVICE-UAT.ROLES["PREMIUMADMIN"].id,
+        "MSPDIRECT-SERVICE-UAT/PREMIUMADMINPLUS" = var.MSPDIRECT-SERVICE-UAT.ROLES["PREMIUMADMINPLUS"].id,
+        "MSPDIRECT-SERVICE-UAT/TRAININGHEALTHAUTH" = var.MSPDIRECT-SERVICE-UAT.ROLES["TRAININGHEALTHAUTH"].id,
+        "MSPDIRECT-SERVICE-UAT/VISARESIDENT" = var.MSPDIRECT-SERVICE-UAT.ROLES["VISARESIDENT"].id,
+    }
 }

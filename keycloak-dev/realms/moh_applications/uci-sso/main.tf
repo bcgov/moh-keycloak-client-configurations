@@ -18,11 +18,11 @@ resource "keycloak_openid_client" "CLIENT" {
     service_accounts_enabled            = false
     standard_flow_enabled               = true
     use_refresh_tokens                  = true
-    valid_redirect_uris = [
+    valid_redirect_uris                 = [
         "http://localhost:8080/*",
         "https://localhost:8080/*",
     ]
-    web_origins = [
+    web_origins                         = [
     ]
 }
 module "client-roles" {
@@ -34,5 +34,5 @@ module "client-roles" {
             "name" = "UCIROLE"
             "description" = ""
         },
-	}
+    }
 }

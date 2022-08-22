@@ -1,35 +1,35 @@
 module "payara-client" {
-	source = "../../../../modules/payara-client"
-	mapper_name = "SA-SFDC Roles"
-	claim_name  = "roles"
-	client_id   = "SA-SFDC"
-	base_url    = ""
-	description = "Sales Force Pharmacare Special Authority"
-	client_name = "Special Authority"
-	roles = {	
-        "MOH_USER" = {
-            "name" = "MOH_USER"
-            "description" = ""
+    source                             = "../../../../modules/payara-client"
+    base_url                           = ""
+    claim_name                         = "roles"
+    client_id                          = "SA-SFDC"
+    client_name                        = "Special Authority"
+    client_role_mapper_add_to_id_token = true
+    client_role_mapper_add_to_userinfo = true
+    description                        = "Sales Force Pharmacare Special Authority"
+    mapper_name                        = "SA-SFDC Roles"
+    roles                              = {
+        "MOH_USER"                     = {
+            "name"                     = "MOH_USER"
+            "description"              = ""
         },
-        "SA_DRUG_MANAGER" = {
-            "name" = "SA_DRUG_MANAGER"
-            "description" = ""
+        "SA_ADMINISTRATOR"             = {
+            "name"                     = "SA_ADMINISTRATOR"
+            "description"              = ""
         },
-        "SA_REPORTS_DASHBOARD" = {
-            "name" = "SA_REPORTS_DASHBOARD"
-            "description" = ""
+        "SA_DRUG_MANAGER"              = {
+            "name"                     = "SA_DRUG_MANAGER"
+            "description"              = ""
         },
-        "SA_ADMINISTRATOR" = {
-            "name" = "SA_ADMINISTRATOR"
-            "description" = ""
+        "SA_REPORTS_DASHBOARD"         = {
+            "name"                     = "SA_REPORTS_DASHBOARD"
+            "description"              = ""
         },
-	}
-	service_accounts_enabled = false
-	client_role_mapper_add_to_id_token = true
-	client_role_mapper_add_to_userinfo = true
-	valid_redirect_uris = [
-		"https://bchealth.my.salesforce.com/services/authcallback/Login_with_IDIR",
-	]
+    }
+    service_accounts_enabled           = false
+    valid_redirect_uris                = [
+        "https://bchealth.my.salesforce.com/services/authcallback/Login_with_IDIR",
+    ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
     add_to_id_token = true

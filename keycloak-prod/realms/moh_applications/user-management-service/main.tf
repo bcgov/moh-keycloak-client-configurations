@@ -2,11 +2,11 @@ resource "keycloak_openid_client" "CLIENT" {
     access_token_lifespan               = "1800"
     access_type                         = "CONFIDENTIAL"
     backchannel_logout_session_required = true
-    base_url                            = "The purpose of the User Management API service is to extend the functionality of Keycloak to provide better security and functionality to the underlying Keycloak APIs."
+    base_url                            = ""
     client_authenticator_type           = "client-secret"
     client_id                           = "USER-MANAGEMENT-SERVICE"
     consent_required                    = false
-    description                         = ""
+    description                         = "The purpose of the User Management API service is to extend the functionality of Keycloak to provide better security and functionality to the underlying Keycloak APIs."
     direct_access_grants_enabled        = false
     enabled                             = true
     frontchannel_logout_enabled         = false

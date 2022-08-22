@@ -1,32 +1,32 @@
 resource "keycloak_openid_client" "CLIENT" {
-    access_token_lifespan = "300"
-    access_type = "PUBLIC"
+    access_token_lifespan               = "300"
+    access_type                         = "PUBLIC"
     backchannel_logout_session_required = false
-    base_url    = ""
-    client_authenticator_type = "client-secret"
-    client_id   = "PIDP-WEBAPP"
-    consent_required = false
-    description = "Provider Identity Portal"
-    direct_access_grants_enabled = false
-    enabled = true
-    frontchannel_logout_enabled = false
-    full_scope_allowed          = false
-    implicit_flow_enabled       = false
-    name = ""
-    pkce_code_challenge_method = ""
-    realm_id = "moh_applications"
-    service_accounts_enabled =false
-    standard_flow_enabled = true
-    use_refresh_tokens = true
-    valid_redirect_uris = [
-		"http://localhost:*",
-		"https://dev.healthprovideridentityportal.gov.bc.ca/*",
-		"https://pr-81.healthprovideridentityportal.gov.bc.ca/",
-		"https://dev.healthprovideridentityportal.gov.bc.ca",
-	]
-    web_origins = [
-		"*",
-	]
+    base_url                            = ""
+    client_authenticator_type           = "client-secret"
+    client_id                           = "PIDP-WEBAPP"
+    consent_required                    = false
+    description                         = "Provider Identity Portal"
+    direct_access_grants_enabled        = false
+    enabled                             = true
+    frontchannel_logout_enabled         = false
+    full_scope_allowed                  = false
+    implicit_flow_enabled               = false
+    name                                = ""
+    pkce_code_challenge_method          = ""
+    realm_id                            = "moh_applications"
+    service_accounts_enabled            = false
+    standard_flow_enabled               = true
+    use_refresh_tokens                  = true
+    valid_redirect_uris                 = [
+        "http://localhost:*",
+        "https://pr-81.healthprovideridentityportal.gov.bc.ca/",
+        "https://dev.healthprovideridentityportal.gov.bc.ca/*",
+        "https://dev.healthprovideridentityportal.gov.bc.ca",
+    ]
+    web_origins                         = [
+        "*",
+    ]
 }
 resource "keycloak_openid_audience_protocol_mapper" "PIDP-SERVICE-aud-mapper" {
     add_to_id_token = false
@@ -58,10 +58,10 @@ module "scope-mappings" {
     realm_id = keycloak_openid_client.CLIENT.realm_id
     client_id = keycloak_openid_client.CLIENT.id
     roles = {
-		"account/view-profile" = var.account.ROLES["view-profile"].id,
-		"PIDP-SERVICE/feature_pidp_demo" = var.PIDP-SERVICE.ROLES["feature_pidp_demo"].id,
-		"PIDP-SERVICE/USER" = var.PIDP-SERVICE.ROLES["USER"].id,
-		"PIDP-SERVICE/feature_amh_demo" = var.PIDP-SERVICE.ROLES["feature_amh_demo"].id,
-		"PIDP-SERVICE/ADMIN" = var.PIDP-SERVICE.ROLES["ADMIN"].id,
-	}
+        "PIDP-SERVICE/ADMIN" = var.PIDP-SERVICE.ROLES["ADMIN"].id,
+        "PIDP-SERVICE/USER" = var.PIDP-SERVICE.ROLES["USER"].id,
+        "PIDP-SERVICE/feature_amh_demo" = var.PIDP-SERVICE.ROLES["feature_amh_demo"].id,
+        "PIDP-SERVICE/feature_pidp_demo" = var.PIDP-SERVICE.ROLES["feature_pidp_demo"].id,
+        "account/view-profile" = var.account.ROLES["view-profile"].id,
+    }
 }

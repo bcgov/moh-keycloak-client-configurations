@@ -1,27 +1,27 @@
 resource "keycloak_openid_client" "CLIENT" {
-    access_token_lifespan = "28800"
-    access_type = "CONFIDENTIAL"
+    access_token_lifespan               = "28800"
+    access_type                         = "CONFIDENTIAL"
     backchannel_logout_session_required = true
-    base_url    = ""
-    client_authenticator_type = "client-secret"
-    client_id   = "PLR-SHOPPERS"
-    consent_required = false
-    description = "Provider Location Registry"
-    direct_access_grants_enabled = false
-    enabled = true
-    frontchannel_logout_enabled = false
-    full_scope_allowed          = false
-    implicit_flow_enabled       = false
-    name = ""
-    pkce_code_challenge_method = ""
-    realm_id = "moh_applications"
-    service_accounts_enabled =true
-    standard_flow_enabled = false
-    use_refresh_tokens = true
-    valid_redirect_uris = [
-	]
-    web_origins = [
-	]
+    base_url                            = ""
+    client_authenticator_type           = "client-secret"
+    client_id                           = "PLR-SHOPPERS"
+    consent_required                    = false
+    description                         = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources, and available to authorized consumers, that facilitates the formal exchange of health information."
+    direct_access_grants_enabled        = false
+    enabled                             = true
+    frontchannel_logout_enabled         = false
+    full_scope_allowed                  = false
+    implicit_flow_enabled               = false
+    name                                = ""
+    pkce_code_challenge_method          = ""
+    realm_id                            = "moh_applications"
+    service_accounts_enabled            = true
+    standard_flow_enabled               = false
+    use_refresh_tokens                  = true
+    valid_redirect_uris                 = [
+    ]
+    web_origins                         = [
+    ]
 }
 resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
     add_to_access_token = true
@@ -31,19 +31,8 @@ resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
     claim_value = "00002855"
     claim_value_type = "String"
     client_id = keycloak_openid_client.CLIENT.id
-    
     name = "orgId"
-
     realm_id = keycloak_openid_client.CLIENT.realm_id
-}
-resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address" {
-    add_to_id_token = true
-    claim_name = "clientAddress"
-    claim_value_type = "String"
-    client_id = keycloak_openid_client.CLIENT.id
-    name = "Client IP Address"
-    realm_id = keycloak_openid_client.CLIENT.realm_id
-    session_note = "clientAddress"
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {
     add_to_id_token = true
@@ -63,13 +52,22 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "Client-ID" {
     realm_id = keycloak_openid_client.CLIENT.realm_id
     session_note = "clientId"
 }
+resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address" {
+    add_to_id_token = true
+    claim_name = "clientAddress"
+    claim_value_type = "String"
+    client_id = keycloak_openid_client.CLIENT.id
+    name = "Client IP Address"
+    realm_id = keycloak_openid_client.CLIENT.realm_id
+    session_note = "clientAddress"
+}
 module "service-account-roles" {
-	source = "../../../../modules/service-account-roles"
-	realm_id = keycloak_openid_client.CLIENT.realm_id
-	client_id = keycloak_openid_client.CLIENT.id
-	service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
-	realm_roles = {
-		"default-roles-moh_applications" = "default-roles-moh_applications",
-	}
-	client_roles = {}
+    source = "../../../../modules/service-account-roles"
+    realm_id = keycloak_openid_client.CLIENT.realm_id
+    client_id = keycloak_openid_client.CLIENT.id
+    service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
+    realm_roles = {
+        "default-roles-moh_applications" = "default-roles-moh_applications",
+    }
+    client_roles = {}
 }

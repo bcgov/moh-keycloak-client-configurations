@@ -1,12 +1,14 @@
 module "payara-client" {
-	source = "../../../../modules/payara-client"
-	mapper_name = "SA-HIBC-SERVICE-BC-PORTAL Roles"
-	claim_name  = "roles"
-	client_id   = "SA-HIBC-SERVICE-BC-PORTAL"
-	base_url    = ""
-	description = "Special Authority HIBC & Service BC Community Portal"
-	client_name = "SA Community Portal"
-	roles = {	
+    source                             = "../../../../modules/payara-client"
+    base_url                           = ""
+    claim_name                         = "roles"
+    client_id                          = "SA-HIBC-SERVICE-BC-PORTAL"
+    client_name                        = "SA Community Portal"
+    client_role_mapper_add_to_id_token = true
+    client_role_mapper_add_to_userinfo = true
+    description                        = "Special Authority HIBC & Service BC Community Portal"
+    mapper_name                        = "SA-HIBC-SERVICE-BC-PORTAL Roles"
+    roles                              = {
         "HIBC_USER" = {
             "name" = "HIBC_USER"
             "description" = ""
@@ -15,14 +17,12 @@ module "payara-client" {
             "name" = "SERVICE_BC_USER"
             "description" = ""
         },
-	}
-	service_accounts_enabled = false
-	client_role_mapper_add_to_id_token = true
-	client_role_mapper_add_to_userinfo = true
-	valid_redirect_uris = [
-		"https://staging-bchealth.cs148.force.com/services/authcallback/Login_with_IDIR_HIBCSBC",
-		"https://pwcdev-bchealth.cs142.force.com/services/authcallback/Login_with_IDIR_HIBCSBC",
-	]
+    }
+    service_accounts_enabled           = false
+    valid_redirect_uris                = [
+        "https://pwcdev-bchealth.cs142.force.com/services/authcallback/Login_with_IDIR_HIBCSBC",
+        "https://staging-bchealth.cs148.force.com/services/authcallback/Login_with_IDIR_HIBCSBC",
+    ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
     add_to_id_token = true
