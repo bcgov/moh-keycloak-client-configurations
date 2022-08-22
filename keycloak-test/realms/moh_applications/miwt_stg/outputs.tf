@@ -1,6 +1,6 @@
 output "CLIENT" {
-    value = module.payara-client.CLIENT
+    value = keycloak_openid_client.CLIENT
 }
 output "ROLES" {
-    value = module.payara-client.ROLES
+    value = module.client-roles.ROLES
 }

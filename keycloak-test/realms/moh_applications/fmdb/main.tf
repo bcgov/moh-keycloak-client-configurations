@@ -8,7 +8,7 @@ module "payara-client" {
     client_role_mapper_add_to_userinfo = false
     description                        = "The Formulary Management Database application is a database of drugs which have been reviewed for inclusion as benefits under the PharmaCare program."
     mapper_name                        = "FMDB Role"
-    roles                              = {     
+    roles                              = {
         "MOHUSER" = {
             "name" = "MOHUSER"
             "description" = "The base user permission for FMDB"
