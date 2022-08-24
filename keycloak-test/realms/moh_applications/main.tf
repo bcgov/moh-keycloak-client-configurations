@@ -106,22 +106,34 @@ module "PLR_CONF" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PLR_FLVR" {
-  source = "./plr_flvr"
+  source                  = "./plr_flvr"
+  realm-management        = module.realm-management
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PLR_IAT" {
-  source = "./plr_iat"
+  source                  = "./plr_iat"
+  realm-management        = module.realm-management
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PLR_REV" {
-  source = "./plr_rev"
+  source                  = "./plr_rev"
+  realm-management        = module.realm-management
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PLR_SIT" {
-  source = "./plr_sit"
+  source                  = "./plr_sit"
+  realm-management        = module.realm-management
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PLR_STG" {
-  source = "./plr_stg"
+  source                  = "./plr_stg"
+  realm-management        = module.realm-management
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PLR_UAT" {
-  source = "./plr_uat"
+  source                  = "./plr_uat"
+  realm-management        = module.realm-management
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
