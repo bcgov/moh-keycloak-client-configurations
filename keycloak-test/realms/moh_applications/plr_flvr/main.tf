@@ -34,11 +34,21 @@ module "payara-client" {
       "description" = ""
     },
   }
-  service_accounts_enabled = false
+  service_accounts_enabled = true
   valid_redirect_uris = [
     "https://plrflvr.hlth.gov.bc.ca/plr*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
+  ]
+}
+resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
+  realm_id  = module.payara-client.CLIENT.realm_id
+  client_id = module.payara-client.CLIENT.id
+  default_scopes = [
+    "profile",
+    "email",
+    "roles",
+    "web-origins"
   ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
@@ -58,4 +68,41 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
   name             = "IDP"
   realm_id         = module.payara-client.CLIENT.realm_id
   session_note     = "identity_provider"
+}
+module "scope-mappings" {
+  source    = "../../../../modules/scope-mappings"
+  realm_id  = module.payara-client.CLIENT.realm_id
+  client_id = module.payara-client.CLIENT.id
+  roles = {
+    "USER-MANAGEMENT-SERVICE/view-client-plr_flvr" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_flvr"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"           = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+  }
+}
+module "service-account-roles" {
+  source                  = "../../../../modules/service-account-roles"
+  realm_id                = module.payara-client.CLIENT.realm_id
+  client_id               = module.payara-client.CLIENT.id
+  service_account_user_id = module.payara-client.CLIENT.service_account_user_id
+  realm_roles = {
+    "default-roles-moh_applications" = "default-roles-moh_applications",
+  }
+  client_roles = {
+    "USER-MANAGEMENT-SERVICE/view-client-plr_flvr" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "view-client-plr_flvr"
+    }
+    "USER-MANAGEMENT-SERVICE/view-clients" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "view-clients"
+    }
+    "USER-MANAGEMENT-SERVICE/view-users" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "view-users"
+    }
+    "realm-management/view-users" = {
+      "client_id" = var.realm-management.CLIENT.id,
+      "role_id"   = "view-users"
+    }
+  }
 }
