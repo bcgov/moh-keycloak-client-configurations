@@ -75,8 +75,8 @@ module "scope-mappings" {
   client_id = module.payara-client.CLIENT.id
   roles = {
     "USER-MANAGEMENT-SERVICE/view-client-plr_sit" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_sit"].id,
-    "USER-MANAGEMENT-SERVICE/view-clients"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
-    "USER-MANAGEMENT-SERVICE/view-users"           = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"          = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   }
 }
 module "service-account-roles" {
