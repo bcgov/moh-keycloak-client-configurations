@@ -20,6 +20,7 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://bcmohmaid--maiduat.my.salesforce.com/*",
+    "https://bcmohmaid--maidqa.my.salesforce.com/*",
   ]
   web_origins = [
     "+"

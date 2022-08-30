@@ -21,7 +21,6 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://bcmohmaid--keycloak.my.salesforce.com/*",
-    "https://bcmohmaid--maidqa.my.salesforce.com/*",
     "https://bcmohmaid--iampoc1.my.salesforce.com/*",
   ]
   web_origins = [
