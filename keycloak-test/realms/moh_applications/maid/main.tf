@@ -34,7 +34,7 @@ module "payara-client" {
       "description" = ""
     },
   }
-  service_accounts_enabled = true
+  service_accounts_enabled = false
   valid_redirect_uris = [
     "*",
   ]
