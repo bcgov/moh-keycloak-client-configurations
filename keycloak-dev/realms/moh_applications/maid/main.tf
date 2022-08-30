@@ -1,13 +1,14 @@
 module "payara-client" {
-  source                             = "../../../../modules/payara-client"
-  base_url                           = ""
-  claim_name                         = "roles"
-  client_id                          = "MAID"
-  client_name                        = "MAiD Case Management"
-  client_role_mapper_add_to_id_token = true
-  client_role_mapper_add_to_userinfo = true
-  description                        = "Medical Assistance in Dying"
-  mapper_name                        = "client roles"
+  source                              = "../../../../modules/payara-client"
+  backchannel_logout_session_required = true
+  base_url                            = ""
+  claim_name                          = "roles"
+  client_id                           = "MAID"
+  client_name                         = "MAiD Case Management"
+  client_role_mapper_add_to_id_token  = true
+  client_role_mapper_add_to_userinfo  = true
+  description                         = "Medical Assistance in Dying"
+  mapper_name                         = "client roles"
   roles = {
     "MAiD-Analyst" = {
       "name"        = "MAiD-Analyst"
