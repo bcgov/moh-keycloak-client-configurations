@@ -80,6 +80,10 @@ module "client-roles" {
       "name"        = "view-client-hscis"
       "description" = ""
     },
+    "view-client-maid" = {
+      "name"        = "view-client-maid"
+      "description" = ""
+    },
     "view-client-miwt" = {
       "name"        = "view-client-miwt"
       "description" = ""
@@ -248,6 +252,10 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/view-client-hscis" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-hscis"
+    }
+    "USER-MANAGEMENT-SERVICE/view-client-maid" = {
+      "client_id" = keycloak_openid_client.CLIENT.id,
+      "role_id"   = "view-client-maid"
     }
     "USER-MANAGEMENT-SERVICE/view-client-miwt" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
