@@ -49,6 +49,9 @@ module "LDAP-ACC-TRANS-SERVICE" {
   source                  = "./ldap-acc-trans-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "MAID" {
+  source = "./maid"
+}
 module "MIWT" {
   source = "./miwt"
 }

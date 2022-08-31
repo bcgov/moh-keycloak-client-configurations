@@ -49,8 +49,8 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   realm_id  = module.payara-client.CLIENT.realm_id
   client_id = module.payara-client.CLIENT.id
   default_scopes = [
-    "profile",
     "email",
+    "profile",
     "roles",
     "web-origins"
   ]
@@ -137,4 +137,3 @@ module "service-account-roles" {
     }
   }
 }
-

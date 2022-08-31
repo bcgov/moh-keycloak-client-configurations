@@ -1,38 +1,59 @@
 resource "keycloak_openid_client" "CLIENT" {
-  access_token_lifespan               = ""
+  access_token_lifespan               = "300"
   access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PLR-SHOPPERS"
+  client_id                           = "MAID"
   consent_required                    = false
-  description                         = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources, and available to authorized consumers, that facilitates the formal exchange of health information."
+  description                         = "Medical Assistance in Dying"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
-  full_scope_allowed                  = true
+  full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = ""
+  name                                = "MAiD Case Management"
   pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
-  service_accounts_enabled            = true
-  standard_flow_enabled               = false
-  use_refresh_tokens                  = true
+  service_accounts_enabled            = false
+  standard_flow_enabled               = true
+  use_refresh_tokens                  = false
   valid_redirect_uris = [
+    "https://bcmohmaid.my.salesforce.com/*",
   ]
   web_origins = [
   ]
 }
-resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
-  add_to_access_token = true
-  add_to_id_token     = true
-  add_to_userinfo     = true
-  claim_name          = "orgId"
-  claim_value         = "00002855"
-  claim_value_type    = "String"
-  client_id           = keycloak_openid_client.CLIENT.id
-  name                = "orgId"
-  realm_id            = keycloak_openid_client.CLIENT.realm_id
+module "client-roles" {
+  source    = "../../../../modules/client-roles"
+  client_id = keycloak_openid_client.CLIENT.id
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  roles = {
+    "MAiD-Analyst" = {
+      "name"        = "MAiD-Analyst"
+      "description" = ""
+    },
+    "MAiD-Manager-1" = {
+      "name"        = "MAiD-Manager-1"
+      "description" = ""
+    },
+    "MAiD-Manager-2" = {
+      "name"        = "MAiD-Manager-2"
+      "description" = ""
+    },
+    "MAiD-Manager-3" = {
+      "name"        = "MAiD-Manager-3"
+      "description" = ""
+    },
+    "MAiD-Manager-4" = {
+      "name"        = "MAiD-Manager-4"
+      "description" = ""
+    },
+    "MAiD-System-Administrator" = {
+      "name"        = "MAiD-System-Administrator"
+      "description" = ""
+    },
+  }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {
   add_to_id_token  = true
@@ -61,13 +82,13 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address"
   realm_id         = keycloak_openid_client.CLIENT.realm_id
   session_note     = "clientAddress"
 }
-module "service-account-roles" {
-  source                  = "../../../../modules/service-account-roles"
-  realm_id                = keycloak_openid_client.CLIENT.realm_id
-  client_id               = keycloak_openid_client.CLIENT.id
-  service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
-  realm_roles = {
-    "default-roles-moh_applications" = "default-roles-moh_applications",
-  }
-  client_roles = {}
+resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  default_scopes = [
+    "email",
+    "profile",
+    "roles",
+    "web-origins"
+  ]
 }
