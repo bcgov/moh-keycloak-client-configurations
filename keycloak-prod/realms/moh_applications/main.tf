@@ -103,14 +103,14 @@ module "SFDS" {
 module "SWT" {
   source = "./swt"
 }
-module "USER-MANAGEMENT" {
-  source                  = "./user-management"
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-}
 module "USER-MANAGEMENT-SERVICE" {
   source           = "./user-management-service"
   realm-management = module.realm-management
   account          = module.account
+}
+module "USER-MANAGEMENT" {
+  source                  = "./user-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "WEBCAPS" {
   source = "./webcaps"
