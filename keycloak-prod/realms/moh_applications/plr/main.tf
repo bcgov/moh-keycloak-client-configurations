@@ -10,23 +10,23 @@ module "payara-client" {
   mapper_name                        = "PLR Role"
   roles = {
     "DSR_USER" = {
-      "name"        = "DSR_USER"
-      },
+      "name" = "DSR_USER"
+    },
     "CONSUMER" = {
-      "name"        = "CONSUMER"
-      },
+      "name" = "CONSUMER"
+    },
     "MOH_APPROVER" = {
-      "name"        = "MOH_APPROVER"
-      },
+      "name" = "MOH_APPROVER"
+    },
     "PRIMARY_SOURCE" = {
-      "name"        = "PRIMARY_SOURCE"
-      },
+      "name" = "PRIMARY_SOURCE"
+    },
     "REG_ADMIN" = {
-      "name"        = "REG_ADMIN"
-      },
+      "name" = "REG_ADMIN"
+    },
     "SECONDARY_SOURCE" = {
-      "name"        = "SECONDARY_SOURCE"
-      },
+      "name" = "SECONDARY_SOURCE"
+    },
   }
   service_accounts_enabled = false
   use_refresh_tokens       = false

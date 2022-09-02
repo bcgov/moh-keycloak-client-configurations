@@ -10,17 +10,17 @@ module "payara-client" {
   mapper_name                        = "SA-SFDC Roles"
   roles = {
     "MOH_USER" = {
-      "name"        = "MOH_USER"
-      },
+      "name" = "MOH_USER"
+    },
     "SA_ADMINISTRATOR" = {
-      "name"        = "SA_ADMINISTRATOR"
-      },
+      "name" = "SA_ADMINISTRATOR"
+    },
     "SA_DRUG_MANAGER" = {
-      "name"        = "SA_DRUG_MANAGER"
-      },
+      "name" = "SA_DRUG_MANAGER"
+    },
     "SA_REPORTS_DASHBOARD" = {
-      "name"        = "SA_REPORTS_DASHBOARD"
-      },
+      "name" = "SA_REPORTS_DASHBOARD"
+    },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

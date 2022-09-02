@@ -31,7 +31,7 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "UCIROLE" = {
-      "name"        = "UCIROLE"
-      },
+      "name" = "UCIROLE"
+    },
   }
 }

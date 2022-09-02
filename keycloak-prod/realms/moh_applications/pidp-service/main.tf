@@ -29,17 +29,17 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "ADMIN" = {
-      "name"        = "ADMIN"
-      },
+      "name" = "ADMIN"
+    },
     "USER" = {
-      "name"        = "USER"
-      },
+      "name" = "USER"
+    },
     "feature_amh_demo" = {
-      "name"        = "feature_amh_demo"
-      },
+      "name" = "feature_amh_demo"
+    },
     "feature_pidp_demo" = {
-      "name"        = "feature_pidp_demo"
-      },
+      "name" = "feature_pidp_demo"
+    },
   }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {

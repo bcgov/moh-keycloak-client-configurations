@@ -29,143 +29,143 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "create-user" = {
-      "name"        = "create-user"
-      },
+      "name" = "create-user"
+    },
     "manage-user-details" = {
-      "name"        = "manage-user-details"
-      },
+      "name" = "manage-user-details"
+    },
     "manage-user-groups" = {
-      "name"        = "manage-user-groups"
-      },
+      "name" = "manage-user-groups"
+    },
     "manage-user-roles" = {
-      "name"        = "manage-user-roles"
-      },
+      "name" = "manage-user-roles"
+    },
     "view-client-bcer-cp" = {
-      "name"        = "view-client-bcer-cp"
-      },
+      "name" = "view-client-bcer-cp"
+    },
     "view-client-eacl" = {
-      "name"        = "view-client-eacl"
-      },
+      "name" = "view-client-eacl"
+    },
     "view-client-eacl_stg" = {
-      "name"        = "view-client-eacl_stg"
-      },
+      "name" = "view-client-eacl_stg"
+    },
     "view-client-emcod" = {
-      "name"        = "view-client-emcod"
-      },
+      "name" = "view-client-emcod"
+    },
     "view-client-fmdb" = {
-      "name"        = "view-client-fmdb"
-      },
+      "name" = "view-client-fmdb"
+    },
     "view-client-gis" = {
-      "name"        = "view-client-gis"
-      },
+      "name" = "view-client-gis"
+    },
     "view-client-hamis" = {
-      "name"        = "view-client-hamis"
-      },
+      "name" = "view-client-hamis"
+    },
     "view-client-hcimweb_hiat1" = {
-      "name"        = "view-client-hcimweb_hiat1"
-      },
+      "name" = "view-client-hcimweb_hiat1"
+    },
     "view-client-hcimweb_hiat2" = {
-      "name"        = "view-client-hcimweb_hiat2"
-      },
+      "name" = "view-client-hcimweb_hiat2"
+    },
     "view-client-hcimweb_hiat3" = {
-      "name"        = "view-client-hcimweb_hiat3"
-      },
+      "name" = "view-client-hcimweb_hiat3"
+    },
     "view-client-hcimweb_hs1" = {
-      "name"        = "view-client-hcimweb_hs1"
-      },
+      "name" = "view-client-hcimweb_hs1"
+    },
     "view-client-hcimweb_hsit" = {
-      "name"        = "view-client-hcimweb_hsit"
-      },
+      "name" = "view-client-hcimweb_hsit"
+    },
     "view-client-hcimweb_huat" = {
-      "name"        = "view-client-hcimweb_huat"
-      },
+      "name" = "view-client-hcimweb_huat"
+    },
     "view-client-hem" = {
-      "name"        = "view-client-hem"
-      },
+      "name" = "view-client-hem"
+    },
     "view-client-hscis" = {
-      "name"        = "view-client-hscis"
-      },
+      "name" = "view-client-hscis"
+    },
     "view-client-maid" = {
-      "name"        = "view-client-maid"
-      },
+      "name" = "view-client-maid"
+    },
     "view-client-miwt" = {
-      "name"        = "view-client-miwt"
-      },
+      "name" = "view-client-miwt"
+    },
     "view-client-miwt_stg" = {
-      "name"        = "view-client-miwt_stg"
-      },
+      "name" = "view-client-miwt_stg"
+    },
     "view-client-mspdirect-service" = {
-      "name"        = "view-client-mspdirect-service"
-      },
+      "name" = "view-client-mspdirect-service"
+    },
     "view-client-mspdirect-service-uat" = {
-      "name"        = "view-client-mspdirect-service-uat"
-      },
+      "name" = "view-client-mspdirect-service-uat"
+    },
     "view-client-pidp-service" = {
-      "name"        = "view-client-pidp-service"
-      },
+      "name" = "view-client-pidp-service"
+    },
     "view-client-plr_conf" = {
-      "name"        = "view-client-plr_conf"
-      },
+      "name" = "view-client-plr_conf"
+    },
     "view-client-plr_flvr" = {
-      "name"        = "view-client-plr_flvr"
-      },
+      "name" = "view-client-plr_flvr"
+    },
     "view-client-plr_iat" = {
-      "name"        = "view-client-plr_iat"
-      },
+      "name" = "view-client-plr_iat"
+    },
     "view-client-plr_rev" = {
-      "name"        = "view-client-plr_rev"
-      },
+      "name" = "view-client-plr_rev"
+    },
     "view-client-plr_sit" = {
-      "name"        = "view-client-plr_sit"
-      },
+      "name" = "view-client-plr_sit"
+    },
     "view-client-plr_stg" = {
-      "name"        = "view-client-plr_stg"
-      },
+      "name" = "view-client-plr_stg"
+    },
     "view-client-plr_uat" = {
-      "name"        = "view-client-plr_uat"
-      },
+      "name" = "view-client-plr_uat"
+    },
     "view-client-sa-dbaac-portal" = {
-      "name"        = "view-client-sa-dbaac-portal"
-      },
+      "name" = "view-client-sa-dbaac-portal"
+    },
     "view-client-sa-hibc-service-bc-portal" = {
-      "name"        = "view-client-sa-hibc-service-bc-portal"
-      },
+      "name" = "view-client-sa-hibc-service-bc-portal"
+    },
     "view-client-sa-sfdc" = {
-      "name"        = "view-client-sa-sfdc"
-      },
+      "name" = "view-client-sa-sfdc"
+    },
     "view-client-sat-eforms" = {
-      "name"        = "view-client-sat-eforms"
-      },
+      "name" = "view-client-sat-eforms"
+    },
     "view-client-sfds" = {
-      "name"        = "view-client-sfds"
-      },
+      "name" = "view-client-sfds"
+    },
     "view-client-swt" = {
-      "name"        = "view-client-swt"
-      },
+      "name" = "view-client-swt"
+    },
     "view-client-swt_stg" = {
-      "name"        = "view-client-swt_stg"
-      },
+      "name" = "view-client-swt_stg"
+    },
     "view-client-uci-sso" = {
-      "name"        = "view-client-uci-sso"
-      },
+      "name" = "view-client-uci-sso"
+    },
     "view-client-webcaps" = {
-      "name"        = "view-client-webcaps"
-      },
+      "name" = "view-client-webcaps"
+    },
     "view-clients" = {
-      "name"        = "view-clients"
-      },
+      "name" = "view-clients"
+    },
     "view-events" = {
-      "name"        = "view-events"
-      },
+      "name" = "view-events"
+    },
     "view-groups" = {
-      "name"        = "view-groups"
-      },
+      "name" = "view-groups"
+    },
     "view-metrics" = {
-      "name"        = "view-metrics"
-      },
+      "name" = "view-metrics"
+    },
     "view-users" = {
-      "name"        = "view-users"
-      },
+      "name" = "view-users"
+    },
   }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {

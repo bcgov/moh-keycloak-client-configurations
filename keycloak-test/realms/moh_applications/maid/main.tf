@@ -32,23 +32,23 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "MAiD-Analyst" = {
-      "name"        = "MAiD-Analyst"
-     },
+      "name" = "MAiD-Analyst"
+    },
     "MAiD-Manager-1" = {
-      "name"        = "MAiD-Manager-1"
-      },
+      "name" = "MAiD-Manager-1"
+    },
     "MAiD-Manager-2" = {
-      "name"        = "MAiD-Manager-2"
-      },
+      "name" = "MAiD-Manager-2"
+    },
     "MAiD-Manager-3" = {
-      "name"        = "MAiD-Manager-3"
-      },
+      "name" = "MAiD-Manager-3"
+    },
     "MAiD-Manager-4" = {
-      "name"        = "MAiD-Manager-4"
-      },
+      "name" = "MAiD-Manager-4"
+    },
     "MAiD-System-Administrator" = {
-      "name"        = "MAiD-System-Administrator"
-      },
+      "name" = "MAiD-System-Administrator"
+    },
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {

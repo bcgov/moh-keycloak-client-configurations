@@ -10,14 +10,14 @@ module "payara-client" {
   mapper_name                        = "HAMIS Role"
   roles = {
     "HMS_ADMIN" = {
-      "name"        = "HMS_ADMIN"
-      },
+      "name" = "HMS_ADMIN"
+    },
     "HMS_DATA_SUBMITTER" = {
-      "name"        = "HMS_DATA_SUBMITTER"
-      },
+      "name" = "HMS_DATA_SUBMITTER"
+    },
     "HMS_STANDARD_USER" = {
-      "name"        = "HMS_STANDARD_USER"
-      },
+      "name" = "HMS_STANDARD_USER"
+    },
   }
   service_accounts_enabled = true
   use_refresh_tokens       = false

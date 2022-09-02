@@ -69,8 +69,8 @@ module "client-roles" {
       "description" = "Province View"
     },
     "DATA_HA_SNHA" = {
-      "name"        = "DATA_HA_SNHA"
-      },
+      "name" = "DATA_HA_SNHA"
+    },
     "DATA_HA_Z_UN" = {
       "name"        = "DATA_HA_Z_UN"
       "description" = "Z Unallocated"

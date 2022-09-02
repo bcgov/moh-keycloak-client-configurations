@@ -28,28 +28,28 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "Dummy" = {
-      "name"        = "Dummy"
-      },
+      "name" = "Dummy"
+    },
     "E45" = {
-      "name"        = "E45"
-      },
+      "name" = "E45"
+    },
     "ELIGIBILITY" = {
-      "name"        = "ELIGIBILITY"
-      },
+      "name" = "ELIGIBILITY"
+    },
     "PBFUSER" = {
-      "name"        = "PBFUSER"
-      },
+      "name" = "PBFUSER"
+    },
     "PREMIUMADMIN" = {
-      "name"        = "PREMIUMADMIN"
-      },
+      "name" = "PREMIUMADMIN"
+    },
     "PREMIUMADMINPLUS" = {
-      "name"        = "PREMIUMADMINPLUS"
-      },
+      "name" = "PREMIUMADMINPLUS"
+    },
     "TRAININGHEALTHAUTH" = {
-      "name"        = "TRAININGHEALTHAUTH"
-      },
+      "name" = "TRAININGHEALTHAUTH"
+    },
     "VISARESIDENT" = {
-      "name"        = "VISARESIDENT"
-      },
+      "name" = "VISARESIDENT"
+    },
   }
 }

@@ -10,14 +10,14 @@ module "payara-client" {
   mapper_name                        = "SWT Role"
   roles = {
     "Administrator" = {
-      "name"        = "Administrator"
-      },
+      "name" = "Administrator"
+    },
     "Analyst" = {
-      "name"        = "Analyst"
-      },
+      "name" = "Analyst"
+    },
     "Reviewer" = {
-      "name"        = "Reviewer"
-      },
+      "name" = "Reviewer"
+    },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

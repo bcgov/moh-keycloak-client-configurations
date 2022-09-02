@@ -88,7 +88,7 @@ resource "keycloak_role" "ROLES" {
   client_id   = keycloak_openid_client.CLIENT.id
   for_each    = var.roles
   name        = each.value.name
-  description = "${contains( keys(each.value), "description" )? (each.value.description) : ""}"
+  description = contains(keys(each.value), "description") ? (each.value.description) : ""
   # description = each.value.description
   lifecycle {
     prevent_destroy = true

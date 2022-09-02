@@ -29,95 +29,95 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "create-user" = {
-      "name"        = "create-user"
-      },
+      "name" = "create-user"
+    },
     "manage-user-details" = {
-      "name"        = "manage-user-details"
-      },
+      "name" = "manage-user-details"
+    },
     "manage-user-groups" = {
-      "name"        = "manage-user-groups"
-      },
+      "name" = "manage-user-groups"
+    },
     "manage-user-roles" = {
-      "name"        = "manage-user-roles"
-      },
+      "name" = "manage-user-roles"
+    },
     "view-client-bcer-cp" = {
-      "name"        = "view-client-bcer-cp"
-      },
+      "name" = "view-client-bcer-cp"
+    },
     "view-client-eacl" = {
-      "name"        = "view-client-eacl"
-      },
+      "name" = "view-client-eacl"
+    },
     "view-client-emcod" = {
-      "name"        = "view-client-emcod"
-      },
+      "name" = "view-client-emcod"
+    },
     "view-client-fmdb" = {
-      "name"        = "view-client-fmdb"
-      },
+      "name" = "view-client-fmdb"
+    },
     "view-client-gis" = {
-      "name"        = "view-client-gis"
-      },
+      "name" = "view-client-gis"
+    },
     "view-client-hamis" = {
-      "name"        = "view-client-hamis"
-      },
+      "name" = "view-client-hamis"
+    },
     "view-client-hcimweb" = {
-      "name"        = "view-client-hcimweb"
-      },
+      "name" = "view-client-hcimweb"
+    },
     "view-client-hem" = {
-      "name"        = "view-client-hem"
-      },
+      "name" = "view-client-hem"
+    },
     "view-client-hscis" = {
-      "name"        = "view-client-hscis"
-      },
+      "name" = "view-client-hscis"
+    },
     "view-client-maid" = {
-      "name"        = "view-client-maid"
-      },
+      "name" = "view-client-maid"
+    },
     "view-client-miwt" = {
-      "name"        = "view-client-miwt"
-      },
+      "name" = "view-client-miwt"
+    },
     "view-client-mspdirect-service" = {
-      "name"        = "view-client-mspdirect-service"
-      },
+      "name" = "view-client-mspdirect-service"
+    },
     "view-client-pidp-service" = {
-      "name"        = "view-client-pidp-service"
-      },
+      "name" = "view-client-pidp-service"
+    },
     "view-client-plr" = {
-      "name"        = "view-client-plr"
-      },
+      "name" = "view-client-plr"
+    },
     "view-client-sa-dbaac-portal" = {
-      "name"        = "view-client-sa-dbaac-portal"
-      },
+      "name" = "view-client-sa-dbaac-portal"
+    },
     "view-client-sa-hibc-service-bc-portal" = {
-      "name"        = "view-client-sa-hibc-service-bc-portal"
-      },
+      "name" = "view-client-sa-hibc-service-bc-portal"
+    },
     "view-client-sa-sfdc" = {
-      "name"        = "view-client-sa-sfdc"
-      },
+      "name" = "view-client-sa-sfdc"
+    },
     "view-client-sat-eforms" = {
-      "name"        = "view-client-sat-eforms"
-      },
+      "name" = "view-client-sat-eforms"
+    },
     "view-client-sfds" = {
-      "name"        = "view-client-sfds"
-      },
+      "name" = "view-client-sfds"
+    },
     "view-client-swt" = {
-      "name"        = "view-client-swt"
-      },
+      "name" = "view-client-swt"
+    },
     "view-client-webcaps" = {
-      "name"        = "view-client-webcaps"
-      },
+      "name" = "view-client-webcaps"
+    },
     "view-clients" = {
-      "name"        = "view-clients"
-      },
+      "name" = "view-clients"
+    },
     "view-events" = {
-      "name"        = "view-events"
-      },
+      "name" = "view-events"
+    },
     "view-groups" = {
-      "name"        = "view-groups"
-      },
+      "name" = "view-groups"
+    },
     "view-metrics" = {
-      "name"        = "view-metrics"
-      },
+      "name" = "view-metrics"
+    },
     "view-users" = {
-      "name"        = "view-users"
-      },
+      "name" = "view-users"
+    },
   }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {

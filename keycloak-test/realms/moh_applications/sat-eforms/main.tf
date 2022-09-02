@@ -31,8 +31,8 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "phsa_eforms_sat" = {
-      "name"        = "phsa_eforms_sat"
-      },
+      "name" = "phsa_eforms_sat"
+    },
   }
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_id" {

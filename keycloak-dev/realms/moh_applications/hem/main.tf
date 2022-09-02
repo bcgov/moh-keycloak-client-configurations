@@ -10,8 +10,8 @@ module "payara-client" {
   mapper_name                        = "HEM Role"
   roles = {
     "hem" = {
-      "name"        = "hem"
-      },
+      "name" = "hem"
+    },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [
