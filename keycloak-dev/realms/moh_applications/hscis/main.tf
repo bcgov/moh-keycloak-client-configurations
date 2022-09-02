@@ -10,20 +10,16 @@ module "payara-client" {
   mapper_name                        = "HSCIS Role"
   roles = {
     "ADMIN" = {
-      "name"        = "ADMIN"
-      "description" = ""
+      "name" = "ADMIN"
     },
     "DATA_ENTRY" = {
-      "name"        = "DATA_ENTRY"
-      "description" = ""
+      "name" = "DATA_ENTRY"
     },
     "HNFILE" = {
-      "name"        = "HNFILE"
-      "description" = ""
+      "name" = "HNFILE"
     },
     "TESTCAFE" = {
-      "name"        = "TESTCAFE"
-      "description" = ""
+      "name" = "TESTCAFE"
     },
   }
   service_accounts_enabled = false

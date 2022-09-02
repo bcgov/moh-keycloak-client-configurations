@@ -10,8 +10,7 @@ module "payara-client" {
   mapper_name                        = "HEM Role"
   roles = {
     "hem" = {
-      "name"        = "hem"
-      "description" = ""
+      "name" = "hem"
     },
   }
   service_accounts_enabled = false

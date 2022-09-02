@@ -10,48 +10,37 @@ module "payara-client" {
   mapper_name                        = "HCIMWEB Role"
   roles = {
     "HIBC_REG_NEWBORN" = {
-      "name"        = "HIBC_REG_NEWBORN"
-      "description" = ""
+      "name" = "HIBC_REG_NEWBORN"
     },
     "MAINTR_FULL" = {
-      "name"        = "MAINTR_FULL"
-      "description" = ""
+      "name" = "MAINTR_FULL"
     },
     "MAINTR_READ_ONLY" = {
-      "name"        = "MAINTR_READ_ONLY"
-      "description" = ""
+      "name" = "MAINTR_READ_ONLY"
     },
     "MAINTR_UPDT" = {
-      "name"        = "MAINTR_UPDT"
-      "description" = ""
+      "name" = "MAINTR_UPDT"
     },
     "READ_ONLY_ALL_SRC" = {
-      "name"        = "READ_ONLY_ALL_SRC"
-      "description" = ""
+      "name" = "READ_ONLY_ALL_SRC"
     },
     "REGR_FULL" = {
-      "name"        = "REGR_FULL"
-      "description" = ""
+      "name" = "REGR_FULL"
     },
     "REGR_LTD" = {
-      "name"        = "REGR_LTD"
-      "description" = ""
+      "name" = "REGR_LTD"
     },
     "REGR_UPDT" = {
-      "name"        = "REGR_UPDT"
-      "description" = ""
+      "name" = "REGR_UPDT"
     },
     "REGR_UPDT_ADDR_ONLY" = {
-      "name"        = "REGR_UPDT_ADDR_ONLY"
-      "description" = ""
+      "name" = "REGR_UPDT_ADDR_ONLY"
     },
     "REG_ADMIN_HCIM" = {
-      "name"        = "REG_ADMIN_HCIM"
-      "description" = ""
+      "name" = "REG_ADMIN_HCIM"
     },
     "REG_INTEGRITY_CLERK" = {
-      "name"        = "REG_INTEGRITY_CLERK"
-      "description" = ""
+      "name" = "REG_INTEGRITY_CLERK"
     },
   }
   service_accounts_enabled = false

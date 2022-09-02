@@ -33,20 +33,16 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "ha" = {
-      "name"        = "ha"
-      "description" = ""
+      "name" = "ha"
     },
     "hmbc" = {
-      "name"        = "hmbc"
-      "description" = ""
+      "name" = "hmbc"
     },
     "moh" = {
-      "name"        = "moh"
-      "description" = ""
+      "name" = "moh"
     },
     "pending" = {
-      "name"        = "pending"
-      "description" = ""
+      "name" = "pending"
     },
   }
 }

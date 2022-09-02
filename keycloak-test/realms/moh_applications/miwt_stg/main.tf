@@ -32,36 +32,28 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "MEDIMADMIN" = {
-      "name"        = "MEDIMADMIN"
-      "description" = ""
+      "name" = "MEDIMADMIN"
     },
     "MEDIMGA_HA_FRASER" = {
-      "name"        = "MEDIMGA_HA_FRASER"
-      "description" = ""
+      "name" = "MEDIMGA_HA_FRASER"
     },
     "MEDIMGA_HA_INTERIOR" = {
-      "name"        = "MEDIMGA_HA_INTERIOR"
-      "description" = ""
+      "name" = "MEDIMGA_HA_INTERIOR"
     },
     "MEDIMGA_HA_NORTHERN" = {
-      "name"        = "MEDIMGA_HA_NORTHERN"
-      "description" = ""
+      "name" = "MEDIMGA_HA_NORTHERN"
     },
     "MEDIMGA_HA_PHSA" = {
-      "name"        = "MEDIMGA_HA_PHSA"
-      "description" = ""
+      "name" = "MEDIMGA_HA_PHSA"
     },
     "MEDIMGA_HA_VAN_COSTL" = {
-      "name"        = "MEDIMGA_HA_VAN_COSTL"
-      "description" = ""
+      "name" = "MEDIMGA_HA_VAN_COSTL"
     },
     "MEDIMGA_HA_VAN_ISLD" = {
-      "name"        = "MEDIMGA_HA_VAN_ISLD"
-      "description" = ""
+      "name" = "MEDIMGA_HA_VAN_ISLD"
     },
     "MEDIMSTAFF" = {
-      "name"        = "MEDIMSTAFF"
-      "description" = ""
+      "name" = "MEDIMSTAFF"
     },
   }
 }

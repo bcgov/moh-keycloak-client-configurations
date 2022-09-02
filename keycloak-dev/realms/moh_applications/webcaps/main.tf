@@ -37,68 +37,52 @@ module "client-roles" {
       "description" = "This is an example description"
     },
     "DATA_HA_02" = {
-      "name"        = "DATA_HA_02"
-      "description" = ""
+      "name" = "DATA_HA_02"
     },
     "DATA_HA_03" = {
-      "name"        = "DATA_HA_03"
-      "description" = ""
+      "name" = "DATA_HA_03"
     },
     "DATA_HA_04" = {
-      "name"        = "DATA_HA_04"
-      "description" = ""
+      "name" = "DATA_HA_04"
     },
     "DATA_HA_05" = {
-      "name"        = "DATA_HA_05"
-      "description" = ""
+      "name" = "DATA_HA_05"
     },
     "DATA_HA_08" = {
-      "name"        = "DATA_HA_08"
-      "description" = ""
+      "name" = "DATA_HA_08"
     },
     "DATA_HA_20" = {
-      "name"        = "DATA_HA_20"
-      "description" = ""
+      "name" = "DATA_HA_20"
     },
     "DATA_HA_CRF" = {
-      "name"        = "DATA_HA_CRF"
-      "description" = ""
+      "name" = "DATA_HA_CRF"
     },
     "DATA_HA_NVHB" = {
-      "name"        = "DATA_HA_NVHB"
-      "description" = ""
+      "name" = "DATA_HA_NVHB"
     },
     "DATA_HA_PROV" = {
-      "name"        = "DATA_HA_PROV"
-      "description" = ""
+      "name" = "DATA_HA_PROV"
     },
     "DATA_HA_SNHA" = {
-      "name"        = "DATA_HA_SNHA"
-      "description" = ""
+      "name" = "DATA_HA_SNHA"
     },
     "DATA_HA_Z_UN" = {
-      "name"        = "DATA_HA_Z_UN"
-      "description" = ""
+      "name" = "DATA_HA_Z_UN"
     },
     "HAUSER" = {
-      "name"        = "HAUSER"
-      "description" = ""
+      "name" = "HAUSER"
     },
     "HAUSERPRIV" = {
-      "name"        = "HAUSERPRIV"
-      "description" = ""
+      "name" = "HAUSERPRIV"
     },
     "MINUSER" = {
-      "name"        = "MINUSER"
-      "description" = ""
+      "name" = "MINUSER"
     },
     "MINUSERPRIV" = {
-      "name"        = "MINUSERPRIV"
-      "description" = ""
+      "name" = "MINUSERPRIV"
     },
     "SYSADMIN" = {
-      "name"        = "SYSADMIN"
-      "description" = ""
+      "name" = "SYSADMIN"
     },
   }
 }

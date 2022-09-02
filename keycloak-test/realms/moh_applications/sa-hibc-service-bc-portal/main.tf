@@ -10,12 +10,10 @@ module "payara-client" {
   mapper_name                        = "SA-HIBC-SERVICE-BC-PORTAL Roles"
   roles = {
     "HIBC_USER" = {
-      "name"        = "HIBC_USER"
-      "description" = ""
+      "name" = "HIBC_USER"
     },
     "SERVICE_BC_USER" = {
-      "name"        = "SERVICE_BC_USER"
-      "description" = ""
+      "name" = "SERVICE_BC_USER"
     },
   }
   service_accounts_enabled = false

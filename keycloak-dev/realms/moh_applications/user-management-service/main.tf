@@ -29,140 +29,106 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "create-user" = {
-      "name"        = "create-user"
-      "description" = ""
+      "name" = "create-user"
     },
     "manage-user-details" = {
-      "name"        = "manage-user-details"
-      "description" = ""
+      "name" = "manage-user-details"
     },
     "manage-user-groups" = {
-      "name"        = "manage-user-groups"
-      "description" = ""
+      "name" = "manage-user-groups"
     },
     "manage-user-roles" = {
-      "name"        = "manage-user-roles"
-      "description" = ""
+      "name" = "manage-user-roles"
     },
     "view-client-bcer-cp" = {
-      "name"        = "view-client-bcer-cp"
-      "description" = ""
+      "name" = "view-client-bcer-cp"
     },
     "view-client-eacl" = {
-      "name"        = "view-client-eacl"
-      "description" = ""
+      "name" = "view-client-eacl"
     },
     "view-client-emcod" = {
-      "name"        = "view-client-emcod"
-      "description" = ""
+      "name" = "view-client-emcod"
     },
     "view-client-fmdb" = {
-      "name"        = "view-client-fmdb"
-      "description" = ""
+      "name" = "view-client-fmdb"
     },
     "view-client-gis" = {
-      "name"        = "view-client-gis"
-      "description" = ""
+      "name" = "view-client-gis"
     },
     "view-client-hamis" = {
-      "name"        = "view-client-hamis"
-      "description" = ""
+      "name" = "view-client-hamis"
     },
     "view-client-hcimweb" = {
-      "name"        = "view-client-hcimweb"
-      "description" = ""
+      "name" = "view-client-hcimweb"
     },
     "view-client-hcimweb_hd2" = {
-      "name"        = "view-client-hcimweb_hd2"
-      "description" = ""
+      "name" = "view-client-hcimweb_hd2"
     },
     "view-client-hem" = {
-      "name"        = "view-client-hem"
-      "description" = ""
+      "name" = "view-client-hem"
     },
     "view-client-hscis" = {
-      "name"        = "view-client-hscis"
-      "description" = ""
+      "name" = "view-client-hscis"
     },
     "view-client-maid" = {
-      "name"        = "view-client-maid"
-      "description" = ""
+      "name" = "view-client-maid"
     },
     "view-client-miwt" = {
-      "name"        = "view-client-miwt"
-      "description" = ""
+      "name" = "view-client-miwt"
     },
     "view-client-mspdirect-service" = {
-      "name"        = "view-client-mspdirect-service"
-      "description" = ""
+      "name" = "view-client-mspdirect-service"
     },
     "view-client-pidp-service" = {
-      "name"        = "view-client-pidp-service"
-      "description" = ""
+      "name" = "view-client-pidp-service"
     },
     "view-client-plr" = {
-      "name"        = "view-client-plr"
-      "description" = ""
+      "name" = "view-client-plr"
     },
     "view-client-sa-dbaac-portal" = {
-      "name"        = "view-client-sa-dbaac-portal"
-      "description" = ""
+      "name" = "view-client-sa-dbaac-portal"
     },
     "view-client-sa-hibc-service-bc-portal" = {
-      "name"        = "view-client-sa-hibc-service-bc-portal"
-      "description" = ""
+      "name" = "view-client-sa-hibc-service-bc-portal"
     },
     "view-client-sa-sfdc" = {
-      "name"        = "view-client-sa-sfdc"
-      "description" = ""
+      "name" = "view-client-sa-sfdc"
     },
     "view-client-sat-case-management-1" = {
-      "name"        = "view-client-sat-case-management-1"
-      "description" = ""
+      "name" = "view-client-sat-case-management-1"
     },
     "view-client-sat-drug-management-1" = {
-      "name"        = "view-client-sat-drug-management-1"
-      "description" = ""
+      "name" = "view-client-sat-drug-management-1"
     },
     "view-client-sat-eforms" = {
-      "name"        = "view-client-sat-eforms"
-      "description" = ""
+      "name" = "view-client-sat-eforms"
     },
     "view-client-sfds" = {
-      "name"        = "view-client-sfds"
-      "description" = ""
+      "name" = "view-client-sfds"
     },
     "view-client-swt" = {
-      "name"        = "view-client-swt"
-      "description" = ""
+      "name" = "view-client-swt"
     },
     "view-client-uci-sso" = {
-      "name"        = "view-client-uci-sso"
-      "description" = ""
+      "name" = "view-client-uci-sso"
     },
     "view-client-webcaps" = {
-      "name"        = "view-client-webcaps"
-      "description" = ""
+      "name" = "view-client-webcaps"
     },
     "view-clients" = {
-      "name"        = "view-clients"
-      "description" = ""
+      "name" = "view-clients"
     },
     "view-events" = {
-      "name"        = "view-events"
-      "description" = ""
+      "name" = "view-events"
     },
     "view-groups" = {
-      "name"        = "view-groups"
-      "description" = ""
+      "name" = "view-groups"
     },
     "view-metrics" = {
-      "name"        = "view-metrics"
-      "description" = ""
+      "name" = "view-metrics"
     },
     "view-users" = {
-      "name"        = "view-users"
-      "description" = ""
+      "name" = "view-users"
     },
   }
 }

@@ -10,8 +10,7 @@ module "payara-client" {
   mapper_name                        = "GIS Role"
   roles = {
     "GISUSER" = {
-      "name"        = "GISUSER"
-      "description" = ""
+      "name" = "GISUSER"
     },
   }
   service_accounts_enabled = false
