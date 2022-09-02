@@ -33,12 +33,10 @@ module "client-roles" {
   roles = {
     "coroner" = {
       "name"        = "coroner"
-      "description" = ""
-    },
+      },
     "coroner_clerk" = {
       "name"        = "coroner_clerk"
-      "description" = ""
-    },
+      },
   }
 }
 resource "keycloak_openid_audience_protocol_mapper" "EMCOD-API-aud-mapper" {

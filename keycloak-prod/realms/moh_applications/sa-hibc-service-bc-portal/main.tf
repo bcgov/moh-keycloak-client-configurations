@@ -11,12 +11,10 @@ module "payara-client" {
   roles = {
     "SERVICE_BC_USER" = {
       "name"        = "SERVICE_BC_USER"
-      "description" = ""
-    },
+      },
     "HIBC_USER" = {
       "name"        = "HIBC_USER"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

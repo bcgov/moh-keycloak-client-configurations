@@ -11,16 +11,13 @@ module "payara-client" {
   roles = {
     "HMS_ADMIN" = {
       "name"        = "HMS_ADMIN"
-      "description" = ""
-    },
+      },
     "HMS_DATA_SUBMITTER" = {
       "name"        = "HMS_DATA_SUBMITTER"
-      "description" = ""
-    },
+      },
     "HMS_STANDARD_USER" = {
       "name"        = "HMS_STANDARD_USER"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = true
   valid_redirect_uris = [

@@ -11,20 +11,16 @@ module "payara-client" {
   roles = {
     "MOH_USER" = {
       "name"        = "MOH_USER"
-      "description" = ""
-    },
+      },
     "SA_ADMINISTRATOR" = {
       "name"        = "SA_ADMINISTRATOR"
-      "description" = ""
-    },
+      },
     "SA_DRUG_MANAGER" = {
       "name"        = "SA_DRUG_MANAGER"
-      "description" = ""
-    },
+      },
     "SA_REPORTS_DASHBOARD" = {
       "name"        = "SA_REPORTS_DASHBOARD"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

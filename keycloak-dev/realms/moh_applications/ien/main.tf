@@ -34,19 +34,15 @@ module "client-roles" {
   roles = {
     "ha" = {
       "name"        = "ha"
-      "description" = ""
-    },
+      },
     "hmbc" = {
       "name"        = "hmbc"
-      "description" = ""
-    },
+      },
     "moh" = {
       "name"        = "moh"
-      "description" = ""
-    },
+      },
     "pending" = {
       "name"        = "pending"
-      "description" = ""
-    },
+      },
   }
 }

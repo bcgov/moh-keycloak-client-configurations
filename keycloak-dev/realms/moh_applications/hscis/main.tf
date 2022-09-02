@@ -11,20 +11,16 @@ module "payara-client" {
   roles = {
     "ADMIN" = {
       "name"        = "ADMIN"
-      "description" = ""
-    },
+      },
     "DATA_ENTRY" = {
       "name"        = "DATA_ENTRY"
-      "description" = ""
-    },
+      },
     "HNFILE" = {
       "name"        = "HNFILE"
-      "description" = ""
-    },
+      },
     "TESTCAFE" = {
       "name"        = "TESTCAFE"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

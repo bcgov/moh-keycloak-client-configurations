@@ -11,48 +11,37 @@ module "payara-client" {
   roles = {
     "HIBC_REG_NEWBORN" = {
       "name"        = "HIBC_REG_NEWBORN"
-      "description" = ""
-    },
+      },
     "MAINTR_FULL" = {
       "name"        = "MAINTR_FULL"
-      "description" = ""
-    },
+      },
     "MAINTR_READ_ONLY" = {
       "name"        = "MAINTR_READ_ONLY"
-      "description" = ""
-    },
+      },
     "MAINTR_UPDT" = {
       "name"        = "MAINTR_UPDT"
-      "description" = ""
-    },
+      },
     "READ_ONLY_ALL_SRC" = {
       "name"        = "READ_ONLY_ALL_SRC"
-      "description" = ""
-    },
+      },
     "REGR_FULL" = {
       "name"        = "REGR_FULL"
-      "description" = ""
-    },
+      },
     "REGR_LTD" = {
       "name"        = "REGR_LTD"
-      "description" = ""
-    },
+      },
     "REGR_UPDT" = {
       "name"        = "REGR_UPDT"
-      "description" = ""
-    },
+      },
     "REGR_UPDT_ADDR_ONLY" = {
       "name"        = "REGR_UPDT_ADDR_ONLY"
-      "description" = ""
-    },
+      },
     "REG_ADMIN_HCIM" = {
       "name"        = "REG_ADMIN_HCIM"
-      "description" = ""
-    },
+      },
     "REG_INTEGRITY_CLERK" = {
       "name"        = "REG_INTEGRITY_CLERK"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   use_refresh_tokens       = false

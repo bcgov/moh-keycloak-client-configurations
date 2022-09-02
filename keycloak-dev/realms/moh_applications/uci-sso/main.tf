@@ -32,7 +32,6 @@ module "client-roles" {
   roles = {
     "UCIROLE" = {
       "name"        = "UCIROLE"
-      "description" = ""
-    },
+      },
   }
 }

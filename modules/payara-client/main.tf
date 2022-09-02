@@ -52,10 +52,7 @@ variable "client_role_mapper_add_to_userinfo" {
   default = false
 }
 variable "roles" {
-  type = map(object({
-    name        = string
-    description = string
-  }))
+  type = map(map(string))
 }
 
 
@@ -91,7 +88,8 @@ resource "keycloak_role" "ROLES" {
   client_id   = keycloak_openid_client.CLIENT.id
   for_each    = var.roles
   name        = each.value.name
-  description = each.value.description
+  description = "${contains( keys(each.value), "description" )? (each.value.description) : ""}"
+  # description = each.value.description
   lifecycle {
     prevent_destroy = true
   }

@@ -29,35 +29,27 @@ module "client-roles" {
   roles = {
     "Dummy" = {
       "name"        = "Dummy"
-      "description" = ""
-    },
+      },
     "E45" = {
       "name"        = "E45"
-      "description" = ""
-    },
+      },
     "ELIGIBILITY" = {
       "name"        = "ELIGIBILITY"
-      "description" = ""
-    },
+      },
     "PBFUSER" = {
       "name"        = "PBFUSER"
-      "description" = ""
-    },
+      },
     "PREMIUMADMIN" = {
       "name"        = "PREMIUMADMIN"
-      "description" = ""
-    },
+      },
     "PREMIUMADMINPLUS" = {
       "name"        = "PREMIUMADMINPLUS"
-      "description" = ""
-    },
+      },
     "TRAININGHEALTHAUTH" = {
       "name"        = "TRAININGHEALTHAUTH"
-      "description" = ""
-    },
+      },
     "VISARESIDENT" = {
       "name"        = "VISARESIDENT"
-      "description" = ""
-    },
+      },
   }
 }

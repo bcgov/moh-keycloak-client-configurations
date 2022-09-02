@@ -11,36 +11,28 @@ module "payara-client" {
   roles = {
     "MEDIMADMIN" = {
       "name"        = "MEDIMADMIN"
-      "description" = ""
-    },
+      },
     "MEDIMGA_HA_FRASER" = {
       "name"        = "MEDIMGA_HA_FRASER"
-      "description" = ""
-    },
+      },
     "MEDIMGA_HA_INTERIOR" = {
       "name"        = "MEDIMGA_HA_INTERIOR"
-      "description" = ""
-    },
+      },
     "MEDIMGA_HA_NORTHERN" = {
       "name"        = "MEDIMGA_HA_NORTHERN"
-      "description" = ""
-    },
+      },
     "MEDIMGA_HA_PHSA" = {
       "name"        = "MEDIMGA_HA_PHSA"
-      "description" = ""
-    },
+      },
     "MEDIMGA_HA_VAN_COSTL" = {
       "name"        = "MEDIMGA_HA_VAN_COSTL"
-      "description" = ""
-    },
+      },
     "MEDIMGA_HA_VAN_ISLD" = {
       "name"        = "MEDIMGA_HA_VAN_ISLD"
-      "description" = ""
-    },
+      },
     "MEDIMSTAFF" = {
       "name"        = "MEDIMSTAFF"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

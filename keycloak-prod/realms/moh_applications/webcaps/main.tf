@@ -67,8 +67,7 @@ module "client-roles" {
     },
     "DATA_HA_SNHA" = {
       "name"        = "DATA_HA_SNHA"
-      "description" = ""
-    },
+      },
     "DATA_HA_Z_UN" = {
       "name"        = "DATA_HA_Z_UN"
       "description" = "Z Unallocated"

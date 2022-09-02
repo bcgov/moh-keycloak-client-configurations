@@ -21,6 +21,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "https://bcmohmaid--maiduat.my.salesforce.com/*",
     "https://bcmohmaid--maidqa.my.salesforce.com/*",
+    "https://healthbc--pmycareidp.sandbox.my.site.com/*",
   ]
   web_origins = [
   ]
@@ -32,28 +33,22 @@ module "client-roles" {
   roles = {
     "MAiD-Analyst" = {
       "name"        = "MAiD-Analyst"
-      "description" = ""
-    },
+     },
     "MAiD-Manager-1" = {
       "name"        = "MAiD-Manager-1"
-      "description" = ""
-    },
+      },
     "MAiD-Manager-2" = {
       "name"        = "MAiD-Manager-2"
-      "description" = ""
-    },
+      },
     "MAiD-Manager-3" = {
       "name"        = "MAiD-Manager-3"
-      "description" = ""
-    },
+      },
     "MAiD-Manager-4" = {
       "name"        = "MAiD-Manager-4"
-      "description" = ""
-    },
+      },
     "MAiD-System-Administrator" = {
       "name"        = "MAiD-System-Administrator"
-      "description" = ""
-    },
+      },
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {

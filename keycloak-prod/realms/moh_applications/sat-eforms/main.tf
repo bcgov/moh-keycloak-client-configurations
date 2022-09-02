@@ -33,8 +33,7 @@ module "client-roles" {
   roles = {
     "phsa_eforms_sat" = {
       "name"        = "phsa_eforms_sat"
-      "description" = ""
-    },
+      },
   }
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_id" {

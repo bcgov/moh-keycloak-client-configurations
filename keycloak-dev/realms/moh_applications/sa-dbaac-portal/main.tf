@@ -11,8 +11,7 @@ module "payara-client" {
   roles = {
     "USER" = {
       "name"        = "USER"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

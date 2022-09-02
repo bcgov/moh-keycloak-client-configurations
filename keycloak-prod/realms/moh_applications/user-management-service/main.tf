@@ -30,124 +30,94 @@ module "client-roles" {
   roles = {
     "create-user" = {
       "name"        = "create-user"
-      "description" = ""
-    },
+      },
     "manage-user-details" = {
       "name"        = "manage-user-details"
-      "description" = ""
-    },
+      },
     "manage-user-groups" = {
       "name"        = "manage-user-groups"
-      "description" = ""
-    },
+      },
     "manage-user-roles" = {
       "name"        = "manage-user-roles"
-      "description" = ""
-    },
+      },
     "view-client-bcer-cp" = {
       "name"        = "view-client-bcer-cp"
-      "description" = ""
-    },
+      },
     "view-client-eacl" = {
       "name"        = "view-client-eacl"
-      "description" = ""
-    },
+      },
     "view-client-emcod" = {
       "name"        = "view-client-emcod"
-      "description" = ""
-    },
+      },
     "view-client-fmdb" = {
       "name"        = "view-client-fmdb"
-      "description" = ""
-    },
+      },
     "view-client-gis" = {
       "name"        = "view-client-gis"
-      "description" = ""
-    },
+      },
     "view-client-hamis" = {
       "name"        = "view-client-hamis"
-      "description" = ""
-    },
+      },
     "view-client-hcimweb" = {
       "name"        = "view-client-hcimweb"
-      "description" = ""
-    },
+      },
     "view-client-hem" = {
       "name"        = "view-client-hem"
-      "description" = ""
-    },
+      },
     "view-client-hscis" = {
       "name"        = "view-client-hscis"
-      "description" = ""
-    },
+      },
     "view-client-maid" = {
       "name"        = "view-client-maid"
-      "description" = ""
-    },
+      },
     "view-client-miwt" = {
       "name"        = "view-client-miwt"
-      "description" = ""
-    },
+      },
     "view-client-mspdirect-service" = {
       "name"        = "view-client-mspdirect-service"
-      "description" = ""
-    },
+      },
     "view-client-pidp-service" = {
       "name"        = "view-client-pidp-service"
-      "description" = ""
-    },
+      },
     "view-client-plr" = {
       "name"        = "view-client-plr"
-      "description" = ""
-    },
+      },
     "view-client-sa-dbaac-portal" = {
       "name"        = "view-client-sa-dbaac-portal"
-      "description" = ""
-    },
+      },
     "view-client-sa-hibc-service-bc-portal" = {
       "name"        = "view-client-sa-hibc-service-bc-portal"
-      "description" = ""
-    },
+      },
     "view-client-sa-sfdc" = {
       "name"        = "view-client-sa-sfdc"
-      "description" = ""
-    },
+      },
     "view-client-sat-eforms" = {
       "name"        = "view-client-sat-eforms"
-      "description" = ""
-    },
+      },
     "view-client-sfds" = {
       "name"        = "view-client-sfds"
-      "description" = ""
-    },
+      },
     "view-client-swt" = {
       "name"        = "view-client-swt"
-      "description" = ""
-    },
+      },
     "view-client-webcaps" = {
       "name"        = "view-client-webcaps"
-      "description" = ""
-    },
+      },
     "view-clients" = {
       "name"        = "view-clients"
-      "description" = ""
-    },
+      },
     "view-events" = {
       "name"        = "view-events"
-      "description" = ""
-    },
+      },
     "view-groups" = {
       "name"        = "view-groups"
-      "description" = ""
-    },
+      },
     "view-metrics" = {
       "name"        = "view-metrics"
-      "description" = ""
-    },
+      },
     "view-users" = {
       "name"        = "view-users"
-      "description" = ""
-    },
+      },
   }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {

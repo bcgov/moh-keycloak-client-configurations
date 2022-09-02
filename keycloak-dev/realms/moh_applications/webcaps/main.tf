@@ -38,68 +38,52 @@ module "client-roles" {
     },
     "DATA_HA_02" = {
       "name"        = "DATA_HA_02"
-      "description" = ""
-    },
+      },
     "DATA_HA_03" = {
       "name"        = "DATA_HA_03"
-      "description" = ""
-    },
+      },
     "DATA_HA_04" = {
       "name"        = "DATA_HA_04"
-      "description" = ""
-    },
+      },
     "DATA_HA_05" = {
       "name"        = "DATA_HA_05"
-      "description" = ""
-    },
+      },
     "DATA_HA_08" = {
       "name"        = "DATA_HA_08"
-      "description" = ""
-    },
+      },
     "DATA_HA_20" = {
       "name"        = "DATA_HA_20"
-      "description" = ""
-    },
+      },
     "DATA_HA_CRF" = {
       "name"        = "DATA_HA_CRF"
-      "description" = ""
-    },
+      },
     "DATA_HA_NVHB" = {
       "name"        = "DATA_HA_NVHB"
-      "description" = ""
-    },
+      },
     "DATA_HA_PROV" = {
       "name"        = "DATA_HA_PROV"
-      "description" = ""
-    },
+      },
     "DATA_HA_SNHA" = {
       "name"        = "DATA_HA_SNHA"
-      "description" = ""
-    },
+      },
     "DATA_HA_Z_UN" = {
       "name"        = "DATA_HA_Z_UN"
-      "description" = ""
-    },
+      },
     "HAUSER" = {
       "name"        = "HAUSER"
-      "description" = ""
-    },
+      },
     "HAUSERPRIV" = {
       "name"        = "HAUSERPRIV"
-      "description" = ""
-    },
+      },
     "MINUSER" = {
       "name"        = "MINUSER"
-      "description" = ""
-    },
+      },
     "MINUSERPRIV" = {
       "name"        = "MINUSERPRIV"
-      "description" = ""
-    },
+      },
     "SYSADMIN" = {
       "name"        = "SYSADMIN"
-      "description" = ""
-    },
+      },
   }
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "idir_user_guid" {

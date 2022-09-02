@@ -30,20 +30,16 @@ module "client-roles" {
   roles = {
     "ADMIN" = {
       "name"        = "ADMIN"
-      "description" = ""
-    },
+      },
     "USER" = {
       "name"        = "USER"
-      "description" = ""
-    },
+      },
     "feature_amh_demo" = {
       "name"        = "feature_amh_demo"
-      "description" = ""
-    },
+      },
     "feature_pidp_demo" = {
       "name"        = "feature_pidp_demo"
-      "description" = ""
-    },
+      },
   }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {

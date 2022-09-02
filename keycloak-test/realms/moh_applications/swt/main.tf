@@ -11,16 +11,13 @@ module "payara-client" {
   roles = {
     "Administrator" = {
       "name"        = "Administrator"
-      "description" = ""
-    },
+      },
     "Analyst" = {
       "name"        = "Analyst"
-      "description" = ""
-    },
+      },
     "Reviewer" = {
       "name"        = "Reviewer"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

@@ -32,15 +32,12 @@ module "client-roles" {
   roles = {
     "bcer_admin" = {
       "name"        = "bcer_admin"
-      "description" = ""
-    },
+      },
     "health_authority" = {
       "name"        = "health_authority"
-      "description" = ""
-    },
+      },
     "moh_admin" = {
       "name"        = "moh_admin"
-      "description" = ""
-    },
+      },
   }
 }

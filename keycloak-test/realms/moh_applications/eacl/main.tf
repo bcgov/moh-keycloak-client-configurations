@@ -11,28 +11,22 @@ module "payara-client" {
   roles = {
     "EACL_Auditor" = {
       "name"        = "EACL_Auditor"
-      "description" = ""
-    },
+      },
     "EACL_Sysadmin" = {
       "name"        = "EACL_Sysadmin"
-      "description" = ""
-    },
+      },
     "PharmaCare_Auditor" = {
       "name"        = "PharmaCare_Auditor"
-      "description" = ""
-    },
+      },
     "SYSADMIN" = {
       "name"        = "SYSADMIN"
-      "description" = ""
-    },
+      },
     "Super_Auditor" = {
       "name"        = "Super_Auditor"
-      "description" = ""
-    },
+      },
     "Super_Sysadmin" = {
       "name"        = "Super_Sysadmin"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [

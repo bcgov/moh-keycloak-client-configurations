@@ -11,28 +11,22 @@ module "payara-client" {
   roles = {
     "DSR_USER" = {
       "name"        = "DSR_USER"
-      "description" = ""
-    },
+      },
     "CONSUMER" = {
       "name"        = "CONSUMER"
-      "description" = ""
-    },
+      },
     "MOH_APPROVER" = {
       "name"        = "MOH_APPROVER"
-      "description" = ""
-    },
+      },
     "PRIMARY_SOURCE" = {
       "name"        = "PRIMARY_SOURCE"
-      "description" = ""
-    },
+      },
     "REG_ADMIN" = {
       "name"        = "REG_ADMIN"
-      "description" = ""
-    },
+      },
     "SECONDARY_SOURCE" = {
       "name"        = "SECONDARY_SOURCE"
-      "description" = ""
-    },
+      },
   }
   service_accounts_enabled = false
   use_refresh_tokens       = false
