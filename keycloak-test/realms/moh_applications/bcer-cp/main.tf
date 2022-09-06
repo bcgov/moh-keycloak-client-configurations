@@ -31,16 +31,13 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "bcer_admin" = {
-      "name"        = "bcer_admin"
-      "description" = ""
+      "name" = "bcer_admin"
     },
     "health_authority" = {
-      "name"        = "health_authority"
-      "description" = ""
+      "name" = "health_authority"
     },
     "moh_admin" = {
-      "name"        = "moh_admin"
-      "description" = ""
+      "name" = "moh_admin"
     },
   }
 }

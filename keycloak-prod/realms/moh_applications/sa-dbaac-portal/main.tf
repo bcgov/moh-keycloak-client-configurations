@@ -10,8 +10,7 @@ module "payara-client" {
   mapper_name                        = "SA-DBAAC-PORTAL Roles"
   roles = {
     "USER" = {
-      "name"        = "USER"
-      "description" = ""
+      "name" = "USER"
     },
   }
   service_accounts_enabled = false

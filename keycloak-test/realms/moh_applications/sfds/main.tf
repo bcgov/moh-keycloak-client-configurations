@@ -10,12 +10,10 @@ module "payara-client" {
   mapper_name                        = "SFDS Role"
   roles = {
     "ADMIN" = {
-      "name"        = "ADMIN"
-      "description" = ""
+      "name" = "ADMIN"
     },
     "USER" = {
-      "name"        = "USER"
-      "description" = ""
+      "name" = "USER"
     },
   }
   service_accounts_enabled = false

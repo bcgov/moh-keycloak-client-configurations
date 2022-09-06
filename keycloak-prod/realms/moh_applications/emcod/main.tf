@@ -32,12 +32,10 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "coroner" = {
-      "name"        = "coroner"
-      "description" = ""
+      "name" = "coroner"
     },
     "coroner_clerk" = {
-      "name"        = "coroner_clerk"
-      "description" = ""
+      "name" = "coroner_clerk"
     },
   }
 }

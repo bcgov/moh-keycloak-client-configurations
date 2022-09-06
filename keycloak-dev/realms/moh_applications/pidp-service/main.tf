@@ -29,20 +29,16 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "ADMIN" = {
-      "name"        = "ADMIN"
-      "description" = ""
+      "name" = "ADMIN"
     },
     "USER" = {
-      "name"        = "USER"
-      "description" = ""
+      "name" = "USER"
     },
     "feature_amh_demo" = {
-      "name"        = "feature_amh_demo"
-      "description" = ""
+      "name" = "feature_amh_demo"
     },
     "feature_pidp_demo" = {
-      "name"        = "feature_pidp_demo"
-      "description" = ""
+      "name" = "feature_pidp_demo"
     },
   }
 }

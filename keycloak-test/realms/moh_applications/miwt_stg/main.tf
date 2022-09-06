@@ -7,37 +7,29 @@ module "payara-client" {
   description = "The Medical Imaging Wait Times application allows the Ministry of Health (MoH) to track the wait times for various medical imaging procedure at different facilities in BC."
   client_name = "MIWT_STG"
   roles = {
-    "MEDIMGA_HA_VAN_COSTL" = {
-      "name"        = "MEDIMGA_HA_VAN_COSTL"
-      "description" = ""
-    },
-    "MEDIMGA_HA_INTERIOR" = {
-      "name"        = "MEDIMGA_HA_INTERIOR"
-      "description" = ""
+    "MEDIMADMIN" = {
+      "name" = "MEDIMADMIN"
     },
     "MEDIMGA_HA_FRASER" = {
-      "name"        = "MEDIMGA_HA_FRASER"
-      "description" = ""
+      "name" = "MEDIMGA_HA_FRASER"
     },
-    "MEDIMGA_HA_PHSA" = {
-      "name"        = "MEDIMGA_HA_PHSA"
-      "description" = ""
-    },
-    "MEDIMGA_HA_VAN_ISLD" = {
-      "name"        = "MEDIMGA_HA_VAN_ISLD"
-      "description" = ""
+    "MEDIMGA_HA_INTERIOR" = {
+      "name" = "MEDIMGA_HA_INTERIOR"
     },
     "MEDIMGA_HA_NORTHERN" = {
-      "name"        = "MEDIMGA_HA_NORTHERN"
-      "description" = ""
+      "name" = "MEDIMGA_HA_NORTHERN"
+    },
+    "MEDIMGA_HA_PHSA" = {
+      "name" = "MEDIMGA_HA_PHSA"
+    },
+    "MEDIMGA_HA_VAN_COSTL" = {
+      "name" = "MEDIMGA_HA_VAN_COSTL"
+    },
+    "MEDIMGA_HA_VAN_ISLD" = {
+      "name" = "MEDIMGA_HA_VAN_ISLD"
     },
     "MEDIMSTAFF" = {
-      "name"        = "MEDIMSTAFF"
-      "description" = ""
-    },
-    "MEDIMADMIN" = {
-      "name"        = "MEDIMADMIN"
-      "description" = ""
+      "name" = "MEDIMSTAFF"
     },
   }
   service_accounts_enabled           = false

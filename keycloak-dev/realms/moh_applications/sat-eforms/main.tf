@@ -31,8 +31,7 @@ module "client-roles" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
     "phsa_eforms_sat" = {
-      "name"        = "phsa_eforms_sat"
-      "description" = ""
+      "name" = "phsa_eforms_sat"
     },
   }
 }
