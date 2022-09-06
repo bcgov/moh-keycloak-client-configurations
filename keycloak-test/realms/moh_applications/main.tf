@@ -53,7 +53,7 @@ module "HOOPC" {
   source = "./hoopc"
 }
 module "HOOPC_STG" {
-    source = "./hoopc_stg"
+  source = "./hoopc_stg"
 }
 module "HSCIS" {
   source = "./hscis"
@@ -162,7 +162,7 @@ module "SA-SFDC" {
   source = "./sa-sfdc"
 }
 module "SAT-EFORMS_QA" {
-    source = "./sat-eforms_qa"
+  source = "./sat-eforms_qa"
 }
 module "SFDS" {
   source = "./sfds"
