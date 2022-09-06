@@ -52,6 +52,9 @@ module "hnsesb_api_gateway_client_manager" {
 module "HOOPC" {
   source = "./hoopc"
 }
+module "HOOPC_STG" {
+  source = "./hoopc_stg"
+}
 module "HSCIS" {
   source = "./hscis"
 }
@@ -157,6 +160,9 @@ module "SA-HIBC-SERVICE-BC-PORTAL" {
 }
 module "SA-SFDC" {
   source = "./sa-sfdc"
+}
+module "SAT-EFORMS_QA" {
+  source = "./sat-eforms_qa"
 }
 module "SFDS" {
   source = "./sfds"
