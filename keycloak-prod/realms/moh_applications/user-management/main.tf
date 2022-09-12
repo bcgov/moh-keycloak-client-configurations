@@ -37,12 +37,12 @@ module "client-roles" {
   }
 }
 resource "keycloak_openid_group_membership_protocol_mapper" "Group-Membership" {
-  name             = "user groups"
-  claim_name       = "groups"
-  client_id        = keycloak_openid_client.CLIENT.id
-  realm_id         = keycloak_openid_client.CLIENT.realm_id
-  add_to_userinfo  = false
-  add_to_id_token  = false
+  name            = "user groups"
+  claim_name      = "groups"
+  client_id       = keycloak_openid_client.CLIENT.id
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+  add_to_userinfo = false
+  add_to_id_token = false
 }
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
