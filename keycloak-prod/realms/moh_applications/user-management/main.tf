@@ -43,6 +43,7 @@ resource "keycloak_openid_group_membership_protocol_mapper" "Group-Membership" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
   add_to_userinfo = false
   add_to_id_token = false
+  full_path       = false
 }
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
