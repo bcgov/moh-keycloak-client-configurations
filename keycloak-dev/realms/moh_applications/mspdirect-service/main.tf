@@ -27,6 +27,9 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
+    "AUDITUSER" = {
+      "name" = "AUDITUSER"
+    },
     "Dummy" = {
       "name" = "Dummy"
     },
@@ -35,6 +38,9 @@ module "client-roles" {
     },
     "ELIGIBILITY" = {
       "name" = "ELIGIBILITY"
+    },
+    "MANAGEMSPPAYEENUMBER" = {
+      "name" = "MANAGEMSPPAYEENUMBER"
     },
     "PBFUSER" = {
       "name" = "PBFUSER"
