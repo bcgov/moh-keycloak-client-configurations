@@ -47,6 +47,7 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
+    "MSPDIRECT-SERVICE/AUDITUSER"          = var.MSPDIRECT-SERVICE.ROLES["AUDITUSER"].id,
     "MSPDIRECT-SERVICE/E45"                = var.MSPDIRECT-SERVICE.ROLES["E45"].id,
     "MSPDIRECT-SERVICE/ELIGIBILITY"        = var.MSPDIRECT-SERVICE.ROLES["ELIGIBILITY"].id,
     "MSPDIRECT-SERVICE/PREMIUMADMIN"       = var.MSPDIRECT-SERVICE.ROLES["PREMIUMADMIN"].id,
