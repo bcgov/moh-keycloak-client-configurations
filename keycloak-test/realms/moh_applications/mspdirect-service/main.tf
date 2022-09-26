@@ -48,6 +48,9 @@ module "client-roles" {
     "PREMIUMADMINPLUS" = {
       "name" = "PREMIUMADMINPLUS"
     },
+    "SOCIALSECTOR" = {
+      "name" = "SOCIALSECTOR"
+    },
     "TRAININGHEALTHAUTH" = {
       "name" = "TRAININGHEALTHAUTH"
     },
