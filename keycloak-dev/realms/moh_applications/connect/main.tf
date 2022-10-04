@@ -19,14 +19,25 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
-    "https://connect-dev.health.gov.bc.ca/",
+    "https://connect-dev.health.gov.bc.ca/*",
     "https://connect-dev-d7.health.gov.bc.ca/*",
     "https://connect-d9.dev.wbu-dev.com/*",
     "https://drupal-vanilla.ddev.site/*",
+    "https://connect-d9.ddev.site/*",
   ]
   web_origins = [
   ]
 }
+resource "keycloak_openid_user_attribute_protocol_mapper" "bceid_business_legalName" {
+  add_to_id_token = true
+  add_to_userinfo = false
+  claim_name      = "bceid_business_legalName"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "bceid_business_legalName"
+  user_attribute  = "bceid_business_legalName"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
 resource "keycloak_openid_user_attribute_protocol_mapper" "idir_company" {
   add_to_id_token = true
   add_to_userinfo = false
