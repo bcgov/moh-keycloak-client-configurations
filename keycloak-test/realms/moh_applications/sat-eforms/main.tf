@@ -47,3 +47,15 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_id" {
   user_attribute  = "bcsc_guid"
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "common_provider_number" {
+  add_to_id_token     = false
+  add_to_userinfo     = false
+  add_to_access_token = true
+  claim_name          = "common_provider_number"
+  claim_value_type    = "String"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "common_provider_number"
+  user_attribute      = "common_provider_number"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
