@@ -19,6 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
+    "https://bcmohmaid--maid23.sandbox.my.salesforce.com/*",
     "https://bcmohmaid--maiduat.my.salesforce.com/*",
     "https://bcmohmaid--maidqa.my.salesforce.com/*",
     "https://healthbc--pmycareidp.sandbox.my.site.com/*",
