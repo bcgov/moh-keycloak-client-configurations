@@ -28,6 +28,7 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
   ]
 }
+
 resource "keycloak_openid_user_attribute_protocol_mapper" "bceid_business_legalName" {
   add_to_id_token = true
   add_to_userinfo = false
