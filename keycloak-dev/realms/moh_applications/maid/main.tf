@@ -22,6 +22,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:*",
     "https://bcmohmaid--keycloak.my.salesforce.com/*",
     "https://bcmohmaid--iampoc1.my.salesforce.com/*",
+    "https://bcmohmaid--keycloak.sandbox.my.salesforce.com/*",
   ]
   web_origins = [
     "+"
