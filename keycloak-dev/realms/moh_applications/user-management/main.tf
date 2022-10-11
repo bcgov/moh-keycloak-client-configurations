@@ -2,7 +2,7 @@ resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan               = ""
   access_type                         = "PUBLIC"
   backchannel_logout_session_required = false
-  base_url                            = "https://common-logon-dev.hlth.gov.bc.ca/webapp"
+  base_url                            = "https://user-management-dev.hlth.gov.bc.ca/"
   client_authenticator_type           = "client-secret"
   client_id                           = "USER-MANAGEMENT"
   consent_required                    = false
