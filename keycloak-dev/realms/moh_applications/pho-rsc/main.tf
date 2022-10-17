@@ -21,9 +21,9 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                       = false
   valid_redirect_uris = [
     "http://tussle.hlth.gov.bc.ca/*",
-    "https://rsc-test.hlth.gov.bc.ca/*",
+    "https://rsc-stg.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-    "http://rsc-test.hlth.gov.bc.ca/*",
+    "http://rsc-stg.hlth.gov.bc.ca/*",
     "https://tussle.hlth.gov.bc.ca/*",
   ]
   web_origins = [
