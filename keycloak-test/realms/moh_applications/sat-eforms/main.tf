@@ -20,6 +20,7 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://uat.eforms.healthbc.org/oauth2/authorize",
+    "https://uat.eforms.healthbc.org/login",
   ]
   web_origins = [
     "+",
@@ -35,7 +36,10 @@ module "client-roles" {
     },
     "phsa_eforms_sat2" = {
       "name" = "phsa_eforms_sat2"
-    }
+    },
+    "phsa_eforms_rxrefill" = {
+      "name" = "phsa_eforms_rxrefill"
+    },
   }
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_id" {
