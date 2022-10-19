@@ -21,6 +21,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "https://eforms.healthbc.org/oauth2/authorize",
     "https://www.eforms.healthbc.org/oauth2/authorize",
+    "https://eforms.healthbc.org/login",
   ]
   web_origins = [
     "+",
@@ -33,6 +34,9 @@ module "client-roles" {
   roles = {
     "phsa_eforms_sat" = {
       "name" = "phsa_eforms_sat"
+    },
+    "phsa_eforms_rxrefill" = {
+      "name" = "phsa_eforms_rxrefill"
     },
   }
 }
