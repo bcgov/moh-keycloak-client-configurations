@@ -40,6 +40,9 @@ module "client-roles" {
     "feature_pidp_demo" = {
       "name" = "feature_pidp_demo"
     },
+    "view_endorsement_data" = {
+      "name" = "view_endorsement_data"
+    },
   }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {
