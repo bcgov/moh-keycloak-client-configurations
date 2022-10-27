@@ -28,8 +28,9 @@ resource "keycloak_role" "ROLES" {
   name = each.value.name
   # terraform does not short circuit conditionals, so a check to see if the key exists must happen before taking the length of the value.
   description = contains(keys(each.value), "description") ? (each.value.description) : ""
+  attributes  = contains(keys(each.value), "attributes") ? (each.value.attributes) : {}
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 

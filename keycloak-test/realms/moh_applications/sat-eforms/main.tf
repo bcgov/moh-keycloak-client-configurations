@@ -34,9 +34,6 @@ module "client-roles" {
     "phsa_eforms_sat" = {
       "name" = "phsa_eforms_sat"
     },
-    "phsa_eforms_sat2" = {
-      "name" = "phsa_eforms_sat2"
-    },
     "phsa_eforms_rxrefill" = {
       "name" = "phsa_eforms_rxrefill"
     },
