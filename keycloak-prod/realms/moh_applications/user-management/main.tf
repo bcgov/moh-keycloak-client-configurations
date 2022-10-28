@@ -52,7 +52,6 @@ module "scope-mappings" {
   roles = {
     "USER-MANAGEMENT-SERVICE/create-user"                           = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-details"                   = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
-    "USER-MANAGEMENT-SERVICE/manage-user-groups"                    = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-groups"].id,
     "USER-MANAGEMENT-SERVICE/manage-all-groups"                     = var.USER-MANAGEMENT-SERVICE.ROLES["manage-all-groups"].id,
     "USER-MANAGEMENT-SERVICE/manage-own-groups"                     = var.USER-MANAGEMENT-SERVICE.ROLES["manage-own-groups"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-roles"                     = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,

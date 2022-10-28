@@ -34,9 +34,6 @@ module "client-roles" {
     "manage-user-details" = {
       "name" = "manage-user-details"
     },
-    "manage-user-groups" = {
-      "name" = "manage-user-groups"
-    },
     "manage-all-groups" = {
       "name" = "manage-all-groups"
     },
@@ -232,10 +229,6 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/manage-user-details" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "manage-user-details"
-    }
-    "USER-MANAGEMENT-SERVICE/manage-user-groups" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "manage-user-groups"
     }
     "USER-MANAGEMENT-SERVICE/manage-all-groups" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
