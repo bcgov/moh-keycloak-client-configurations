@@ -20,11 +20,11 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled                    = true
   use_refresh_tokens                       = false
   valid_redirect_uris = [
-    "http://tussle.hlth.gov.bc.ca/*",
-    "https://tussle.hlth.gov.bc.ca/*",
-    "http://rsc-stg.hlth.gov.bc.ca/*",
-    "https://rsc-stg.hlth.gov.bc.ca/*",
-    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "http://philly.hlth.gov.bc.ca/*",
+    "https://philly.hlth.gov.bc.ca/*",
+    "http://rsc.hlth.gov.bc.ca/*",
+    "https://rsc.hlth.gov.bc.ca/*",
+    "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
   web_origins = [
     "*",
