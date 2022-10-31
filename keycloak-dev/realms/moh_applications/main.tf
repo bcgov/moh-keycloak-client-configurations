@@ -121,6 +121,13 @@ module "SA-HIBC-SERVICE-BC-PORTAL" {
 module "SA-SFDC" {
   source = "./sa-sfdc"
 }
+module "TEST-DELETE-CLIENT-SERVICE" {
+  source = "./test-delete-client-service"
+}
+module "TEST-DELETE-CLIENT" {
+  source                     = "./test-delete-client"
+  TEST-DELETE-CLIENT-SERVICE = module.TEST-DELETE-CLIENT-SERVICE
+}
 module "SFDS" {
   source = "./sfds"
 }
