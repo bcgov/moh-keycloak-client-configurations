@@ -31,9 +31,6 @@ module "client-roles" {
     "first-test-role" = {
       "name" = "first-test-role"
     },
-    "second-test-role" = {
-      "name" = "second-test-role"
-    },
     "third-test-role" = {
       "name" = "third-test-role"
     },
@@ -55,10 +52,6 @@ module "service-account-roles" {
     "TEST-DELETE-CLIENT-SERVICE/first-test-role" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "first-test-role"
-    }
-    "TEST-DELETE-CLIENT-SERVICE/second-test-role" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "second-test-role"
     }
     "TEST-DELETE-CLIENT-SERVICE/third-test-role" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
