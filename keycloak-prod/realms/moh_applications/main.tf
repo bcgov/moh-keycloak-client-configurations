@@ -68,6 +68,9 @@ module "MSPDIRECT-WEB" {
   source            = "./mspdirect-web"
   MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
+module "PHO-RSC" {
+  source = "./pho-rsc"
+}
 module "PIDP-SERVICE" {
   source                  = "./pidp-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
