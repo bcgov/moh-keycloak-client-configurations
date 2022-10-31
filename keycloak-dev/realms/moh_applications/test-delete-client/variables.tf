@@ -1,0 +1,1 @@
+variable "TEST-DELETE-CLIENT-SERVICE" {}
