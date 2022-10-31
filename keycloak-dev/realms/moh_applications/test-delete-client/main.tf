@@ -41,7 +41,6 @@ module "scope-mappings" {
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
     "TEST-DELETE-CLIENT-SERVICE/first-test-role"  = var.TEST-DELETE-CLIENT-SERVICE.ROLES["first-test-role"].id,
-    "TEST-DELETE-CLIENT-SERVICE/second-test-role" = var.TEST-DELETE-CLIENT-SERVICE.ROLES["second-test-role"].id,
     "TEST-DELETE-CLIENT-SERVICE/third-test-role"  = var.TEST-DELETE-CLIENT-SERVICE.ROLES["third-test-role"].id,
     "TEST-DELETE-CLIENT-SERVICE/fourth-test-role" = var.TEST-DELETE-CLIENT-SERVICE.ROLES["fourth-test-role"].id,
   }
