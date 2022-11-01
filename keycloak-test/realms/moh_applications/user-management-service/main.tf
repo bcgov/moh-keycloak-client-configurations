@@ -127,6 +127,9 @@ module "client-roles" {
     "view-client-plr_uat" = {
       "name" = "view-client-plr_uat"
     },
+    "view-client-primary-care" = {
+      "name" = "view-client-primary-care"
+    },
     "view-client-sa-dbaac-portal" = {
       "name" = "view-client-sa-dbaac-portal"
     },
@@ -349,6 +352,10 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/view-client-plr_uat" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-plr_uat"
+    }
+    "USER-MANAGEMENT-SERVICE/view-client-primary-care" = {
+      "client_id" = keycloak_openid_client.CLIENT.id,
+      "role_id"   = "view-client-primary-care"
     }
     "USER-MANAGEMENT-SERVICE/view-client-sa-dbaac-portal" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
