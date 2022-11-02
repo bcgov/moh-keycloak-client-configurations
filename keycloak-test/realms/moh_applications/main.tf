@@ -144,6 +144,9 @@ module "PLR_UAT" {
   realm-management        = module.realm-management
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "PRIMARY-CARE" {
+  source = "./primary-care"
+}
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
   account = module.account
