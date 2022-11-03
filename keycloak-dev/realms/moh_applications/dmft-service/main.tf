@@ -18,12 +18,6 @@ resource "keycloak_openid_client" "CLIENT" {
   service_accounts_enabled            = true
   standard_flow_enabled               = false
   use_refresh_tokens                  = true
-  valid_redirect_uris = [
-    "*",
-  ]
-  web_origins = [
-    "*",
-  ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {
   add_to_id_token  = true
