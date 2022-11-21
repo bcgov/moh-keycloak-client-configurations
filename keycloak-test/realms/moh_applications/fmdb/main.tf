@@ -21,6 +21,9 @@ module "payara-client" {
   service_accounts_enabled = false
   use_refresh_tokens       = false
   valid_redirect_uris = [
+    "http://localhost:8080/*",
+    "https://localhost:8081/*",
+    "https://fmdbd.hlth.gov.bc.ca/*",
     "https://fmdbt.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]

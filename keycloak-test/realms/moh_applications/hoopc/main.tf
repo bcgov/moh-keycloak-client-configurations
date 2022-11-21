@@ -19,6 +19,9 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
+    "http://localhost:8080/*",
+    "https://localhost:8081/*",
+    "https://hoopcdev.hlth.gov.bc.ca/*",
     "https://hoopctst.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",

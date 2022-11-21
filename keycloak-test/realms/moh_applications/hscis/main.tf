@@ -18,9 +18,15 @@ module "payara-client" {
     "HNFILE" = {
       "name" = "HNFILE"
     },
+    "TESTCAFE" = {
+      "name" = "TESTCAFE"
+    },
   }
   service_accounts_enabled = false
   valid_redirect_uris = [
+    "http://localhost:8080/*",
+    "https://localhost:8081/*",
+    "https://hscisdev.hlth.gov.bc.ca/*",
     "https://hscistst.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
