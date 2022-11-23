@@ -1,5 +1,5 @@
 resource "keycloak_openid_client" "CLIENT" {
-  access_token_lifespan               = ""
+  access_token_lifespan               = "18000"
   access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
   base_url                            = ""

@@ -49,6 +49,7 @@ module "payara-client" {
     "https://hcimweb-cl-hsit.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
+    "http://localhost:8080/*",
   ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
