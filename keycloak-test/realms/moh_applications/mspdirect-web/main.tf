@@ -18,7 +18,7 @@ resource "keycloak_openid_client" "CLIENT" {
   service_accounts_enabled            = false
   standard_flow_enabled               = true
   valid_redirect_uris = [
-    "localhost:3000*",
+    "http://localhost:*",
     "https://mspdirect-test.apps.silver.devops.gov.bc.ca/*",
   ]
   web_origins = [

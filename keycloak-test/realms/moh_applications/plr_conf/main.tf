@@ -33,6 +33,7 @@ module "payara-client" {
     "https://plrconf.hlth.gov.bc.ca/plr*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
+    "http://localhost:8080/*",
   ]
 }
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {

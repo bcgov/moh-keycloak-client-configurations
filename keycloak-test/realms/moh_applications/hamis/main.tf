@@ -21,9 +21,12 @@ module "payara-client" {
   }
   service_accounts_enabled = true
   valid_redirect_uris = [
-    "https://sts.healthbc.org/adfs/ls/*",
-    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "http://localhost:8080/*",
+    "https://localhost:8081/*",
+    "https://hamisdev.hlth.gov.bc.ca/*",
     "https://hamistst.hlth.gov.bc.ca/*",
+    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://sts.healthbc.org/adfs/ls/*",
   ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {

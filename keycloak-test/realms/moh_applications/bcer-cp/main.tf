@@ -20,6 +20,8 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://bcer-test.hlth.gov.bc.ca/portal/*",
+    "http://localhost:3000/*",
+    "https://localhost:3001/*",
   ]
   web_origins = [
     "+",

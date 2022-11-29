@@ -15,6 +15,9 @@ module "payara-client" {
   }
   service_accounts_enabled = false
   valid_redirect_uris = [
+    "http://localhost:8080/*",
+    "https://localhost:8081/*",
+    "https://gisd.hlth.gov.bc.ca/*",
     "https://gist.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",

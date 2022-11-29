@@ -30,6 +30,9 @@ module "payara-client" {
   }
   service_accounts_enabled = false
   valid_redirect_uris = [
+    "http://localhost:8080/*",
+    "https://localhost:8081/*",
+    "https://eacldev.hlth.gov.bc.ca/*",
     "https://eacluat.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
