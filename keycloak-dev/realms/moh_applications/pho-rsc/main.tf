@@ -25,6 +25,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://rsc-stg.hlth.gov.bc.ca/*",
     "https://rsc-stg.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://rsc-test.hlth.gov.bc.ca/*"
   ]
   web_origins = [
     "*",
