@@ -216,6 +216,8 @@ module "scope-mappings" {
     "realm-management/view-clients"  = var.realm-management.ROLES["view-clients"].id,
     "realm-management/view-events"   = var.realm-management.ROLES["view-events"].id,
     "realm-management/view-users"    = var.realm-management.ROLES["view-users"].id,
+    "ORGANIZATIONS-API/get-org"      = var.ORGANIZATIONS-API.ROLES["get-org"].id,
+    "ORGANIZATIONS-API/add-org"      = var.ORGANIZATIONS-API.ROLES["add-org"].id,
   }
 }
 module "service-account-roles" {
@@ -443,6 +445,14 @@ module "service-account-roles" {
     "realm-management/view-users" = {
       "client_id" = var.realm-management.CLIENT.id,
       "role_id"   = "view-users"
+    }
+    "ORGANIZATIONS-API/get-org" = {
+      "client_id" = var.ORGANIZATIONS-API.CLIENT.id,
+      "role_id"   = "get-org"
+    }
+    "ORGANIZATIONS-API/add-org" = {
+      "client_id" = var.ORGANIZATIONS-API.CLIENT.id,
+      "role_id"   = "add-org"
     }
   }
 }
