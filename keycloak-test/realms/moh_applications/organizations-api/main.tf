@@ -16,7 +16,7 @@ resource "keycloak_openid_client" "CLIENT" {
   pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false
-  standard_flow_enabled               = true
+  standard_flow_enabled               = false
   valid_redirect_uris = [
   ]
   web_origins = [
