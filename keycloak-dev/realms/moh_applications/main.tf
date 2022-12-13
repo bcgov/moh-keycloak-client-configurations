@@ -74,6 +74,9 @@ module "MSPDIRECT-WEB" {
   source            = "./mspdirect-web"
   MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
+module "ORGANIZATIONS-API" {
+  source = "./organizations-api"
+}
 module "PHO-RSC" {
   source = "./pho-rsc"
 }
@@ -131,9 +134,10 @@ module "UCI-SSO" {
   source = "./uci-sso"
 }
 module "USER-MANAGEMENT-SERVICE" {
-  source           = "./user-management-service"
-  realm-management = module.realm-management
-  account          = module.account
+  source            = "./user-management-service"
+  realm-management  = module.realm-management
+  account           = module.account
+  ORGANIZATIONS-API = module.ORGANIZATIONS-API
 }
 module "USER-MANAGEMENT" {
   source                  = "./user-management"

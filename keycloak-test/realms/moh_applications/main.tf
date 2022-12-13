@@ -97,6 +97,9 @@ module "MSPDIRECT-WEB-UAT" {
   source                = "./mspdirect-web-uat"
   MSPDIRECT-SERVICE-UAT = module.MSPDIRECT-SERVICE-UAT
 }
+module "ORGANIZATIONS-API" {
+  source = "./organizations-api"
+}
 module "PIDP-SERVICE" {
   source                  = "./pidp-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
@@ -190,9 +193,10 @@ module "UCI-SSO" {
   source = "./uci-sso"
 }
 module "USER-MANAGEMENT-SERVICE" {
-  source           = "./user-management-service"
-  realm-management = module.realm-management
-  account          = module.account
+  source            = "./user-management-service"
+  realm-management  = module.realm-management
+  account           = module.account
+  ORGANIZATIONS-API = module.ORGANIZATIONS-API
 }
 module "USER-MANAGEMENT" {
   source                  = "./user-management"
