@@ -28,7 +28,7 @@ resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
   add_to_id_token     = true
   add_to_userinfo     = true
   claim_name          = "orgId"
-  claim_value         = "\"\{"id":"0000010","name":"MOH crs"}\"
+  claim_value         = "{\"id\":\"0000010\",\"name\":\"MOH crs\"}"
   claim_value_type    = "String"
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "orgId"
