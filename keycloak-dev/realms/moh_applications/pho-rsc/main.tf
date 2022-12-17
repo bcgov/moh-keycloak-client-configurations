@@ -48,6 +48,10 @@ module "client-roles" {
       "name"        = "publisher"
       "description" = ""
     },
+    "demoreports" = {
+      "name"        = "demoreports"
+      "description" = ""
+    }
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role" {
