@@ -121,6 +121,9 @@ module "client-roles" {
     "view-client-webcaps" = {
       "name" = "view-client-webcaps"
     },
+    "view-client-pho-rsc" = {
+      "name" = "view-client-pho-rsc"
+    },
     "view-clients" = {
       "name" = "view-clients"
     },
@@ -310,6 +313,10 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/view-client-webcaps" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-webcaps"
+    }
+    "USER-MANAGEMENT-SERVICE/view-client-pho-rsc" = {
+      "client_id" = keycloak_openid_client.CLIENT.id,
+      "role_id"   = "view-client-pho-rsc"
     }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
