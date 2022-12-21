@@ -44,6 +44,9 @@ module "HCIMWEB_HSIT" {
 module "HCIMWEB_HUAT" {
   source = "./hcimweb_huat"
 }
+module "HDPBC" {
+  source = "./hdpbc"
+}
 module "HEM" {
   source = "./hem"
 }
