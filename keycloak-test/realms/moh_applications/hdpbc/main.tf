@@ -19,6 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
+    "https://hdpbc.ddev.site/*",
     "https://hdpbc-dev.hlth.gov.bc.ca/*",
     "https://hdpbc-tst.hlth.gov.bc.ca/*",
     "https://dmz1.hdpbc-tst.hlth.gov.bc.ca/*",
