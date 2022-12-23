@@ -29,6 +29,17 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_company" {
+  add_to_id_token = true
+  add_to_userinfo = false
+  claim_name      = "idir_company"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_company"
+  user_attribute  = "idir_company"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
+
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
