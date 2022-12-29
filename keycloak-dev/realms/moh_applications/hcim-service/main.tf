@@ -62,10 +62,10 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address"
   session_note     = "clientAddress"
 }
 resource "keycloak_openid_audience_protocol_mapper" "hcim-hd3" {
-  add_to_id_token  = false
-  client_id        = keycloak_openid_client.CLIENT.id
-  name             = "hcim_hd3"
-  realm_id         = keycloak_openid_client.CLIENT.realm_id
+  add_to_id_token          = false
+  client_id                = keycloak_openid_client.CLIENT.id
+  name                     = "hcim_hd3"
+  realm_id                 = keycloak_openid_client.CLIENT.realm_id
   included_custom_audience = "hcim_hd3"
 }
 module "service-account-roles" {
