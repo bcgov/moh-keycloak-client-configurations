@@ -38,6 +38,9 @@ module "HCIMWEB" {
 module "HCIMWEB_HD2" {
   source = "./hcimweb_hd2"
 }
+module "HCIM-SERVICE" {
+  source = "./hcim-service"
+}
 module "HEM" {
   source = "./hem"
 }
