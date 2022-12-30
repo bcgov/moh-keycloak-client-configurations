@@ -36,6 +36,9 @@ module "client-roles" {
     "ELIGIBILITY" = {
       "name" = "ELIGIBILITY"
     },
+    "HELPDESK" = {
+      "name" = "HELPDESK"
+    },
     "MANAGEMSPPAYEENUMBER" = {
       "name" = "MANAGEMSPPAYEENUMBER"
     },
