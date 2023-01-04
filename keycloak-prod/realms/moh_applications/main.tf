@@ -29,6 +29,9 @@ module "HAMIS" {
 module "HCIMWEB" {
   source = "./hcimweb"
 }
+module "HDPBC" {
+  source = "./hdpbc"
+}
 module "HEM" {
   source = "./hem"
 }
