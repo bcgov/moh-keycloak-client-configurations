@@ -111,6 +111,9 @@ module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
 module "PRP-SERVICE" {
   source = "./prp-service"
 }
+module "PRP-SYSTEM" {
+  source = "./prp-system"
+}
 module "PRP-WEB" {
   source      = "./prp-web"
   PRP-SERVICE = module.PRP-SERVICE
