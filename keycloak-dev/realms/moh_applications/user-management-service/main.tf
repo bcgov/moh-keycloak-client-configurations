@@ -46,6 +46,9 @@ module "client-roles" {
     "view-client-bcer-cp" = {
       "name" = "view-client-bcer-cp"
     },
+    "view-client-dmft-service" = {
+      "name" = "view-client-dmft-service"
+    },
     "view-client-eacl" = {
       "name" = "view-client-eacl"
     },

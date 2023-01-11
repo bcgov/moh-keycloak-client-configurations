@@ -4,7 +4,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "DMFT-SERVICE-ACCOUNT"
+  client_id                           = "DMFT-SERVICE"
   consent_required                    = false
   description                         = "Driver Medical Fitness Transformation"
   direct_access_grants_enabled        = false
