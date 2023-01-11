@@ -97,6 +97,9 @@ module "PLR" {
   realm-management        = module.realm-management
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "PLR-PRP" {
+  source = "./plr-prp"
+}
 module "PLR-SHOPPERS" {
   source = "./plr-shoppers"
 }
@@ -107,9 +110,6 @@ module "PRIME-WEBAPP-ENROLLMENT" {
 module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
   source                  = "./prime-webapp-enrollment-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-}
-module "PRP-SERVICE" {
-  source = "./prp-service"
 }
 module "PRP-SYSTEM" {
   source = "./prp-system"
