@@ -112,6 +112,9 @@ module "PIDP-WEBAPP" {
   account      = module.account
   PIDP-SERVICE = module.PIDP-SERVICE
 }
+module "PLR-PRP" {
+  source = "./plr-prp"
+}
 module "PLR-SHOPPERS" {
   source = "./plr-shoppers"
 }
