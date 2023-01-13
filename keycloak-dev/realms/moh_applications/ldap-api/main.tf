@@ -1,6 +1,6 @@
 resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan               = ""
-  access_type                         = "BEARER-ONLY"
+  access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
