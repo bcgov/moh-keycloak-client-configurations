@@ -74,6 +74,10 @@ module "LDAP-ACC-TRANS-SERVICE" {
   source                  = "./ldap-acc-trans-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "LDAP-API" {
+  source            = "./ldap-api"
+  ORGANIZATIONS-API = module.ORGANIZATIONS-API
+}
 module "MAID" {
   source = "./maid"
 }
