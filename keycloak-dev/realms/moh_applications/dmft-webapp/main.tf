@@ -43,7 +43,7 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "LICENCE-STATUS/MOA"          = var.LICENCE-STATUS.ROLES["MOA"].id
+    "LICENCE-STATUS/MOA"          = var.LICENCE-STATUS.ROLES["MOA"].id,
     "LICENCE-STATUS/PRACTITIONER" = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
   }
 }
