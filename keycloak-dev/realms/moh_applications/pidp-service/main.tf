@@ -76,7 +76,7 @@ module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
-  roles     = {
+  roles = {
     "USER-MANAGEMENT-SERVICE/create-user"                = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-details"        = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-roles"          = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
