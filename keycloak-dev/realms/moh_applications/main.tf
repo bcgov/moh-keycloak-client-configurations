@@ -97,9 +97,6 @@ module "PLR" {
   realm-management        = module.realm-management
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
-module "PLR-PRP" {
-  source = "./plr-prp"
-}
 module "PLR-SHOPPERS" {
   source = "./plr-shoppers"
 }
