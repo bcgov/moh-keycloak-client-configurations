@@ -15,6 +15,7 @@ module "DMFT-SERVICE" {
 }
 module "DMFT-WEBAPP" {
   source = "./dmft-webapp"
+  LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "EACL" {
   source = "./eacl"
@@ -64,6 +65,9 @@ module "LDAP-ACC-TRANS-SERVICE" {
 module "LDAP-API" {
   source            = "./ldap-api"
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
+}
+module "LICENCE-STATUS" {
+  source            = "./licence-status"
 }
 module "MAID" {
   source = "./maid"
