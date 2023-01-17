@@ -77,16 +77,17 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "USER-MANAGEMENT-SERVICE/create-user"              = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
-    "USER-MANAGEMENT-SERVICE/manage-user-details"      = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
-    "USER-MANAGEMENT-SERVICE/manage-user-roles"        = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-dmft-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-dmft-service"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-hcimweb"      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-sat-eforms"   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-eforms"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-uci-sso"      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-uci-sso"].id,
-    "USER-MANAGEMENT-SERVICE/view-clients"             = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
-    "USER-MANAGEMENT-SERVICE/view-users"               = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "USER-MANAGEMENT-SERVICE/create-user"                = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-details"        = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-roles"          = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-dmft-webapp"    = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-dmft-webapp"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-hcimweb"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-licence-status" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-licence-status"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-pidp-service"   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-sat-eforms"     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-eforms"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-uci-sso"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-uci-sso"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients"               = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"                 = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   }
 }
 module "service-account-roles" {
@@ -110,13 +111,17 @@ module "service-account-roles" {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "manage-user-roles"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-dmft-service" = {
+    "USER-MANAGEMENT-SERVICE/view-client-dmft-webapp" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-      "role_id"   = "view-client-dmft-service"
+      "role_id"   = "view-client-dmft-webapp"
     }
     "USER-MANAGEMENT-SERVICE/view-client-hcimweb" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-client-hcimweb"
+    }
+    "USER-MANAGEMENT-SERVICE/view-client-licence-status" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "view-client-licence-status"
     }
     "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
