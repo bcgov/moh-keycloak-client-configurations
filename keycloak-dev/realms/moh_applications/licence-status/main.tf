@@ -29,11 +29,11 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "get-org" = {
+    "MOA" = {
       "name"        = "MOA"
       "description" = ""
     },
-    "add-org" = {
+    "PRACTITIONER" = {
       "name"        = "PRACTITIONER"
       "description" = ""
     },
