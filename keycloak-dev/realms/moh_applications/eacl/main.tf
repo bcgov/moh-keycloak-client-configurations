@@ -1,6 +1,6 @@
 module "payara-client" {
   source                             = "../../../../modules/payara-client"
-  base_url                           = "http://eacldev.hlth.gov.bc.ca"
+  base_url                           = "https://eacldev.hlth.gov.bc.ca"
   claim_name                         = "eacl_role"
   client_id                          = "EACL"
   client_name                        = "EACL"
