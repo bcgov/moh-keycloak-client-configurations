@@ -46,9 +46,6 @@ module "client-roles" {
     "view-client-bcer-cp" = {
       "name" = "view-client-bcer-cp"
     },
-    "view-client-licence-status" = {
-      "name" = "view-client-licence-status"
-    },
     "view-client-dmft-webapp" = {
       "name" = "view-client-dmft-webapp"
     },
@@ -78,6 +75,9 @@ module "client-roles" {
     },
     "view-client-hscis" = {
       "name" = "view-client-hscis"
+    },
+    "view-client-licence-status" = {
+      "name" = "view-client-licence-status"
     },
     "view-client-maid" = {
       "name" = "view-client-maid"
