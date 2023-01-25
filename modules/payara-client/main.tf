@@ -10,6 +10,7 @@ terraform {
 variable "client_id" {
   type = string
 }
+
 variable "client_name" {
   type = string
 }
@@ -23,6 +24,10 @@ variable "base_url" {
 }
 
 variable "description" {
+  type = string
+}
+
+variable "login_theme" {
   type = string
 }
 
@@ -47,10 +52,12 @@ variable "client_role_mapper_add_to_id_token" {
   type    = bool
   default = false
 }
+
 variable "client_role_mapper_add_to_userinfo" {
   type    = bool
   default = false
 }
+
 variable "roles" {
   type = map(map(string))
 }
@@ -72,6 +79,7 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled = false
   full_scope_allowed          = false
   implicit_flow_enabled       = false
+  login_theme                 = var.login_theme
   name                        = var.client_name
   # oauth2_device_authorization_grant_enabled  = false
   realm_id                 = "moh_applications"
