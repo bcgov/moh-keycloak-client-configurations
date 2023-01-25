@@ -7,6 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = true
   client_role_mapper_add_to_userinfo = true
   description                        = "Sales Force Pharmacare Special Authority"
+  login_theme                        = ""
   mapper_name                        = "SA-SFDC Roles"
   roles = {
     "MOH_USER" = {

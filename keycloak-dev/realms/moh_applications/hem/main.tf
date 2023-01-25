@@ -7,6 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Health Environment Manager application is used to schedule the change requests and server patching."
+  login_theme                        = ""
   mapper_name                        = "HEM Role"
   roles = {
     "hem" = {

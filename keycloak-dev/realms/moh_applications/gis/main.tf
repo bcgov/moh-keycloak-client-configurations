@@ -7,6 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Guaranteed Income Supplement is used by Health Authorities to determine the rate of service fees to be charged to the client for certain Home Care services (Home Support or Residential Care)."
+  login_theme                        = ""
   mapper_name                        = "GIS Role"
   roles = {
     "GISUSER" = {

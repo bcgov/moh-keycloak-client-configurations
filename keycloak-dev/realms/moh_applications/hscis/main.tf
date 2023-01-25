@@ -7,6 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Health Sector Compensation Information System collects detailed payroll and funding information from all of the health sector employers in the province (excluding Doctors). It is intended to collect wage rates, paid hours, and benefits information."
+  login_theme                        = ""
   mapper_name                        = "HSCIS Role"
   roles = {
     "ADMIN" = {

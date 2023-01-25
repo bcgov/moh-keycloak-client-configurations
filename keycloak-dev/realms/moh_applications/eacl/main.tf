@@ -7,6 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Enhanced Audit Confirmation Letters applications are used to analyze Pharmacare Audit Information to generate letters to end users and process the returned letters."
+  login_theme                        = ""
   mapper_name                        = "EACL Role"
   roles = {
     "EACL_Auditor" = {

@@ -7,6 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Health Authority Management Information System is used to report Health Authority financial and statistical general ledger information."
+  login_theme                        = ""
   mapper_name                        = "HAMIS Role"
   roles = {
     "HMS_ADMIN" = {

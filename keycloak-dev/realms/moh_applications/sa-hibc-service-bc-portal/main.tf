@@ -7,6 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = true
   client_role_mapper_add_to_userinfo = true
   description                        = "Special Authority HIBC & Service BC Community Portal"
+  login_theme                        = ""
   mapper_name                        = "SA-HIBC-SERVICE-BC-PORTAL Roles"
   roles = {
     "HIBC_USER" = {
