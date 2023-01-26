@@ -2,7 +2,7 @@ resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan               = ""
   access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
-  base_url                            = ""https://hcimweb-hd4.hlth.gov.bc.ca/HCIMWeb"
+  base_url                            = "https://hcimweb-hd4.hlth.gov.bc.ca/HCIMWeb"
   client_authenticator_type           = "client-secret"
   client_id                           = "HCIMWEB"
   consent_required                    = false
