@@ -70,19 +70,6 @@ module "client-roles" {
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {
-  realm_id   = keycloak_openid_client.CLIENT.realm_id
-  client_id  = keycloak_openid_client.CLIENT.id
-  name       = "HCIMWEB Role"
-  claim_name = "hcimweb_role"
-
-  add_to_access_token         = true
-  add_to_id_token             = false
-  add_to_userinfo             = false
-  claim_value_type            = "String"
-  client_id_for_role_mappings = var.client_id
-  multivalued                 = true
-}
-resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {
   add_to_access_token         = true
   add_to_id_token             = false
   add_to_userinfo             = false
