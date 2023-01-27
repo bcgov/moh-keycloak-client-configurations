@@ -66,24 +66,32 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "TESTROLE1" = {
-      "name"        = "TESTROLE1"
+    "PC_Patient" = {
+      "name"        = "PC_Patient"
       "description" = ""
     },
-    "TESTROLE2" = {
-      "name"        = "TESTROLE2"
+    "PC_Practitioner" = {
+      "name"        = "PC_Practitioner"
       "description" = ""
     },
-    "Admin Support" = {
-      "name"        = "Admin-Support"
+    "IMITS_PC_System_Admin" = {
+      "name"        = "IMITS_PC_System_Admin"
       "description" = ""
     },
-    "PRACTIONER" = {
-      "name"        = "PRACTIONER"
+    "IMITS_PC_Ops_Support" = {
+      "name"        = "IMITS_PC_Ops_Support"
       "description" = ""
     },
-    "BCW Nurse" = {
-      "name"        = "BCW-Nurse"
+    "PC_Attachment_Coordinator" = {
+      "name"        = "PC_Attachment_Coordinator"
+      "description" = ""
+    },
+    "PC_HCR_Support_Tier2" = {
+      "name"        = "PC_HCR_Support_Tier2"
+      "description" = ""
+    },
+    "PC_HCR_Support_Tier1" = {
+      "name"        = "PC_HCR_Support_Tier1"
       "description" = ""
     },
   }
