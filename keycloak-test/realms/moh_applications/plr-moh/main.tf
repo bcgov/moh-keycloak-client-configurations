@@ -4,9 +4,9 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PLR-PRP"
+  client_id                           = "PLR-MOH"
   consent_required                    = false
-  description                         = "This service account is used for accessing the Provider and Location Registry (PLR) which is a standards-based repository of core provider data supplied by authorized sources that facilitates the formal exchange of health information."
+  description                         = "This service account is used for the MoH to access the Provider and Location Registry (PLR) which is a standards-based repository of core provider data supplied by authorized sources that facilitates the formal exchange of health information."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
