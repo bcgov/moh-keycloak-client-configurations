@@ -79,8 +79,6 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-sa-dbaac-portal"           = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-dbaac-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sa-hibc-service-bc-portal" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-hibc-service-bc-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sa-sfdc"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-sfdc"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-sat-case-management-1"     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-case-management-1"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-sat-drug-management-1"     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-drug-management-1"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sat-eforms"                = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-eforms"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sfds"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sfds"].id,
     "USER-MANAGEMENT-SERVICE/view-client-swt"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-swt"].id,
