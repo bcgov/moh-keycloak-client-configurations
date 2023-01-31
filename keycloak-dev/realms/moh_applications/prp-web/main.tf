@@ -11,6 +11,8 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled      = true
   valid_redirect_uris = [
     "http://localhost:*",
+    "https://wonderful-cliff-0d1cec610.2.azurestaticapps.net/*",
+    "https://devprp.healthideas.gov.bc.ca/*",
   ]
   web_origins = [
     "*",
