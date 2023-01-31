@@ -122,6 +122,9 @@ module "PLR-PRP" {
 module "PLR-SHOPPERS" {
   source = "./plr-shoppers"
 }
+module "PLR-MOH" {
+  source = "./plr-moh"
+}
 module "PLR_CONF" {
   source                  = "./plr_conf"
   realm-management        = module.realm-management
