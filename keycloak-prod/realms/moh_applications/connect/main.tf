@@ -7,7 +7,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_id                           = "CONNECT"
   consent_required                    = false
   description                         = "Ministry of Health Extranet"
-  direct_access_grants_enabled        = false
+  direct_access_grants_enabled    = false
   enabled                             = true
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
