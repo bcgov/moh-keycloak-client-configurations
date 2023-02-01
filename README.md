@@ -58,7 +58,7 @@ Once the above steps are complete, you will be able to run all Terraform command
 #### Terraform format
 
 This repository enforces having all configuration formatted in the same manner. 
-To ensure propper formatting run `terraform fmt -recursive` from the root of moh-keycloak-client-configurations.
+To ensure proper formatting run `terraform fmt -recursive` from the root of moh-keycloak-client-configurations.
 Terraform will modify the files, so they satisfy the formatting constraints.
 Environment variables set-up is not necessary to run this command, it can be performed by anyone who has Terraform installed.
 In case of being unable to install Terraform, formtting issues need to be resolved manually. 
