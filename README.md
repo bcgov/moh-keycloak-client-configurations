@@ -33,6 +33,8 @@ The workflow will:
 1. **Checkout** check outs the current configuration. Uses defines the action/Docker image to run that specific step. The checkout step "uses" GitHub's actions/checkout@v2 action.
 1. **Setup Terraform** retrieves the Terraform CLI used in the GitHub action workflow.
 1. **Terraform Format** checks whether the configuration has been properly formatted. If the configuration isn't properly formatted this step will produce an error. It enforces Terraform best practices by preventing your team from merging unformatted configuration to `main`.
+    * To ensure propper formatting run `terraform fmt -recursive` from the root of moh-keycloak-client-configurations, before pushing your changes.
+    * In case of formatting errors, detailed explanation is displayed (`steps.fmt.outputs.stdout`). This allows your team to review the formatting changes that need to be done directly in the PR instead of viewing the GitHub Actions log. 
 1. **Terraform Init** initializes the configuration used in the GitHub action workflow.
 1. **Terraform Validate** validates the configuration used in the GitHub action workflow.
 1. **Terraform Plan** generates a Terraform plan. Notice:
