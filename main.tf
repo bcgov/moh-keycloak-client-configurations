@@ -1,19 +1,3 @@
-terraform {
-  required_providers {
-    keycloak = {
-      source  = "mrparkers/keycloak"
-      version = ">= 3.0.0"
-    }
-  }
-  required_version = ">= 1.1.0"
-
-  backend "s3" {
-    bucket = "cey5wq-sandbox-moh-keycloak-terraform-state"
-    key    = "moh-keycloak-terraform-state"
-    region = "ca-central-1"
-  }
-}
-
 module "KEYCLOAK_DEV" {
   source = "./keycloak-dev"
 
