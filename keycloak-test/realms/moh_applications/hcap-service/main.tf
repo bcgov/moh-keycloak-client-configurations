@@ -38,7 +38,6 @@ module "service-account-roles" {
   source    = "../../../../modules/service-account-roles"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
-  //noinspection HILUnresolvedReference
   service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
   realm_roles = {
     "default-roles-moh_applications" = "default-roles-moh_applications",
