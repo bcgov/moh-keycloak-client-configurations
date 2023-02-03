@@ -1,4 +1,4 @@
-resource "keycloak_openid_client" "CLIENT" {
+ resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan               = "300"
   access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
@@ -28,16 +28,16 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "USER-MANAGEMENT-SERVICE/manage-user-roles"             = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
-#    "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
-    "USER-MANAGEMENT-SERVICE/view-clients"                  = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
-    "USER-MANAGEMENT-SERVICE/view-users"                    = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-roles" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    #    "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"   = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   }
 }
 module "service-account-roles" {
-  source                  = "../../../../modules/service-account-roles"
-  realm_id                = keycloak_openid_client.CLIENT.realm_id
-  client_id               = keycloak_openid_client.CLIENT.id
+  source    = "../../../../modules/service-account-roles"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
   //noinspection HILUnresolvedReference
   service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
   realm_roles = {
@@ -48,10 +48,10 @@ module "service-account-roles" {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "manage-user-roles"
     }
-#    "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service" = {
-#      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-#      "role_id"   = "view-client-mspdirect-service"
-#    }
+    #    "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service" = {
+    #      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+    #      "role_id"   = "view-client-mspdirect-service"
+    #    }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-clients"
