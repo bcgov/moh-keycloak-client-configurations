@@ -37,6 +37,9 @@ module "client-roles" {
     "manage-all-groups" = {
       "name" = "manage-all-groups"
     },
+    "manage-org" = {
+      "name" = "manage-org"
+    },
     "manage-own-groups" = {
       "name" = "manage-own-groups"
     },

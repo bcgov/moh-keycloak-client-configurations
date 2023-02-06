@@ -29,6 +29,11 @@ module "HAMIS" {
   source                  = "./hamis"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "HCAP-SERVICE" {
+  source                  = "./hcap-service"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "HCIMWEB_HIAT1" {
   source = "./hcimweb_hiat1"
 }
