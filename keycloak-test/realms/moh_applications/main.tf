@@ -7,6 +7,9 @@ module "realm-management" {
 module "BCER-CP" {
   source = "./bcer-cp"
 }
+module "BCHCIM" {
+  source = "./bchcim"
+}
 module "CONNECT" {
   source = "./connect"
 }
