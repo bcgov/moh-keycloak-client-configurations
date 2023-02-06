@@ -37,6 +37,9 @@ module "client-roles" {
     "manage-all-groups" = {
       "name" = "manage-all-groups"
     },
+    "manage-org" = {
+      "name" = "manage-org"
+    },
     "manage-own-groups" = {
       "name" = "manage-own-groups"
     },
@@ -105,12 +108,6 @@ module "client-roles" {
     },
     "view-client-sa-sfdc" = {
       "name" = "view-client-sa-sfdc"
-    },
-    "view-client-sat-case-management-1" = {
-      "name" = "view-client-sat-case-management-1"
-    },
-    "view-client-sat-drug-management-1" = {
-      "name" = "view-client-sat-drug-management-1"
     },
     "view-client-sat-eforms" = {
       "name" = "view-client-sat-eforms"
@@ -291,14 +288,6 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/view-client-sa-sfdc" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-sa-sfdc"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-sat-case-management-1" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-sat-case-management-1"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-sat-drug-management-1" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-sat-drug-management-1"
     }
     "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
