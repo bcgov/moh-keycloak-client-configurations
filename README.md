@@ -5,7 +5,7 @@ This repository holds Keycloak client configuration files for the Ministry of He
 ## How to update a client configuration
 
 1. Get permission from the Access Management Team to make pull requests to this repo.
-2. Create a pull request with your proposed changes to a client configuration file.
+2. Create a pull request with your proposed changes to a client configuration file. Make sure your changes are [properly formatted](#terraform-format).
 3. An automatic process will compare your changes to the current state of Keycloak.
 4. A bot will add a comparison report to your pull request.
 5. An Access Management Team member will merge your changes into the `main` branch.
@@ -32,7 +32,7 @@ The workflow will:
 
 1. **Checkout** check outs the current configuration. Uses defines the action/Docker image to run that specific step. The checkout step "uses" GitHub's actions/checkout@v2 action.
 1. **Setup Terraform** retrieves the Terraform CLI used in the GitHub action workflow.
-1. **Terraform Format** checks whether the configuration has been properly formatted. If the configuration isn't properly formatted this step will produce an error. It enforces Terraform best practices by preventing your team from merging unformatted configuration to `main`.
+1. **Terraform Format** checks whether the configuration has been properly formatted. If the configuration isn't [properly formatted](#terraform-format) this step will produce an error. It enforces Terraform best practices by preventing your team from merging unformatted configuration to `main`. In case of formatting errors, detailed explanation is displayed (`steps.fmt.outputs.stdout`). This allows your team to review the formatting changes that need to be done directly in the PR instead of viewing the GitHub Actions log. 
 1. **Terraform Init** initializes the configuration used in the GitHub action workflow.
 1. **Terraform Validate** validates the configuration used in the GitHub action workflow.
 1. **Terraform Plan** generates a Terraform plan. Notice:
@@ -48,12 +48,21 @@ The workflow will:
 In some rare cases you may need to set up Terraform locally. It is easy to do so. Note that this same
 configuration is used by GitHub Actions, so may refer to its commands and secrets for comparison.
 
-1. Install Terraform.
+1. Install Terraform (use version identified in https://github.com/bcgov/moh-keycloak-client-configurations/blob/main/.github/workflows/terraform.yml).
 2. Set environment variables.
 3. Checkout the project.
 4. Run `terraform init -backend-config="role_arn=$AWS_S3_BACKEND_ROLE_ARN`".
 
 Once the above steps are complete, you will be able to run all Terraform commands.
+
+#### Terraform format
+
+This repository enforces having all configuration formatted in the same manner. 
+To ensure proper formatting run `terraform fmt -recursive` from the root of moh-keycloak-client-configurations.
+Terraform will modify the files, so they satisfy the formatting constraints.
+Environment variables set-up is not necessary to run this command, it can be performed by anyone who has Terraform installed.
+In case of being unable to install Terraform, formtting issues need to be resolved manually. 
+
 
 #### Environment variables
 
