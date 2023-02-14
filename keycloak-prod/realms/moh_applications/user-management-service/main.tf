@@ -70,7 +70,7 @@ module "client-roles" {
     "view-client-hscis" = {
       "name" = "view-client-hscis"
     },
-     "view-client-licence-status" = {
+    "view-client-licence-status" = {
       "name" = "view-client-licence-status"
     },
     "view-client-maid" = {
