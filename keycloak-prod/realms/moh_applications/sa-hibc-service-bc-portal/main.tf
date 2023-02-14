@@ -19,6 +19,8 @@ module "payara-client" {
   service_accounts_enabled = false
   valid_redirect_uris = [
     "https://bchealth.force.com/services/authcallback/Login_with_IDIR_HIBCSBC",
+    "https://bchealth.my.site.com/s/*",
+    "https://bchealth.my.site.com/services/authcallback/Login_with_IDIR_HIBCSBC"
   ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {

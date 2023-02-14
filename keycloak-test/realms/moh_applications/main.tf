@@ -29,6 +29,11 @@ module "HAMIS" {
   source                  = "./hamis"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "HCAP-SERVICE" {
+  source                  = "./hcap-service"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "HCIMWEB_HIAT1" {
   source = "./hcimweb_hiat1"
 }
@@ -52,6 +57,9 @@ module "HDPBC" {
 }
 module "HEM" {
   source = "./hem"
+}
+module "HHSLibrary" {
+  source = "./hhs-library"
 }
 module "hnsesb_api_gateway_client_manager" {
   source           = "./hnsesb_api_gateway_client_manager"

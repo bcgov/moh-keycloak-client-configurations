@@ -35,5 +35,9 @@ module "client-roles" {
       "name"        = "add-org"
       "description" = ""
     },
+    "delete-org" = {
+      "name"        = "delete-org"
+      "description" = ""
+    },
   }
 }

@@ -18,8 +18,11 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "ADMIN" = {
-      "name" = "ADMIN"
+    "PHARMACIST" = {
+      "name" = "PHARMACIST"
+    },
+    "PHYSICIAN" = {
+      "name" = "PHYSICIAN"
     },
     "PMP" = {
       "name" = "PMP"

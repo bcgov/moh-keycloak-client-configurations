@@ -37,6 +37,9 @@ module "client-roles" {
     "manage-all-groups" = {
       "name" = "manage-all-groups"
     },
+    "manage-org" = {
+      "name" = "manage-org"
+    },
     "manage-own-groups" = {
       "name" = "manage-own-groups"
     },
@@ -105,12 +108,6 @@ module "client-roles" {
     },
     "view-client-sa-sfdc" = {
       "name" = "view-client-sa-sfdc"
-    },
-    "view-client-sat-case-management-1" = {
-      "name" = "view-client-sat-case-management-1"
-    },
-    "view-client-sat-drug-management-1" = {
-      "name" = "view-client-sat-drug-management-1"
     },
     "view-client-sat-eforms" = {
       "name" = "view-client-sat-eforms"
@@ -188,6 +185,7 @@ module "scope-mappings" {
     "realm-management/view-users"    = var.realm-management.ROLES["view-users"].id,
     "ORGANIZATIONS-API/get-org"      = var.ORGANIZATIONS-API.ROLES["get-org"].id,
     "ORGANIZATIONS-API/add-org"      = var.ORGANIZATIONS-API.ROLES["add-org"].id,
+    "ORGANIZATIONS-API/delete-org"   = var.ORGANIZATIONS-API.ROLES["delete-org"].id,
   }
 }
 module "service-account-roles" {
@@ -292,14 +290,6 @@ module "service-account-roles" {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-sa-sfdc"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-sat-case-management-1" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-sat-case-management-1"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-sat-drug-management-1" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-sat-drug-management-1"
-    }
     "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-sat-eforms"
@@ -375,6 +365,10 @@ module "service-account-roles" {
     "ORGANIZATIONS-API/add-org" = {
       "client_id" = var.ORGANIZATIONS-API.CLIENT.id,
       "role_id"   = "add-org"
+    }
+    "ORGANIZATIONS-API/delete-org" = {
+      "client_id" = var.ORGANIZATIONS-API.CLIENT.id,
+      "role_id"   = "delete-org"
     }
   }
 }

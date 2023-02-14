@@ -28,13 +28,26 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
   session_note     = "identity_provider"
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "common_provider_number" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "common_provider_number"
+  claim_value_type    = "String"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "common_provider_number"
+  user_attribute      = "common_provider_number"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PRP-SERVICE/ADMIN" = var.PRP-SERVICE.ROLES["ADMIN"].id,
-    "PRP-SERVICE/PMP"   = var.PRP-SERVICE.ROLES["PMP"].id,
-    "PRP-SERVICE/MSPQI" = var.PRP-SERVICE.ROLES["MSPQI"].id,
+    "PRP-SERVICE/PHYSICIAN"  = var.PRP-SERVICE.ROLES["PHYSICIAN"].id,
+    "PRP-SERVICE/PHARMACIST" = var.PRP-SERVICE.ROLES["PHARMACIST"].id,
+    "PRP-SERVICE/PMP"        = var.PRP-SERVICE.ROLES["PMP"].id,
+    "PRP-SERVICE/MSPQI"      = var.PRP-SERVICE.ROLES["MSPQI"].id,
   }
 }
