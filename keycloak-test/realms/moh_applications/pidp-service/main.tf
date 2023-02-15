@@ -81,6 +81,7 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/manage-user-details"      = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-roles"        = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hcimweb_huat" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_huat"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-licence-status" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-licence-status"].id,
     "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sat-eforms"   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sat-eforms"].id,
     "USER-MANAGEMENT-SERVICE/view-client-uci-sso"      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-uci-sso"].id,
