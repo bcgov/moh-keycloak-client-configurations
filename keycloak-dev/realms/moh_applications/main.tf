@@ -110,6 +110,7 @@ module "PLR" {
 }
 module "PLR-SHOPPERS" {
   source = "./plr-shoppers"
+  PLR    = module.PLR
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
