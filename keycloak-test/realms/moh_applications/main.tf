@@ -90,7 +90,7 @@ module "LDAP-API" {
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
 }
 module "LICENCE-STATUS" {
-  source            = "./licence-status"
+  source = "./licence-status"
 }
 module "MAID" {
   source = "./maid"
