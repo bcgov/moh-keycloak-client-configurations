@@ -71,3 +71,11 @@ module "service-account-roles" {
   }
   client_roles = {}
 }
+module "scope-mappings" {
+  source    = "../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "PLR_IAT/CONSUMER" = var.PLR_IAT.ROLES["CONSUMER"].id
+  }
+}
