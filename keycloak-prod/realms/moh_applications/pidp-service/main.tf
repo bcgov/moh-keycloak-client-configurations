@@ -113,10 +113,6 @@ module "service-account-roles" {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-client-hcimweb"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-licence-status" = {
-      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-      "role_id"   = "view-client-licence-status"
-    }
     "USER-MANAGEMENT-SERVICE/view-client-pidp-service" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-client-pidp-service"
