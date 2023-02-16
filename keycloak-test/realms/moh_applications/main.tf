@@ -91,6 +91,9 @@ module "LDAP-API" {
   source            = "./ldap-api"
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
 }
+module "LICENCE-STATUS" {
+  source = "./licence-status"
+}
 module "MAID" {
   source = "./maid"
 }
