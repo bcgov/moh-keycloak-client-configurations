@@ -133,7 +133,8 @@ module "PLR-PRP" {
   source = "./plr-prp"
 }
 module "PLR-SHOPPERS" {
-  source = "./plr-shoppers"
+  source  = "./plr-shoppers"
+  PLR_IAT = module.PLR_IAT
 }
 module "PLR-MOH" {
   source = "./plr-moh"
