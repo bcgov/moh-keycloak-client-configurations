@@ -75,10 +75,10 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_IAT/CONSUMER" = var.PLR_IAT.ROLES["PRIMARY_SOURCE"].id
-    "PLR_UAT/CONSUMER" = var.PLR_UAT.ROLES["PRIMARY_SOURCE"].id
+    "PLR_IAT/CONSUMER"  = var.PLR_IAT.ROLES["PRIMARY_SOURCE"].id
+    "PLR_UAT/CONSUMER"  = var.PLR_UAT.ROLES["PRIMARY_SOURCE"].id
     "PLR_CONF/CONSUMER" = var.PLR_CONF.ROLES["PRIMARY_SOURCE"].id
-    "PLR_SIT/CONSUMER" = var.PLR_SIT.ROLES["PRIMARY_SOURCE"].id
-    "PLR_IAT/CONSUMER" = var.PLR_REV.ROLES["PRIMARY_SOURCE"].id
+    "PLR_SIT/CONSUMER"  = var.PLR_SIT.ROLES["PRIMARY_SOURCE"].id
+    "PLR_IAT/CONSUMER"  = var.PLR_REV.ROLES["PRIMARY_SOURCE"].id
   }
 }

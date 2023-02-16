@@ -133,52 +133,52 @@ module "PLR-PRP" {
   source = "./plr-prp"
 }
 module "PLR-QA-CONSUMER" {
-  source = "./plr-qa-consumer"
-  PLR_IAT = module.PLR_IAT
-  PLR_UAT = module.PLR_UAT
-  PLR_SIT = module.PLR_SIT
+  source   = "./plr-qa-consumer"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
   PLR_CONF = module.PLR_CONF
-  PLR_REV = module.PLR_REV
+  PLR_REV  = module.PLR_REV
 }
 module "PLR-QA-DSR-USER" {
-  source = "./plr-qa-dsr-user"
-  PLR_IAT = module.PLR_IAT
-  PLR_UAT = module.PLR_UAT
-  PLR_SIT = module.PLR_SIT
+  source   = "./plr-qa-dsr-user"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
   PLR_CONF = module.PLR_CONF
-  PLR_REV = module.PLR_REV
+  PLR_REV  = module.PLR_REV
 }
 module "PLR-QA-MOH-APPROVER" {
-  source = "./plr-qa-moh-approver"
-  PLR_IAT = module.PLR_IAT
-  PLR_UAT = module.PLR_UAT
-  PLR_SIT = module.PLR_SIT
+  source   = "./plr-qa-moh-approver"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
   PLR_CONF = module.PLR_CONF
-  PLR_REV = module.PLR_REV
+  PLR_REV  = module.PLR_REV
 }
 module "PLR-QA-PRIMARY-SOURCE" {
-  source = "./plr-qa-primary-source"
-  PLR_IAT = module.PLR_IAT
-  PLR_UAT = module.PLR_UAT
-  PLR_SIT = module.PLR_SIT
+  source   = "./plr-qa-primary-source"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
   PLR_CONF = module.PLR_CONF
-  PLR_REV = module.PLR_REV
+  PLR_REV  = module.PLR_REV
 }
 module "PLR-QA-REGADMIN" {
-  source = "./plr-qa-regadmin"
-  PLR_IAT = module.PLR_IAT
-  PLR_UAT = module.PLR_UAT
-  PLR_SIT = module.PLR_SIT
+  source   = "./plr-qa-regadmin"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
   PLR_CONF = module.PLR_CONF
-  PLR_REV = module.PLR_REV
+  PLR_REV  = module.PLR_REV
 }
 module "PLR-QA-SECONDARY-SOURCE" {
-  source = "./plr-qa-secondary-source"
-  PLR_IAT = module.PLR_IAT
-  PLR_UAT = module.PLR_UAT
-  PLR_SIT = module.PLR_SIT
+  source   = "./plr-qa-secondary-source"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
   PLR_CONF = module.PLR_CONF
-  PLR_REV = module.PLR_REV
+  PLR_REV  = module.PLR_REV
 }
 module "PLR-SHOPPERS" {
   source  = "./plr-shoppers"
