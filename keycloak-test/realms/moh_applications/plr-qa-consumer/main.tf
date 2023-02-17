@@ -9,7 +9,7 @@ resource "keycloak_openid_client" "CLIENT" {
   description                         = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources. This client will be used to generate accces tokens for the internal PLR QA team with the PLR Consumer role"
   enabled                             = true
   frontchannel_logout_enabled         = false
-  full_scope_allowed                  = true
+  full_scope_allowed                  = false
   implicit_flow_enabled               = false
   name                                = ""
   pkce_code_challenge_method          = ""
