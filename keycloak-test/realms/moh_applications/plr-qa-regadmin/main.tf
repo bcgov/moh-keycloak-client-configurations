@@ -68,17 +68,38 @@ module "service-account-roles" {
   realm_roles = {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
-  client_roles = {}
+  client_roles = {
+    "PLR_IAT/REG_ADMIN" = {
+      "client_id" = var.PLR_IAT.CLIENT.id,
+      "role_id"   = "REG_ADMIN"
+    }
+    "PLR_UAT/REG_ADMIN" = {
+      "client_id" = var.PLR_UAT.CLIENT.id,
+      "role_id"   = "REG_ADMIN"
+    }
+    "PLR_CONF/REG_ADMIN" = {
+      "client_id" = var.PLR_CONF.CLIENT.id,
+      "role_id"   = "REG_ADMIN"
+    }
+    "PLR_SIT/REG_ADMIN" = {
+      "client_id" = var.PLR_SIT.CLIENT.id,
+      "role_id"   = "REG_ADMIN"
+    }
+    "PLR_REV/REG_ADMIN" = {
+      "client_id" = var.PLR_REV.CLIENT.id,
+      "role_id"   = "REG_ADMIN"
+    }
+  }
 }
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_IAT/CONSUMER"  = var.PLR_IAT.ROLES["REG_ADMIN"].id
-    "PLR_UAT/CONSUMER"  = var.PLR_UAT.ROLES["REG_ADMIN"].id
-    "PLR_CONF/CONSUMER" = var.PLR_CONF.ROLES["REG_ADMIN"].id
-    "PLR_SIT/CONSUMER"  = var.PLR_SIT.ROLES["REG_ADMIN"].id
-    "PLR_IAT/CONSUMER"  = var.PLR_REV.ROLES["REG_ADMIN"].id
+    "PLR_IAT/REG_ADMIN"  = var.PLR_IAT.ROLES["REG_ADMIN"].id
+    "PLR_UAT/REG_ADMIN"  = var.PLR_UAT.ROLES["REG_ADMIN"].id
+    "PLR_CONF/REG_ADMIN" = var.PLR_CONF.ROLES["REG_ADMIN"].id
+    "PLR_SIT/REG_ADMIN"  = var.PLR_SIT.ROLES["REG_ADMIN"].id
+    "PLR_REV/REG_ADMIN"  = var.PLR_REV.ROLES["REG_ADMIN"].id
   }
 }

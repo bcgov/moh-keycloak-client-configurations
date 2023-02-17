@@ -68,17 +68,38 @@ module "service-account-roles" {
   realm_roles = {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
-  client_roles = {}
+  client_roles = {
+    "PLR_IAT/DSR_USER" = {
+      "client_id" = var.PLR_IAT.CLIENT.id,
+      "role_id"   = "DSR_USER"
+    }
+    "PLR_UAT/DSR_USER" = {
+      "client_id" = var.PLR_UAT.CLIENT.id,
+      "role_id"   = "DSR_USER"
+    }
+    "PLR_CONF/DSR_USER" = {
+      "client_id" = var.PLR_CONF.CLIENT.id,
+      "role_id"   = "DSR_USER"
+    }
+    "PLR_SIT/DSR_USER" = {
+      "client_id" = var.PLR_SIT.CLIENT.id,
+      "role_id"   = "DSR_USER"
+    }
+    "PLR_REV/DSR_USER" = {
+      "client_id" = var.PLR_REV.CLIENT.id,
+      "role_id"   = "DSR_USER"
+    }
+  }
 }
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_IAT/CONSUMER"  = var.PLR_IAT.ROLES["DSR_USER"].id
-    "PLR_UAT/CONSUMER"  = var.PLR_UAT.ROLES["DSR_USER"].id
-    "PLR_CONF/CONSUMER" = var.PLR_CONF.ROLES["DSR_USER"].id
-    "PLR_SIT/CONSUMER"  = var.PLR_SIT.ROLES["DSR_USER"].id
-    "PLR_IAT/CONSUMER"  = var.PLR_REV.ROLES["DSR_USER"].id
+    "PLR_IAT/DSR_USER"  = var.PLR_IAT.ROLES["DSR_USER"].id
+    "PLR_UAT/DSR_USER"  = var.PLR_UAT.ROLES["DSR_USER"].id
+    "PLR_CONF/DSR_USER" = var.PLR_CONF.ROLES["DSR_USER"].id
+    "PLR_SIT/DSR_USER"  = var.PLR_SIT.ROLES["DSR_USER"].id
+    "PLR_REV/DSR_USER"  = var.PLR_REV.ROLES["DSR_USER"].id
   }
 }

@@ -68,17 +68,38 @@ module "service-account-roles" {
   realm_roles = {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
-  client_roles = {}
+  client_roles = {
+    "PLR_IAT/MOH_APPROVER" = {
+      "client_id" = var.PLR_IAT.CLIENT.id,
+      "role_id"   = "MOH_APPROVER"
+    }
+    "PLR_UAT/MOH_APPROVER" = {
+      "client_id" = var.PLR_UAT.CLIENT.id,
+      "role_id"   = "MOH_APPROVER"
+    }
+    "PLR_CONF/MOH_APPROVER" = {
+      "client_id" = var.PLR_CONF.CLIENT.id,
+      "role_id"   = "MOH_APPROVER"
+    }
+    "PLR_SIT/MOH_APPROVER" = {
+      "client_id" = var.PLR_SIT.CLIENT.id,
+      "role_id"   = "MOH_APPROVER"
+    }
+    "PLR_REV/MOH_APPROVER" = {
+      "client_id" = var.PLR_REV.CLIENT.id,
+      "role_id"   = "MOH_APPROVER"
+    }
+  }
 }
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_IAT/CONSUMER"  = var.PLR_IAT.ROLES["MOH_APPROVER"].id
-    "PLR_UAT/CONSUMER"  = var.PLR_UAT.ROLES["MOH_APPROVER"].id
-    "PLR_CONF/CONSUMER" = var.PLR_CONF.ROLES["MOH_APPROVER"].id
-    "PLR_SIT/CONSUMER"  = var.PLR_SIT.ROLES["MOH_APPROVER"].id
-    "PLR_IAT/CONSUMER"  = var.PLR_REV.ROLES["MOH_APPROVER"].id
+    "PLR_IAT/MOH_APPROVER"  = var.PLR_IAT.ROLES["MOH_APPROVER"].id
+    "PLR_UAT/MOH_APPROVER"  = var.PLR_UAT.ROLES["MOH_APPROVER"].id
+    "PLR_CONF/MOH_APPROVER" = var.PLR_CONF.ROLES["MOH_APPROVER"].id
+    "PLR_SIT/MOH_APPROVER"  = var.PLR_SIT.ROLES["MOH_APPROVER"].id
+    "PLR_REV/MOH_APPROVER"  = var.PLR_REV.ROLES["MOH_APPROVER"].id
   }
 }

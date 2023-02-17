@@ -68,7 +68,28 @@ module "service-account-roles" {
   realm_roles = {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
-  client_roles = {}
+  client_roles = {
+    "PLR_IAT/CONSUMER" = {
+      "client_id" = var.PLR_IAT.CLIENT.id,
+      "role_id"   = "CONSUMER"
+    }
+    "PLR_UAT/CONSUMER" = {
+      "client_id" = var.PLR_UAT.CLIENT.id,
+      "role_id"   = "CONSUMER"
+    }
+    "PLR_CONF/CONSUMER" = {
+      "client_id" = var.PLR_CONF.CLIENT.id,
+      "role_id"   = "CONSUMER"
+    }
+    "PLR_SIT/CONSUMER" = {
+      "client_id" = var.PLR_SIT.CLIENT.id,
+      "role_id"   = "CONSUMER"
+    }
+    "PLR_REV/CONSUMER" = {
+      "client_id" = var.PLR_REV.CLIENT.id,
+      "role_id"   = "CONSUMER"
+    }
+  }
 }
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
@@ -79,6 +100,6 @@ module "scope-mappings" {
     "PLR_UAT/CONSUMER"  = var.PLR_UAT.ROLES["CONSUMER"].id
     "PLR_CONF/CONSUMER" = var.PLR_CONF.ROLES["CONSUMER"].id
     "PLR_SIT/CONSUMER"  = var.PLR_SIT.ROLES["CONSUMER"].id
-    "PLR_IAT/CONSUMER"  = var.PLR_REV.ROLES["CONSUMER"].id
+    "PLR_REV/CONSUMER"  = var.PLR_REV.ROLES["CONSUMER"].id
   }
 }
