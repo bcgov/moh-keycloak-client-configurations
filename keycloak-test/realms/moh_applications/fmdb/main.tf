@@ -25,6 +25,8 @@ module "payara-client" {
     "https://localhost:8081/*",
     "https://fmdbd.hlth.gov.bc.ca/*",
     "https://fmdbt.hlth.gov.bc.ca/*",
+    "https://fmdb.ynr9ed-dev.nimbus.cloud.gov.bc.ca/*",
+    "https://fmdb.ynr9ed-test.nimbus.cloud.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
 }
