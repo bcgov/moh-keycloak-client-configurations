@@ -228,6 +228,12 @@ module "PLR_UAT" {
 module "PRIMARY-CARE" {
   source = "./primary-care"
 }
+module "PRIME-APPLICATION-DEV" {
+  source = "./prime-application-dev"
+}
+module "PRIME-APPLICATION-LOCAL" {
+  source = "./prime-application-local"
+}
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
   account = module.account
