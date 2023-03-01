@@ -77,6 +77,9 @@ module "HOOPC_STG" {
 module "HSCIS" {
   source = "./hscis"
 }
+module "HSIAR" {
+  source = "./hsiar"
+}
 module "IEN" {
   source = "./ien"
 }
