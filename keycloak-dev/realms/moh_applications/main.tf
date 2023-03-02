@@ -145,6 +145,10 @@ module "SFDS" {
 module "SWT" {
   source = "./swt"
 }
+module "terraform" {
+  source           = "./terraform"
+  realm-management = module.realm-management
+}
 module "UCI-SSO" {
   source = "./uci-sso"
 }
