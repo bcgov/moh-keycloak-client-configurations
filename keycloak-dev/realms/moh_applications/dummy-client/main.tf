@@ -44,7 +44,8 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "realm-management/view-clients" = var.realm-management.ROLES["view-clients"].id
+    "realm-management/view-clients"  = var.realm-management.ROLES["view-clients"].id,
+    "realm-management/manage-events" = var.realm-management.ROLES["manage-events"].id
   }
 }
 
@@ -60,6 +61,10 @@ module "service-account-roles" {
     "realm-management/view-clients" = {
       "client_id" = var.realm-management.CLIENT.id,
       "role_id"   = "view-clients"
+    }
+    "realm-management/manage-events" = {
+      "client_id" = var.realm-management.CLIENT.id,
+      "role_id"   = "manage-events"
     }
   }
 }
