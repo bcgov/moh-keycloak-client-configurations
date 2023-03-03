@@ -62,6 +62,9 @@ module "scope-mappings" {
     "realm-management/create-client"  = var.realm-management.ROLES["create-client"].id,
     "realm-management/manage-clients" = var.realm-management.ROLES["manage-clients"].id,
     "realm-management/query-clients"  = var.realm-management.ROLES["query-clients"].id,
+    "realm-management/view-users"     = var.realm-management.ROLES["view-users"].id,
+    "realm-management/manage-users"   = var.realm-management.ROLES["manage-users"].id,
+    "realm-management/query-users"    = var.realm-management.ROLES["query-users"].id,
   }
 }
 
@@ -89,6 +92,18 @@ module "service-account-roles" {
     "realm-management/manage-clients" = {
       "client_id" = var.realm-management.CLIENT.id,
       "role_id"   = "manage-clients"
+    }
+    "realm-management/view-users" = {
+      "client_id" = var.realm-management.CLIENT.id,
+      "role_id"   = "view-users"
+    }
+    "realm-management/query-users" = {
+      "client_id" = var.realm-management.CLIENT.id,
+      "role_id"   = "query-users"
+    }
+    "realm-management/manage-users" = {
+      "client_id" = var.realm-management.CLIENT.id,
+      "role_id"   = "manage-users"
     }
   }
 }
