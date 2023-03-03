@@ -139,6 +139,9 @@ module "client-roles" {
     "view-client-primary-care" = {
       "name" = "view-client-primary-care"
     },
+    "view-client-prime-application-local" = {
+      "name" = "view-client-prime-application-local"
+    },
     "view-client-prp-service" = {
       "name" = "view-client-prp-service"
     },
