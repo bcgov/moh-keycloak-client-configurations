@@ -25,3 +25,47 @@ resource "keycloak_openid_client" "CLIENT" {
     "*",
   ]
 }
+
+module "client-roles" {
+  source    = "../../../../modules/client-roles"
+  client_id = keycloak_openid_client.CLIENT.id
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  roles = {
+    "enrollee_approve" = {
+      "name" = "enrollee_approve"
+    },
+    "enrollee_triage" = {
+      "name" = "enrollee_triage"
+    },
+    "enrollee_view" = {
+      "name" = "enrollee_view"
+    },
+    "enrollee_elevated_management" = {
+      "name" = "enrollee_elevated_management"
+    },
+    "site_edit" = {
+      "name" = "site_edit"
+    },
+    "site_view" = {
+      "name" = "site_view"
+    },
+    "paper_enrolment_only_edit" = {
+      "name" = "paper_enrolment_only_edit"
+    },
+    "paper_enrolment_only_view" = {
+      "name" = "paper_enrolment_only_view"
+    },
+    "prime_administrant" = {
+      "name" = "prime_administrant"
+    },
+    "prime_super_admin" = {
+      "name" = "prime_super_admin"
+    },
+    "prime_maintenance" = {
+      "name" = "prime_maintenance"
+    },
+    "prime_user" = {
+      "name" = "prime_user"
+    },
+  }
+}
