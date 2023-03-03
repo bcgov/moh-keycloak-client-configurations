@@ -20,6 +20,10 @@ module "DMFT-WEBAPP" {
   source         = "./dmft-webapp"
   LICENCE-STATUS = module.LICENCE-STATUS
 }
+module "dummy-client" {
+  source           = "./dummy-client"
+  realm-management = module.realm-management
+}
 module "EACL" {
   source = "./eacl"
 }
