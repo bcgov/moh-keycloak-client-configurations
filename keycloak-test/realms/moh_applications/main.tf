@@ -279,6 +279,10 @@ module "SWT_STG" {
 module "UCI-SSO" {
   source = "./uci-sso"
 }
+module "terraform" {
+  source           = "./terraform"
+  realm-management = module.realm-management
+}
 module "USER-MANAGEMENT-SERVICE" {
   source            = "./user-management-service"
   realm-management  = module.realm-management
