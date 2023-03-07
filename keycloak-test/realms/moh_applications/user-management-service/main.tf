@@ -115,7 +115,7 @@ module "client-roles" {
     "view-client-pidp-service" = {
       "name" = "view-client-pidp-service"
     },
-    "view-client-aglstg" = {
+    "view-client-plr_aglstg" = {
       "name" = "view-client-plr_aglstg"
     },
     "view-client-plr_conf" = {
