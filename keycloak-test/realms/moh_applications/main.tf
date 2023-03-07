@@ -193,6 +193,11 @@ module "PLR-SHOPPERS" {
 module "PLR-MOH" {
   source = "./plr-moh"
 }
+module "PLR_AGLSTG" {
+  source                  = "./plr_aglstg"
+  realm-management        = module.realm-management
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
 module "PLR_CONF" {
   source                  = "./plr_conf"
   realm-management        = module.realm-management
