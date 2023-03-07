@@ -66,8 +66,9 @@ module "scope-mappings" {
   realm_id  = module.payara-client.CLIENT.realm_id
   client_id = module.payara-client.CLIENT.id
   roles = {
-    "USER-MANAGEMENT-SERVICE/view-clients" = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
-    "USER-MANAGEMENT-SERVICE/view-users"   = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-plr_aglstg" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_aglstg"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients"           = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"             = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   }
 }
 module "service-account-roles" {
@@ -79,7 +80,10 @@ module "service-account-roles" {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
-
+    "USER-MANAGEMENT-SERVICE/view-client-plr_aglstg" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "view-client-plr_aglstg"
+    }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-clients"
