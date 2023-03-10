@@ -118,9 +118,6 @@ module "client-roles" {
     "view-client-swt" = {
       "name" = "view-client-swt"
     },
-    "view-client-uci-sso" = {
-      "name" = "view-client-uci-sso"
-    },
     "view-client-webcaps" = {
       "name" = "view-client-webcaps"
     },
@@ -301,10 +298,6 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/view-client-swt" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-swt"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-uci-sso" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-uci-sso"
     }
     "USER-MANAGEMENT-SERVICE/view-client-webcaps" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
