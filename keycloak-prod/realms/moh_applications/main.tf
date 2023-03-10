@@ -125,6 +125,10 @@ module "SFDS" {
 module "SWT" {
   source = "./swt"
 }
+module "terraform" {
+  source           = "./terraform"
+  realm-management = module.realm-management
+}
 module "USER-MANAGEMENT-SERVICE" {
   source            = "./user-management-service"
   realm-management  = module.realm-management
