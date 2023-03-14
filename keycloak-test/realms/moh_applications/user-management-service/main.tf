@@ -406,10 +406,6 @@ module "service-account-roles" {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-swt_stg"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-tap" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-tap"
-    }
     "USER-MANAGEMENT-SERVICE/view-client-webcaps" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-webcaps"
