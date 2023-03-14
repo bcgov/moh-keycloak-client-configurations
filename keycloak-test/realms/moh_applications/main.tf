@@ -276,6 +276,9 @@ module "SWT" {
 module "SWT_STG" {
   source = "./swt_stg"
 }
+module "TAP" {
+  source = "./tap"
+}
 module "terraform" {
   source           = "./terraform"
   realm-management = module.realm-management

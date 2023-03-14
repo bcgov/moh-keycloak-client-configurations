@@ -166,6 +166,9 @@ module "client-roles" {
     "view-client-swt_stg" = {
       "name" = "view-client-swt_stg"
     },
+    "view-client-tap" = {
+      "name" = "view-client-tap"
+    },
     "view-client-webcaps" = {
       "name" = "view-client-webcaps"
     },
