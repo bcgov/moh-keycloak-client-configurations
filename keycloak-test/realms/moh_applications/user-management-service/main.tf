@@ -166,6 +166,9 @@ module "client-roles" {
     "view-client-swt_stg" = {
       "name" = "view-client-swt_stg"
     },
+    "view-client-tap" = {
+      "name" = "view-client-tap"
+    },
     "view-client-webcaps" = {
       "name" = "view-client-webcaps"
     },
@@ -402,6 +405,10 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/view-client-swt_stg" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-swt_stg"
+    }
+    "USER-MANAGEMENT-SERVICE/view-client-tap" = {
+      "client_id" = keycloak_openid_client.CLIENT.id,
+      "role_id"   = "view-client-tap"
     }
     "USER-MANAGEMENT-SERVICE/view-client-webcaps" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
