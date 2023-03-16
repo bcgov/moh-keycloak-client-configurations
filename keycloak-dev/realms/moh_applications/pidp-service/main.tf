@@ -34,9 +34,6 @@ module "client-roles" {
     "USER" = {
       "name" = "USER"
     },
-    "feature_amh_demo" = {
-      "name" = "feature_amh_demo"
-    },
     "feature_pidp_demo" = {
       "name" = "feature_pidp_demo"
     },
