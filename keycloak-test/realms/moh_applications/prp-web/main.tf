@@ -12,6 +12,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://wonderful-cliff-0d1cec610.2.azurestaticapps.net/*",
+    "https://sitprp.hlth.gov.bc.ca/*",
   ]
   web_origins = [
     "*",
