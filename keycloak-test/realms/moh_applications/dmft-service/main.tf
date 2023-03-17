@@ -46,6 +46,14 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address"
   realm_id         = keycloak_openid_client.CLIENT.realm_id
   session_note     = "clientAddress"
 }
+module "scope-mappings" {
+  source    = "../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "PIDP-SERVICE/view_endorsement_data" = var.PIDP-SERVICE.ROLES["view_endorsement_data"].id,
+  }
+}
 module "service-account-roles" {
   source                  = "../../../../modules/service-account-roles"
   realm_id                = keycloak_openid_client.CLIENT.realm_id
@@ -54,5 +62,10 @@ module "service-account-roles" {
   realm_roles = {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
-  client_roles = {}
+  client_roles = {
+    "PIDP-SERVICE/view_endorsement_data" = {
+      "client_id" = var.PIDP-SERVICE.CLIENT.id,
+      "role_id"   = "view_endorsement_data"
+    }
+  }
 }
