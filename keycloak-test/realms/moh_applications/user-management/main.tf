@@ -71,6 +71,7 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-hcimweb_huat"              = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_huat"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hem"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hem"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hscis"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hscis"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-hsiar"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hsiar"].id,
     "USER-MANAGEMENT-SERVICE/view-client-maid"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-maid"].id,
     "USER-MANAGEMENT-SERVICE/view-client-miwt"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt"].id,
     "USER-MANAGEMENT-SERVICE/view-client-miwt_stg"                  = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt_stg"].id,
