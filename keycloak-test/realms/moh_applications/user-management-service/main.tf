@@ -82,6 +82,9 @@ module "client-roles" {
     "view-client-hcimweb_hiat3" = {
       "name" = "view-client-hcimweb_hiat3"
     },
+    "view-client-hsiar" = {
+      "name" = "view-client-hsiar"
+    }
     "view-client-hcimweb_hs1" = {
       "name" = "view-client-hcimweb_hs1"
     },
