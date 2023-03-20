@@ -24,3 +24,16 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
   ]
 }
+module "client-roles" {
+  source    = "../../../../modules/client-roles"
+  client_id = keycloak_openid_client.CLIENT.id
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  roles = {
+    "Surgical" = {
+      "name" = "Surgical"
+    },
+    "Ed" = {
+      "name" = "Ed"
+    },
+  }
+}
