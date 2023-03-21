@@ -49,7 +49,6 @@ module "scope-mappings" {
   roles = {
     "PIDP-SERVICE/ADMIN"             = var.PIDP-SERVICE.ROLES["ADMIN"].id,
     "PIDP-SERVICE/USER"              = var.PIDP-SERVICE.ROLES["USER"].id,
-    "PIDP-SERVICE/feature_amh_demo"  = var.PIDP-SERVICE.ROLES["feature_amh_demo"].id,
     "PIDP-SERVICE/feature_pidp_demo" = var.PIDP-SERVICE.ROLES["feature_pidp_demo"].id,
     "account/view-profile"           = var.account.ROLES["view-profile"].id,
   }
