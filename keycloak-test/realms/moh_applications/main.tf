@@ -239,11 +239,17 @@ module "PLR_UAT" {
 module "PRIMARY-CARE" {
   source = "./primary-care"
 }
+module "PRIME-DOCUMENT-MANAGER" {
+  source = "./prime-document-manager"
+}
 module "PRIME-APPLICATION-DEV" {
   source = "./prime-application-dev"
 }
 module "PRIME-APPLICATION-LOCAL" {
   source = "./prime-application-local"
+}
+module "PRIME-APPLICATION-SERVICE-ACCOUNT" {
+  source = "./prime-application-service-account"
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
