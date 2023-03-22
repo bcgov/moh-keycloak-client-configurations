@@ -19,9 +19,12 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://bcer-test.hlth.gov.bc.ca/portal/*",
     "http://localhost:3000/*",
+    "http://localhost:3001/*",
+    "https://localhost:3000/*",
     "https://localhost:3001/*",
+    "https://bcer-test.hlth.gov.bc.ca/portal/*",
+    "https://d120a58t5knrkb.cloudfront.net/*",
   ]
   web_origins = [
     "+",
