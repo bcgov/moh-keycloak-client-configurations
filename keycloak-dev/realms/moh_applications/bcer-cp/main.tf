@@ -23,7 +23,6 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:3001/*",
     "https://localhost:3000/*",
     "https://localhost:3001/*",
-    "https://dev.web.ha-common-portal.freshworks.club/*",
     "https://bcer-dev.hlth.gov.bc.ca/portal/*",
   ]
   web_origins = [

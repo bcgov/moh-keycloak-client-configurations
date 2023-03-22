@@ -109,6 +109,9 @@ module "client-roles" {
     "view-client-swt" = {
       "name" = "view-client-swt"
     },
+    "view-client-tap" = {
+      "name" = "view-client-tap"
+    },
     "view-client-webcaps" = {
       "name" = "view-client-webcaps"
     },
