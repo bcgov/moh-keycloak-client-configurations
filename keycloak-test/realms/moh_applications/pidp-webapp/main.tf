@@ -19,12 +19,10 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://pr-81.healthprovideridentityportal.gov.bc.ca/*",
+    "https://demo.healthprovideridentityportal.gov.bc.ca/*",
+    "https://demo.healthprovideridentityportal.gov.bc.ca",
     "https://test.healthprovideridentityportal.gov.bc.ca/*",
     "https://test.healthprovideridentityportal.gov.bc.ca",
-    "https://demo.healthprovideridentityportal.gov.bc.ca/*",
-    "https://dev.healthprovideridentityportal.gov.bc.ca/*",
-    "https://dev.healthprovideridentityportal.gov.bc.ca",
     "http://localhost:4200/*",
   ]
   web_origins = [
