@@ -26,6 +26,41 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+resource "keycloak_openid_audience_protocol_mapper" "prime-web-api" {
+  add_to_id_token          = false
+  client_id                = keycloak_openid_client.CLIENT.id
+  included_custom_audience = "prime-web-api"
+  name                     = "prime-web-api"
+  realm_id                 = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
+  add_to_id_token = false
+  claim_name      = "identity_provider"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "IDP"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+  session_note    = "identity_provider"
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_guid" {
+  add_to_id_token = true
+  claim_name      = "bcsc_guid"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "bcsc_guid"
+  user_attribute  = "bcsc_guid"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "identity_assurance_level" {
+  add_to_id_token = true
+  claim_name      = "identity_assurance_level"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "identity_assurance_level"
+  user_attribute  = "identity_assurance_level"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
 module "client-roles" {
   source    = "../../../../modules/client-roles"
   client_id = keycloak_openid_client.CLIENT.id
