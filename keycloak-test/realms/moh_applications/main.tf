@@ -13,6 +13,9 @@ module "BCHCIM" {
 module "CONNECT" {
   source = "./connect"
 }
+module "DEMO-CLIENT" {
+  source = "./demo-client"
+}
 module "DMFT-SERVICE" {
   source       = "./dmft-service"
   PIDP-SERVICE = module.PIDP-SERVICE
