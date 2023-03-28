@@ -84,10 +84,6 @@ module "service-account-roles" {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "manage-user-roles"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-gis" = {
-      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-      "role_id"   = "view-client-gis"
-    }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-clients"
