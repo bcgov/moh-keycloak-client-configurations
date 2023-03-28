@@ -54,7 +54,7 @@ module "client-roles" {
     },
     "view-client-emcod" = {
       "name" = "view-client-emcod"
-    },  
+    },
     "view-client-hcimweb" = {
       "name" = "view-client-hcimweb"
     },
