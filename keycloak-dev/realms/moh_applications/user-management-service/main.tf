@@ -52,21 +52,9 @@ module "client-roles" {
     "view-client-dmft-webapp" = {
       "name" = "view-client-dmft-webapp"
     },
-    "view-client-eacl" = {
-      "name" = "view-client-eacl"
-    },
     "view-client-emcod" = {
       "name" = "view-client-emcod"
-    },
-    "view-client-fmdb" = {
-      "name" = "view-client-fmdb"
-    },
-    "view-client-gis" = {
-      "name" = "view-client-gis"
-    },
-    "view-client-hamis" = {
-      "name" = "view-client-hamis"
-    },
+    },  
     "view-client-hcimweb" = {
       "name" = "view-client-hcimweb"
     },
@@ -76,17 +64,11 @@ module "client-roles" {
     "view-client-hem" = {
       "name" = "view-client-hem"
     },
-    "view-client-hscis" = {
-      "name" = "view-client-hscis"
-    },
     "view-client-licence-status" = {
       "name" = "view-client-licence-status"
     },
     "view-client-maid" = {
       "name" = "view-client-maid"
-    },
-    "view-client-miwt" = {
-      "name" = "view-client-miwt"
     },
     "view-client-mspdirect-service" = {
       "name" = "view-client-mspdirect-service"
@@ -108,18 +90,6 @@ module "client-roles" {
     },
     "view-client-sa-sfdc" = {
       "name" = "view-client-sa-sfdc"
-    },
-    "view-client-sat-eforms" = {
-      "name" = "view-client-sat-eforms"
-    },
-    "view-client-sfds" = {
-      "name" = "view-client-sfds"
-    },
-    "view-client-swt" = {
-      "name" = "view-client-swt"
-    },
-    "view-client-webcaps" = {
-      "name" = "view-client-webcaps"
     },
     "view-client-pho-rsc" = {
       "name" = "view-client-pho-rsc"
@@ -215,25 +185,9 @@ module "service-account-roles" {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-bcer-cp"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-eacl" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-eacl"
-    }
     "USER-MANAGEMENT-SERVICE/view-client-emcod" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-emcod"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-fmdb" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-fmdb"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-gis" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-gis"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-hamis" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-hamis"
     }
     "USER-MANAGEMENT-SERVICE/view-client-hcimweb" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
@@ -247,17 +201,9 @@ module "service-account-roles" {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-hem"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-hscis" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-hscis"
-    }
     "USER-MANAGEMENT-SERVICE/view-client-maid" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-maid"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-miwt" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-miwt"
     }
     "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
@@ -286,22 +232,6 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/view-client-sa-sfdc" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "view-client-sa-sfdc"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-sat-eforms"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-sfds" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-sfds"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-swt" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-swt"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-webcaps" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-webcaps"
     }
     "USER-MANAGEMENT-SERVICE/view-client-pho-rsc" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
