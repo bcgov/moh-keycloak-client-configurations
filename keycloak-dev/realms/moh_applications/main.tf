@@ -13,6 +13,7 @@ module "BCHCIM" {
 module "CONNECT" {
   source = "./connect"
 }
+
 module "DMFT-SERVICE" {
   source       = "./dmft-service"
   PIDP-SERVICE = module.PIDP-SERVICE
@@ -21,21 +22,8 @@ module "DMFT-WEBAPP" {
   source         = "./dmft-webapp"
   LICENCE-STATUS = module.LICENCE-STATUS
 }
-module "EACL" {
-  source = "./eacl"
-}
 module "EMCOD" {
   source = "./emcod"
-}
-module "FMDB" {
-  source = "./fmdb"
-}
-module "GIS" {
-  source = "./gis"
-}
-module "HAMIS" {
-  source                  = "./hamis"
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "HCIMWEB" {
   source = "./hcimweb"
@@ -49,12 +37,7 @@ module "HCIM-SERVICE" {
 module "HEM" {
   source = "./hem"
 }
-module "HOOPC" {
-  source = "./hoopc"
-}
-module "HSCIS" {
-  source = "./hscis"
-}
+
 module "IEN" {
   source = "./ien"
 }
@@ -75,9 +58,6 @@ module "LICENCE-STATUS" {
 }
 module "MAID" {
   source = "./maid"
-}
-module "MIWT" {
-  source = "./miwt"
 }
 module "MOH-SERVICENOW" {
   source = "./moh-servicenow"
@@ -128,9 +108,6 @@ module "PRP-WEB" {
   source      = "./prp-web"
   PRP-SERVICE = module.PRP-SERVICE
 }
-module "SAT-EFORMS" {
-  source = "./sat-eforms"
-}
 module "SA-DBAAC-PORTAL" {
   source = "./sa-dbaac-portal"
 }
@@ -139,12 +116,6 @@ module "SA-HIBC-SERVICE-BC-PORTAL" {
 }
 module "SA-SFDC" {
   source = "./sa-sfdc"
-}
-module "SFDS" {
-  source = "./sfds"
-}
-module "SWT" {
-  source = "./swt"
 }
 module "terraform" {
   source           = "./terraform"
@@ -159,7 +130,4 @@ module "USER-MANAGEMENT-SERVICE" {
 module "USER-MANAGEMENT" {
   source                  = "./user-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-}
-module "WEBCAPS" {
-  source = "./webcaps"
 }

@@ -58,7 +58,6 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/create-user"         = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-details" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-roles"   = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-gis"     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-gis"].id,
     "USER-MANAGEMENT-SERVICE/view-clients"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
     "USER-MANAGEMENT-SERVICE/view-users"          = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   }

@@ -1,1 +1,0 @@
-variable "USER-MANAGEMENT-SERVICE" {}
