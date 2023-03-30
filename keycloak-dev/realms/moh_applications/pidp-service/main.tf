@@ -127,10 +127,6 @@ module "service-account-roles" {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-client-prp-service"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-sat-eforms" = {
-      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-      "role_id"   = "view-client-sat-eforms"
-    }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-clients"

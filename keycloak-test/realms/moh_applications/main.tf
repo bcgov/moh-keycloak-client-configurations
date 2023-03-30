@@ -198,8 +198,14 @@ module "PLR-QA-SECONDARY-SOURCE" {
   PLR_REV  = module.PLR_REV
 }
 module "PLR-SHOPPERS" {
-  source  = "./plr-shoppers"
-  PLR_IAT = module.PLR_IAT
+  source   = "./plr-shoppers"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
+  PLR_CONF = module.PLR_CONF
+  PLR_REV  = module.PLR_REV
+  PLR_FLVR = module.PLR_FLVR
+  PLR_STG  = module.PLR_STG
 }
 module "PLR-MOH" {
   source = "./plr-moh"
