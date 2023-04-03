@@ -257,8 +257,19 @@ module "PRIME-APPLICATION-DEV" {
 module "PRIME-APPLICATION-LOCAL" {
   source = "./prime-application-local"
 }
+module "PRIME-APPLICATION-TEST" {
+  source = "./prime-application-test"
+}
 module "PRIME-APPLICATION-SERVICE-ACCOUNT" {
   source = "./prime-application-service-account"
+}
+module "PRIME-MEDINET-ACCESS" {
+  source                  = "./prime-medinet-access"
+  PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
+}
+module "PRIME-CARECONNECT-ACCESS" {
+  source                  = "./prime-careconnect-access"
+  PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
