@@ -31,3 +31,33 @@ resource "keycloak_openid_audience_protocol_mapper" "Prime-Audience-Mapper" {
   name                     = "Prime Audience Mapper"
   realm_id                 = keycloak_openid_client.CLIENT.realm_id
 }
+
+module "service-account-roles" {
+  source                  = "../../../../modules/service-account-roles"
+  realm_id                = keycloak_openid_client.CLIENT.realm_id
+  client_id               = keycloak_openid_client.CLIENT.id
+  service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
+  realm_roles = {
+    "default-roles-moh_applications" = "default-roles-moh_applications",
+  }
+  client_roles = {
+    "PRIME-APPLICATION-LOCAL/prime_api_service_account" = {
+      "client_id" = var.PRIME-APPLICATION-LOCAL.CLIENT.id,
+      "role_id"   = "prime_api_service_account"
+    }
+    "PRIME-APPLICATION-TEST/prime_api_service_account" = {
+      "client_id" = var.PRIME-APPLICATION-TEST.CLIENT.id,
+      "role_id"   = "prime_api_service_account"
+    }
+  }
+}
+
+module "scope-mappings" {
+  source    = "../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "PRIME-APPLICATION-LOCAL/prime_api_service_account" = var.PRIME-APPLICATION-LOCAL.ROLES["prime_api_service_account"].id,
+    "PRIME-APPLICATION-TEST/prime_api_service_account"  = var.PRIME-APPLICATION-TEST.ROLES["prime_api_service_account"].id
+  }
+}

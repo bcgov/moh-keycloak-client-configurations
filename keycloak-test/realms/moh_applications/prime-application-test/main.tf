@@ -108,5 +108,8 @@ module "client-roles" {
     "external_hpdid_access" = {
       "name" = "external_hpdid_access"
     },
+    "prime_api_service_account" = {
+      "name" = "prime_api_service_account"
+    },
   }
 }

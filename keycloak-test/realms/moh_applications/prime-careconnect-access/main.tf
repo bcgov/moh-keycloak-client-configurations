@@ -44,6 +44,10 @@ module "service-account-roles" {
     "PRIME-APPLICATION-LOCAL/external_hpdid_access" = {
       "client_id" = var.PRIME-APPLICATION-LOCAL.CLIENT.id,
       "role_id"   = "external_hpdid_access"
+    },
+    "PRIME-APPLICATION-TEST/external_hpdid_access" = {
+      "client_id" = var.PRIME-APPLICATION-TEST.CLIENT.id,
+      "role_id"   = "external_hpdid_access"
     }
   }
 }
@@ -53,6 +57,7 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PRIME-APPLICATION-LOCAL/external_hpdid_access" = var.PRIME-APPLICATION-LOCAL.ROLES["external_hpdid_access"].id
+    "PRIME-APPLICATION-LOCAL/external_hpdid_access" = var.PRIME-APPLICATION-LOCAL.ROLES["external_hpdid_access"].id,
+    "PRIME-APPLICATION-TEST/external_hpdid_access"  = var.PRIME-APPLICATION-TEST.ROLES["external_hpdid_access"].id
   }
 }

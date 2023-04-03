@@ -148,6 +148,9 @@ module "client-roles" {
     "view-client-prime-application-local" = {
       "name" = "view-client-prime-application-local"
     },
+    "view-client-prime-application-test" = {
+      "name" = "view-client-prime-application-test"
+    },
     "view-client-prp-service" = {
       "name" = "view-client-prp-service"
     },
