@@ -255,10 +255,12 @@ module "PRIME-APPLICATION-DEV" {
   source = "./prime-application-dev"
 }
 module "PRIME-APPLICATION-LOCAL" {
-  source = "./prime-application-local"
+  source  = "./prime-application-local"
+  account = module.account
 }
 module "PRIME-APPLICATION-TEST" {
-  source = "./prime-application-test"
+  source  = "./prime-application-test"
+  account = module.account
 }
 module "PRIME-APPLICATION-SERVICE-ACCOUNT" {
   source                  = "./prime-application-service-account"

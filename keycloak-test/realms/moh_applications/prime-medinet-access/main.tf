@@ -57,7 +57,7 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PRIME-APPLICATION-LOCAL/external_gpid_validation" = var.PRIME-APPLICATION-LOCAL.ROLES["external_gpid_validation"].id
+    "PRIME-APPLICATION-LOCAL/external_gpid_validation" = var.PRIME-APPLICATION-LOCAL.ROLES["external_gpid_validation"].id,
     "PRIME-APPLICATION-TEST/external_gpid_validation"  = var.PRIME-APPLICATION-TEST.ROLES["external_gpid_validation"].id
   }
 }

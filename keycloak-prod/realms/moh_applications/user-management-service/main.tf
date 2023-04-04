@@ -91,6 +91,9 @@ module "client-roles" {
     "view-client-plr" = {
       "name" = "view-client-plr"
     },
+    "view-client-prime-application" = {
+      "name" = "view-client-prime-application"
+    },
     "view-client-sa-dbaac-portal" = {
       "name" = "view-client-sa-dbaac-portal"
     },
