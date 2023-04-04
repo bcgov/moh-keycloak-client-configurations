@@ -113,3 +113,13 @@ module "client-roles" {
     },
   }
 }
+
+module "scope-mappings" {
+  source    = "../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "account/manage-account" = var.account.ROLES["manage-account"].id,
+    "account/view-profile"   = var.account.ROLES["view-profile"].id,
+  }
+}

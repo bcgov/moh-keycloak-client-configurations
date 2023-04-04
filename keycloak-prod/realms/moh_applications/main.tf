@@ -99,6 +99,13 @@ module "PIDP-WEBAPP" {
 module "PLR" {
   source = "./plr"
 }
+module "PRIME-DOCUMENT-MANAGER" {
+  source = "./prime-document-manager"
+}
+module "PRIME-APPLICATION" {
+  source  = "./prime-application"
+  account = module.account
+}
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
   account = module.account
