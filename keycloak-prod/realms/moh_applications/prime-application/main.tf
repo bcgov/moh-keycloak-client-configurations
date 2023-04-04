@@ -4,7 +4,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PRIME-APPLICATION-PROD"
+  client_id                           = "PRIME-APPLICATION"
   consent_required                    = false
   description                         = ""
   direct_access_grants_enabled        = false
@@ -19,7 +19,9 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "*"
+    "https://healthpractitionerregistration.apps.silver.devops.gov.bc.ca/*",
+    "https://pharmanetenrolment.gov.bc.ca/*",
+    "https://prod-9c33a9-prod.apps.silver.devops.gov.bc.ca/*",
   ]
   web_origins = [
     "*",
