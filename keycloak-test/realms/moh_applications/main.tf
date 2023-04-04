@@ -266,19 +266,16 @@ module "PRIME-APPLICATION-SERVICE-ACCOUNT" {
   source                  = "./prime-application-service-account"
   PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
   PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
-
 }
 module "PRIME-MEDINET-ACCESS" {
   source                  = "./prime-medinet-access"
   PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
   PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
-
 }
 module "PRIME-CARECONNECT-ACCESS" {
   source                  = "./prime-careconnect-access"
   PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
   PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
-
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"

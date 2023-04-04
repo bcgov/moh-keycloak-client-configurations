@@ -99,12 +99,24 @@ module "PIDP-WEBAPP" {
 module "PLR" {
   source = "./plr"
 }
-module "PRIME-DOCUMENT-MANAGER" {
-  source = "./prime-document-manager"
-}
 module "PRIME-APPLICATION" {
   source  = "./prime-application"
   account = module.account
+}
+module "PRIME-APPLICATION-SERVICE-ACCOUNT" {
+  source            = "./prime-application-service-account"
+  PRIME-APPLICATION = module.PRIME-APPLICATION
+}
+module "PRIME-CARECONNECT-ACCESS" {
+  source            = "./prime-careconnect-access"
+  PRIME-APPLICATION = module.PRIME-APPLICATION
+}
+module "PRIME-DOCUMENT-MANAGER" {
+  source = "./prime-document-manager"
+}
+module "PRIME-MEDINET-ACCESS" {
+  source            = "./prime-medinet-access"
+  PRIME-APPLICATION = module.PRIME-APPLICATION
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./prime-webapp-enrollment"
