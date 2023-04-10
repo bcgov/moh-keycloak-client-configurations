@@ -34,6 +34,16 @@ resource "keycloak_openid_audience_protocol_mapper" "prime-web-api" {
   realm_id                 = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "given_names" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "given_names"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "given_names"
+  user_attribute  = "given_names"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
   add_to_id_token = false
   claim_name      = "identity_provider"
