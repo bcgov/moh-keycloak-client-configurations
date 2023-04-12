@@ -88,6 +88,12 @@ module "client-roles" {
     "enrollee_elevated_management" = {
       "name" = "enrollee_elevated_management"
     },
+    "feature_site_pharmacist" = {
+      "name" = "feature_site_pharmacist"
+    },
+    "feature_site_device_provider" = {
+      "name" = "feature_site_device_provider"
+    },
     "site_edit" = {
       "name" = "site_edit"
     },
