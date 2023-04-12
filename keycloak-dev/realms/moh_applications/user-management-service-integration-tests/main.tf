@@ -29,18 +29,17 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "USER-MANAGEMENT-SERVICE/create-user"         = var.ORGANIZATIONS-API.ROLES["create-user"].id,
-    "USER-MANAGEMENT-SERVICE/manage-user-details" = var.ORGANIZATIONS-API.ROLES["manage-user-details"].id,
-    "USER-MANAGEMENT-SERVICE/manage-all-groups"   = var.ORGANIZATIONS-API.ROLES["manage-all-groups"].id,
-    "USER-MANAGEMENT-SERVICE/manage-user-roles"   = var.ORGANIZATIONS-API.ROLES["manage-user-roles"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-fmdb"    = var.ORGANIZATIONS-API.ROLES["view-client-fmdb"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-gis"     = var.ORGANIZATIONS-API.ROLES["view-client-gis"].id,
-    "USER-MANAGEMENT-SERVICE/view-clients"        = var.ORGANIZATIONS-API.ROLES["view-clients"].id,
-    "USER-MANAGEMENT-SERVICE/view-events"         = var.ORGANIZATIONS-API.ROLES["view-events"].id,
-    "USER-MANAGEMENT-SERVICE/view-groups"         = var.ORGANIZATIONS-API.ROLES["view-groups"].id,
-    "USER-MANAGEMENT-SERVICE/view-metrics"        = var.ORGANIZATIONS-API.ROLES["view-metrics"].id,
-    "USER-MANAGEMENT-SERVICE/view-users"          = var.ORGANIZATIONS-API.ROLES["view-users"].id,
-    "USER-MANAGEMENT-SERVICE/manage-users"        = var.ORGANIZATIONS-API.ROLES["manage-users"].id,
+    "USER-MANAGEMENT-SERVICE/create-user"         = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-details" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
+    "USER-MANAGEMENT-SERVICE/manage-all-groups"   = var.USER-MANAGEMENT-SERVICE.ROLES["manage-all-groups"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-roles"   = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-plr"     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-events"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
+    "USER-MANAGEMENT-SERVICE/view-groups"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
+    "USER-MANAGEMENT-SERVICE/view-metrics"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"          = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "USER-MANAGEMENT-SERVICE/manage-users"        = var.USER-MANAGEMENT-SERVICE.ROLES["manage-users"].id,
     "realm-management/manage-users"               = var.realm-management.ROLES["manage-users"].id,
     "realm-management/view-clients"               = var.realm-management.ROLES["view-clients"].id,
     "realm-management/view-events"                = var.realm-management.ROLES["view-events"].id,
@@ -77,13 +76,9 @@ module "service-account-roles" {
       "client_id" = keycloak_openid_client.CLIENT.id,
       "role_id"   = "manage-user-roles"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-fmdb" = {
+    "USER-MANAGEMENT-SERVICE/view-client-plr" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-fmdb"
-    }
-    "USER-MANAGEMENT-SERVICE/view-client-gis" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-gis"
+      "role_id"   = "view-client-plr"
     }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
       "client_id" = keycloak_openid_client.CLIENT.id,
