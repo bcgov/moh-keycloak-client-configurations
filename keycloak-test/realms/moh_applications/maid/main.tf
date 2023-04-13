@@ -43,12 +43,6 @@ module "client-roles" {
     "MAiD-Manager-2" = {
       "name" = "MAiD-Manager-2"
     },
-    "MAiD-Manager-3" = {
-      "name" = "MAiD-Manager-3"
-    },
-    "MAiD-Manager-4" = {
-      "name" = "MAiD-Manager-4"
-    },
     "MAiD-System-Administrator" = {
       "name" = "MAiD-System-Administrator"
     },
