@@ -27,9 +27,10 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "USER-MANAGEMENT-SERVICE/manage-user-roles" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
-    "USER-MANAGEMENT-SERVICE/view-clients"      = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
-    "USER-MANAGEMENT-SERVICE/view-users"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-roles"   = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-hcap-fe" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcap-fe"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"          = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   }
 }
 module "service-account-roles" {
@@ -44,6 +45,10 @@ module "service-account-roles" {
     "USER-MANAGEMENT-SERVICE/manage-user-roles" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "manage-user-roles"
+    }
+    "USER-MANAGEMENT-SERVICE/view-client-hcap-fe" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "view-client-hcap-fe"
     }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
