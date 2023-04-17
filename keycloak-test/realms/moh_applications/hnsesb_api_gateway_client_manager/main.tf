@@ -55,8 +55,7 @@ module "service-account-roles" {
   client_id               = keycloak_openid_client.CLIENT.id
   service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
   realm_roles = {
-    "offline_access"    = "offline_access",
-    "uma_authorization" = "uma_authorization",
+    "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
     "account/manage-account" = {
