@@ -128,10 +128,10 @@ module "USER-MANAGEMENT-SERVICE" {
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
 }
 module "USER-MANAGEMENT-SERVICE-INTEGRATION-TESTS" {
-  source            = "./user-management-service-integration-tests"
+  source                  = "./user-management-service-integration-tests"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-  realm-management  = module.realm-management
-  ORGANIZATIONS-API = module.ORGANIZATIONS-API
+  realm-management        = module.realm-management
+  ORGANIZATIONS-API       = module.ORGANIZATIONS-API
 }
 module "USER-MANAGEMENT" {
   source                  = "./user-management"
