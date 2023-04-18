@@ -39,7 +39,6 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-groups"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
     "USER-MANAGEMENT-SERVICE/view-metrics"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
     "USER-MANAGEMENT-SERVICE/view-users"          = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
-    "USER-MANAGEMENT-SERVICE/manage-users"        = var.USER-MANAGEMENT-SERVICE.ROLES["manage-users"].id,
     "realm-management/manage-users"               = var.realm-management.ROLES["manage-users"].id,
     "realm-management/view-clients"               = var.realm-management.ROLES["view-clients"].id,
     "realm-management/view-events"                = var.realm-management.ROLES["view-events"].id,
