@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "PLR-PRIMARY-CARE"
   consent_required                    = false
-  description                         = ""
+  description                         = "PRIMARY-CARE service account for access to PLR"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
@@ -28,7 +28,7 @@ resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
   add_to_id_token     = true
   add_to_userinfo     = true
   claim_name          = "orgId"
-  claim_value         = "00002855"
+  claim_value         = "90001234"
   claim_value_type    = "String"
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "orgId"
@@ -44,33 +44,33 @@ module "service-account-roles" {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
-    "PLR_IAT/CONSUMER" = {
+    "PLR_IAT/SECONDARY_SOURCE" = {
       "client_id" = var.PLR_IAT.CLIENT.id,
-      "role_id"   = "CONSUMER"
+      "role_id"   = "SECONDARY_SOURCE"
     }
-    "PLR_UAT/CONSUMER" = {
+    "PLR_UAT/SECONDARY_SOURCE" = {
       "client_id" = var.PLR_UAT.CLIENT.id,
-      "role_id"   = "CONSUMER"
+      "role_id"   = "SECONDARY_SOURCE"
     }
-    "PLR_CONF/CONSUMER" = {
+    "PLR_CONF/SECONDARY_SOURCE" = {
       "client_id" = var.PLR_CONF.CLIENT.id,
-      "role_id"   = "CONSUMER"
+      "role_id"   = "SECONDARY_SOURCE"
     }
-    "PLR_SIT/CONSUMER" = {
+    "PLR_SIT/SECONDARY_SOURCE" = {
       "client_id" = var.PLR_SIT.CLIENT.id,
-      "role_id"   = "CONSUMER"
+      "role_id"   = "SECONDARY_SOURCE"
     }
-    "PLR_REV/CONSUMER" = {
+    "PLR_REV/SECONDARY_SOURCE" = {
       "client_id" = var.PLR_REV.CLIENT.id,
-      "role_id"   = "CONSUMER"
+      "role_id"   = "SECONDARY_SOURCE"
     }
-    "PLR_STG/CONSUMER" = {
+    "PLR_STG/SECONDARY_SOURCE" = {
       "client_id" = var.PLR_STG.CLIENT.id,
-      "role_id"   = "CONSUMER"
+      "role_id"   = "SECONDARY_SOURCE"
     }
-    "PLR_FLVR/CONSUMER" = {
+    "PLR_FLVR/SECONDARY_SOURCE" = {
       "client_id" = var.PLR_FLVR.CLIENT.id,
-      "role_id"   = "CONSUMER"
+      "role_id"   = "SECONDARY_SOURCE"
     }
   }
 }
@@ -79,12 +79,12 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_IAT/CONSUMER"  = var.PLR_IAT.ROLES["CONSUMER"].id
-    "PLR_UAT/CONSUMER"  = var.PLR_UAT.ROLES["CONSUMER"].id
-    "PLR_CONF/CONSUMER" = var.PLR_CONF.ROLES["CONSUMER"].id
-    "PLR_SIT/CONSUMER"  = var.PLR_SIT.ROLES["CONSUMER"].id
-    "PLR_REV/CONSUMER"  = var.PLR_REV.ROLES["CONSUMER"].id
-    "PLR_STG/CONSUMER"  = var.PLR_STG.ROLES["CONSUMER"].id
-    "PLR_FLVR/CONSUMER" = var.PLR_FLVR.ROLES["CONSUMER"].id
+    "PLR_IAT/SECONDARY_SOURCE"  = var.PLR_IAT.ROLES["SECONDARY_SOURCE"].id
+    "PLR_UAT/SECONDARY_SOURCE"  = var.PLR_UAT.ROLES["SECONDARY_SOURCE"].id
+    "PLR_CONF/SECONDARY_SOURCE" = var.PLR_CONF.ROLES["SECONDARY_SOURCE"].id
+    "PLR_SIT/SECONDARY_SOURCE"  = var.PLR_SIT.ROLES["SECONDARY_SOURCE"].id
+    "PLR_REV/SECONDARY_SOURCE"  = var.PLR_REV.ROLES["SECONDARY_SOURCE"].id
+    "PLR_STG/SECONDARY_SOURCE"  = var.PLR_STG.ROLES["SECONDARY_SOURCE"].id
+    "PLR_FLVR/SECONDARY_SOURCE" = var.PLR_FLVR.ROLES["SECONDARY_SOURCE"].id
   }
 }
