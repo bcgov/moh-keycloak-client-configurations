@@ -58,6 +58,14 @@ module "service-account-roles" {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
+    "account/manage-account" = {
+      "client_id" = var.account.CLIENT.id,
+      "role_id"   = "manage-account"
+    }
+    "account/view-profile" = {
+      "client_id" = var.account.CLIENT.id,
+      "role_id"   = "view-profile"
+    }
     "realm-management/manage-clients" = {
       "client_id" = var.realm-management.CLIENT.id,
       "role_id"   = "manage-clients"

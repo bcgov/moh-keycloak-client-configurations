@@ -51,6 +51,7 @@ module "HHSLibrary" {
 module "hnsesb_api_gateway_client_manager" {
   source           = "./hnsesb_api_gateway_client_manager"
   realm-management = module.realm-management
+  account          = module.account
 }
 module "HOOPC" {
   source = "./hoopc"
