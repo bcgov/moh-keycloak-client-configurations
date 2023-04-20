@@ -2,7 +2,7 @@ resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan               = ""
   access_type                         = "PUBLIC"
   backchannel_logout_session_required = true
-  base_url                            = ""
+  base_url                            = "https://hcapemployers.gov.bc.ca"
   client_authenticator_type           = "client-secret"
   client_id                           = "HCAP-FE"
   consent_required                    = false
@@ -18,7 +18,14 @@ resource "keycloak_openid_client" "CLIENT" {
   service_accounts_enabled            = false
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
-  valid_redirect_uris                 = ["http://localhost:4000"]
+  valid_redirect_uris = [
+    "/*",
+    "https://www.hcapemployers.gov.bc.ca/*",
+    "https://www.hcapparticipants.gov.bc.ca/*",
+    "https://hcapparticipants.gov.bc.ca/*",
+    "https://hcapemployers.gov.bc.ca/*",
+    "https://hcapemployers.gov.bc.ca"
+  ]
   web_origins = [
     "*",
   ]
