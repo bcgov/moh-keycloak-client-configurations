@@ -66,3 +66,12 @@ module "client-roles" {
     }
   }
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "user_id" {
+  add_to_id_token = true
+  claim_name      = "user_id"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "user_id"
+  user_attribute  = "bcsc_guid"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
