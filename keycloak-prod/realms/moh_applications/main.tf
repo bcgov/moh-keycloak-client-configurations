@@ -13,6 +13,14 @@ module "BCHCIM" {
 module "CONNECT" {
   source = "./connect"
 }
+module "DMFT-SERVICE" {
+  source       = "./dmft-service"
+  PIDP-SERVICE = module.PIDP-SERVICE
+}
+module "DMFT-WEBAPP" {
+  source         = "./dmft-webapp"
+  LICENCE-STATUS = module.LICENCE-STATUS
+}
 module "EACL" {
   source = "./eacl"
 }
