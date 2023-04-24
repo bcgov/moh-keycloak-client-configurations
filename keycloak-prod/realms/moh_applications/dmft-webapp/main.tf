@@ -19,12 +19,11 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://test.roadsafetybc.gov.bc.ca/",
-    "https://localhost:*",
-    "http://localhost:*",
-    "https://pidp-adapter-0137d5-test.apps.silver.devops.gov.bc.ca/",
-    "https://portal-ui-0137d5-test.apps.silver.devops.gov.bc.ca/",
-    "https://rsbc-dfp-medical-portal-dev.silver.devops.bcgov/api",
+    "https://www.roadsafetybc.gov.bc.ca/",
+    "https://roadsafetybc.gov.bc.ca/",
+    "https://pidp-adapter-0137d5-prodapps.silver.devops.gov.bc.ca/",
+    "https://portal-ui-0137d5-prod.apps.silver.devops.gov.bc.ca/",
+    "https://rsbc-dfp-medical-portal-prod.silver.devops.bcgov/api",
   ]
   web_origins = [
     "*",
