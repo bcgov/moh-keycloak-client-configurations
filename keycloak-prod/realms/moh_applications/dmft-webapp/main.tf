@@ -21,6 +21,9 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "https://www.roadsafetybc.gov.bc.ca/",
     "https://roadsafetybc.gov.bc.ca/",
+    "https://pidp-adapter-0137d5-prodapps.silver.devops.gov.bc.ca/",
+    "https://portal-ui-0137d5-prod.apps.silver.devops.gov.bc.ca/",
+    "https://rsbc-dfp-medical-portal-prod.silver.devops.bcgov/api",
   ]
   web_origins = [
     "*",
