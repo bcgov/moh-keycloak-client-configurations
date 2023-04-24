@@ -26,6 +26,9 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:4000",
     "http://hcapemployers.local.freshworks.club:4000/*",
     "http://hcapparticipants.local.freshworks.club:4000/*",
+    "https://hcapemployers.test.freshworks.club/*",
+    "https://www.hcapemployers.test.freshworks.club/*",
+    "https://hcapparticipants.test.freshworks.club/*"
   ]
   web_origins = [
     "*",
