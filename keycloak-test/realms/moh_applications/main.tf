@@ -65,6 +65,9 @@ module "HCIMWEB_HSIT" {
 module "HCIMWEB_HUAT" {
   source = "./hcimweb_huat"
 }
+module "HCIM_VIHA" {
+  source = "./hcim_viha"
+}
 module "HDPBC" {
   source = "./hdpbc"
 }
