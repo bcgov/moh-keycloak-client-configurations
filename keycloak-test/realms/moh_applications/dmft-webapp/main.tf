@@ -25,6 +25,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://pidp-adapter-0137d5-test.apps.silver.devops.gov.bc.ca/",
     "https://portal-ui-0137d5-test.apps.silver.devops.gov.bc.ca/",
     "https://rsbc-dfp-medical-portal-dev.silver.devops.bcgov/api",
+    "https://oauth.pstmn.io/v1/callback",
   ]
   web_origins = [
     "*",
