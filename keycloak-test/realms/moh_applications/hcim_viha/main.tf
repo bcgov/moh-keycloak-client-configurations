@@ -4,7 +4,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "hcim_viha"
+  client_id                           = "HCIM_VIHA"
   consent_required                    = false
   description                         = "Healthcare Client Identity Management - Vancouver Island Health Authority"
   direct_access_grants_enabled        = false
