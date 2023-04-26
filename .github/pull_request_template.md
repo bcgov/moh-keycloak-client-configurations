@@ -1,8 +1,8 @@
 ### Changes being made
 
- Please include a short summary of the change.
+Please include a short summary of the change.
 
- ### Context
+### Context
 
 What is the context for those changes? For example: particular role needs to be shown in token. Reference Azure Board task, if applicable.
  
