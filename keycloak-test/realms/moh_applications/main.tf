@@ -346,6 +346,16 @@ module "USER-MANAGEMENT" {
   source                  = "./user-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "WAVA" {
+  source   = "./plr-wava"
+  PLR_IAT  = module.PLR_IAT
+  PLR_UAT  = module.PLR_UAT
+  PLR_SIT  = module.PLR_SIT
+  PLR_CONF = module.PLR_CONF
+  PLR_REV  = module.PLR_REV
+  PLR_FLVR = module.PLR_FLVR
+  PLR_STG  = module.PLR_STG
+}
 module "WEBCAPS" {
   source = "./webcaps"
 }
