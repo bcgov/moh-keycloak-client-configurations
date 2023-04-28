@@ -21,6 +21,18 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "https://healthbc--pmycareidp.sandbox.my.salesforce.com/*",
     "https://healthbc--pmycareidp.sandbox.my.site.com/*",
+    "https://healthbc--hlthbcdevx.sandbox.my.salesforce.com/*",
+    "https://healthbc--hlthbcdevx.sandbox.my.site.com/*",
+    "https://healthbc--hlthbcqax.sandbox.my.salesforce.com/*",
+    "https://healthbc--hlthbcqax.sandbox.my.site.com/*",
+    "https://healthbc--hlthbccix.sandbox.my.salesforce.com/*",
+    "https://healthbc--hlthbccix.sandbox.my.site.com/*",
+    "https://healthbc--hlthbccix2.sandbox.my.salesforce.com/*",
+    "https://healthbc--hlthbccix2.sandbox.my.site.com/*",
+    "https://healthbc--hlthbcstx.sandbox.my.salesforce.com/*",
+    "https://healthbc--hlthbcstx.sandbox.my.site.com/*",
+    "https://healthbc--hlthbcuat.sandbox.my.salesforce.com/*",
+    "https://healthbc--hlthbcuat.sandbox.my.site.com/*",
   ]
   web_origins = [
   ]
