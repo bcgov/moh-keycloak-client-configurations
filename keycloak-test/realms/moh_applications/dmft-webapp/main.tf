@@ -40,6 +40,10 @@ module "client-roles" {
     "ROLE_NAME_TBD" = {
       "name"        = "ROLE_NAME_TBD"
       "description" = ""
+    },
+    "DMFT_ENROLLED" = {
+      "name"        = "DMFT_ENROLLED"
+      "description" = ""
     }
   }
 }
