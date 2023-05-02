@@ -41,10 +41,6 @@ module "service-account-roles" {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
-    "PRIME-APPLICATION/external_hpdid_access" = {
-      "client_id" = var.PRIME-APPLICATION.CLIENT.id,
-      "role_id"   = "external_hpdid_access"
-    },
   }
 }
 
