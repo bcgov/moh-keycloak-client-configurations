@@ -37,5 +37,13 @@ module "client-roles" {
       "name"        = "PRACTITIONER"
       "description" = ""
     },
+    "MD" = {
+      "name"        = "MD"
+      "description" = ""
+    },
+    "RNP" = {
+      "name"        = "RNP"
+      "description" = ""
+    },
   }
 }
