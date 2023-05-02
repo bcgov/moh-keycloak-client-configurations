@@ -94,8 +94,8 @@ module "client-roles" {
     "view-client-pho-rsc" = {
       "name" = "view-client-pho-rsc"
     },
-    "view-client-user-management-service-integration-tests" = {
-      "name" = "view-client-user-management-service-integration-tests"
+    "view-client-ums-integration-tests" = {
+      "name" = "view-client-ums-integration-tests"
     },
     "view-clients" = {
       "name" = "view-clients"
