@@ -29,23 +29,23 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "USER-MANAGEMENT-SERVICE/create-user"         = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
-    "USER-MANAGEMENT-SERVICE/manage-user-details" = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
-    "USER-MANAGEMENT-SERVICE/manage-all-groups"   = var.USER-MANAGEMENT-SERVICE.ROLES["manage-all-groups"].id,
-    "USER-MANAGEMENT-SERVICE/manage-user-roles"   = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-plr"     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr"].id,
-    "USER-MANAGEMENT-SERVICE/view-clients"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
-    "USER-MANAGEMENT-SERVICE/view-events"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
-    "USER-MANAGEMENT-SERVICE/view-groups"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
-    "USER-MANAGEMENT-SERVICE/view-metrics"        = var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
-    "USER-MANAGEMENT-SERVICE/view-users"          = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
-    "realm-management/manage-users"               = var.realm-management.ROLES["manage-users"].id,
-    "realm-management/view-clients"               = var.realm-management.ROLES["view-clients"].id,
-    "realm-management/view-events"                = var.realm-management.ROLES["view-events"].id,
-    "realm-management/view-users"                 = var.realm-management.ROLES["view-users"].id,
-    "ORGANIZATIONS-API/get-org"                   = var.ORGANIZATIONS-API.ROLES["get-org"].id,
-    "ORGANIZATIONS-API/add-org"                   = var.ORGANIZATIONS-API.ROLES["add-org"].id,
-    "ORGANIZATIONS-API/delete-org"                = var.ORGANIZATIONS-API.ROLES["delete-org"].id,
+    "USER-MANAGEMENT-SERVICE/create-user"                       = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-details"               = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
+    "USER-MANAGEMENT-SERVICE/manage-all-groups"                 = var.USER-MANAGEMENT-SERVICE.ROLES["manage-all-groups"].id,
+    "USER-MANAGEMENT-SERVICE/manage-user-roles"                 = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-ums-integration-tests" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-ums-integration-tests"].id,
+    "USER-MANAGEMENT-SERVICE/view-clients"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    "USER-MANAGEMENT-SERVICE/view-events"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
+    "USER-MANAGEMENT-SERVICE/view-groups"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
+    "USER-MANAGEMENT-SERVICE/view-metrics"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
+    "USER-MANAGEMENT-SERVICE/view-users"                        = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "realm-management/manage-users"                             = var.realm-management.ROLES["manage-users"].id,
+    "realm-management/view-clients"                             = var.realm-management.ROLES["view-clients"].id,
+    "realm-management/view-events"                              = var.realm-management.ROLES["view-events"].id,
+    "realm-management/view-users"                               = var.realm-management.ROLES["view-users"].id,
+    "ORGANIZATIONS-API/get-org"                                 = var.ORGANIZATIONS-API.ROLES["get-org"].id,
+    "ORGANIZATIONS-API/add-org"                                 = var.ORGANIZATIONS-API.ROLES["add-org"].id,
+    "ORGANIZATIONS-API/delete-org"                              = var.ORGANIZATIONS-API.ROLES["delete-org"].id,
   }
 }
 
@@ -60,43 +60,43 @@ module "service-account-roles" {
   }
   client_roles = {
     "USER-MANAGEMENT-SERVICE/create-user" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "create-user"
     }
     "USER-MANAGEMENT-SERVICE/manage-user-details" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "manage-user-details"
     }
     "USER-MANAGEMENT-SERVICE/manage-all-groups" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "manage-all-groups"
     }
     "USER-MANAGEMENT-SERVICE/manage-user-roles" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "manage-user-roles"
     }
-    "USER-MANAGEMENT-SERVICE/view-client-plr" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
-      "role_id"   = "view-client-plr"
+    "USER-MANAGEMENT-SERVICE/view-client-ums-integration-tests" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "view-client-ums-integration-tests"
     }
     "USER-MANAGEMENT-SERVICE/view-clients" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-clients"
     }
     "USER-MANAGEMENT-SERVICE/view-events" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-events"
     }
     "USER-MANAGEMENT-SERVICE/view-groups" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-groups"
     }
     "USER-MANAGEMENT-SERVICE/view-metrics" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-metrics"
     }
     "USER-MANAGEMENT-SERVICE/view-users" = {
-      "client_id" = keycloak_openid_client.CLIENT.id,
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "view-users"
     }
     "realm-management/manage-users" = {
