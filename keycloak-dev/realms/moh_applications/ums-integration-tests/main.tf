@@ -33,6 +33,10 @@ module "client-roles" {
       "name"        = "TEST_ROLE"
       "description" = "Role used in UMS integration tests"
     },
+    "getUsersInRole_TEST_ROLE" = {
+      "name"        = "getUsersInRole_TEST_ROLE"
+      "description" = "role used for getUsersInRole test in UMS"
+    },
   }
 }
 
