@@ -13,6 +13,13 @@ What is the context for those changes? For example: particular role needs to be 
 - [ ] Direct Access Grants Enabled is disabled.
 - [ ] Valid Redirect URIs are properly defined, or explanation for `*` (allow all) is provided. 
 - [ ] Web Origins are set to `+` instead of `*` to restrict the CORS origins.
+- [ ] Client Scopes are not assigned to client, or explanation for doing so is provided. [^1]
 - [ ] Client module and all references are defined in main.tf in realm root folder.
-- [ ] Terraform plan contains only my changes, or other developers are aware that their manual changes can be overridden. 
+- [ ] Terraform plan contains only my changes, or other developers are aware that their manual changes can be overridden. [^2]
 - [ ] [CMDB](https://cmdb.hlth.gov.bc.ca/cmdbuildProd/ui/#classes/Application/cards) is updated, if applicable.
+
+[^1]: Data transparency. Does the client you are creating has permissions to pass/access all the Client Scope attributes in the token? For example `profile` scope includes user birthdate, which is used by BCSC, but other applications shouldn't necessarily have access to it.
+
+
+[^2]: Keep in mind that sometimes Keycloak autmatically adds properties to newly created resources. `terraform plan` will show them as changes made outside of Terraform. As long as those attributes are empty and do not interfere with existing configuration, they can be ignored. Here is example of one:
+![Terraform](https://user-images.githubusercontent.com/52381251/236051457-cdf91ff2-adc1-4ec0-b648-bfbcd7c55198.png)
