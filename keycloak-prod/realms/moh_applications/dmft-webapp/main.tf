@@ -35,8 +35,8 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "ROLE_NAME_TBD" = {
-      "name"        = "ROLE_NAME_TBD"
+    "DMFT_ENROLLED" = {
+      "name"        = "DMFT_ENROLLED"
       "description" = ""
     }
   }
