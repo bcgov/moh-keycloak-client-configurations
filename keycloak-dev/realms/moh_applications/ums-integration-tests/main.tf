@@ -24,6 +24,18 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+module "client-roles" {
+  source    = "../../../../modules/client-roles"
+  client_id = keycloak_openid_client.CLIENT.id
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  roles = {
+    "TEST_ROLE" = {
+      "name"        = "TEST_ROLE"
+      "description" = "Role used in UMS integration tests"
+    },
+  }
+}
+
 module "scope-mappings" {
   source    = "../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
