@@ -67,33 +67,33 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_guid" {
   add_to_id_token     = false
   add_to_userinfo     = true
   add_to_access_token = true
-  claim_name      = "bcsc_guid"
-  client_id       = keycloak_openid_client.CLIENT.id
-  name            = "bcsc_guid"
-  user_attribute  = "bcsc_guid"
-  realm_id        = keycloak_openid_client.CLIENT.realm_id
+  claim_name          = "bcsc_guid"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "bcsc_guid"
+  user_attribute      = "bcsc_guid"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
 resource "keycloak_openid_user_attribute_protocol_mapper" "pidp_email" {
   add_to_id_token     = false
   add_to_userinfo     = true
   add_to_access_token = true
-  claim_name      = "pidp_email"
-  client_id       = keycloak_openid_client.CLIENT.id
-  name            = "pidp_email"
-  user_attribute  = "pidp_email"
-  realm_id        = keycloak_openid_client.CLIENT.realm_id
+  claim_name          = "pidp_email"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "pidp_email"
+  user_attribute      = "pidp_email"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
 resource "keycloak_openid_user_attribute_protocol_mapper" "endorser_data" {
   add_to_id_token     = false
   add_to_userinfo     = true
   add_to_access_token = true
-  claim_name      = "endorser_data"
-  client_id       = keycloak_openid_client.CLIENT.id
-  name            = "endorser_data"
-  user_attribute  = "endorser_data"
-  realm_id        = keycloak_openid_client.CLIENT.realm_id
+  claim_name          = "endorser_data"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "endorser_data"
+  user_attribute      = "endorser_data"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
@@ -158,7 +158,7 @@ module "scope-mappings" {
   roles = {
     "LICENCE-STATUS/MOA"          = var.LICENCE-STATUS.ROLES["MOA"].id
     "LICENCE-STATUS/PRACTITIONER" = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
-    "LICENCE-STATUS/MD" = var.LICENCE-STATUS.ROLES["MD"].id
-    "LICENCE-STATUS/RNP" = var.LICENCE-STATUS.ROLES["RNP"].id
+    "LICENCE-STATUS/MD"           = var.LICENCE-STATUS.ROLES["MD"].id
+    "LICENCE-STATUS/RNP"          = var.LICENCE-STATUS.ROLES["RNP"].id
   }
 }
