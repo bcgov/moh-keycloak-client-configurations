@@ -158,5 +158,7 @@ module "scope-mappings" {
   roles = {
     "LICENCE-STATUS/MOA"          = var.LICENCE-STATUS.ROLES["MOA"].id
     "LICENCE-STATUS/PRACTITIONER" = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
+    "LICENCE-STATUS/MD" = var.LICENCE-STATUS.ROLES["MD"].id
+    "LICENCE-STATUS/RNP" = var.LICENCE-STATUS.ROLES["RNP"].id
   }
 }
