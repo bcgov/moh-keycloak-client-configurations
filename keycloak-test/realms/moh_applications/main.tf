@@ -260,6 +260,7 @@ module "PLR_UAT" {
 }
 module "PRIMARY-CARE" {
   source = "./primary-care"
+  LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "PRIME-DOCUMENT-MANAGER" {
   source = "./prime-document-manager"
