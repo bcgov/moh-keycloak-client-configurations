@@ -259,7 +259,8 @@ module "PLR_UAT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PRIMARY-CARE" {
-  source = "./primary-care"
+  source         = "./primary-care"
+  LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "PRIME-DOCUMENT-MANAGER" {
   source = "./prime-document-manager"
