@@ -51,7 +51,15 @@ module "client-roles" {
     "demoreports" = {
       "name"        = "demoreports"
       "description" = ""
-    }
+    },
+    "externalha" = {
+      "name"        = "externalha"
+      "description" = ""
+    },
+    "internalpho" = {
+      "name"        = "internalpho"
+      "description" = ""
+    },
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role" {
