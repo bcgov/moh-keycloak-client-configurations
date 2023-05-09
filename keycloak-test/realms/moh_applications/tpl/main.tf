@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "TPL"
   consent_required                    = false
-  description                         = "TPL Keycloak for SSO"
+  description                         = "Third Party Liability Keycloak for SSO"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
