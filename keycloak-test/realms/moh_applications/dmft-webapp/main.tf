@@ -33,6 +33,17 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "pidp_email" {
+  add_to_id_token     = true
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "pidp_email"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "pidp_email"
+  user_attribute      = "pidp_email"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
 module "client-roles" {
   source    = "../../../../modules/client-roles"
   client_id = keycloak_openid_client.CLIENT.id
