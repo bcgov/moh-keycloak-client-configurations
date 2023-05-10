@@ -350,3 +350,6 @@ module "USER-MANAGEMENT" {
 module "WEBCAPS" {
   source = "./webcaps"
 }
+module "HCIM-BCMI" {
+  source = "./hcim-bcmi"
+}
