@@ -350,3 +350,45 @@ module "USER-MANAGEMENT" {
 module "WEBCAPS" {
   source = "./webcaps"
 }
+module "HCIM_BCMI" {
+  source = "./hcim_bcmi"
+}
+module "HCIM_FHA" {
+  source = "./hcim_fha"
+}
+module "HCIM_HIBC" {
+  source = "./hcim_hibc"
+}
+module "HCIM_IHA" {
+  source = "./hcim_iha"
+}
+module "HCIM_LCTZ" {
+  source = "./hcim_lctz"
+}
+module "HCIM_MOH_CRS" {
+  source = "./hcim_moh_crs"
+}
+module "HCIM_MOH_VSA" {
+  source = "./hcim_moh_vsa"
+}
+module "HCIM_NHA" {
+  source = "./hcim_nha"
+}
+module "HCIM_PHARM" {
+  source = "./hcim_pharm"
+}
+module "HCIM_PHSA" {
+  source = "./hcim_phsa"
+}
+module "HCIM_PUBH" {
+  source = "./hcim_pubh"
+}
+module "HCIM_SDPR" {
+  source = "./hcim_sdpr"
+}
+module "HCIM_VCHA" {
+  source = "./hcim_vcha"
+}
+module "HCIM_VPP" {
+  source = "./hcim_vpp"
+}
