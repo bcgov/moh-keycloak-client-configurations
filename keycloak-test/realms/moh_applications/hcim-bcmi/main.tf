@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "HCIM-BCMI"
   consent_required                    = false
-  description                         = "Healthcare Client Identity Management - Vancouver Island Health Authority"
+  description                         = "Healthcare Client Identity Management"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
