@@ -38,7 +38,7 @@ resource "keycloak_openid_hardcoded_claim_protocol_mapper" "hcim_org" {
   add_to_id_token     = true
   add_to_userinfo     = true
   claim_name          = "hcim_org"
-  claim_value         = "organization/HCIM_PHSA"
+  claim_value         = "organization/PHSA"
   claim_value_type    = "String"
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "hcim_org"
