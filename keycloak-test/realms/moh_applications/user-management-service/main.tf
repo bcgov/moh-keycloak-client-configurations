@@ -178,6 +178,9 @@ module "client-roles" {
     "view-client-tap" = {
       "name" = "view-client-tap"
     },
+    "view-client-tpl" = {
+      "name" = "view-client-tpl"
+    },
     "view-client-webcaps" = {
       "name" = "view-client-webcaps"
     },
