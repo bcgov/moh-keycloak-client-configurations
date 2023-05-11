@@ -48,5 +48,11 @@ module "client-roles" {
     "Ed" = {
       "name" = "Ed"
     },
+    "HI_Operation" = {
+      "name" = "HI_Operation"
+    },
+    "HI_Consumer" = {
+      "name" = "HI_Consumer"
+    },
   }
 }
