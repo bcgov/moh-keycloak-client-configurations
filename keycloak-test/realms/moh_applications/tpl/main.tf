@@ -19,7 +19,9 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
+    "https://bcmohtpl--keycloak.sandbox.my.salesforce.com/*",
     "https://bcmohtpl--tplqaa.sandbox.my.salesforce.com/*",
+    "https://bcmohtpl--tpluat.sandbox.my.salesforce.com/*",
   ]
   web_origins = [
   ]
