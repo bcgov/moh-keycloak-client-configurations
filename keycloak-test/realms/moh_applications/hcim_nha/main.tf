@@ -4,7 +4,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "HCIM_VIHA"
+  client_id                           = "HCIM_NHA"
   consent_required                    = false
   description                         = "Healthcare Client Identity Management"
   direct_access_grants_enabled        = false
@@ -38,7 +38,7 @@ resource "keycloak_openid_hardcoded_claim_protocol_mapper" "hcim_org" {
   add_to_id_token     = true
   add_to_userinfo     = true
   claim_name          = "hcim_org"
-  claim_value         = "organization/VIHA"
+  claim_value         = "organization/NHA"
   claim_value_type    = "String"
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "hcim_org"
