@@ -27,7 +27,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
   web_origins = [
-    "*",
+    "+",
   ]
 }
 module "client-roles" {
@@ -45,6 +45,18 @@ module "client-roles" {
     },
     "publisher" = {
       "name"        = "publisher"
+      "description" = ""
+    },
+    "demoreports" = {
+      "name"        = "demoreports"
+      "description" = ""
+    },
+    "externalha" = {
+      "name"        = "externalha"
+      "description" = ""
+    },
+    "internalpho" = {
+      "name"        = "internalpho"
       "description" = ""
     },
   }
