@@ -28,7 +28,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://rsc-test.hlth.gov.bc.ca/*"
   ]
   web_origins = [
-    "*",
+    "+",
   ]
 }
 module "client-roles" {

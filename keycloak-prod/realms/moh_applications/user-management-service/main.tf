@@ -88,6 +88,9 @@ module "client-roles" {
     "view-client-mspdirect-service" = {
       "name" = "view-client-mspdirect-service"
     },
+    "view-client-pho-rsc" = {
+      "name" = "view-client-pho-rsc"
+    },
     "view-client-pidp-service" = {
       "name" = "view-client-pidp-service"
     },
