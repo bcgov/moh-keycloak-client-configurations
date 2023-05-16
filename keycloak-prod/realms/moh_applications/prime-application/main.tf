@@ -124,7 +124,7 @@ module "client-roles" {
       "name" = "prime_api_service_account"
     },
     "external_gpid_access" = {
-      "name": "external_gpid_access"
+      "name" : "external_gpid_access"
     }
   }
 }
