@@ -24,7 +24,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://prod-9c33a9-prod.apps.silver.devops.gov.bc.ca/*",
   ]
   web_origins = [
-    "*",
+    "+",
   ]
 }
 
@@ -123,6 +123,9 @@ module "client-roles" {
     "prime_api_service_account" = {
       "name" = "prime_api_service_account"
     },
+    "external_gpid_access" = {
+      "name" : "external_gpid_access"
+    }
   }
 }
 
