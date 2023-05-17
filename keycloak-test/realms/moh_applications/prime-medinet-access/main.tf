@@ -49,7 +49,7 @@ module "service-account-roles" {
       "client_id" = var.PRIME-APPLICATION-TEST.CLIENT.id,
       "role_id"   = "external_gpid_validation"
     },
-    "PRIME-APPLICATION-TEST/external_gpid_access" = {
+    "PRIME-APPLICATION-LOCAL/external_gpid_access" = {
       "client_id" = var.PRIME-APPLICATION-TEST.CLIENT.id,
       "role_id"   = "external_gpid_access"
     },
