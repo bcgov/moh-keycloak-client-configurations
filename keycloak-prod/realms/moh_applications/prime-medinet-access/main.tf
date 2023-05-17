@@ -44,6 +44,10 @@ module "service-account-roles" {
     "PRIME-APPLICATION/external_gpid_validation" = {
       "client_id" = var.PRIME-APPLICATION.CLIENT.id,
       "role_id"   = "external_gpid_validation"
+    },
+    "PRIME-APPLICATION/external_gpid_access" = {
+      "client_id" = var.PRIME-APPLICATION.CLIENT.id,
+      "role_id"   = "external_gpid_access"
     }
   }
 }
@@ -53,6 +57,7 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PRIME-APPLICATION/external_gpid_validation" = var.PRIME-APPLICATION.ROLES["external_gpid_validation"].id
+    "PRIME-APPLICATION/external_gpid_validation" = var.PRIME-APPLICATION.ROLES["external_gpid_validation"].id,
+    "PRIME-APPLICATION/external_gpid_access"     = var.PRIME-APPLICATION.ROLES["external_gpid_access"].id
   }
 }
