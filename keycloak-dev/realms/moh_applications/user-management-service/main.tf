@@ -146,16 +146,17 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "realm-management/manage-users"  = var.realm-management.ROLES["manage-users"].id,
-    "realm-management/query-clients" = var.realm-management.ROLES["query-clients"].id,
-    "realm-management/query-groups"  = var.realm-management.ROLES["query-groups"].id,
-    "realm-management/query-users"   = var.realm-management.ROLES["query-users"].id,
-    "realm-management/view-clients"  = var.realm-management.ROLES["view-clients"].id,
-    "realm-management/view-events"   = var.realm-management.ROLES["view-events"].id,
-    "realm-management/view-users"    = var.realm-management.ROLES["view-users"].id,
-    "ORGANIZATIONS-API/get-org"      = var.ORGANIZATIONS-API.ROLES["get-org"].id,
-    "ORGANIZATIONS-API/add-org"      = var.ORGANIZATIONS-API.ROLES["add-org"].id,
-    "ORGANIZATIONS-API/delete-org"   = var.ORGANIZATIONS-API.ROLES["delete-org"].id,
+    "MSPDIRECT-SERVICE/MANAGEMSPPAYEENUMBER" = var.MSPDIRECT-SERVICE.ROLES["MANAGEMSPPAYEENUMBER"].id,
+    "realm-management/manage-users"          = var.realm-management.ROLES["manage-users"].id,
+    "realm-management/query-clients"         = var.realm-management.ROLES["query-clients"].id,
+    "realm-management/query-groups"          = var.realm-management.ROLES["query-groups"].id,
+    "realm-management/query-users"           = var.realm-management.ROLES["query-users"].id,
+    "realm-management/view-clients"          = var.realm-management.ROLES["view-clients"].id,
+    "realm-management/view-events"           = var.realm-management.ROLES["view-events"].id,
+    "realm-management/view-users"            = var.realm-management.ROLES["view-users"].id,
+    "ORGANIZATIONS-API/get-org"              = var.ORGANIZATIONS-API.ROLES["get-org"].id,
+    "ORGANIZATIONS-API/add-org"              = var.ORGANIZATIONS-API.ROLES["add-org"].id,
+    "ORGANIZATIONS-API/delete-org"           = var.ORGANIZATIONS-API.ROLES["delete-org"].id,
   }
 }
 module "service-account-roles" {
@@ -175,6 +176,10 @@ module "service-account-roles" {
     "account/view-profile" = {
       "client_id" = var.account.CLIENT.id,
       "role_id"   = "view-profile"
+    }
+    "MSPDIRECT-SERVICE/MANAGEMSPPAYEENUMBER" = {
+      "client_id" = var.MSPDIRECT-SERVICE.CLIENT.id,
+      "role_id"   = "MANAGEMSPPAYEENUMBER"
     }
     "realm-management/manage-users" = {
       "client_id" = var.realm-management.CLIENT.id,
