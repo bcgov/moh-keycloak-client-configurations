@@ -175,6 +175,7 @@ module "USER-MANAGEMENT-SERVICE" {
   realm-management  = module.realm-management
   account           = module.account
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
+  MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
 module "USER-MANAGEMENT" {
   source                  = "./user-management"

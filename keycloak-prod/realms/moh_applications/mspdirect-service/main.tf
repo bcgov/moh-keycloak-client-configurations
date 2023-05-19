@@ -41,7 +41,10 @@ module "client-roles" {
     },
     "MANAGEMSPPAYEENUMBER" = {
       "name" = "MANAGEMSPPAYEENUMBER"
-    }
+    },
+    "PBFUSER" = {
+      "name" = "PBFUSER"
+    },
     "PREMIUMADMIN" = {
       "name" = "PREMIUMADMIN"
     },
