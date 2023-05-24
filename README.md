@@ -85,7 +85,7 @@ Example:
   "access_key_id": "VALUE_OF_AWS_ACCESS_KEY_ID",
   "access_key_secret": "VALUE_OF_AWS_SECRET_ACCESS_KEY",
   "roles": {
-    "cey5wq_sandbox_s3_admin": "VALUE_OF_AWS_S3_BACKEND_ROLE_ARN"
+    "cey5wq_tools_s3_admin": "VALUE_OF_AWS_S3_BACKEND_ROLE_ARN"
   }
 }
 ```
@@ -102,11 +102,11 @@ The values for the `TF_VAR_ENV_client_secret` environment variables are Keycloak
 
 The Terraform state file containing Keycloak configuration is stored in an S3 bucket on the BCGOV AWS platform. In order for this to work, Terraform requires a service account with the necessary permissions to access the bucket. To fulfill this requirement, a request was submitted on the BCGOV Cloud RocketChat channel. The following is the text of the original request.
 
-> May I request a service account to have AmazonS3FullAccess Managed policy in the cey5wq-sandbox environment?
+> May I request a service account to have AmazonS3FullAccess Managed policy in the cey5wq-tools environment?
 > 
 > Assuming we create buckets prefixed with the license plate cey5wq, can we have the service account that have enough permissions to control the buckets prefixed with cey5wq? Something like this below?
 > 
-> (My intent is to store Terraform state for our Keycloak instance in a sandbox-environment S3 bucket.)
+> (My intent is to store Terraform state for our Keycloak instance in a tools-environment S3 bucket.)
 > 
 > ```json
 > {

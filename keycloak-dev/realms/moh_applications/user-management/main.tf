@@ -21,6 +21,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://user-management-dev.hlth.gov.bc.ca/*",
+    "http://user-management-dev.hlth.gov.bc.ca/*",
     "https://localhost:*",
   ]
   web_origins = [
