@@ -90,6 +90,7 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "endorser_data" {
   add_to_userinfo     = true
   add_to_access_token = true
   claim_name          = "endorser_data"
+  claim_value_type    = "JSON"
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "endorser_data"
   user_attribute      = "endorser_data"
