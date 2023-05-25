@@ -54,5 +54,17 @@ module "client-roles" {
     "HI_Consumer" = {
       "name" = "HI_Consumer"
     },
+    "HSPP_HumanResource" = {
+      "name" = "HSPP_HumanResource"
+    },
+    "HSPP_OKR" = {
+      "name" = "HSPP_OKR"
+    },
+    "AD_Education" = {
+      "name" = "AD_Education"
+    },
+    "HI_Administrator" = {
+      "name" = "HI_Administrator"
+    },
   }
 }
