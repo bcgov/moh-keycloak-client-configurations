@@ -97,6 +97,61 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "endorser_data" {
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "is_md" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "is_md"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "is_md"
+  user_attribute      = "is_md"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "is_moa" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "is_moa"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "is_moa"
+  user_attribute      = "is_moa"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "is_rnp" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "is_rnp"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "is_rnp"
+  user_attribute      = "is_rnp"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "hpdid" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "hpdid"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "hpdid"
+  user_attribute      = "hpdid"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "user_oid" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "user_oid"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "user_oid"
+  user_attribute      = "user_oid"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
