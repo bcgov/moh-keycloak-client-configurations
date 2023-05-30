@@ -51,18 +51,6 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper"
   add_to_userinfo             = true
 }
 
-resource "keycloak_openid_user_attribute_protocol_mapper" "common_provider_number" {
-  add_to_id_token     = false
-  add_to_userinfo     = true
-  add_to_access_token = true
-  claim_name          = "common_provider_number"
-  claim_value_type    = "String"
-  client_id           = keycloak_openid_client.CLIENT.id
-  name                = "common_provider_number"
-  user_attribute      = "common_provider_number"
-  realm_id            = keycloak_openid_client.CLIENT.realm_id
-}
-
 resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_guid" {
   add_to_id_token     = false
   add_to_userinfo     = true
@@ -94,6 +82,73 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "endorser_data" {
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "endorser_data"
   user_attribute      = "endorser_data"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "is_md" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "is_md"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "is_md"
+  user_attribute      = "is_md"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "is_moa" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "is_moa"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "is_moa"
+  user_attribute      = "is_moa"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "is_rnp" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "is_rnp"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "is_rnp"
+  user_attribute      = "is_rnp"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "hpdid" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "hpdid"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "hpdid"
+  user_attribute      = "hpdid"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "user_oid" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "user_oid"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "user_oid"
+  user_attribute      = "user_oid"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "cpn" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "cpn"
+  claim_value_type    = "String"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "cpn"
+  user_attribute      = "cpn"
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
