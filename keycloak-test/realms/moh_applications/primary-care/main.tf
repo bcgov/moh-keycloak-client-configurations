@@ -51,18 +51,6 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper"
   add_to_userinfo             = true
 }
 
-resource "keycloak_openid_user_attribute_protocol_mapper" "common_provider_number" {
-  add_to_id_token     = false
-  add_to_userinfo     = true
-  add_to_access_token = true
-  claim_name          = "common_provider_number"
-  claim_value_type    = "String"
-  client_id           = keycloak_openid_client.CLIENT.id
-  name                = "common_provider_number"
-  user_attribute      = "common_provider_number"
-  realm_id            = keycloak_openid_client.CLIENT.realm_id
-}
-
 resource "keycloak_openid_user_attribute_protocol_mapper" "bcsc_guid" {
   add_to_id_token     = false
   add_to_userinfo     = true
@@ -149,6 +137,18 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "user_oid" {
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "user_oid"
   user_attribute      = "user_oid"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "cpn" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "cpn"
+  claim_value_type    = "String"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "cpn"
+  user_attribute      = "cpn"
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
