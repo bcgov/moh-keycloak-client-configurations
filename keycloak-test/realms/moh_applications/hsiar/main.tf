@@ -54,6 +54,9 @@ module "client-roles" {
     "HI_Consumer" = {
       "name" = "HI_Consumer"
     },
+    "HSPP_ALL" = {
+      "name" = "HSPP_ALL"
+    },
     "HSPP_HumanResource" = {
       "name" = "HSPP_HumanResource"
     },
