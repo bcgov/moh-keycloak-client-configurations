@@ -98,25 +98,14 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "endorser_data" {
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
-resource "keycloak_openid_user_attribute_protocol_mapper" "hpdid" {
-  add_to_id_token     = false
-  add_to_userinfo     = true
-  add_to_access_token = true
-  claim_name          = "hpdid"
-  client_id           = keycloak_openid_client.CLIENT.id
-  name                = "hpdid"
-  user_attribute      = "hpdid"
-  realm_id            = keycloak_openid_client.CLIENT.realm_id
-}
-
 resource "keycloak_openid_user_attribute_protocol_mapper" "cpn" {
   add_to_id_token     = true
   add_to_userinfo     = true
   add_to_access_token = true
-  claim_name          = "cpn"
+  claim_name          = "common_provider_number"
   client_id           = keycloak_openid_client.CLIENT.id
   name                = "cpn"
-  user_attribute      = "cpn"
+  user_attribute      = "common_provider_number"
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
@@ -170,6 +159,10 @@ module "client-roles" {
     },
     "PC_HCR_Support_Tier1" = {
       "name"        = "PC_HCR_Support_Tier1"
+      "description" = ""
+    },
+    "PC_Navigator" = {
+      "name"        = "PC_Navigator"
       "description" = ""
     },
   }
