@@ -42,17 +42,20 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "Surgical" = {
-      "name" = "Surgical"
+    "AD_Education" = {
+      "name" = "AD_Education"
     },
     "Ed" = {
       "name" = "Ed"
     },
-    "HI_Operation" = {
-      "name" = "HI_Operation"
+    "HI_Administrator" = {
+      "name" = "HI_Administrator"
     },
     "HI_Consumer" = {
       "name" = "HI_Consumer"
+    },
+    "HI_Operation" = {
+      "name" = "HI_Operation"
     },
     "HSPP_ALL" = {
       "name" = "HSPP_ALL"
@@ -63,11 +66,11 @@ module "client-roles" {
     "HSPP_OKR" = {
       "name" = "HSPP_OKR"
     },
-    "AD_Education" = {
-      "name" = "AD_Education"
+    "ITSB_DIGI" = {
+      "name" = "ITSB_DIGI"
     },
-    "HI_Administrator" = {
-      "name" = "HI_Administrator"
+    "Surgical" = {
+      "name" = "Surgical"
     },
   }
 }
