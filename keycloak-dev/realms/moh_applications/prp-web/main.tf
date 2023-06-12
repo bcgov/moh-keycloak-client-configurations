@@ -14,6 +14,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://wonderful-cliff-0d1cec610.2.azurestaticapps.net/*",
     "https://devprp.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://login.microsoftonline.com/common/oauth2/v2.0/logout*",
   ]
   web_origins = [
     "*",
