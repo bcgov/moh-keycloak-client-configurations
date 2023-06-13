@@ -5,181 +5,179 @@ module "realm-management" {
   source = "../../../modules/realm-management"
 }
 module "BCER-CP" {
-  source = "./bcer-cp"
+  source = "./clients/bcer-cp"
 }
 module "BCHCIM" {
-  source = "./bchcim"
+  source = "./clients/bchcim"
 }
 module "CONNECT" {
-  source = "./connect"
+  source = "./clients/connect"
 }
-
 module "DMFT-SERVICE" {
-  source       = "./dmft-service"
+  source       = "./clients/dmft-service"
   PIDP-SERVICE = module.PIDP-SERVICE
 }
 module "DMFT-WEBAPP" {
-  source         = "./dmft-webapp"
+  source         = "./clients/dmft-webapp"
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "EMCOD" {
-  source = "./emcod"
+  source = "./clients/emcod"
 }
 module "HCIMWEB" {
-  source = "./hcimweb"
+  source = "./clients/hcimweb"
 }
 module "HCIMWEB_HD2" {
-  source = "./hcimweb_hd2"
+  source = "./clients/hcimweb_hd2"
 }
 module "HCIM-SERVICE" {
-  source = "./hcim-service"
+  source = "./clients/hcim-service"
 }
 module "HEM" {
-  source = "./hem"
+  source = "./clients/hem"
 }
-
 module "IEN" {
-  source = "./ien"
+  source = "./clients/ien"
 }
 module "LDAP-ACC-TRANS" {
-  source            = "./ldap-acc-trans"
+  source            = "./clients/ldap-acc-trans"
   MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
 module "LDAP-ACC-TRANS-SERVICE" {
-  source                  = "./ldap-acc-trans-service"
+  source                  = "./clients/ldap-acc-trans-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "LDAP-API" {
-  source            = "./ldap-api"
+  source            = "./clients/ldap-api"
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
 }
 module "LICENCE-STATUS" {
-  source = "./licence-status"
+  source = "./clients/licence-status"
 }
 module "MAID" {
-  source = "./maid"
+  source = "./clients/maid"
 }
 module "MOH-SERVICENOW" {
-  source = "./moh-servicenow"
+  source = "./clients/moh-servicenow"
 }
 module "MSPDIRECT-SERVICE" {
-  source = "./mspdirect-service"
+  source = "./clients/mspdirect-service"
 }
 module "MSPDIRECT-WEB" {
-  source            = "./mspdirect-web"
+  source            = "./clients/mspdirect-web"
   MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
 module "ORGANIZATIONS-API" {
-  source = "./organizations-api"
+  source = "./clients/organizations-api"
 }
 module "PHO-RSC" {
-  source = "./pho-rsc"
+  source = "./clients/pho-rsc"
 }
 module "PIDP-SERVICE" {
-  source                  = "./pidp-service"
+  source                  = "./clients/pidp-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PIDP-WEBAPP" {
-  source       = "./pidp-webapp"
+  source       = "./clients/pidp-webapp"
   account      = module.account
   PIDP-SERVICE = module.PIDP-SERVICE
 }
 module "PLR" {
-  source                  = "./plr"
+  source                  = "./clients/plr"
   realm-management        = module.realm-management
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PLR-SHOPPERS" {
-  source = "./plr-shoppers"
+  source = "./clients/plr-shoppers"
   PLR    = module.PLR
 }
 module "PRIME-WEBAPP-ENROLLMENT" {
-  source  = "./prime-webapp-enrollment"
+  source  = "./clients/prime-webapp-enrollment"
   account = module.account
 }
 module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
-  source                  = "./prime-webapp-enrollment-service"
+  source                  = "./clients/prime-webapp-enrollment-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PRP-SERVICE" {
-  source = "./prp-service"
+  source = "./clients/prp-service"
 }
 module "PRP-WEB" {
-  source      = "./prp-web"
+  source      = "./clients/prp-web"
   PRP-SERVICE = module.PRP-SERVICE
 }
 module "SA-DBAAC-PORTAL" {
-  source = "./sa-dbaac-portal"
+  source = "./clients/sa-dbaac-portal"
 }
 module "SA-HIBC-SERVICE-BC-PORTAL" {
-  source = "./sa-hibc-service-bc-portal"
+  source = "./clients/sa-hibc-service-bc-portal"
 }
 module "SA-SFDC" {
-  source = "./sa-sfdc"
+  source = "./clients/sa-sfdc"
 }
 module "terraform" {
-  source           = "./terraform"
+  source           = "./clients/terraform"
   realm-management = module.realm-management
 }
 module "USER-MANAGEMENT-SERVICE" {
-  source            = "./user-management-service"
+  source            = "./clients/user-management-service"
   realm-management  = module.realm-management
   account           = module.account
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
   MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
 module "UMS-INTEGRATION-TESTS" {
-  source                  = "./ums-integration-tests"
+  source                  = "./clients/ums-integration-tests"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
   realm-management        = module.realm-management
   ORGANIZATIONS-API       = module.ORGANIZATIONS-API
 }
 module "USER-MANAGEMENT" {
-  source                  = "./user-management"
+  source                  = "./clients/user-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "HCIM_BCMI" {
-  source = "./hcim_bcmi"
+  source = "./clients/hcim_bcmi"
 }
 module "HCIM_FHA" {
-  source = "./hcim_fha"
+  source = "./clients/hcim_fha"
 }
 module "HCIM_HIBC" {
-  source = "./hcim_hibc"
+  source = "./clients/hcim_hibc"
 }
 module "HCIM_IHA" {
-  source = "./hcim_iha"
+  source = "./clients/hcim_iha"
 }
 module "HCIM_LCTZ" {
-  source = "./hcim_lctz"
+  source = "./clients/hcim_lctz"
 }
 module "HCIM_MOH_CRS" {
-  source = "./hcim_moh_crs"
+  source = "./clients/hcim_moh_crs"
 }
 module "HCIM_MOH_VSA" {
-  source = "./hcim_moh_vsa"
+  source = "./clients/hcim_moh_vsa"
 }
 module "HCIM_NHA" {
-  source = "./hcim_nha"
+  source = "./clients/hcim_nha"
 }
 module "HCIM_PHARM" {
-  source = "./hcim_pharm"
+  source = "./clients/hcim_pharm"
 }
 module "HCIM_PHSA" {
-  source = "./hcim_phsa"
+  source = "./clients/hcim_phsa"
 }
 module "HCIM_PUBH" {
-  source = "./hcim_pubh"
+  source = "./clients/hcim_pubh"
 }
 module "HCIM_SDPR" {
-  source = "./hcim_sdpr"
+  source = "./clients/hcim_sdpr"
 }
 module "HCIM_VCHA" {
-  source = "./hcim_vcha"
+  source = "./clients/hcim_vcha"
 }
 module "HCIM_VIHA" {
-  source = "./hcim_viha"
+  source = "./clients/hcim_viha"
 }
 module "HCIM_VPP" {
-  source = "./hcim_vpp"
+  source = "./clients/hcim_vpp"
 }
