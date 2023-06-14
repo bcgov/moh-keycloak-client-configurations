@@ -1,7 +1,4 @@
 resource "keycloak_role" "REALM_ROLE" {
-  realm_id    = "moh_applications"
-  name        = "Manage Realm"
-  description = "Provides the required ream-management roles to manage all aspects of this realm. In DEV this role is provided to the Developer and Midtier teams."
   composite_roles = [
     var.realm-management.ROLES["create-client"].id,
     var.realm-management.ROLES["manage-authorization"].id,
@@ -21,4 +18,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.realm-management.ROLES["view-realm"].id,
     var.realm-management.ROLES["view-users"].id,
   ]
+  description = "Provides the required ream-management roles to manage all aspects of this realm. In DEV this role is provided to the Developer and Midtier teams."
+  name        = "Manage Realm"
+  realm_id    = "moh_applications"
 }

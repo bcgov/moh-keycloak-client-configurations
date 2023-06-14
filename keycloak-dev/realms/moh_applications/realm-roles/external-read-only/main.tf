@@ -1,7 +1,4 @@
 resource "keycloak_role" "REALM_ROLE" {
-  realm_id    = "moh_applications"
-  name        = "External Read Only"
-  description = "Role for external (non CGI) users to be able to have a read only view of the moh applications realm"
   composite_roles = [
     var.realm-management.ROLES["query-clients"].id,
     var.realm-management.ROLES["query-realms"].id,
@@ -10,4 +7,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.realm-management.ROLES["view-identity-providers"].id,
     var.realm-management.ROLES["view-users"].id,
   ]
+  description = "Role for external (non CGI) users to be able to have a read only view of the moh applications realm"
+  name        = "External Read Only"
+  realm_id    = "moh_applications"
 }

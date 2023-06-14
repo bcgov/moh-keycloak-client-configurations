@@ -1,14 +1,11 @@
 resource "keycloak_role" "REALM_ROLE" {
-  realm_id    = "moh_applications"
-  name        = "Manage Users"
-  description = "Provides the roles required to manage users using the USER-MANAGEMENT application including roles for all applications.  In DEV this role is provided to the Developer and Midtier teams."
   composite_roles = [
+    var.USER-MANAGEMENT.ROLES["user-management-admin"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-all-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-org"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
-    var.USER-MANAGEMENT.ROLES["user-management-admin"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-bcer-cp"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-dmft-webapp"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-emcod"].id,
@@ -30,4 +27,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   ]
+  description = "Provides the roles required to manage users using the USER-MANAGEMENT application including roles for all applications.  In DEV this role is provided to the Developer and Midtier teams."
+  name        = "Manage Users"
+  realm_id    = "moh_applications"
 }
