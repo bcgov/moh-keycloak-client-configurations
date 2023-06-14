@@ -25,6 +25,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   ]
   description = "Provides the roles required to manage users using the USER-MANAGEMENT application including roles for all applications.  In DEV this role is provided to the Developer and Midtier teams."
