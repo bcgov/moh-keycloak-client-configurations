@@ -1,6 +1,6 @@
 variable "BCER-CP" {}
-variable "HEM" {}
-variable "HCIMWEB_HD2" {}
-variable "MSPDIRECT-SERVICE" {}
 variable "HCIMWEB" {}
+variable "HCIMWEB_HD2" {}
+variable "HEM" {}
+variable "MSPDIRECT-SERVICE" {}
 variable "PLR" {}

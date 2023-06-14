@@ -1,2 +1,2 @@
-variable "USER-MANAGEMENT-SERVICE" {}
 variable "USER-MANAGEMENT" {}
+variable "USER-MANAGEMENT-SERVICE" {}
