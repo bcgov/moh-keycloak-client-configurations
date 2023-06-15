@@ -27,6 +27,9 @@ module "DMFT-WEBAPP" {
 module "EACL" {
   source = "./clients/eacl"
 }
+module "EACL_STG" {
+  source = "./clients/eacl_stg"
+}
 module "EMCOD" {
   source = "./clients/emcod"
 }
