@@ -100,6 +100,9 @@ module "client-roles" {
     "view-client-plr" = {
       "name" = "view-client-plr"
     },
+    "view-client-primary-care" = {
+      "name" = "view-client-primary-care"
+    },
     "view-client-prime-application" = {
       "name" = "view-client-prime-application"
     },
