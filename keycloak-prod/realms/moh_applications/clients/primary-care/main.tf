@@ -19,6 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
+    "https://cgi.com/"
   ]
   web_origins = [
   ]
