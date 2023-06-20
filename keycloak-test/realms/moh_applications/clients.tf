@@ -294,6 +294,11 @@ module "PRIME-CARECONNECT-ACCESS" {
   PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
   PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
 }
+module "PRIME-VIHACERNER-ACCESS" {
+  source                  = "./clients/prime-vihacerner-access"
+  PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
+  PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
+}
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./clients/prime-webapp-enrollment"
   account = module.account
