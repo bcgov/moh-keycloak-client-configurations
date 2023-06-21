@@ -140,18 +140,6 @@ module "client-roles" {
       "name"        = "PC_Patient"
       "description" = ""
     },
-    "PC_Practitioner" = {
-      "name"        = "PC_Practitioner"
-      "description" = ""
-    },
-    "IMITS_PC_System_Admin" = {
-      "name"        = "IMITS_PC_System_Admin"
-      "description" = ""
-    },
-    "IMITS_PC_Ops_Support" = {
-      "name"        = "IMITS_PC_Ops_Support"
-      "description" = ""
-    },
     "PC_Attachment_Coordinator" = {
       "name"        = "PC_Attachment_Coordinator"
       "description" = ""
@@ -166,6 +154,14 @@ module "client-roles" {
     },
     "PC_Navigator" = {
       "name"        = "PC_Navigator"
+      "description" = ""
+    },
+    "PC_Provider_Support_Tier0" = {
+      "name"        = "PC_Provider_Support_Tier0"
+      "description" = ""
+    },
+    "PC_Reporting_User" = {
+      "name"        = "PC_Reporting_User"
       "description" = ""
     },
   }
