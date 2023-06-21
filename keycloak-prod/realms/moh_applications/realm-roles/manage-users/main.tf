@@ -17,6 +17,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-primary-care"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-prime-application"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sfds"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-swt"].id,
