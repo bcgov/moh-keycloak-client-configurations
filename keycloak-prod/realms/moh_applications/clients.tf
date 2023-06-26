@@ -67,6 +67,9 @@ module "HOOPC" {
 module "HSCIS" {
   source = "./clients/hscis"
 }
+module "HSPPCLIIP" {
+  source = "./clients/hsppcliip"
+}
 module "IEN" {
   source = "./clients/ien"
 }
