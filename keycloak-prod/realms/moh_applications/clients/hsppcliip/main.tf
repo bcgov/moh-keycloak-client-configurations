@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "HSPPCLIIP"
   consent_required                    = false
-  description                         = "Prod configuration for HSIAR application"
+  description                         = "The Health System Performance Portal (HSPP) provides a panoramic analytical view of the health system in British Columbia across the four pillars of the Performance Management Framework"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
