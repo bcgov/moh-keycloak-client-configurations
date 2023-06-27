@@ -1,0 +1,1 @@
+variable USER-MANAGEMENT-SERVICE {}
