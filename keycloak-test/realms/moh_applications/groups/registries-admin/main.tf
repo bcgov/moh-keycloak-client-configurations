@@ -1,0 +1,29 @@
+resource "keycloak_group" "GROUP" {
+  realm_id = "moh_applications"
+  name     = "Registries Admin"
+}
+
+resource "keycloak_group_roles" "GROUP_ROLES" {
+  realm_id = keycloak_group.GROUP.realm_id
+  group_id = keycloak_group.GROUP.id
+
+  role_ids = [
+    var.HCIMWEB_HIAT1.ROLES["REG_ADMIN_HCIM"].id,
+    var.HCIMWEB_HIAT2.ROLES["REG_ADMIN_HCIM"].id,
+    var.HCIMWEB_HIAT3.ROLES["REG_ADMIN_HCIM"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["manage-own-groups"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_conf"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_iat"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_rev"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_sit"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_stg"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_uat"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id
+  ]
+}
