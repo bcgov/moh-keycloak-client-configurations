@@ -4,7 +4,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "HSPPCLIIP"
+  client_id                           = "HSPP"
   consent_required                    = false
   description                         = "The Health System Performance Portal (HSPP) provides a panoramic analytical view of the health system in British Columbia across the four pillars of the Performance Management Framework"
   direct_access_grants_enabled        = false
@@ -12,7 +12,7 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = "HSPPCLIIP"
+  name                                = "HSPP"
   pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false
@@ -31,7 +31,7 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   claim_name                  = "roles"
   claim_value_type            = "String"
   client_id                   = keycloak_openid_client.CLIENT.id
-  client_id_for_role_mappings = "HSPPCLIIP"
+  client_id_for_role_mappings = "HSPP"
   multivalued                 = true
   name                        = "client roles"
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
@@ -53,6 +53,12 @@ module "client-roles" {
     },
     "HI_Administrator" = {
       "name" = "HI_Administrator"
+    },
+    "HSPP_ReportProgram_All" = {
+      "name" = "HSPP_ReportProgram_All"
+    },
+    "HSPP_ReportSection_All" = {
+      "name" = "HSPP_ReportSection_All"
     },
   }
 }
