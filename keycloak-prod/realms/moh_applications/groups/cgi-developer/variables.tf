@@ -1,0 +1,12 @@
+variable "FMDB" {}
+variable "GIS" {}
+variable "HAMIS" {}
+variable "HEM" {}
+variable "HSCIS" {}
+variable "MANAGE-USERS" {}
+variable "MIWT" {}
+variable "SFDS" {}
+variable "SWT" {}
+variable "TAP" {}
+variable "USER-MANAGEMENT-SERVICE" {}
+variable "realm-management" {}
