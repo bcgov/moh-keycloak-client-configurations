@@ -1,6 +1,6 @@
 resource "keycloak_group" "GROUP" {
-  realm_id   = "moh_applications"
-  name       = "CGI DBA"
+  realm_id = "moh_applications"
+  name     = "CGI DBA"
 }
 
 resource "keycloak_group_roles" "GROUP_ROLES" {

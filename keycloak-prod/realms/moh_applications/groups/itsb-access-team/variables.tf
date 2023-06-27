@@ -1,2 +1,2 @@
-variable USER-MANAGEMENT-SERVICE {}
-variable realm-management {}
+variable "USER-MANAGEMENT-SERVICE" {}
+variable "realm-management" {}
