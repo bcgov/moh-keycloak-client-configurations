@@ -22,6 +22,7 @@ module "payara-client" {
   use_refresh_tokens       = false
   valid_redirect_uris = [
     "https://fmdb.hlth.gov.bc.ca/*",
+    "https://fmdb.ynr9ed-prod.nimbus.cloud.gov.bc.ca/*",
     "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
 }
