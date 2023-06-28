@@ -101,13 +101,14 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "cpn" {
 }
 
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
-  add_to_id_token  = false
-  claim_name       = "identity_provider"
-  claim_value_type = "String"
-  client_id        = keycloak_openid_client.CLIENT.id
-  name             = "IDP"
-  realm_id         = keycloak_openid_client.CLIENT.realm_id
-  session_note     = "identity_provider"
+  add_to_id_token     = true
+  add_to_access_token = true
+  claim_name          = "identity_provider"
+  claim_value_type    = "String"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "IDP"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+  session_note        = "identity_provider"
 }
 
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
