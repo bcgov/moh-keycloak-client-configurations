@@ -25,8 +25,6 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://localhost:3001/*",
     "https://bcer-dev.hlth.gov.bc.ca/portal/*",
     "https://bcer-test.hlth.gov.bc.ca/portal/*",
-    "https://d2ys4dsq8xqjer.cloudfront.net/portal/*",
-    "https://d4j0vravf4z7q.cloudfront.net/portal/*",
   ]
   web_origins = [
     "+",
