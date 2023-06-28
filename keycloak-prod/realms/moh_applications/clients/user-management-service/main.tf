@@ -79,6 +79,9 @@ module "client-roles" {
     "view-client-hscis" = {
       "name" = "view-client-hscis"
     },
+    "view-client-hspp" = {
+      "name" = "view-client-hspp"
+    },
     "view-client-licence-status" = {
       "name" = "view-client-licence-status"
     },

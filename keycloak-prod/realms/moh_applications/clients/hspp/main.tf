@@ -37,6 +37,16 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_displayName" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "idir_displayName"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_displayName"
+  user_attribute  = "idir_displayName"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
 module "client-roles" {
   source    = "../../../../../modules/client-roles"
   client_id = keycloak_openid_client.CLIENT.id
