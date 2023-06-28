@@ -14,7 +14,7 @@ What is the context for those changes? For example: particular role needs to be 
 - [ ] Valid Redirect URIs are properly defined, or explanation for `*` (allow all) is provided. 
 - [ ] Web Origins are set to `+` instead of `*` to restrict the CORS origins.
 - [ ] Client Scopes are not assigned to client, or explanation for doing so is provided. [^1]
-- [ ] Client module and all references are defined in main.tf in realm root folder.
+- [ ] Client module and all references are defined in clients.tf in realm root folder. Same rule applies to other resources, like groups and realm roles.
 - [ ] Terraform plan contains only my changes, or other developers are aware that their manual changes can be overridden. [^2]
 - [ ] [CMDB](https://cmdb.hlth.gov.bc.ca/cmdbuildProd/ui/#classes/Application/cards) is updated, if applicable.
 
