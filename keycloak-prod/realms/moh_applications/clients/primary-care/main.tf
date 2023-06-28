@@ -22,7 +22,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://healthbc.lightning.force.com/*",
     "https://healthbc.my.site.com/*",
     "https://bchealthprovider.ca/*",
-    "https://www.bchealthprovider.ca/*"
+    "https://www.bchealthprovider.ca/*",
+    "https://healthbc.my.salesforce.com/*",
   ]
   web_origins = [
   ]
