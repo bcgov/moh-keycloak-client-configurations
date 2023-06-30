@@ -377,6 +377,9 @@ module "HCIM_IHA" {
 module "HCIM_LCTZ" {
   source = "./clients/hcim_lctz"
 }
+module "HCIM_LRA" {
+  source = "./clients/hcim_lra"
+}
 module "HCIM_MOH_CRS" {
   source = "./clients/hcim_moh_crs"
 }
