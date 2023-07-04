@@ -60,6 +60,11 @@ module "PIDP-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "PRIMARY-CARE-ACCESS-TEAM" {
+  source                  = "./groups/primary-care-access-team"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "PRIME-MANAGEMENT" {
   source                  = "./groups/prime-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
