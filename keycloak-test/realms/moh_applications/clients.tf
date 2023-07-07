@@ -97,6 +97,9 @@ module "HSCIS" {
 module "HSIAR" {
   source = "./clients/hsiar"
 }
+module "HSPP" {
+  source = "./clients/hspp"
+}
 module "IEN" {
   source = "./clients/ien"
 }
