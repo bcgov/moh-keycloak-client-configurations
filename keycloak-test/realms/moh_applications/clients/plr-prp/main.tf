@@ -54,6 +54,6 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_REV/CONSUMER"  = var.PLR_REV.ROLES["CONSUMER"].id
+    "PLR_REV/CONSUMER" = var.PLR_REV.ROLES["CONSUMER"].id
   }
 }
