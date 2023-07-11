@@ -34,3 +34,26 @@ resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
   name                = "orgId"
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
+module "service-account-roles" {
+  source                  = "../../../../../modules/service-account-roles"
+  realm_id                = keycloak_openid_client.CLIENT.realm_id
+  client_id               = keycloak_openid_client.CLIENT.id
+  service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
+  realm_roles = {
+    "default-roles-moh_applications" = "default-roles-moh_applications",
+  }
+  client_roles = {
+    "PLR_REV/CONSUMER" = {
+      "client_id" = var.PLR_REV.CLIENT.id,
+      "role_id"   = "CONSUMER"
+    }
+  }
+}
+module "scope-mappings" {
+  source    = "../../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "PLR_REV/CONSUMER" = var.PLR_REV.ROLES["CONSUMER"].id
+  }
+}

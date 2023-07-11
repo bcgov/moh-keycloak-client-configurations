@@ -166,7 +166,8 @@ module "PLR-PRIMARY-CARE" {
   PLR_STG  = module.PLR_STG
 }
 module "PLR-PRP" {
-  source = "./clients/plr-prp"
+  source  = "./clients/plr-prp"
+  PLR_REV = module.PLR_REV
 }
 module "PLR-QA-CONSUMER" {
   source   = "./clients/plr-qa-consumer"
