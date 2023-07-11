@@ -19,7 +19,8 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://uathsppcliip.healthideas.gov.bc.ca/*",
+    "https://hsppstg.hlth.gov.bc.ca/*",
+    "https://localhost:44322/*"
   ]
   web_origins = [
   ]
