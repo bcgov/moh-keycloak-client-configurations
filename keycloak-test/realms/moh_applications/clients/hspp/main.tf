@@ -20,6 +20,7 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "http://localhost:*",
+    "https://localhost:*",
     "https://hsppstg.hlth.gov.bc.ca/*",
   ]
   web_origins = [
