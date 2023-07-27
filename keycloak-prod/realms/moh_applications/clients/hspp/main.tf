@@ -71,5 +71,14 @@ module "client-roles" {
     "HSPP_ReportSection_All" = {
       "name" = "HSPP_ReportSection_All"
     },
+    "HSPP_ReportProgram_Invictus" = {
+      "name" = "HSPP_ReportProgram_Invictus"
+    },
+    "HSPP_ReportSection_Invictus" = {
+      "name" = "HSPP_ReportSection_Invictus"
+    },
+    "HSPP_Report_Invictus" = {
+      "name" = "HSPP_Report_Invictus"
+    },
   }
 }
