@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "PLR-QA-SECONDARY-SOURCE"
   consent_required                    = false
-  description                         = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources. This client will be used to generate access tokens for the internal PLR QA team with the PLR SECONDARY_SOURCE role"
+  description                         = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources. This client will be used to generate access tokens for the internal PLR QA team with the PLR SECONDARY_SOURCE role."
   enabled                             = true
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
