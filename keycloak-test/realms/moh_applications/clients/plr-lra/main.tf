@@ -4,9 +4,9 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PLR-QA-MOH-APPROVER"
+  client_id                           = "PLR-LRA"
   consent_required                    = false
-  description                         = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources. This client will be used to generate access tokens for the internal PLR QA team with the PLR MOH_APPROVER role"
+  description                         = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources. This client will be used to generate access tokens for the internal PLR QA team with the PLR CONSUMER role"
   enabled                             = true
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
@@ -69,25 +69,9 @@ module "service-account-roles" {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
-    "PLR_IAT/MOH_APPROVER" = {
-      "client_id" = var.PLR_IAT.CLIENT.id,
-      "role_id"   = "MOH_APPROVER"
-    }
-    "PLR_UAT/MOH_APPROVER" = {
-      "client_id" = var.PLR_UAT.CLIENT.id,
-      "role_id"   = "MOH_APPROVER"
-    }
-    "PLR_CONF/MOH_APPROVER" = {
-      "client_id" = var.PLR_CONF.CLIENT.id,
-      "role_id"   = "MOH_APPROVER"
-    }
-    "PLR_SIT/MOH_APPROVER" = {
-      "client_id" = var.PLR_SIT.CLIENT.id,
-      "role_id"   = "MOH_APPROVER"
-    }
-    "PLR_REV/MOH_APPROVER" = {
+    "PLR_REV/CONSUMER" = {
       "client_id" = var.PLR_REV.CLIENT.id,
-      "role_id"   = "MOH_APPROVER"
+      "role_id"   = "CONSUMER"
     }
   }
 }
@@ -96,10 +80,6 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_IAT/MOH_APPROVER"  = var.PLR_IAT.ROLES["MOH_APPROVER"].id
-    "PLR_UAT/MOH_APPROVER"  = var.PLR_UAT.ROLES["MOH_APPROVER"].id
-    "PLR_CONF/MOH_APPROVER" = var.PLR_CONF.ROLES["MOH_APPROVER"].id
-    "PLR_SIT/MOH_APPROVER"  = var.PLR_SIT.ROLES["MOH_APPROVER"].id
-    "PLR_REV/MOH_APPROVER"  = var.PLR_REV.ROLES["MOH_APPROVER"].id
+    "PLR_REV/CONSUMER"  = var.PLR_REV.ROLES["CONSUMER"].id
   }
 }
