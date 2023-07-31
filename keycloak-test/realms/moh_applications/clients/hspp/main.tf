@@ -54,32 +54,41 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
+    "HI_Administrator" = {
+      "name" = "HI_Administrator"
+    },
     "HSPP_ALL" = {
       "name" = "HSPP_ALL"
-    },
-    "HSPP_OKR" = {
-      "name" = "HSPP_OKR"
     },
     "HSPP_HumanResource" = {
       "name" = "HSPP_HumanResource"
     },
-    "HI_Administrator" = {
-      "name" = "HI_Administrator"
+    "HSPP_OKR" = {
+      "name" = "HSPP_OKR"
     },
     "HSPP_ReportProgram_All" = {
       "name" = "HSPP_ReportProgram_All"
     },
-    "HSPP_ReportSection_All" = {
-      "name" = "HSPP_ReportSection_All"
-    },
     "HSPP_ReportProgram_Invictus" = {
       "name" = "HSPP_ReportProgram_Invictus"
+    },
+    "HSPP_ReportProgram_LFPPM" = {
+      "name" = "HSPP_ReportProgram_LFPPM"
+    },
+    "HSPP_ReportSection_All" = {
+      "name" = "HSPP_ReportSection_All"
     },
     "HSPP_ReportSection_Invictus" = {
       "name" = "HSPP_ReportSection_Invictus"
     },
+    "HSPP_ReportSection_LFPPM" = {
+      "name" = "HSPP_ReportSection_LFPPM"
+    },
     "HSPP_Report_Invictus" = {
       "name" = "HSPP_Report_Invictus"
+    },
+    "HSPP_Report_LFPPM" = {
+      "name" = "HSPP_Report_LFPPM"
     },
   }
 }
