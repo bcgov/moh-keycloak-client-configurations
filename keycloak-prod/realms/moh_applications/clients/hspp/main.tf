@@ -71,23 +71,14 @@ module "client-roles" {
     "HSPP_ReportProgram_Invictus" = {
       "name" = "HSPP_ReportProgram_Invictus"
     },
-    "HSPP_ReportProgram_LFPPM" = {
-      "name" = "HSPP_ReportProgram_LFPPM"
-    },
     "HSPP_ReportSection_All" = {
       "name" = "HSPP_ReportSection_All"
     },
     "HSPP_ReportSection_Invictus" = {
       "name" = "HSPP_ReportSection_Invictus"
     },
-    "HSPP_ReportSection_LFPPM" = {
-      "name" = "HSPP_ReportSection_LFPPM"
-    },
     "HSPP_Report_Invictus" = {
       "name" = "HSPP_Report_Invictus"
-    },
-    "HSPP_Report_LFPPM" = {
-      "name" = "HSPP_Report_LFPPM"
     },
   }
 }
