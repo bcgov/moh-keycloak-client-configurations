@@ -80,5 +80,17 @@ module "client-roles" {
     "HSPP_Report_Invictus" = {
       "name" = "HSPP_Report_Invictus"
     },
+    "HSPP_Restricted_ACFT" = {
+      "name" = "HSPP_Restricted_ACFT"
+    },
+    "HSPP_Restricted_PCR" = {
+      "name" = "HSPP_Restricted_PCR"
+    },
+    "HSPP_Restricted_UPCC" = {
+      "name" = "HSPP_Restricted_UPCC"
+    },
+    "HSPP_Restricted_PEP" = {
+      "name" = "HSPP_Restricted_PEP"
+    },
   }
 }
