@@ -25,3 +25,11 @@ resource "keycloak_openid_client" "CLIENT" {
     "*",
   ]
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "birthdate" {
+  claim_name     = "birthdate"
+  client_id      = keycloak_openid_client.CLIENT.id
+  name           = "birthdate"
+  user_attribute = "birthdate"
+  realm_id       = keycloak_openid_client.CLIENT.realm_id
+}
