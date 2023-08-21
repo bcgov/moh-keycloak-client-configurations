@@ -22,6 +22,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:*",
     "https://localhost:*",
     "https://hsppstg.hlth.gov.bc.ca/*",
+    "https://devhspp.healthideas.gov.bc.ca/*",
   ]
   web_origins = [
   ]
