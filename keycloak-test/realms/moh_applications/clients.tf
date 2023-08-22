@@ -36,6 +36,9 @@ module "EMCOD" {
 module "FMDB" {
   source = "./clients/fmdb"
 }
+module "FORMS" {
+  source = "./clients/forms"
+}
 module "GIS" {
   source = "./clients/gis"
 }
