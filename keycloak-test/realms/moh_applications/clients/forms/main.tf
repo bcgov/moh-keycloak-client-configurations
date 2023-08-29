@@ -22,6 +22,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://forms.ddev.site/*",
     "https://formsdev.hlth.gov.bc.ca/*",
     "https://formstst.hlth.gov.bc.ca/*",
+    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
   web_origins = [
   ]
