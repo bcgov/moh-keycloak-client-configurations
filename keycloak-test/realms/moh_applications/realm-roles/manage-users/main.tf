@@ -23,6 +23,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hem"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hscis"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hsiar"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hspp"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-licence-status"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-maid"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt"].id,
