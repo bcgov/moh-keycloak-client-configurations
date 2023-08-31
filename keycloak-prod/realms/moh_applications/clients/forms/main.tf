@@ -2,7 +2,7 @@ resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan               = ""
   access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
-  base_url                            = "https://formstst.hlth.gov.bc.ca/"
+  base_url                            = "https://forms.hlth.gov.bc.ca/"
   client_authenticator_type           = "client-secret"
   client_id                           = "FORMS"
   consent_required                    = false
@@ -19,10 +19,11 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://formstst.hlth.gov.bc.ca/*",
-    "https://dmz1.formstst.hlth.gov.bc.ca/*",
-    "https://dmz2.formstst.hlth.gov.bc.ca/*",
-    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://forms.hlth.gov.bc.ca/*",
+    "https://forms-tmp.hlth.gov.bc.ca/*",
+    "https://dmz1.forms.hlth.gov.bc.ca/*",
+    "https://dmz2.forms.hlth.gov.bc.ca/*",
+    "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
   ]
   web_origins = [
