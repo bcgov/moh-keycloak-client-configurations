@@ -6,6 +6,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-bcer-cp"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-dhiper"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-dmft-webapp"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl_stg"].id,

@@ -32,6 +32,11 @@ module "CGI-REGISTRIES" {
   HCIMWEB_HUAT  = module.HCIMWEB_HUAT
 }
 
+module "DHIPER-MANAGEMENT" {
+  source                  = "./groups/dhiper-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "EMCOD-ACCESS-TEAM" {
   source                  = "./groups/emcod-access-team"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
