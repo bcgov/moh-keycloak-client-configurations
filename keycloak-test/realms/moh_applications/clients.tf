@@ -33,6 +33,9 @@ module "EACL" {
 module "EACL_STG" {
   source = "./clients/eacl_stg"
 }
+module "EHPR" {
+  source = "./clients/ehpr"
+}
 module "EMCOD" {
   source = "./clients/emcod"
 }
