@@ -24,6 +24,9 @@ module "DMFT-WEBAPP" {
 module "EMCOD" {
   source = "./clients/emcod"
 }
+module "FORMS" {
+  source = "./clients/forms"
+}
 module "HCIMWEB" {
   source = "./clients/hcimweb"
 }
