@@ -16,6 +16,9 @@ module "CONNECT" {
 module "DEMO-CLIENT" {
   source = "./clients/demo-client"
 }
+module "DHIPER" {
+  source = "./clients/dhiper"
+}
 module "DMFT-SERVICE" {
   source       = "./clients/dmft-service"
   PIDP-SERVICE = module.PIDP-SERVICE
