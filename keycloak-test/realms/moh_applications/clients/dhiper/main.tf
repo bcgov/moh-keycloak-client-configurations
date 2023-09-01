@@ -59,11 +59,11 @@ module "client-roles" {
     "DHIPER_ALL" = {
       "name" = "DHIPER_ALL"
     },
-        "DHIPER_ReportSection_All" = {
+    "DHIPER_ReportSection_All" = {
       "name" = "DHIPER_ReportSection_All"
     },
-        "DHIPER_ReportProgram_All" = {
+    "DHIPER_ReportProgram_All" = {
       "name" = "DHIPER_ReportProgram_All"
-    }        
+    }
   }
 }
