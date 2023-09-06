@@ -60,6 +60,9 @@ module "LICENCE-STATUS" {
 module "MAID" {
   source = "./clients/maid"
 }
+module "METASPACE" {
+  source = "./clients/metaspace"
+}
 module "MOH-SERVICENOW" {
   source = "./clients/moh-servicenow"
 }
