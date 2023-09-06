@@ -27,13 +27,3 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
   ]
 }
-
-resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
-  add_to_id_token = false
-  add_to_userinfo = false
-  claim_name      = "org_details"
-  client_id       = keycloak_openid_client.CLIENT.id
-  name            = "org_details"
-  user_attribute  = "org_details"
-  realm_id        = keycloak_openid_client.CLIENT.realm_id
-}
