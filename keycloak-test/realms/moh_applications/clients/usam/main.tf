@@ -25,3 +25,23 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
   ]
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_displayName" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "idir_displayName"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_displayName"
+  user_attribute  = "idir_displayName"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_username" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "idir_username"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_username"
+  user_attribute  = "idir_username"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
