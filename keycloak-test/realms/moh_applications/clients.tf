@@ -89,6 +89,9 @@ module "HEM" {
 module "HHSLibrary" {
   source = "./clients/hhs-library"
 }
+module "HLBC" {
+  source = "./clients/hlbc"
+}
 module "hnsesb_api_gateway_client_manager" {
   source           = "./clients/hnsesb_api_gateway_client_manager"
   realm-management = module.realm-management

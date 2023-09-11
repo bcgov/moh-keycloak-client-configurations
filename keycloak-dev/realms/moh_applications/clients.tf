@@ -39,6 +39,9 @@ module "HCIM-SERVICE" {
 module "HEM" {
   source = "./clients/hem"
 }
+module "HLBC" {
+  source = "./clients/hlbc"
+}
 module "IEN" {
   source = "./clients/ien"
 }
