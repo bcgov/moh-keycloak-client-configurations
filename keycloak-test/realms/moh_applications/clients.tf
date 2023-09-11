@@ -368,6 +368,9 @@ module "terraform" {
 module "TPL" {
   source = "./clients/tpl"
 }
+module "USAM" {
+  source = "./clients/usam"
+}
 module "USER-MANAGEMENT-SERVICE" {
   source            = "./clients/user-management-service"
   realm-management  = module.realm-management
