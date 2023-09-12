@@ -29,7 +29,7 @@ resource "keycloak_openid_client" "CLIENT" {
 }
 
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
-  add_to_id_token  = false
+  add_to_id_token  = true
   claim_name       = "identity_provider"
   claim_value_type = "String"
   client_id        = keycloak_openid_client.CLIENT.id

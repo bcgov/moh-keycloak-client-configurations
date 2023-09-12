@@ -124,6 +124,10 @@ module "PIDP-WEBAPP" {
 module "PLR" {
   source = "./clients/plr"
 }
+module "PLR-SHOPPERS" {
+  source = "./clients/plr-shoppers"
+  PLR    = module.PLR
+}
 module "PRIMARY-CARE" {
   source         = "./clients/primary-care"
   LICENCE-STATUS = module.LICENCE-STATUS

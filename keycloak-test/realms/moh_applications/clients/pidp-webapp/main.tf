@@ -54,6 +54,13 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "identity_provider"
   realm_id         = keycloak_openid_client.CLIENT.realm_id
   session_note     = "identity_provider"
 }
+resource "keycloak_openid_user_attribute_protocol_mapper" "birthdate" {
+  claim_name     = "birthdate"
+  client_id      = keycloak_openid_client.CLIENT.id
+  name           = "birthdate"
+  user_attribute = "birthdate"
+  realm_id       = keycloak_openid_client.CLIENT.realm_id
+}
 module "scope-mappings" {
   source    = "../../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
