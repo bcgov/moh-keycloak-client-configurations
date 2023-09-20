@@ -129,6 +129,21 @@ module "LDAP-API" {
 module "LICENCE-STATUS" {
   source = "./clients/licence-status"
 }
+module "LRA-DEV" {
+  source         = "./clients/lra-dev"
+  LICENCE-STATUS = module.LICENCE-STATUS
+
+}
+module "LRA-SANDBOX" {
+  source         = "./clients/lra-sandbox"
+  LICENCE-STATUS = module.LICENCE-STATUS
+
+}
+module "LRA-TEST" {
+  source         = "./clients/lra-test"
+  LICENCE-STATUS = module.LICENCE-STATUS
+
+}
 module "MAID" {
   source = "./clients/maid"
 }
