@@ -64,6 +64,9 @@ module "client-roles" {
     },
     "DHIPER_ReportProgram_All" = {
       "name" = "DHIPER_ReportProgram_All"
+    },
+    "HI_Administrator" = {
+      "name" = "HI_Administrator"
     }
   }
 }
