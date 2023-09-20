@@ -4,7 +4,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PPM-DEVELOPMENT"
+  client_id                           = "ppm-api-cgi-BC30550160"
   consent_required                    = false
   description                         = "Client for testing the production environments during the PPM API application's development."
   direct_access_grants_enabled        = false
@@ -12,7 +12,7 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = "PPM Development"
+  name                                = "PPM API CGI BC30550160"
   pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false

@@ -128,8 +128,8 @@ module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"
   PLR    = module.PLR
 }
-module "PPM-DEVELOPMENT" {
-  source = "./clients/ppm-development"
+module "PPM-API-CGI-BC30550160" {
+  source = "./clients/ppm-api-cgi-BC30550160"
 }
 module "PRIMARY-CARE" {
   source         = "./clients/primary-care"
