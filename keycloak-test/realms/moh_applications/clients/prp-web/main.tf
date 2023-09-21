@@ -48,10 +48,10 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PRP-SERVICE/HI_ADMINISTRATOR" = var.PRP-SERVICE.ROLES["HI_ADMINISTRATOR"].id,
-    "PRP-SERVICE/MSPQI"            = var.PRP-SERVICE.ROLES["MSPQI"].id,
-    "PRP-SERVICE/PHYSICIAN"        = var.PRP-SERVICE.ROLES["PHYSICIAN"].id,
-    "PRP-SERVICE/PHARMACIST"       = var.PRP-SERVICE.ROLES["PHARMACIST"].id,
-    "PRP-SERVICE/PMP"              = var.PRP-SERVICE.ROLES["PMP"].id,
+    "PRP-SERVICE/HI_Administrator" = var.PRP-SERVICE.ROLES["HI_Administrator"].id,
+    "PRP-SERVICE/Mspqi"            = var.PRP-SERVICE.ROLES["Mspqi"].id,
+    "PRP-SERVICE/Physician"        = var.PRP-SERVICE.ROLES["Physician"].id,
+    "PRP-SERVICE/Pharmacist"       = var.PRP-SERVICE.ROLES["Pharmacist"].id,
+    "PRP-SERVICE/Pmp"              = var.PRP-SERVICE.ROLES["Pmp"].id,
   }
 }
