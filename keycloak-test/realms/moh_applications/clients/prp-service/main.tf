@@ -18,6 +18,12 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
+    "HI_ADMINISTRATOR" = {
+      "name" = "HI_ADMINISTRATOR"
+    },
+    "MSPQI" = {
+      "name" = "MSPQI"
+    },
     "PHARMACIST" = {
       "name" = "PHARMACIST"
     },
@@ -27,8 +33,5 @@ module "client-roles" {
     "PMP" = {
       "name" = "PMP"
     },
-    "MSPQI" = {
-      "name" = "MSPQI"
-    }
   }
 }
