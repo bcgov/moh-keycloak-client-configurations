@@ -380,6 +380,9 @@ module "terraform" {
   source           = "./clients/terraform"
   realm-management = module.realm-management
 }
+module "TBCM" {
+  source = "./clients/tbcm"
+}
 module "TPL" {
   source = "./clients/tpl"
 }
