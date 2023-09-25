@@ -43,6 +43,18 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "common_provider_numbe
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {
+  add_to_access_token         = true
+  add_to_id_token             = true
+  claim_name                  = "roles"
+  claim_value_type            = "String"
+  client_id                   = keycloak_openid_client.CLIENT.id
+  client_id_for_role_mappings = "PRP-SERVICE"
+  multivalued                 = true
+  name                        = "client roles"
+  realm_id                    = keycloak_openid_client.CLIENT.realm_id
+}
+
 module "scope-mappings" {
   source    = "../../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
