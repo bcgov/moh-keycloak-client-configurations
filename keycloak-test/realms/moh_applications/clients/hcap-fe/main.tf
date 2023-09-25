@@ -48,6 +48,9 @@ module "client-roles" {
     "maximus" = {
       "name" = "maximus"
     },
+    "mhsu-employer" = {
+      "name" = "mhsu-employer"
+    },
     "ministry_of_health" = {
       "name" = "ministry_of_health"
     },
