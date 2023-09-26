@@ -33,5 +33,23 @@ module "client-roles" {
     "Pmp" = {
       "name" = "Pmp"
     },
+    "PRP_MSPQI" = {
+      "name" = "PRP_MSPQI"
+    },
+    "PRP_PMP" = {
+      "name" = "PRP_PMP"
+    },
+    "PRP_ReportProgram_MSPQI" = {
+      "name" = "PRP_ReportProgram_MSPQI"
+    },
+    "PRP_ReportSection_MSPQI" = {
+      "name" = "PRP_ReportSection_MSPQI"
+    },
+    "PRP_ReportProgram_PMP" = {
+      "name" = "PRP_ReportProgram_PMP"
+    },
+    "PRP_ReportSection_PMP" = {
+      "name" = "PRP_ReportSection_PMP"
+    },
   }
 }
