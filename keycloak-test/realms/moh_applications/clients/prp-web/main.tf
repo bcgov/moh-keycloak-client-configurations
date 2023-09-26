@@ -74,14 +74,20 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PRP-SERVICE/HI_Administrator" = var.PRP-SERVICE.ROLES["HI_Administrator"].id,
-    "PRP-SERVICE/Mspqi"            = var.PRP-SERVICE.ROLES["Mspqi"].id,
-    "PRP-SERVICE/Physician"        = var.PRP-SERVICE.ROLES["Physician"].id,
-    "PRP-SERVICE/Pharmacist"       = var.PRP-SERVICE.ROLES["Pharmacist"].id,
-    "PRP-SERVICE/Pmp"              = var.PRP-SERVICE.ROLES["Pmp"].id,
-    "LICENCE-STATUS/MOA"           = var.LICENCE-STATUS.ROLES["MOA"].id
-    "LICENCE-STATUS/PRACTITIONER"  = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
-    "LICENCE-STATUS/MD"            = var.LICENCE-STATUS.ROLES["MD"].id
-    "LICENCE-STATUS/RNP"           = var.LICENCE-STATUS.ROLES["RNP"].id
+    "PRP-SERVICE/HI_Administrator"        = var.PRP-SERVICE.ROLES["HI_Administrator"].id,
+    "PRP-SERVICE/Mspqi"                   = var.PRP-SERVICE.ROLES["Mspqi"].id,
+    "PRP-SERVICE/Physician"               = var.PRP-SERVICE.ROLES["Physician"].id,
+    "PRP-SERVICE/Pharmacist"              = var.PRP-SERVICE.ROLES["Pharmacist"].id,
+    "PRP-SERVICE/Pmp"                     = var.PRP-SERVICE.ROLES["Pmp"].id,
+    "PRP-SERVICE/PRP_MSPQI"               = var.PRP-SERVICE.ROLES["PRP_MSPQI"].id,
+    "PRP-SERVICE/PRP_PMP"                 = var.PRP-SERVICE.ROLES["PRP_PMP"].id,
+    "PRP-SERVICE/PRP_ReportProgram_MSPQI" = var.PRP-SERVICE.ROLES["PRP_ReportProgram_MSPQI"].id,
+    "PRP-SERVICE/PRP_ReportSection_MSPQI" = var.PRP-SERVICE.ROLES["PRP_ReportSection_MSPQI"].id,
+    "PRP-SERVICE/PRP_ReportProgram_PMP"   = var.PRP-SERVICE.ROLES["PRP_ReportProgram_PMP"].id,
+    "PRP-SERVICE/PRP_ReportSection_PMP"   = var.PRP-SERVICE.ROLES["PRP_ReportSection_PMP"].id,
+    "LICENCE-STATUS/MOA"                  = var.LICENCE-STATUS.ROLES["MOA"].id
+    "LICENCE-STATUS/PRACTITIONER"         = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
+    "LICENCE-STATUS/MD"                   = var.LICENCE-STATUS.ROLES["MD"].id
+    "LICENCE-STATUS/RNP"                  = var.LICENCE-STATUS.ROLES["RNP"].id
   }
 }
