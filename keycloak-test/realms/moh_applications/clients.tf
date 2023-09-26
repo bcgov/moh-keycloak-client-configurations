@@ -346,8 +346,9 @@ module "PRP-SERVICE" {
   source = "./clients/prp-service"
 }
 module "PRP-WEB" {
-  source      = "./clients/prp-web"
-  PRP-SERVICE = module.PRP-SERVICE
+  source         = "./clients/prp-web"
+  PRP-SERVICE    = module.PRP-SERVICE
+  LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "SAT-EFORMS" {
   source = "./clients/sat-eforms"
