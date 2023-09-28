@@ -24,12 +24,12 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
-resource "keycloak_openid_user_session_note_protocol_mapper" "Pharmanet-Audience" {
+resource "keycloak_openid_audience_protocol_mapper" "Pharmanet-Audience" {
   add_to_id_token          = false
   client_id                = keycloak_openid_client.CLIENT.id
   included_custom_audience = "pharmanet"
   name                     = "Pharmanet Audience"
-  realm_id                 = keycloak_openid_client.CLIENT.realm_id 
+  realm_id                 = keycloak_openid_client.CLIENT.realm_id
 }
 
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
