@@ -1,6 +1,6 @@
 resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan      = ""
-  access_type                = "PUBLIC"
+  access_type                = "CONFIDENTIAL"
   client_authenticator_type  = "client-secret"
   client_id                  = "PRP-WEB"
   description                = "Provider Reporting Portal Frontend"
