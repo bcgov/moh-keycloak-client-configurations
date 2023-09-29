@@ -19,8 +19,8 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://uatprp.hlth.gov.bc.ca",
-    "https://prp.hlth.gov.bc.ca",
+    "https://uatprp.hlth.gov.bc.ca/*",
+    "https://prp.hlth.gov.bc.ca/*",
 
   ]
   web_origins = [
