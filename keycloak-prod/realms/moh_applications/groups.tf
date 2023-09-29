@@ -75,6 +75,11 @@ module "PRIME-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "PRP-USER-ADMIN" {
+  source                  = "./groups/prp-user-admin"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "REGISTRIES-ADMIN" {
   source                  = "./groups/registries-admin"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
