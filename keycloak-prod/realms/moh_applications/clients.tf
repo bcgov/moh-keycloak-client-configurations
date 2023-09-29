@@ -162,6 +162,14 @@ module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
   source                  = "./clients/prime-webapp-enrollment-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "PRP-SERVICE" {
+  source = "./clients/prp-service"
+}
+module "PRP-WEB" {
+  source         = "./clients/prp-web"
+  PRP-SERVICE    = module.PRP-SERVICE
+  LICENCE-STATUS = module.LICENCE-STATUS
+}
 module "SAT-EFORMS" {
   source = "./clients/sat-eforms"
 }
