@@ -23,7 +23,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://localhost:*",
     "https://devdhiper.hlth.gov.bc.ca/*",
     "https://uatdhiper.hlth.gov.bc.ca/*",
-    "https://sitdhiper.hlth.gov.bc.ca/*"
+    "https://sitdhiper.hlth.gov.bc.ca/*",
+    "https://devdhiper.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
