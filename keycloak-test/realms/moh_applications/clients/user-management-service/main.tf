@@ -184,6 +184,9 @@ module "client-roles" {
     "view-client-tap" = {
       "name" = "view-client-tap"
     },
+    "view-client-tbcm" = {
+      "name" = "view-client-tbcm"
+    },
     "view-client-tpl" = {
       "name" = "view-client-tpl"
     },
