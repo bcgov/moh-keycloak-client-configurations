@@ -51,6 +51,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-swt"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-swt_stg"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-tap"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-tbcm"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-tpl"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-webcaps"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
