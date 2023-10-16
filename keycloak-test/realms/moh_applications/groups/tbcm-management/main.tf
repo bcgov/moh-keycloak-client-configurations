@@ -1,6 +1,6 @@
 resource "keycloak_group" "GROUP" {
   realm_id = "moh_applications"
-  name     = "HSPP Management"
+  name     = "TBCM Management"
 }
 
 resource "keycloak_group_roles" "GROUP_ROLES" {
