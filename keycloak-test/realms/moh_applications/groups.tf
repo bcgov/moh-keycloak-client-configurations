@@ -105,6 +105,11 @@ module "REGISTRIES-CONNECTIONS-TEAM" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "TBCM-MANAGEMENT" {
+  source                  = "./groups/tbcm-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "TPL-MANAGEMENT" {
   source                  = "./groups/tpl-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
