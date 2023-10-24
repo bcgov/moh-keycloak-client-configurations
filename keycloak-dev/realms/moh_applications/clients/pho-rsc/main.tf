@@ -48,16 +48,16 @@ module "client-roles" {
       "name"        = "publisher"
       "description" = ""
     },
-    "demoreports" = {
-      "name"        = "demoreports"
+    "opho" = {
+      "name"        = "opho"
       "description" = ""
     },
-    "externalha" = {
-      "name"        = "externalha"
+    "hsiar_dart" = {
+      "name"        = "hsiar_dart"
       "description" = ""
     },
-    "internalpho" = {
-      "name"        = "internalpho"
+    "hsiar_ppd" = {
+      "name"        = "hsiar_ppd"
       "description" = ""
     },
   }
