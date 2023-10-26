@@ -191,6 +191,9 @@ module "SWT" {
 module "TAP" {
   source = "./clients/tap"
 }
+module "TBCM" {
+  source = "./clients/tbcm"
+}
 module "terraform" {
   source           = "./clients/terraform"
   realm-management = module.realm-management
