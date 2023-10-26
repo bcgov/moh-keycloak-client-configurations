@@ -185,7 +185,6 @@ module "PIDP-WEBAPP" {
 module "PLR-LRA" {
   source  = "./clients/plr-lra"
   PLR_REV = module.PLR_REV
-  PLR_IAT = module.PLR_IAT
 }
 module "PLR-PRIMARY-CARE" {
   source   = "./clients/plr-primary-care"
