@@ -45,6 +45,10 @@ module "service-account-roles" {
     "PLR_REV/CONSUMER" = {
       "client_id" = var.PLR_REV.CLIENT.id,
       "role_id"   = "CONSUMER"
+    },
+    "PLR_IAT/CONSUMER" = {
+      "client_id" = var.PLR_IAT.CLIENT.id,
+      "role_id"   = "CONSUMER"
     }
   }
 }
@@ -53,6 +57,7 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_REV/CONSUMER" = var.PLR_REV.ROLES["CONSUMER"].id
+    "PLR_REV/CONSUMER" = var.PLR_REV.ROLES["CONSUMER"].id,
+    "PLR_IAT/CONSUMER" = var.PLR_IAT.ROLES["CONSUMER"].id
   }
 }
