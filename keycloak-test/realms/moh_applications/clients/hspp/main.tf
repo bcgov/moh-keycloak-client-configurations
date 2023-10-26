@@ -50,6 +50,16 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "idir_displayName" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_mailboxOrgCode" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "idir_mailboxOrgCode"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_mailboxOrgCode"
+  user_attribute  = "idir_mailboxOrgCode"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
 module "client-roles" {
   source    = "../../../../../modules/client-roles"
   client_id = keycloak_openid_client.CLIENT.id
