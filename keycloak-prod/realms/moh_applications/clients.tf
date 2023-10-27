@@ -27,6 +27,9 @@ module "EACL" {
 module "EMCOD" {
   source = "./clients/emcod"
 }
+module "EHPR" {
+  source = "./clients/ehpr"
+}
 module "FMDB" {
   source = "./clients/fmdb"
 }
