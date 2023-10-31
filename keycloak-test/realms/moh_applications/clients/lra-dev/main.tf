@@ -22,6 +22,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:*",
     "https://localhost:*",
     "https://lra-dev.bchealthcloud.ca/*",
+    "https://main.dev.api.healthcarebc.ca/*"
   ]
   web_origins = [
   ]

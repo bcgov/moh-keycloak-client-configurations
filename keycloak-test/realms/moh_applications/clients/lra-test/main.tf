@@ -21,7 +21,8 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://lra-test.bchealthcloud.ca/*"
+    "https://lra-test.bchealthcloud.ca/*",
+    "https://qa.test.api.healthcarebc.ca/*"
   ]
   web_origins = [
   ]
