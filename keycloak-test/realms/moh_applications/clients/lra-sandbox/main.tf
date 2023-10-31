@@ -21,7 +21,8 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://lra-sandbox.bchealthcloud.ca/*"
+    "https://lra-sandbox.bchealthcloud.ca/*",
+    "https://sbx1.dev.api.healthcarebc.ca/*"
   ]
   web_origins = [
   ]
