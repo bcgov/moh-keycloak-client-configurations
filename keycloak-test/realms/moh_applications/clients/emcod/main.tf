@@ -20,9 +20,9 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://emcod-uat.vs.gov.bc.ca/*",
+    "https://emcod-test.vs.gov.bc.ca/*"
   ]
   web_origins = [
-    "https://emcod-uat.vs.gov.bc.ca",
     "+",
   ]
 }
