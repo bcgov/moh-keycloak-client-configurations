@@ -129,6 +129,21 @@ module "LDAP-API" {
 module "LICENCE-STATUS" {
   source = "./clients/licence-status"
 }
+module "LRA-DEV" {
+  source         = "./clients/lra-dev"
+  LICENCE-STATUS = module.LICENCE-STATUS
+
+}
+module "LRA-SANDBOX" {
+  source         = "./clients/lra-sandbox"
+  LICENCE-STATUS = module.LICENCE-STATUS
+
+}
+module "LRA-TEST" {
+  source         = "./clients/lra-test"
+  LICENCE-STATUS = module.LICENCE-STATUS
+
+}
 module "MAID" {
   source = "./clients/maid"
 }
@@ -170,6 +185,7 @@ module "PIDP-WEBAPP" {
 module "PLR-LRA" {
   source  = "./clients/plr-lra"
   PLR_REV = module.PLR_REV
+  PLR_IAT = module.PLR_IAT
 }
 module "PLR-PRIMARY-CARE" {
   source   = "./clients/plr-primary-care"
@@ -331,8 +347,9 @@ module "PRP-SERVICE" {
   source = "./clients/prp-service"
 }
 module "PRP-WEB" {
-  source      = "./clients/prp-web"
-  PRP-SERVICE = module.PRP-SERVICE
+  source         = "./clients/prp-web"
+  PRP-SERVICE    = module.PRP-SERVICE
+  LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "SAT-EFORMS" {
   source = "./clients/sat-eforms"
@@ -364,6 +381,9 @@ module "TAP" {
 module "terraform" {
   source           = "./clients/terraform"
   realm-management = module.realm-management
+}
+module "TBCM" {
+  source = "./clients/tbcm"
 }
 module "TPL" {
   source = "./clients/tpl"

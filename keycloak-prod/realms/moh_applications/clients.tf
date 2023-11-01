@@ -27,6 +27,9 @@ module "EACL" {
 module "EMCOD" {
   source = "./clients/emcod"
 }
+module "EHPR" {
+  source = "./clients/ehpr"
+}
 module "FMDB" {
   source = "./clients/fmdb"
 }
@@ -128,6 +131,9 @@ module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"
   PLR    = module.PLR
 }
+module "PPM-API-CGI-BC30550160" {
+  source = "./clients/ppm-api-cgi-BC30550160"
+}
 module "PRIMARY-CARE" {
   source         = "./clients/primary-care"
   LICENCE-STATUS = module.LICENCE-STATUS
@@ -159,6 +165,14 @@ module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
   source                  = "./clients/prime-webapp-enrollment-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "PRP-SERVICE" {
+  source = "./clients/prp-service"
+}
+module "PRP-WEB" {
+  source         = "./clients/prp-web"
+  PRP-SERVICE    = module.PRP-SERVICE
+  LICENCE-STATUS = module.LICENCE-STATUS
+}
 module "SAT-EFORMS" {
   source = "./clients/sat-eforms"
 }
@@ -179,6 +193,9 @@ module "SWT" {
 }
 module "TAP" {
   source = "./clients/tap"
+}
+module "TBCM" {
+  source = "./clients/tbcm"
 }
 module "terraform" {
   source           = "./clients/terraform"

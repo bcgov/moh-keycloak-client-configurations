@@ -21,7 +21,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://hsppstg.hlth.gov.bc.ca/*",
+    "https://uathspp.hlth.gov.bc.ca/*",
     "https://devhspp.healthideas.gov.bc.ca/*",
   ]
   web_origins = [
@@ -47,6 +47,16 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "idir_displayName" {
   client_id       = keycloak_openid_client.CLIENT.id
   name            = "idir_displayName"
   user_attribute  = "idir_displayName"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_mailboxOrgCode" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "idir_mailboxOrgCode"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_mailboxOrgCode"
+  user_attribute  = "idir_mailboxOrgCode"
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
 

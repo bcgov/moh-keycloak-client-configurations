@@ -23,7 +23,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://localhost:*",
     "https://devdhiper.hlth.gov.bc.ca/*",
     "https://uatdhiper.hlth.gov.bc.ca/*",
-    "https://sitdhiper.hlth.gov.bc.ca/*"
+    "https://sitdhiper.hlth.gov.bc.ca/*",
+    "https://devdhiper.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
@@ -64,6 +65,9 @@ module "client-roles" {
     },
     "DHIPER_ReportProgram_All" = {
       "name" = "DHIPER_ReportProgram_All"
+    },
+    "HI_Administrator" = {
+      "name" = "HI_Administrator"
     }
   }
 }
