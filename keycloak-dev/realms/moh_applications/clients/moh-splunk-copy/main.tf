@@ -1,7 +1,7 @@
 resource "keycloak_saml_client" "CLIENT" {
   realm_id                  = "moh_applications"
-  client_id                 = "MOH_SPLUNK"
-  name                      = "MOH_SPLUNK"
+  client_id                 = "MOH_SPLUNK_COPY"
+  name                      = "MOH_SPLUNK_COPY"
   description               = "This is a client to integrate with the OCIO's Splunk instance running against the HIVE. The HIVE is a centralized SIEM where we collect security related data to monitor and audit events occuring on MoH systems"
   enabled                   = true
   include_authn_statement   = true
@@ -16,21 +16,28 @@ resource "keycloak_saml_client" "CLIENT" {
   front_channel_logout      = true
   force_name_id_format      = false
   name_id_format            = "username"
-  mapper_name               = "Splunk Role"
-  roles = {
-    "hlth_rw" = {
-      "name" = "hlth_rw"
-    },
-  }
 
   valid_redirect_uris = [
     "https://siem.secops.gov.bc.ca/*"
   ]
   base_url = "https://siem.secops.gov.bc.ca/"
 
-  idp_initiated_sso_url_name                      = "MOH_SPLUNK"
-  assertion_consumer_service_redirect_binding_url = "https://siem.secops.gov.bc.ca/health/saml/acs"
-  logout_service_redirect_binding_url             = "https://siem.secops.gov.bc.ca/health/saml/logout"
+  idp_initiated_sso_url_name          = "MOH_SPLUNK_COPY"
+  assertion_consumer_redirect_url     = "https://siem.secops.gov.bc.ca/health/saml/acs"
+  logout_service_redirect_binding_url = "https://siem.secops.gov.bc.ca/health/saml/logout"
+}
+
+resource "keycloak_role" "reportingadmin_role" {
+  realm_id    = keycloak_saml_client.CLIENT.realm_id
+  client_id   = keycloak_saml_client.CLIENT.id
+  name        = "reportingadmin"
+  description = "This is the role that maps to hlth_rw in the HIVE"
+}
+
+resource "keycloak_generic_client_role_mapper" "splunk_role_mapper" {
+  realm_id  = keycloak_saml_client.CLIENT.realm_id
+  client_id = keycloak_saml_client.CLIENT.id
+  role_id   = keycloak_role.reportingadmin_role.id
 }
 
 resource "keycloak_saml_client_default_scopes" "client_default_scopes" {
