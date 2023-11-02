@@ -48,6 +48,26 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "idir_company" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_displayName" {
+  add_to_id_token = true
+  add_to_userinfo = false
+  claim_name      = "idir_displayName"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_displayName"
+  user_attribute  = "idir_displayName"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_mailboxOrgCode" {
+  add_to_id_token = true
+  add_to_userinfo = false
+  claim_name      = "idir_mailboxOrgCode"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_mailboxOrgCode"
+  user_attribute  = "idir_mailboxOrgCode"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
+
 resource "keycloak_openid_user_attribute_protocol_mapper" "bceid_business_legalName" {
   add_to_id_token = true
   add_to_userinfo = false
