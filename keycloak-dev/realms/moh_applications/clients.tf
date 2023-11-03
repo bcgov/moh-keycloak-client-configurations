@@ -100,6 +100,9 @@ module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"
   PLR    = module.PLR
 }
+module "PLR-SCAN" {
+  source = "./clients/plr-scan"
+}
 module "PRIME-WEBAPP-ENROLLMENT" {
   source  = "./clients/prime-webapp-enrollment"
   account = module.account
