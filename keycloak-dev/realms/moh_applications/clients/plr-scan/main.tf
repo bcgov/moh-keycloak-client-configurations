@@ -23,18 +23,14 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
   ]
 }
-module "service-account-roles" {
-  source                  = "../../../../../modules/service-account-roles"
-  realm_id                = keycloak_openid_client.CLIENT.realm_id
-  client_id               = keycloak_openid_client.CLIENT.id
-  service_account_user_id = keycloak_openid_client.CLIENT.service_account_user_id
-  realm_roles = {
-    "default-roles-moh_applications" = "default-roles-moh_applications",
-  }
-  client_roles = {
-    "realm-management/consumer" = {
-      "client_id" = var.realm-management.CLIENT.id,
-      "role_id"   = "consumer"
-    }
+
+module "client-roles" {
+  source    = "../../../../../modules/client-roles"
+  client_id = keycloak_openid_client.CLIENT.id
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  roles = {
+    "CONSUMER" = {
+      "name" = "CONSUMER"
+    },
   }
 }
