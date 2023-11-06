@@ -4,7 +4,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PLR-SCAN"
+  client_id                           = "PLR-WAVA"
   consent_required                    = false
   description                         = "Client for use in performing a PLR WAVA scan"
   direct_access_grants_enabled        = false
