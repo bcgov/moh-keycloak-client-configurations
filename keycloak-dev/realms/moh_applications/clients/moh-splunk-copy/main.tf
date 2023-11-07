@@ -16,6 +16,7 @@ resource "keycloak_saml_client" "CLIENT" {
   front_channel_logout      = true
   force_name_id_format      = false
   name_id_format            = "username"
+  full_scope_allowed        = false
 
   valid_redirect_uris = [
     "https://siem.secops.gov.bc.ca/*"
@@ -38,15 +39,6 @@ resource "keycloak_generic_client_role_mapper" "splunk_role_mapper" {
   realm_id  = keycloak_saml_client.CLIENT.realm_id
   client_id = keycloak_saml_client.CLIENT.id
   role_id   = keycloak_role.reportingadmin_role.id
-}
-
-resource "keycloak_saml_client_default_scopes" "client_default_scopes" {
-  realm_id  = keycloak_saml_client.CLIENT.realm_id
-  client_id = keycloak_saml_client.CLIENT.id
-
-  default_scopes = [
-    "role_list"
-  ]
 }
 
 resource "keycloak_saml_user_attribute_protocol_mapper" "bceid_business_id" {
