@@ -34,7 +34,6 @@ resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
   name                = "orgId"
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
-
 module "service-account-roles" {
   source                  = "../../../../../modules/service-account-roles"
   realm_id                = keycloak_openid_client.CLIENT.realm_id
