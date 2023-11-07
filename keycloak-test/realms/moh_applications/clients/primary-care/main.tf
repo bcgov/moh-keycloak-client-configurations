@@ -38,7 +38,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://healthbc--hlthbcprvx.sandbox.my.salesforce.com/*",
     "https://healthbc--hlthbcprvx.sandbox.my.site.com/*",
     "https://healthbc--hlthbcint.sandbox.my.salesforce.com/*",
-    "https://healthbc--hlthbcint.sandbox.my.site.com/*"
+    "https://healthbc--hlthbcint.sandbox.my.site.com/*",
+    "https://uat.bchealthprovider.ca/*"
 
 
   ]
