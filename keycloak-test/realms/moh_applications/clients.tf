@@ -252,6 +252,7 @@ module "PLR-QA-SECONDARY-SOURCE" {
 module "PLR-WAVA" {
   source  = "./clients/plr-wava"
   PLR_REV = module.PLR_REV
+  PLR_IAT = module.PLR_IAT
 }
 module "PLR-SHOPPERS" {
   source   = "./clients/plr-shoppers"

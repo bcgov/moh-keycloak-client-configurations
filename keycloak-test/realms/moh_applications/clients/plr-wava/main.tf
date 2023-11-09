@@ -1,5 +1,5 @@
 resource "keycloak_openid_client" "CLIENT" {
-  access_token_lifespan               = ""
+  access_token_lifespan               = "18000"
   access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
   base_url                            = ""
@@ -51,6 +51,14 @@ module "service-account-roles" {
       "client_id" = var.PLR_REV.CLIENT.id,
       "role_id"   = "CONSUMER"
     }
+    "PLR_IAT/PRIMARY_SOURCE" = {
+      "client_id" = var.PLR_IAT.CLIENT.id,
+      "role_id"   = "PRIMARY_SOURCE"
+    }
+    "PLR_IAT/CONSUMER" = {
+      "client_id" = var.PLR_REV.CLIENT.id,
+      "role_id"   = "CONSUMER"
+    }
   }
 }
 module "scope-mappings" {
@@ -60,5 +68,7 @@ module "scope-mappings" {
   roles = {
     "PLR_REV/PRIMARY_SOURCE" = var.PLR_REV.ROLES["PRIMARY_SOURCE"].id
     "PLR_REV/CONSUMER"       = var.PLR_REV.ROLES["CONSUMER"].id
+    "PLR_IAT/PRIMARY_SOURCE" = var.PLR_REV.ROLES["PRIMARY_SOURCE"].id
+    "PLR_IAT/CONSUMER"       = var.PLR_REV.ROLES["CONSUMER"].id
   }
 }
