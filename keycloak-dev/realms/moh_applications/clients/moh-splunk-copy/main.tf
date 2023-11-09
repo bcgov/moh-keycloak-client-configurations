@@ -68,7 +68,7 @@ resource "keycloak_generic_client_protocol_mapper" "role_list" {
   client_id       = keycloak_saml_client.CLIENT.id
   name            = "role list"
   protocol        = "saml"
-  protocol_mapper = "Role List"
+  protocol_mapper = "saml-role-list-mapper"
   config = {
     "attribute.name"       = "role"
     "attribute.nameformat" = "Basic"
