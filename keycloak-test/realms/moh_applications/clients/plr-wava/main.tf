@@ -56,7 +56,7 @@ module "service-account-roles" {
       "role_id"   = "PRIMARY_SOURCE"
     }
     "PLR_IAT/CONSUMER" = {
-      "client_id" = var.PLR_REV.CLIENT.id,
+      "client_id" = var.PLR_IAT.CLIENT.id,
       "role_id"   = "CONSUMER"
     }
   }
@@ -68,7 +68,7 @@ module "scope-mappings" {
   roles = {
     "PLR_REV/PRIMARY_SOURCE" = var.PLR_REV.ROLES["PRIMARY_SOURCE"].id
     "PLR_REV/CONSUMER"       = var.PLR_REV.ROLES["CONSUMER"].id
-    "PLR_IAT/PRIMARY_SOURCE" = var.PLR_REV.ROLES["PRIMARY_SOURCE"].id
-    "PLR_IAT/CONSUMER"       = var.PLR_REV.ROLES["CONSUMER"].id
+    "PLR_IAT/PRIMARY_SOURCE" = var.PLR_IAT.ROLES["PRIMARY_SOURCE"].id
+    "PLR_IAT/CONSUMER"       = var.PLR_IAT.ROLES["CONSUMER"].id
   }
 }
