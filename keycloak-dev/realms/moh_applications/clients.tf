@@ -69,6 +69,9 @@ module "METASPACE" {
 module "MOH-SERVICENOW" {
   source = "./clients/moh-servicenow"
 }
+module "MOH_SPLUNK_COPY" {
+  source = "./clients/moh-splunk-copy"
+}
 module "MSPDIRECT-SERVICE" {
   source = "./clients/mspdirect-service"
 }
