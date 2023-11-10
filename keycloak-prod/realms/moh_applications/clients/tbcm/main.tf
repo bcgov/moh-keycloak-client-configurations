@@ -19,7 +19,8 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://d2xshb1uuel3zq.cloudfront.net/*"
+    "https://d2xshb1uuel3zq.cloudfront.net/*",
+    "https://moc.gov.bc.ca/*"
   ]
   web_origins = [
   ]
@@ -31,6 +32,9 @@ module "client-roles" {
   roles = {
     "admin" = {
       "name" = "admin"
+    },
+    "user" = {
+      "name" = "user"
     },
   }
 }
