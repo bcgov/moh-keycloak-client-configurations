@@ -36,5 +36,8 @@ module "client-roles" {
     "admin" = {
       "name" = "admin"
     },
+        "user" = {
+      "name" = "user"
+    },
   }
 }
