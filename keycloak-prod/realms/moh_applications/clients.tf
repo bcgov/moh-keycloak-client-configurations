@@ -102,6 +102,9 @@ module "MIWT" {
 module "MOH-SERVICENOW" {
   source = "./clients/moh-servicenow"
 }
+module "MOH-SPLUNK" {
+  source = "./clients/moh-splunk"
+}
 module "MSPDIRECT-SERVICE" {
   source = "./clients/mspdirect-service"
 }
