@@ -90,6 +90,11 @@ module "REGISTRIES-CONNECTIONS-TEAM" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "TBCM-MANAGEMENT" {
+  source                  = "./groups/tbcm-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "WEBCAPS-USER-ADMIN" {
   source                  = "./groups/webcaps-user-admin"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
