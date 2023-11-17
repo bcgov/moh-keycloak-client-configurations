@@ -19,6 +19,10 @@ module "DEMO-CLIENT" {
 module "DHIPER" {
   source = "./clients/dhiper"
 }
+module "DHT-DEV" {
+  source         = "./clients/dht-dev"
+  LICENCE-STATUS = module.LICENCE-STATUS
+}
 module "DMFT-SERVICE" {
   source       = "./clients/dmft-service"
   PIDP-SERVICE = module.PIDP-SERVICE
@@ -132,17 +136,14 @@ module "LICENCE-STATUS" {
 module "LRA-DEV" {
   source         = "./clients/lra-dev"
   LICENCE-STATUS = module.LICENCE-STATUS
-
 }
 module "LRA-SANDBOX" {
   source         = "./clients/lra-sandbox"
   LICENCE-STATUS = module.LICENCE-STATUS
-
 }
 module "LRA-TEST" {
   source         = "./clients/lra-test"
   LICENCE-STATUS = module.LICENCE-STATUS
-
 }
 module "MAID" {
   source = "./clients/maid"
