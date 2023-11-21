@@ -133,7 +133,7 @@ resource "keycloak_openid_hardcoded_role_protocol_mapper" "default-role-mapper" 
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   name      = "default-role-mapper"
-  role_id   = module.client-roles.ROLES["DefaultRole"].id
+  role_id   = module.client-roles.ROLES["Default_Role"].id
 }
 
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
