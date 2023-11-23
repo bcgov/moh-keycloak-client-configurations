@@ -19,7 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "*"
+    "uathicliip.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
@@ -42,14 +42,14 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "AD_Education" = {
-      "name" = "AD_Education"
-    },
-    "Ed" = {
-      "name" = "Ed"
-    },
     "HI_Administrator" = {
       "name" = "HI_Administrator"
+    },
+    "HI_ReportProgram_All" = {
+      "name" = "HI_ReportProgram_All"
+    },
+    "HI_ReportSection_All" = {
+      "name" = "HI_ReportSection_All"
     },
     "HI_Consumer" = {
       "name" = "HI_Consumer"
@@ -57,20 +57,14 @@ module "client-roles" {
     "HI_Operation" = {
       "name" = "HI_Operation"
     },
-    "HSPP_ALL" = {
-      "name" = "HSPP_ALL"
+    "HI_ReportProgram_CCHS" = {
+      "name" = "HI_ReportProgram_CCHS"
     },
-    "HSPP_HumanResource" = {
-      "name" = "HSPP_HumanResource"
+    "HI_ReportSection_CCHS" = {
+      "name" = "HI_ReportSection_CCHS"
     },
-    "HSPP_OKR" = {
-      "name" = "HSPP_OKR"
-    },
-    "ITSB_DIGI" = {
-      "name" = "ITSB_DIGI"
-    },
-    "Surgical" = {
-      "name" = "Surgical"
+    "HI_CCHS" = {
+      "name" = "HI_CCHS"
     },
   }
 }
