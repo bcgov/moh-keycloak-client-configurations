@@ -90,7 +90,7 @@ module "PIDP-SERVICE" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "PIDP-SERVICE-ACCOUNT" {
-  source                  = "./clients/pidp-service-account"
+  source = "./clients/pidp-service-account"
 }
 module "PIDP-WEBAPP" {
   source       = "./clients/pidp-webapp"
