@@ -29,33 +29,6 @@ module "payara-client" {
     "https://sts.healthbc.org/adfs/ls/*",
   ]
 }
-resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {
-  add_to_id_token  = true
-  claim_name       = "clientHost"
-  claim_value_type = "String"
-  client_id        = module.payara-client.CLIENT.id
-  name             = "Client Host"
-  realm_id         = module.payara-client.CLIENT.realm_id
-  session_note     = "clientHost"
-}
-resource "keycloak_openid_user_session_note_protocol_mapper" "Client-ID" {
-  add_to_id_token  = true
-  claim_name       = "clientId"
-  claim_value_type = "String"
-  client_id        = module.payara-client.CLIENT.id
-  name             = "Client ID"
-  realm_id         = module.payara-client.CLIENT.realm_id
-  session_note     = "clientId"
-}
-resource "keycloak_openid_user_session_note_protocol_mapper" "Client-IP-Address" {
-  add_to_id_token  = true
-  claim_name       = "clientAddress"
-  claim_value_type = "String"
-  client_id        = module.payara-client.CLIENT.id
-  name             = "Client IP Address"
-  realm_id         = module.payara-client.CLIENT.realm_id
-  session_note     = "clientAddress"
-}
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
   add_to_id_token  = false
   claim_name       = "identity_provider"
