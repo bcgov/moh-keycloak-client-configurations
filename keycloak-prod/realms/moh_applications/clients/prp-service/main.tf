@@ -24,8 +24,14 @@ module "client-roles" {
     "PRP_MSPQI" : {
       "name" : "PRP_MSPQI"
     },
+    "PRP_MSPQI_RLS" = {
+      "name" = "PRP_MSPQI_RLS"
+    },
     "PRP_PMP" : {
       "name" : "PRP_PMP"
+    },
+    "PRP_PMP_RLS" = {
+      "name" = "PRP_PMP_RLS"
     },
     "PRP_ReportProgram_MSPQI" : {
       "name" : "PRP_ReportProgram_MSPQI"
