@@ -39,6 +39,11 @@ module "HIBC-MSP-DIRECT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "HSIAR-MANAGEMENT" {
+  source                  = "./groups/hsiar-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "HSPP-MANAGEMENT" {
   source                  = "./groups/hspp-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE

@@ -19,7 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://uathicliip.healthideas.gov.bc.ca/*"
+    "https://hicliip.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
