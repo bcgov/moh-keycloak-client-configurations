@@ -312,6 +312,156 @@ module "client-roles" {
     "ICY-qathet-Powell-River-Team-1-Team-Member" = {
       "name" = "ICY-qathet-Powell-River-Team-1-Team-Member"
     },
+    "ICY-dummy-0" = {
+      "name" = "ICY-dummy-0"
+    },
+    "ICY-dummy-1" = {
+      "name" = "ICY-dummy-1"
+    },
+    "ICY-dummy-2" = {
+      "name" = "ICY-dummy-2"
+    },
+    "ICY-dummy-3" = {
+      "name" = "ICY-dummy-3"
+    },
+    "ICY-dummy-4" = {
+      "name" = "ICY-dummy-4"
+    },
+    "ICY-dummy-5" = {
+      "name" = "ICY-dummy-5"
+    },
+    "ICY-dummy-6" = {
+      "name" = "ICY-dummy-6"
+    },
+    "ICY-dummy-7" = {
+      "name" = "ICY-dummy-7"
+    },
+    "ICY-dummy-8" = {
+      "name" = "ICY-dummy-8"
+    },
+    "ICY-dummy-9" = {
+      "name" = "ICY-dummy-9"
+    },
+    "ICY-dummy-10" = {
+      "name" = "ICY-dummy-10"
+    },
+    "ICY-dummy-11" = {
+      "name" = "ICY-dummy-11"
+    },
+    "ICY-dummy-12" = {
+      "name" = "ICY-dummy-12"
+    },
+    "ICY-dummy-13" = {
+      "name" = "ICY-dummy-13"
+    },
+    "ICY-dummy-14" = {
+      "name" = "ICY-dummy-14"
+    },
+    "ICY-dummy-15" = {
+      "name" = "ICY-dummy-15"
+    },
+    "ICY-dummy-16" = {
+      "name" = "ICY-dummy-16"
+    },
+    "ICY-dummy-17" = {
+      "name" = "ICY-dummy-17"
+    },
+    "ICY-dummy-18" = {
+      "name" = "ICY-dummy-18"
+    },
+    "ICY-dummy-19" = {
+      "name" = "ICY-dummy-19"
+    },
+    "ICY-dummy-20" = {
+      "name" = "ICY-dummy-20"
+    },
+    "ICY-dummy-21" = {
+      "name" = "ICY-dummy-21"
+    },
+    "ICY-dummy-22" = {
+      "name" = "ICY-dummy-22"
+    },
+    "ICY-dummy-23" = {
+      "name" = "ICY-dummy-23"
+    },
+    "ICY-dummy-24" = {
+      "name" = "ICY-dummy-24"
+    },
+    "ICY-dummy-25" = {
+      "name" = "ICY-dummy-25"
+    },
+    "ICY-dummy-26" = {
+      "name" = "ICY-dummy-26"
+    },
+    "ICY-dummy-27" = {
+      "name" = "ICY-dummy-27"
+    },
+    "ICY-dummy-28" = {
+      "name" = "ICY-dummy-28"
+    },
+    "ICY-dummy-29" = {
+      "name" = "ICY-dummy-29"
+    },
+    "ICY-dummy-30" = {
+      "name" = "ICY-dummy-30"
+    },
+    "ICY-dummy-31" = {
+      "name" = "ICY-dummy-31"
+    },
+    "ICY-dummy-32" = {
+      "name" = "ICY-dummy-32"
+    },
+    "ICY-dummy-33" = {
+      "name" = "ICY-dummy-33"
+    },
+    "ICY-dummy-34" = {
+      "name" = "ICY-dummy-34"
+    },
+    "ICY-dummy-35" = {
+      "name" = "ICY-dummy-35"
+    },
+    "ICY-dummy-36" = {
+      "name" = "ICY-dummy-36"
+    },
+    "ICY-dummy-37" = {
+      "name" = "ICY-dummy-37"
+    },
+    "ICY-dummy-38" = {
+      "name" = "ICY-dummy-38"
+    },
+    "ICY-dummy-39" = {
+      "name" = "ICY-dummy-39"
+    },
+    "ICY-dummy-40" = {
+      "name" = "ICY-dummy-40"
+    },
+    "ICY-dummy-41" = {
+      "name" = "ICY-dummy-41"
+    },
+    "ICY-dummy-42" = {
+      "name" = "ICY-dummy-42"
+    },
+    "ICY-dummy-43" = {
+      "name" = "ICY-dummy-43"
+    },
+    "ICY-dummy-44" = {
+      "name" = "ICY-dummy-44"
+    },
+    "ICY-dummy-45" = {
+      "name" = "ICY-dummy-45"
+    },
+    "ICY-dummy-46" = {
+      "name" = "ICY-dummy-46"
+    },
+    "ICY-dummy-47" = {
+      "name" = "ICY-dummy-47"
+    },
+    "ICY-dummy-48" = {
+      "name" = "ICY-dummy-48"
+    },
+    "ICY-dummy-49" = {
+      "name" = "ICY-dummy-49"
+    }
   }
 }
 
