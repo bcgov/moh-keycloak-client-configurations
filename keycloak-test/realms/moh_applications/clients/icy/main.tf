@@ -33,6 +33,9 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
+    "ICY-Business-Administrator" = {
+      "name" = "ICY-Business-Administrator"
+    },
     "ICY-Coast-Mountains-Team-Hazelton-Program-Leader" = {
       "name" = "ICY-Coast-Mountains-Team-Hazelton-Program-Leader"
     },
