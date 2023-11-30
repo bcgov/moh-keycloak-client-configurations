@@ -33,9 +33,6 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "ICY-Business-Administrator" = {
-      "name" = "ICY-Business-Administrator"
-    },
     "ICY-Coast-Mountains-Team-Hazelton-Program-Leader" = {
       "name" = "ICY-Coast-Mountains-Team-Hazelton-Program-Leader"
     },
@@ -45,8 +42,8 @@ module "client-roles" {
     "ICY-Coast-Mountains-Team-Hazelton-Non-Clinical-Team-Member" = {
       "name" = "ICY-Coast-Mountains-Team-Hazelton-Non-Clinical-Team-Member"
     },
-    "ICY-Coast-Mountains-Team-Hazelton-Team-Member" = {
-      "name" = "ICY-Coast-Mountains-Team-Hazelton-Team-Member"
+    "ICY-Coast-Mountains-Team-Hazelton-Clinical-Team-Member" = {
+      "name" = "ICY-Coast-Mountains-Team-Hazelton-Clinical-Team-Member"
     },
     "ICY-Coast-Mountains-Team-Terrace-Program-Leader" = {
       "name" = "ICY-Coast-Mountains-Team-Terrace-Program-Leader"
@@ -57,8 +54,8 @@ module "client-roles" {
     "ICY-Coast-Mountains-Team-Terrace-Non-Clinical-Team-Member" = {
       "name" = "ICY-Coast-Mountains-Team-Terrace-Non-Clinical-Team-Member"
     },
-    "ICY-Coast-Mountains-Team-Terrace-Team-Member" = {
-      "name" = "ICY-Coast-Mountains-Team-Terrace-Team-Member"
+    "ICY-Coast-Mountains-Team-Terrace-Clinical-Team-Member" = {
+      "name" = "ICY-Coast-Mountains-Team-Terrace-Clinical-Team-Member"
     },
     "ICY-Comox-Valley-Team-1-Program-Leader" = {
       "name" = "ICY-Comox-Valley-Team-1-Program-Leader"
@@ -69,8 +66,8 @@ module "client-roles" {
     "ICY-Comox-Valley-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Comox-Valley-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Comox-Valley-Team-1-Team-Member" = {
-      "name" = "ICY-Comox-Valley-Team-1-Team-Member"
+    "ICY-Comox-Valley-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Comox-Valley-Team-1-Clinical-Team-Member"
     },
     "ICY-Comox-Valley-Team-2-Program-Leader" = {
       "name" = "ICY-Comox-Valley-Team-2-Program-Leader"
@@ -81,8 +78,8 @@ module "client-roles" {
     "ICY-Comox-Valley-Team-2-Non-Clinical-Team-Member" = {
       "name" = "ICY-Comox-Valley-Team-2-Non-Clinical-Team-Member"
     },
-    "ICY-Comox-Valley-Team-2-Team-Member" = {
-      "name" = "ICY-Comox-Valley-Team-2-Team-Member"
+    "ICY-Comox-Valley-Team-2-Clinical-Team-Member" = {
+      "name" = "ICY-Comox-Valley-Team-2-Clinical-Team-Member"
     },
     "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Program-Leader" = {
       "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Program-Leader"
@@ -93,8 +90,8 @@ module "client-roles" {
     "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Team-Member" = {
-      "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Team-Member"
+    "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-1-Clinical-Team-Member"
     },
     "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Program-Leader" = {
       "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Program-Leader"
@@ -105,8 +102,8 @@ module "client-roles" {
     "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Non-Clinical-Team-Member" = {
       "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Non-Clinical-Team-Member"
     },
-    "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Team-Member" = {
-      "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Team-Member"
+    "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Clinical-Team-Member" = {
+      "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-2-Clinical-Team-Member"
     },
     "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Program-Leader" = {
       "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Program-Leader"
@@ -117,8 +114,8 @@ module "client-roles" {
     "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Non-Clinical-Team-Member" = {
       "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Non-Clinical-Team-Member"
     },
-    "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Team-Member" = {
-      "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Team-Member"
+    "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Clinical-Team-Member" = {
+      "name" = "ICY-Maple-Ridge-Pitt-Meadows-Team-3-Clinical-Team-Member"
     },
     "ICY-Okanagan-Similkameen-Program-Leader" = {
       "name" = "ICY-Okanagan-Similkameen-Program-Leader"
@@ -129,8 +126,8 @@ module "client-roles" {
     "ICY-Okanagan-Similkameen-Non-Clinical-Team-Member" = {
       "name" = "ICY-Okanagan-Similkameen-Non-Clinical-Team-Member"
     },
-    "ICY-Okanagan-Similkameen-Team-Member" = {
-      "name" = "ICY-Okanagan-Similkameen-Team-Member"
+    "ICY-Okanagan-Similkameen-Clinical-Team-Member" = {
+      "name" = "ICY-Okanagan-Similkameen-Clinical-Team-Member"
     },
     "ICY-Richmond-Team-1-Program-Leader" = {
       "name" = "ICY-Richmond-Team-1-Program-Leader"
@@ -141,8 +138,8 @@ module "client-roles" {
     "ICY-Richmond-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Richmond-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Richmond-Team-1-Team-Member" = {
-      "name" = "ICY-Richmond-Team-1-Team-Member"
+    "ICY-Richmond-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Richmond-Team-1-Clinical-Team-Member"
     },
     "ICY-Richmond-Team-2-Program-Leader" = {
       "name" = "ICY-Richmond-Team-2-Program-Leader"
@@ -153,8 +150,8 @@ module "client-roles" {
     "ICY-Richmond-Team-2-Non-Clinical-Team-Member" = {
       "name" = "ICY-Richmond-Team-2-Non-Clinical-Team-Member"
     },
-    "ICY-Richmond-Team-2-Team-Member" = {
-      "name" = "ICY-Richmond-Team-2-Team-Member"
+    "ICY-Richmond-Team-2-Clinical-Team-Member" = {
+      "name" = "ICY-Richmond-Team-2-Clinical-Team-Member"
     },
     "ICY-Richmond-Team-3-Program-Leader" = {
       "name" = "ICY-Richmond-Team-3-Program-Leader"
@@ -165,8 +162,8 @@ module "client-roles" {
     "ICY-Richmond-Team-3-Non-Clinical-Team-Member" = {
       "name" = "ICY-Richmond-Team-3-Non-Clinical-Team-Member"
     },
-    "ICY-Richmond-Team-3-Team-Member" = {
-      "name" = "ICY-Richmond-Team-3-Team-Member"
+    "ICY-Richmond-Team-3-Clinical-Team-Member" = {
+      "name" = "ICY-Richmond-Team-3-Clinical-Team-Member"
     },
     "ICY-Richmond-Team-4-Program-Leader" = {
       "name" = "ICY-Richmond-Team-4-Program-Leader"
@@ -177,8 +174,8 @@ module "client-roles" {
     "ICY-Richmond-Team-4-Non-Clinical-Team-Member" = {
       "name" = "ICY-Richmond-Team-4-Non-Clinical-Team-Member"
     },
-    "ICY-Richmond-Team-4-Team-Member" = {
-      "name" = "ICY-Richmond-Team-4-Team-Member"
+    "ICY-Richmond-Team-4-Clinical-Team-Member" = {
+      "name" = "ICY-Richmond-Team-4-Clinical-Team-Member"
     },
     "ICY-Fraser-Cascades-Team-1-Program-Leader" = {
       "name" = "ICY-Fraser-Cascades-Team-1-Program-Leader"
@@ -189,8 +186,8 @@ module "client-roles" {
     "ICY-Fraser-Cascades-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Fraser-Cascades-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Fraser-Cascades-Team-1-Team-Member" = {
-      "name" = "ICY-Fraser-Cascades-Team-1-Team-Member"
+    "ICY-Fraser-Cascades-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Fraser-Cascades-Team-1-Clinical-Team-Member"
     },
     "ICY-Kootenay-Columbia-Team-1-Program-Leader" = {
       "name" = "ICY-Kootenay-Columbia-Team-1-Program-Leader"
@@ -201,8 +198,8 @@ module "client-roles" {
     "ICY-Kootenay-Columbia-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Kootenay-Columbia-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Kootenay-Columbia-Team-1-Team-Member" = {
-      "name" = "ICY-Kootenay-Columbia-Team-1-Team-Member"
+    "ICY-Kootenay-Columbia-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Kootenay-Columbia-Team-1-Clinical-Team-Member"
     },
     "ICY-Mission-Team-1-Program-Leader" = {
       "name" = "ICY-Mission-Team-1-Program-Leader"
@@ -213,8 +210,8 @@ module "client-roles" {
     "ICY-Mission-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Mission-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Mission-Team-1-Team-Member" = {
-      "name" = "ICY-Mission-Team-1-Team-Member"
+    "ICY-Mission-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Mission-Team-1-Clinical-Team-Member"
     },
     "ICY-Mission-Team-2-Program-Leader" = {
       "name" = "ICY-Mission-Team-2-Program-Leader"
@@ -225,8 +222,8 @@ module "client-roles" {
     "ICY-Mission-Team-2-Non-Clinical-Team-Member" = {
       "name" = "ICY-Mission-Team-2-Non-Clinical-Team-Member"
     },
-    "ICY-Mission-Team-2-Team-Member" = {
-      "name" = "ICY-Mission-Team-2-Team-Member"
+    "ICY-Mission-Team-2-Clinical-Team-Member" = {
+      "name" = "ICY-Mission-Team-2-Clinical-Team-Member"
     },
     "ICY-Nanaimo-Ladysmith-Team-1-Program-Leader" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-1-Program-Leader"
@@ -237,8 +234,8 @@ module "client-roles" {
     "ICY-Nanaimo-Ladysmith-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Nanaimo-Ladysmith-Team-1-Team-Member" = {
-      "name" = "ICY-Nanaimo-Ladysmith-Team-1-Team-Member"
+    "ICY-Nanaimo-Ladysmith-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Nanaimo-Ladysmith-Team-1-Clinical-Team-Member"
     },
     "ICY-Nanaimo-Ladysmith-Team-2-Program-Leader" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-2-Program-Leader"
@@ -249,8 +246,8 @@ module "client-roles" {
     "ICY-Nanaimo-Ladysmith-Team-2-Non-Clinical-Team-Member" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-2-Non-Clinical-Team-Member"
     },
-    "ICY-Nanaimo-Ladysmith-Team-2-Team-Member" = {
-      "name" = "ICY-Nanaimo-Ladysmith-Team-2-Team-Member"
+    "ICY-Nanaimo-Ladysmith-Team-2-Clinical-Team-Member" = {
+      "name" = "ICY-Nanaimo-Ladysmith-Team-2-Clinical-Team-Member"
     },
     "ICY-Nanaimo-Ladysmith-Team-3-Program-Leader" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-3-Program-Leader"
@@ -261,8 +258,8 @@ module "client-roles" {
     "ICY-Nanaimo-Ladysmith-Team-3-Non-Clinical-Team-Member" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-3-Non-Clinical-Team-Member"
     },
-    "ICY-Nanaimo-Ladysmith-Team-3-Team-Member" = {
-      "name" = "ICY-Nanaimo-Ladysmith-Team-3-Team-Member"
+    "ICY-Nanaimo-Ladysmith-Team-3-Clinical-Team-Member" = {
+      "name" = "ICY-Nanaimo-Ladysmith-Team-3-Clinical-Team-Member"
     },
     "ICY-Nanaimo-Ladysmith-Team-4-Program-Leader" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-4-Program-Leader"
@@ -273,8 +270,8 @@ module "client-roles" {
     "ICY-Nanaimo-Ladysmith-Team-4-Non-Clinical-Team-Member" = {
       "name" = "ICY-Nanaimo-Ladysmith-Team-4-Non-Clinical-Team-Member"
     },
-    "ICY-Nanaimo-Ladysmith-Team-4-Team-Member" = {
-      "name" = "ICY-Nanaimo-Ladysmith-Team-4-Team-Member"
+    "ICY-Nanaimo-Ladysmith-Team-4-Clinical-Team-Member" = {
+      "name" = "ICY-Nanaimo-Ladysmith-Team-4-Clinical-Team-Member"
     },
     "ICY-North-Okanagan-Shuswap-Team-1-Program-Leader" = {
       "name" = "ICY-North-Okanagan-Shuswap-Team-1-Program-Leader"
@@ -285,8 +282,8 @@ module "client-roles" {
     "ICY-North-Okanagan-Shuswap-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-North-Okanagan-Shuswap-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-North-Okanagan-Shuswap-Team-1-Team-Member" = {
-      "name" = "ICY-North-Okanagan-Shuswap-Team-1-Team-Member"
+    "ICY-North-Okanagan-Shuswap-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-North-Okanagan-Shuswap-Team-1-Clinical-Team-Member"
     },
     "ICY-Pacific-Rim-Team-1-Program-Leader" = {
       "name" = "ICY-Pacific-Rim-Team-1-Program-Leader"
@@ -297,8 +294,8 @@ module "client-roles" {
     "ICY-Pacific-Rim-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-Pacific-Rim-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-Pacific-Rim-Team-1-Team-Member" = {
-      "name" = "ICY-Pacific-Rim-Team-1-Team-Member"
+    "ICY-Pacific-Rim-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-Pacific-Rim-Team-1-Clinical-Team-Member"
     },
     "ICY-qathet-Powell-River-Team-1-Program-Leader" = {
       "name" = "ICY-qathet-Powell-River-Team-1-Program-Leader"
@@ -309,9 +306,10 @@ module "client-roles" {
     "ICY-qathet-Powell-River-Team-1-Non-Clinical-Team-Member" = {
       "name" = "ICY-qathet-Powell-River-Team-1-Non-Clinical-Team-Member"
     },
-    "ICY-qathet-Powell-River-Team-1-Team-Member" = {
-      "name" = "ICY-qathet-Powell-River-Team-1-Team-Member"
-    }
+    "ICY-qathet-Powell-River-Team-1-Clinical-Team-Member" = {
+      "name" = "ICY-qathet-Powell-River-Team-1-Clinical-Team-Member"
+    },
+
   }
 }
 
