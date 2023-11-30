@@ -19,6 +19,8 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
+    "https://healthbc--hotfixdev.sandbox.my.salesforce.com/*",
+    "https://healthbc--hotfixdev.sandbox.my.site.com/*",
     "https://healthbc--pmycareidp.sandbox.my.salesforce.com/*",
     "https://healthbc--pmycareidp.sandbox.my.site.com/*",
     "https://healthbc--hlthbcdevx.sandbox.my.salesforce.com/*",
