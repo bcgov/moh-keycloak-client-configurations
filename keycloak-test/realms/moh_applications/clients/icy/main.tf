@@ -328,14 +328,3 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   name                        = "client roles"
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
 }
-
-resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
-  realm_id  = keycloak_openid_client.CLIENT.realm_id
-  client_id = keycloak_openid_client.CLIENT.id
-  default_scopes = [
-    "email",
-    "profile",
-    "roles",
-    "web-origins"
-  ]
-}
