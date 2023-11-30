@@ -36,29 +36,29 @@ module "client-roles" {
     "ICY-Business-Administrator" = {
       "name" = "ICY-Business-Administrator"
     },
-    "ICY-Coast-Mountains-Team-Hazelton-Program-Leader" = {
-      "name" = "ICY-Coast-Mountains-Team-Hazelton-Program-Leader"
+    "ICY-Coast-Mountains-Hazelton-Program-Leader" = {
+      "name" = "ICY-Coast-Mountains-Hazelton-Program-Leader"
     },
-    "ICY-Coast-Mountains-Team-Hazelton-Admin" = {
-      "name" = "ICY-Coast-Mountains-Team-Hazelton-Admin"
+    "ICY-Coast-Mountains-Hazelton-Admin" = {
+      "name" = "ICY-Coast-Mountains-Hazelton-Admin"
     },
-    "ICY-Coast-Mountains-Team-Hazelton-Non-Clinical-Team-Member" = {
-      "name" = "ICY-Coast-Mountains-Team-Hazelton-Non-Clinical-Team-Member"
+    "ICY-Coast-Mountains-Hazelton-Non-Clinical-Team-Member" = {
+      "name" = "ICY-Coast-Mountains-Hazelton-Non-Clinical-Team-Member"
     },
-    "ICY-Coast-Mountains-Team-Hazelton-Clinical-Team-Member" = {
-      "name" = "ICY-Coast-Mountains-Team-Hazelton-Clinical-Team-Member"
+    "ICY-Coast-Mountains-Hazelton-Clinical-Team-Member" = {
+      "name" = "ICY-Coast-Mountains-Hazelton-Clinical-Team-Member"
     },
-    "ICY-Coast-Mountains-Team-Terrace-Program-Leader" = {
-      "name" = "ICY-Coast-Mountains-Team-Terrace-Program-Leader"
+    "ICY-Coast-Mountains-Terrace-Program-Leader" = {
+      "name" = "ICY-Coast-Mountains-Terrace-Program-Leader"
     },
-    "ICY-Coast-Mountains-Team-Terrace-Admin" = {
-      "name" = "ICY-Coast-Mountains-Team-Terrace-Admin"
+    "ICY-Coast-Mountains-Terrace-Admin" = {
+      "name" = "ICY-Coast-Mountains-Terrace-Admin"
     },
-    "ICY-Coast-Mountains-Team-Terrace-Non-Clinical-Team-Member" = {
-      "name" = "ICY-Coast-Mountains-Team-Terrace-Non-Clinical-Team-Member"
+    "ICY-Coast-Mountains-Terrace-Non-Clinical-Team-Member" = {
+      "name" = "ICY-Coast-Mountains-Terrace-Non-Clinical-Team-Member"
     },
-    "ICY-Coast-Mountains-Team-Terrace-Clinical-Team-Member" = {
-      "name" = "ICY-Coast-Mountains-Team-Terrace-Clinical-Team-Member"
+    "ICY-Coast-Mountains-Terrace-Clinical-Team-Member" = {
+      "name" = "ICY-Coast-Mountains-Terrace-Clinical-Team-Member"
     },
     "ICY-Comox-Valley-Team-1-Program-Leader" = {
       "name" = "ICY-Comox-Valley-Team-1-Program-Leader"
