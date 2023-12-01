@@ -55,11 +55,6 @@ module "MAID-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
-module "PAS-MANAGEMENT" {
-  source                  = "./groups/pas-management"
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-}
-
 module "PHO-RSC-MANAGEMENT" {
   source                  = "./groups/pho-rsc-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
