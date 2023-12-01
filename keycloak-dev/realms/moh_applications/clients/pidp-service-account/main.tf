@@ -24,6 +24,27 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+resource "keycloak_openid_audience_protocol_mapper" "PIDP-SERVICE-aud-mapper" {
+  add_to_id_token          = false
+  client_id                = keycloak_openid_client.CLIENT.id
+  included_client_audience = "PIDP-SERVICE"
+  name                     = "PIDP-SERVICE aud mapper"
+  realm_id                 = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {
+  add_to_access_token         = true
+  add_to_id_token             = true
+  add_to_userinfo             = true
+  claim_name                  = "resource_access.PIDP-SERVICE.roles"
+  claim_value_type            = "String"
+  client_id                   = keycloak_openid_client.CLIENT.id
+  client_id_for_role_mappings = "PIDP-SERVICE"
+  multivalued                 = true
+  name                        = "client roles"
+  realm_id                    = keycloak_openid_client.CLIENT.realm_id
+}
+
 module "client-roles" {
   source    = "../../../../../modules/client-roles"
   client_id = keycloak_openid_client.CLIENT.id
