@@ -73,6 +73,9 @@ module "HOOPC" {
 module "HSCIS" {
   source = "./clients/hscis"
 }
+module "HSIAR" {
+  source = "./clients/hsiar"
+}
 module "HSPP" {
   source = "./clients/hspp"
 }

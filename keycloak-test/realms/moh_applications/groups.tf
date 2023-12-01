@@ -67,6 +67,11 @@ module "MAID-ACCESS-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "PAS-MANAGEMENT" {
+  source                  = "./groups/pas-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "PIDP-MANAGEMENT" {
   source                  = "./groups/pidp-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
