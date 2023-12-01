@@ -57,6 +57,11 @@ module "HSPP-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "ICY-MANAGEMENT" {
+  source                  = "./groups/icy-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "ITSB-ACCESS-TEAM" {
   source                  = "./groups/itsb-access-team"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
