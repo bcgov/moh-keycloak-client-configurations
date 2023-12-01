@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "ICY"
   consent_required                    = false
-  description                         = "ICY teams bring together community agencies, school support resources, and clinicians to work in an integrated and collaborative manner to address the mental health and/or substance use needs of children, youth, and their families - where and when they need it."
+  description                         = "ICY teams goal is to address the mental health and/or substance use needs of children, youth, and their families."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
