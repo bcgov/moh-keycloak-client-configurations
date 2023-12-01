@@ -39,7 +39,7 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   claim_name                  = "resource_access.PIDP-SERVICE.roles"
   claim_value_type            = "String"
   client_id                   = keycloak_openid_client.CLIENT.id
-  client_id_for_role_mappings = "PIDP-SERVICE"
+  client_id_for_role_mappings = "PIDP-SERVICE-ACCOUNT"
   multivalued                 = true
   name                        = "client roles"
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
