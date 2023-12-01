@@ -116,6 +116,9 @@ module "HSIAR" {
 module "HSPP" {
   source = "./clients/hspp"
 }
+module "ICY" {
+  source = "./clients/icy"
+}
 module "IEN" {
   source = "./clients/ien"
 }
