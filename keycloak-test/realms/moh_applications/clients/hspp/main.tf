@@ -23,6 +23,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://localhost:*",
     "https://uathspp.hlth.gov.bc.ca/*",
     "https://devhspp.healthideas.gov.bc.ca/*",
+    "https://devsecure.healthideas.gov.bc.ca/*",
     "https://moh-dms-m-sit-as-hspp.azurewebsites.net/*"
   ]
   web_origins = [
