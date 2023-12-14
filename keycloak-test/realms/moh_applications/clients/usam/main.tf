@@ -45,3 +45,13 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "idir_username" {
   user_attribute  = "idir_username"
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "idir_user_guid" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "idir_user_guid"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "idir_user_guid"
+  user_attribute  = "idir_user_guid"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}
