@@ -137,6 +137,10 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
+    "Default_Role" = {
+      "name"        = "Default_Role"
+      "description" = ""
+    },
     "PC_Patient" = {
       "name"        = "PC_Patient"
       "description" = ""
