@@ -59,6 +59,14 @@ module "client-roles" {
       "name"        = "internalpho"
       "description" = ""
     },
+    "hsiar_wfm" = {
+      "name"        = "hsiar_wfm"
+      "description" = ""
+    },
+    "hsiar_phar" = {
+      "name"        = "hsiar_phar"
+      "description" = ""
+    },
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role" {
