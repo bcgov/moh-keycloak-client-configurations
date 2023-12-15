@@ -59,8 +59,8 @@ module "client-roles" {
       "name"        = "internalpho"
       "description" = ""
     },
-    "hsiar_wfm" = {
-      "name"        = "hsiar_wfm"
+    "hsiar_wfa" = {
+      "name"        = "hsiar_wfa"
       "description" = ""
     },
     "hsiar_phar" = {

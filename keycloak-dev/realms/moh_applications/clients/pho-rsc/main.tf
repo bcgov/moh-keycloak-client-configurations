@@ -60,8 +60,8 @@ module "client-roles" {
       "name"        = "hsiar_ppd"
       "description" = ""
     },
-    "hsiar_wfm" = {
-      "name"        = "hsiar_wfm"
+    "hsiar_wfa" = {
+      "name"        = "hsiar_wfa"
       "description" = ""
     },
     "hsiar_phar" = {
