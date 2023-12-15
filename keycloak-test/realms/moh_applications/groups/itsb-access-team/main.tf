@@ -20,6 +20,7 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-gis"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hamis"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hscis"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-icy"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt_stg"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-dbaac-portal"].id,
