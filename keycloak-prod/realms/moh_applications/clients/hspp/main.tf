@@ -89,7 +89,7 @@ module "client-roles" {
     "HSPP_Restricted_ACFT" = {
       "name" = "HSPP_Restricted_ACFT"
     },
-	"HSPP_Restricted_CVC" = {
+    "HSPP_Restricted_CVC" = {
       "name" = "HSPP_Restricted_CVC"
     },
     "HSPP_Restricted_ED" = {
