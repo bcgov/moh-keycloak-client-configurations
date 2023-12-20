@@ -4,6 +4,9 @@ module "account" {
 module "realm-management" {
   source = "../../../modules/realm-management"
 }
+module "ALR" {
+  source = "./clients/alr"
+}
 module "BCER-CP" {
   source = "./clients/bcer-cp"
 }
