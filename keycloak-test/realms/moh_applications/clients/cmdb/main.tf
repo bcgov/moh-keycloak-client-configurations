@@ -6,7 +6,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Configuration Management Database (CMDB) is used to store information on MoH software assets"
-  service_accounts_enabled = false
+  service_accounts_enabled           = false
   valid_redirect_uris = [
     "https://cmdbt.hlth.gov.bc.ca/*",
     "http://localhost:8444/*"
