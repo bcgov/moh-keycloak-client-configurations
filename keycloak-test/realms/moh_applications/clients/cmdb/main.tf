@@ -1,25 +1,27 @@
-module "payara-client" {
-  source                             = "../../../../../modules/payara-client"
-  base_url                           = "https://cmdbt.hlth.gov.bc.ca"
-  client_id                          = "CMDB"
-  client_name                        = "CMDB"
-  client_role_mapper_add_to_id_token = false
-  client_role_mapper_add_to_userinfo = false
-  description                        = "The Configuration Management Database (CMDB) is used to store information on MoH software assets"
-  service_accounts_enabled           = false
+resource "keycloak_openid_client" "CMDB" {
+  access_token_lifespan               = ""
+  access_type                         = "CONFIDENTIAL"
+  backchannel_logout_session_required = true
+  base_url                            = ""
+  client_authenticator_type           = "client-secret"
+  client_id                           = "CMDB"
+  consent_required                    = false
+  description                         = "Configuration Management Database (CMDB) is a database for with a COTS front end for tracking MoH Software Assets"
+  direct_access_grants_enabled        = false
+  enabled                             = true
+  frontchannel_logout_enabled         = false
+  full_scope_allowed                  = false
+  implicit_flow_enabled               = false
+  name                                = "CMDB"
+  realm_id                            = "moh_applications"
+  service_accounts_enabled            = false
+  standard_flow_enabled               = true
+  use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://cmdbt.hlth.gov.bc.ca/*",
-    "http://localhost:8444/*"
+    "https://localhost:8444/*",
+    "https://cmdbt.hlth.gov.bc.ca/*"
   ]
-}
-resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
-  realm_id  = module.payara-client.CLIENT.realm_id
-  client_id = module.payara-client.CLIENT.id
-  default_scopes = [
-    "profile",
-    "email",
-    "roles",
-    "web-origins"
+  web_origins = [
   ]
 }
 
