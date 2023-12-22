@@ -24,13 +24,3 @@ resource "keycloak_openid_client" "CMDB" {
   web_origins = [
   ]
 }
-
-resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
-  add_to_id_token  = false
-  claim_name       = "identity_provider"
-  claim_value_type = "String"
-  client_id        = module.payara-client.CLIENT.id
-  name             = "IDP"
-  realm_id         = module.payara-client.CLIENT.realm_id
-  session_note     = "identity_provider"
-}
