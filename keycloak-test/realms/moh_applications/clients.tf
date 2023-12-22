@@ -16,6 +16,9 @@ module "BCHCIM" {
 module "CONNECT" {
   source = "./clients/connect"
 }
+module "CMDB" {
+  source = "./clients/cmdb"
+}
 module "DEMO-CLIENT" {
   source = "./clients/demo-client"
 }
