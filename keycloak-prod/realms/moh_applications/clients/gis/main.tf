@@ -19,5 +19,6 @@ module "payara-client" {
     "https://gis.hlth.gov.bc.ca/*",
     "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
+    "https://gis.ynr9ed-prod.nimbus.cloud.gov.bc.ca/gis/*"
   ]
 }
