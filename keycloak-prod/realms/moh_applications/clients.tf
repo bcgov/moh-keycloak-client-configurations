@@ -227,3 +227,6 @@ module "WEBCAPS" {
 module "TPL" {
   source = "./clients/tpl"
 }
+module "ICY" {
+  source = "./clients/icy"
+}
