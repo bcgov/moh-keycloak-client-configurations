@@ -105,7 +105,13 @@ module "TBCM-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "TPL-MANAGEMENT" {
+  source                  = "./groups/tpl-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "WEBCAPS-USER-ADMIN" {
   source                  = "./groups/webcaps-user-admin"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+

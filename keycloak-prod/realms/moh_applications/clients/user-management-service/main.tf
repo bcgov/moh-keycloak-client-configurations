@@ -139,6 +139,9 @@ module "client-roles" {
     "view-client-tbcm" = {
       "name" = "view-client-tbcm"
     },
+    "view-client-tpl" = {
+      "name" = "view-client-tpl"
+    },
     "view-client-webcaps" = {
       "name" = "view-client-webcaps"
     },

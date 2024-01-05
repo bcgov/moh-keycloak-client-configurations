@@ -224,3 +224,6 @@ module "USER-MANAGEMENT" {
 module "WEBCAPS" {
   source = "./clients/webcaps"
 }
+module "TPL" {
+  source = "./clients/tpl"
+}
