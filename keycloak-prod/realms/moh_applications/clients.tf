@@ -139,6 +139,10 @@ module "PIDP-WEBAPP" {
 module "PLR" {
   source = "./clients/plr"
 }
+module "PLR-PRP" {
+  source = "./clients/plr-prp"
+  PLR    = module.PLR
+}
 module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"
   PLR    = module.PLR
