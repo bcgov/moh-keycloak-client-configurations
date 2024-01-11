@@ -79,6 +79,9 @@ module "HSIAR" {
 module "HSPP" {
   source = "./clients/hspp"
 }
+module "ICY" {
+  source = "./clients/icy"
+}
 module "IEN" {
   source = "./clients/ien"
 }
@@ -210,6 +213,9 @@ module "terraform" {
   source           = "./clients/terraform"
   realm-management = module.realm-management
 }
+module "TPL" {
+  source = "./clients/tpl"
+}
 module "USER-MANAGEMENT-SERVICE" {
   source            = "./clients/user-management-service"
   realm-management  = module.realm-management
@@ -223,7 +229,4 @@ module "USER-MANAGEMENT" {
 }
 module "WEBCAPS" {
   source = "./clients/webcaps"
-}
-module "TPL" {
-  source = "./clients/tpl"
 }

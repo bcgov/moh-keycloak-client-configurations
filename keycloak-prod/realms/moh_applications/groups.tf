@@ -115,3 +115,7 @@ module "WEBCAPS-USER-ADMIN" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "ICY-MANAGEMENT" {
+  source                  = "./groups/icy-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}

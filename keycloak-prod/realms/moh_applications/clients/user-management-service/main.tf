@@ -85,6 +85,9 @@ module "client-roles" {
     "view-client-hspp" = {
       "name" = "view-client-hspp"
     },
+    "view-client-icy" = {
+      "name" = "view-client-icy"
+    },
     "view-client-licence-status" = {
       "name" = "view-client-licence-status"
     },
