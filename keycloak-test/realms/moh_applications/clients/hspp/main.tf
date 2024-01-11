@@ -25,7 +25,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://devhspp.healthideas.gov.bc.ca/*",
     "https://devsecure.healthideas.gov.bc.ca/*",
     "https://moh-dms-m-sit-as-hspp.azurewebsites.net/*",
-    "https://sithspp.healthideas.gov.bc.ca/*",
+    "https://sithspp.hlth.gov.bc.ca/*",
   ]
   web_origins = [
   ]
