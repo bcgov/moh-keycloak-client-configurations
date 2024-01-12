@@ -1,3 +1,8 @@
+module "ALR-MANAGEMENT" {
+  source                  = "./groups/alr-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "CGI-DEVELOPER" {
   source                  = "./groups/cgi-developer"
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
