@@ -46,6 +46,9 @@ module "client-roles" {
     "manage-user-roles" = {
       "name" = "manage-user-roles"
     },
+    "view-client-alr" = {
+      "name" = "view-client-alr"
+    },
     "view-client-bcer-cp" = {
       "name" = "view-client-bcer-cp"
     },
