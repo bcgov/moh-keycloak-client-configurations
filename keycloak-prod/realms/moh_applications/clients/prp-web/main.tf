@@ -21,7 +21,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "https://uatprp.hlth.gov.bc.ca/*",
     "https://prp.hlth.gov.bc.ca/*",
-
+    "https://localhost:44325/*",
   ]
   web_origins = [
     "*",
