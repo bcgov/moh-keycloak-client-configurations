@@ -56,6 +56,7 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/manage-org"                            = var.USER-MANAGEMENT-SERVICE.ROLES["manage-org"].id,
     "USER-MANAGEMENT-SERVICE/manage-own-groups"                     = var.USER-MANAGEMENT-SERVICE.ROLES["manage-own-groups"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-roles"                     = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-alr"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-alr"].id,
     "USER-MANAGEMENT-SERVICE/view-client-bcer-cp"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-bcer-cp"].id,
     "USER-MANAGEMENT-SERVICE/view-client-dhiper"                    = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-dhiper"].id,
     "USER-MANAGEMENT-SERVICE/view-client-dmft-webappp"              = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-dmft-webapp"].id,
