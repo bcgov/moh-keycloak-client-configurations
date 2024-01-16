@@ -58,6 +58,10 @@ module "client-roles" {
       "name" : "ALR_Admin_Clerk",
       "description" : ""
     },
+    "ALR_Admin_Data_Analyst" : {
+      "name" : "ALR_Admin_Data_Analyst",
+      "description" : ""
+    },
     "ALR_Data_Analyst" : {
       "name" : "ALR_Data_Analyst",
       "description" : ""
