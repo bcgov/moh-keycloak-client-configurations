@@ -7,7 +7,7 @@ module "payara-client" {
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
   description                        = "The Healthcare Client Identity Management Web Application provides a web interface to the HCIM system services, allowing point-of-service users to find, add or update health clients, view documented identity and confirm eligibility."
-  login_theme                        = "moh-app-realm-bcsc-idp-22"
+  login_theme                        = "moh-app-realm-bcsc-idp"
   mapper_name                        = "HCIMWEB Role"
   roles = {
     "HIBC_REG_NEWBORN" = {
