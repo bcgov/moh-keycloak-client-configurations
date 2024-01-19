@@ -4,6 +4,9 @@ module "account" {
 module "realm-management" {
   source = "../../../modules/realm-management"
 }
+module "ALR" {
+  source = "./clients/alr"
+}
 module "BCER-CP" {
   source = "./clients/bcer-cp"
 }
@@ -138,6 +141,10 @@ module "PIDP-WEBAPP" {
 }
 module "PLR" {
   source = "./clients/plr"
+}
+module "PLR-PRP" {
+  source = "./clients/plr-prp"
+  PLR    = module.PLR
 }
 module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"

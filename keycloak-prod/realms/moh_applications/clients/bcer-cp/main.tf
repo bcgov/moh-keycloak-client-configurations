@@ -20,6 +20,7 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://bcer.hlth.gov.bc.ca/portal/*",
+    "https://drac0atkqiq1j.cloudfront.net/portal/*",
   ]
   web_origins = [
     "+",

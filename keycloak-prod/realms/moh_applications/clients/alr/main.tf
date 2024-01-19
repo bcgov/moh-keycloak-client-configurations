@@ -19,10 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
-    "https://bcministryofhealth-environmentalh2--stage.sandbox.my.salesforce.com/*",
-    "https://bcministryofhealth-environmentalh2--dev.sandbox.my.salesforce.com/*",
-    "https://bcministryofhealth-environmentalh2--stx01.sandbox.my.salesforce.com/*",
-    "https://bcministryofhealth-environmentalh2--qa01.sandbox.my.salesforce.com/*",
+    "https://bcministryofhealth-environmentalh2.lightning.force.com/*"
   ]
   web_origins = [
   ]
