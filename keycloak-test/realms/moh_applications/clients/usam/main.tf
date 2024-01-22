@@ -23,7 +23,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://localhost:*",
   ]
   web_origins = [
-    "*"
+    "+"
   ]
 }
 
