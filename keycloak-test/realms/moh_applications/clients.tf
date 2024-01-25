@@ -400,10 +400,6 @@ module "SWT_STG" {
 module "TAP" {
   source = "./clients/tap"
 }
-module "terraform" {
-  source           = "./clients/terraform"
-  realm-management = module.realm-management
-}
 module "TBCM" {
   source = "./clients/tbcm"
 }
