@@ -130,10 +130,6 @@ module "SA-HIBC-SERVICE-BC-PORTAL" {
 module "SA-SFDC" {
   source = "./clients/sa-sfdc"
 }
-module "terraform" {
-  source           = "./clients/terraform"
-  realm-management = module.realm-management
-}
 module "USER-MANAGEMENT-SERVICE" {
   source            = "./clients/user-management-service"
   realm-management  = module.realm-management
