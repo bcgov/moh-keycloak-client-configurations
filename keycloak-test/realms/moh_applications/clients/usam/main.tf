@@ -21,6 +21,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
+    "https://devsecure.healthideas.gov.bc.ca/usam/*"
   ]
   web_origins = [
     "+"
