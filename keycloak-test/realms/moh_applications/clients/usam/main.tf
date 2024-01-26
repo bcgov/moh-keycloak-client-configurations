@@ -21,7 +21,8 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://devsecure.healthideas.gov.bc.ca/usam/*"
+    "https://devsecure.healthideas.gov.bc.ca/usam/*",
+    "http://decumaria.hlth.gov.bc.ca:8090/usam/*",
   ]
   web_origins = [
     "+"
