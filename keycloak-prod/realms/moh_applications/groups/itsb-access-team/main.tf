@@ -18,6 +18,7 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-fmdb"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hamis"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hscis"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-icy"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-dbaac-portal"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-hibc-service-bc-portal"].id,
