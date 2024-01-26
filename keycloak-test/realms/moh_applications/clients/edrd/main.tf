@@ -21,6 +21,10 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "https://bchealth--edrduat.sandbox.my.salesforce.com/*",
     "https://bchealth--edrduat.sandbox.my.site.com/*",
+    "https://bchealth--edrddev.sandbox.my.site.com/edrdportal/*",
+    "bchealth--edrddev.sandbox.my.salesforce.com/*",
+    "bchealth--edrdqa.sandbox.my.salesforce.com/*",
+    "https://bchealth--edrdqa.sandbox.my.site.com/edrdportalQA/*",
   ]
   web_origins = [
   ]
