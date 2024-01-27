@@ -22,7 +22,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:*",
     "https://localhost:*",
     "https://devsecure.healthideas.gov.bc.ca/usam/*",
-    "http://decumaria.hlth.gov.bc.ca:8090/usam/*",
+    "https://decumaria.hlth.gov.bc.ca:8090/usam/*",
   ]
   web_origins = [
     "+"
