@@ -34,11 +34,17 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "EDRD_Admin" = {
-      "name" = "EDRD_Admin"
+    "EDRD_PHSA_PSP_Staff" = {
+      "name" = "EDRD_PHSA_PSP_Staff"
     },
-    "EDRD_Staff" = {
-      "name" = "EDRD_Staff"
+    "EDRD_MoH_Staff" = {
+      "name" = "EDRD_MoH_Staff"
+    },
+    "EDRD_Physicians" = {
+      "name" = "EDRD_Physicians"
+    },
+    "EDRD_Super_Users" = {
+      "name" = "EDRD_Super_Users"
     },
   }
 }
