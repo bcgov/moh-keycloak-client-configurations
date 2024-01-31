@@ -52,6 +52,11 @@ module "EMCOD-ACCESS-TEAM" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "HEALTH-IDEAS-MANAGEMENT" {
+  source                  = "./groups/health-ideas-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "HIBC-ACCESS-MANAGEMENT" {
   source                  = "./groups/hibc-access-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE

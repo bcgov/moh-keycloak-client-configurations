@@ -96,6 +96,9 @@ module "HCIM_VIHA" {
 module "HDPBC" {
   source = "./clients/hdpbc"
 }
+module "HEALTH-IDEAS" {
+  source = "./clients/health-ideas"
+}
 module "HEM" {
   source = "./clients/hem"
 }
