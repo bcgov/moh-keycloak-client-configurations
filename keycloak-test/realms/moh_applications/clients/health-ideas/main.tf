@@ -35,7 +35,7 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   claim_name                  = "roles"
   claim_value_type            = "String"
   client_id                   = keycloak_openid_client.CLIENT.id
-  client_id_for_role_mappings = "HI"
+  client_id_for_role_mappings = "HEALTH-IDEAS"
   multivalued                 = true
   name                        = "client roles"
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
