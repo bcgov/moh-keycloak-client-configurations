@@ -190,7 +190,7 @@ module "ORGANIZATIONS-API" {
   source = "./clients/organizations-api"
 }
 module "PANORAMA" {
-  source                  = "./clients/panorama"
+  source = "./clients/panorama"
 }
 module "PIDP-SERVICE" {
   source                  = "./clients/pidp-service"
