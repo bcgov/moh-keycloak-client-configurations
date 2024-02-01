@@ -5,7 +5,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type    = "client-secret"
   client_id                    = "PANORAMA"
   consent_required             = false
-  description                  = ""
+  description                  = "An eHealth system that allows authorized public health care providers to document and securely store all public health services and care programs in BC and Yukon."
   direct_access_grants_enabled = false
   enabled                      = true
   frontchannel_logout_enabled  = false
