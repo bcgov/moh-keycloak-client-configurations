@@ -209,6 +209,11 @@ module "PLR-LRA" {
   PLR_REV = module.PLR_REV
   PLR_IAT = module.PLR_IAT
 }
+module "PLR-LRA-REGADMIN" {
+  source  = "./clients/plr-lra-regadmin"
+  PLR_REV = module.PLR_REV
+  PLR_IAT = module.PLR_IAT
+}
 module "PLR-PRIMARY-CARE" {
   source   = "./clients/plr-primary-care"
   PLR_IAT  = module.PLR_IAT
