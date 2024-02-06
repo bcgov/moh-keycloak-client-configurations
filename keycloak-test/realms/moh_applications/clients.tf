@@ -99,6 +99,9 @@ module "HDPBC" {
 module "HEALTH-IDEAS" {
   source = "./clients/health-ideas"
 }
+module "HEALTH-IDEAS-APEX" {
+  source = "./clients/health-ideas-apex"
+}
 module "HEM" {
   source = "./clients/hem"
 }
