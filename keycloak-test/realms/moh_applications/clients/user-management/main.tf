@@ -85,6 +85,7 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-miwt_stg"                  = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt_stg"].id,
     "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
     "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service-uat"     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service-uat"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-phlat"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-phlat"].id,
     "USER-MANAGEMENT-SERVICE/view-client-pidp-service"              = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
     "USER-MANAGEMENT-SERVICE/view-client-plr_conf"                  = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_conf"].id,
     "USER-MANAGEMENT-SERVICE/view-client-plr_flvr"                  = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr_flvr"].id,
