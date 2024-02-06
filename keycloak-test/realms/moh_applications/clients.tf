@@ -192,6 +192,9 @@ module "ORGANIZATIONS-API" {
 module "PANORAMA" {
   source = "./clients/panorama"
 }
+module "PHLAT" {
+  source = "./clients/phlat"
+}
 module "PIDP-SERVICE" {
   source                  = "./clients/pidp-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE

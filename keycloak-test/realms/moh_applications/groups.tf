@@ -92,6 +92,11 @@ module "PAS-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "PHLAT-MANAGEMENT" {
+  source                  = "./groups/phlat-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "PIDP-MANAGEMENT" {
   source                  = "./groups/pidp-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE

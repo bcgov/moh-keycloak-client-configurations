@@ -136,6 +136,9 @@ module "client-roles" {
     "view-client-mspdirect-service-uat" = {
       "name" = "view-client-mspdirect-service-uat"
     },
+    "view-client-phlat" = {
+      "name" = "view-client-phlat"
+    },
     "view-client-pidp-service" = {
       "name" = "view-client-pidp-service"
     },
