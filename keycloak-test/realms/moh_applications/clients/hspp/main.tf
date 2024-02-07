@@ -112,6 +112,9 @@ module "client-roles" {
     "HSPP_Restricted_ED" = {
       "name" = "HSPP_Restricted_ED"
     },
+    "HSPP_Restricted_LFP" = {
+      "name" = "HSPP_Restricted_LFP"
+    },
     "HSPP_Restricted_PCR" = {
       "name" = "HSPP_Restricted_PCR"
     },
