@@ -13,6 +13,7 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-own-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-alr"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-bcer-cp"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl_stg"].id,

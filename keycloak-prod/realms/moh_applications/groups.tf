@@ -1,8 +1,3 @@
-module "ALR-MANAGEMENT" {
-  source                  = "./groups/alr-management"
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-}
-
 module "CGI-DBA" {
   source = "./groups/cgi-dba"
   HEM    = module.HEM
