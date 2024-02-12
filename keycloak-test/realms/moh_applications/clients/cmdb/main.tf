@@ -19,7 +19,8 @@ resource "keycloak_openid_client" "CMDB" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://localhost:8444/*",
-    "https://cmdbt.hlth.gov.bc.ca/*"
+    "https://cmdbt.hlth.gov.bc.ca/*",
+    "https://cmdb.ynr9ed-test.nimbus.cloud.gov.bc.ca/*"
   ]
   web_origins = [
   ]
