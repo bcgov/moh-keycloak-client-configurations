@@ -26,6 +26,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://bcministryofhealth-environmentalh2--dat01.sandbox.my.salesforce.com/*",
     "https://bcministryofhealth-environmentalh2--hotfixdev.sandbox.lightning.force.com/*",
     "https://bcministryofhealth-environmentalh2--hotfixqa.sandbox.my.salesforce.com/*",
+    "https://bcministryofhealth-environmentalh2--hotfixdev.sandbox.my.salesforce.com/*",
+    "https://bcministryofhealth-environmentalh2--hotfixqa.sandbox.lightning.force.com/*",
   ]
   web_origins = [
   ]
