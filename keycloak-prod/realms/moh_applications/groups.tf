@@ -5,6 +5,7 @@ module "CGI-DBA" {
 
 module "CGI-DEVELOPER" {
   source                  = "./groups/cgi-developer"
+  CMDB                    = module.CMDB
   FMDB                    = module.FMDB
   GIS                     = module.GIS
   HAMIS                   = module.HAMIS
@@ -21,6 +22,7 @@ module "CGI-DEVELOPER" {
 
 module "CGI-MID-TIER" {
   source           = "./groups/cgi-mid-tier"
+  CMDB             = module.CMDB
   FMDB             = module.FMDB
   HEM              = module.HEM
   MANAGE-USERS     = module.MANAGE-USERS

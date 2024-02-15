@@ -13,6 +13,9 @@ module "BCER-CP" {
 module "BCHCIM" {
   source = "./clients/bchcim"
 }
+module "CMDB" {
+  source = "./clients/cmdb"
+}
 module "CONNECT" {
   source = "./clients/connect"
 }

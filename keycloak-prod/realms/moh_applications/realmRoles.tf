@@ -1,6 +1,7 @@
 module "CGI-APPLICATION-SUPPORT" {
   source            = "./realm-roles/cgi-application-support"
   BCER-CP           = module.BCER-CP
+  CMDB              = module.CMDB
   EACL              = module.EACL
   FMDB              = module.FMDB
   HEM               = module.HEM
