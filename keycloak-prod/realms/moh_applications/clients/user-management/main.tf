@@ -65,6 +65,7 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-gis"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-gis"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hamis"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hamis"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hcimweb"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-health-ideas"              = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-health-ideas"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hem"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hem"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hscis"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hscis"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hsiar"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hsiar"].id,
