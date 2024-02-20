@@ -76,6 +76,9 @@ module "client-roles" {
     "view-client-hcimweb" = {
       "name" = "view-client-hcimweb"
     },
+    "view-client-health-ideas" = {
+      "name" = "view-client-health-ideas"
+    }
     "view-client-hem" = {
       "name" = "view-client-hem"
     },
