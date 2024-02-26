@@ -113,5 +113,8 @@ module "client-roles" {
     "HSPP_Restricted_UPCC" = {
       "name" = "HSPP_Restricted_UPCC"
     },
+    "HSPP_Restricted_UserStatistics" = {
+      "name" = "HSPP_Restricted_UserStatistics"
+    },
   }
 }
