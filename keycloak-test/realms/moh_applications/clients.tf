@@ -198,6 +198,9 @@ module "PANORAMA" {
 module "PHLAT" {
   source = "./clients/phlat"
 }
+module "PHLAT-WEB" {
+  source = "./clients/phlat-web"
+}
 module "PIDP-SERVICE" {
   source                  = "./clients/pidp-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
