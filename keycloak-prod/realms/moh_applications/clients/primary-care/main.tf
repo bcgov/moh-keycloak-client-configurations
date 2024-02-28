@@ -165,6 +165,10 @@ module "client-roles" {
       "name"        = "PC_Provider_Support_Tier0"
       "description" = ""
     },
+    "PC_Provider_Support_Tier1" = {
+      "name"        = "PC_Provider_Support_Tier1"
+      "description" = ""
+    },
     "PC_Reporting_User" = {
       "name"        = "PC_Reporting_User"
       "description" = ""
