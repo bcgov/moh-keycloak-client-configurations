@@ -1,29 +1,31 @@
 resource "keycloak_openid_client" "CLIENT" {
-  access_token_lifespan               = "300"
-  access_type                         = "CONFIDENTIAL"
+  access_token_lifespan               = ""
+  access_type                         = "PUBLIC"
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PHLAT"
+  client_id                           = "PHLAT-WEB"
   consent_required                    = false
-  description                         = "PLR Health Service Delivery Site Data Load Assistant Tool"
+  description                         = "PLR Health Service Delivery Site Data Load Assistant Tool - Web Application"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = "PHLAT"
-  pkce_code_challenge_method          = ""
+  name                                = "PHLAT-WEB"
+  pkce_code_challenge_method          = "S256"
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false
   standard_flow_enabled               = true
-  use_refresh_tokens                  = false
+  use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://d2llaidph43whp.cloudfront.net/app/*",
     "https://localhost:*",
     "http://localhost:*",
+    "https://phlat-dev.hlth.gov.bc.ca/*",
   ]
   web_origins = [
+    "+",
   ]
 }
 
