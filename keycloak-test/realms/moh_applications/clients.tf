@@ -195,8 +195,8 @@ module "ORGANIZATIONS-API" {
 module "PANORAMA" {
   source = "./clients/panorama"
 }
-module "PHLAT" {
-  source = "./clients/phlat"
+module "PHLAT-SERVICE" {
+  source = "./clients/phlat-service"
 }
 module "PHLAT-WEB" {
   source = "./clients/phlat-web"
