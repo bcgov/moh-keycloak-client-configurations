@@ -22,10 +22,12 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://d2llaidph43whp.cloudfront.net/app/*",
     "https://localhost:*",
     "http://localhost:*",
+    "http://localhost:5173/*",
+    "http://localhost:5174/*",
     "https://phlat-dev.hlth.gov.bc.ca/*",
   ]
   web_origins = [
-    "*",
+    "+",
   ]
 }
 
