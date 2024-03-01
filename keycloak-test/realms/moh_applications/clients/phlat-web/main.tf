@@ -12,7 +12,7 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = "PHLAT-WEB"
+  name                                = "PHLAT"
   pkce_code_challenge_method          = "S256"
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false
@@ -22,6 +22,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://d2llaidph43whp.cloudfront.net/app/*",
     "https://localhost:*",
     "http://localhost:*",
+    "http://localhost:5173/*",
+    "http://localhost:5174/*",
     "https://phlat-dev.hlth.gov.bc.ca/*",
   ]
   web_origins = [
@@ -32,7 +34,7 @@ resource "keycloak_openid_client" "CLIENT" {
 resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper-PHLAT" {
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
   client_id                   = keycloak_openid_client.CLIENT.id
-  client_id_for_role_mappings = "PHLAT"
+  client_id_for_role_mappings = "PHLAT-WEB"
   name                        = "PHLAT Role Mapper"
   claim_name                  = "roles"
   multivalued                 = true
