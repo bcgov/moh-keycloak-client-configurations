@@ -121,6 +121,9 @@ module "client-roles" {
     "HSPP_Restricted_PCR" = {
       "name" = "HSPP_Restricted_PCR"
     },
+    "HSPP_Restricted_PDAO" = {
+      "name" = "HSPP_Restricted_PDAO"
+    },
     "HSPP_Restricted_PEP" = {
       "name" = "HSPP_Restricted_PEP"
     },
