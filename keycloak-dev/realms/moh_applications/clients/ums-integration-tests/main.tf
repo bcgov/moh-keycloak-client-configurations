@@ -31,7 +31,7 @@ module "client-roles" {
   roles = {
     "TEST_ROLE" = {
       "name"        = "TEST_ROLE"
-      "description" = "Role used in UMS integration tests"
+      "description" = "Role used in UMS integration tests. this role should NOT be assigned"
     },
     "getUsersInRole_TEST_ROLE" = {
       "name"        = "getUsersInRole_TEST_ROLE"
