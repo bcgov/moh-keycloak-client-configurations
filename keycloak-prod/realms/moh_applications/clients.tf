@@ -152,8 +152,8 @@ module "PLR" {
   source = "./clients/plr"
 }
 module "PLR-LRA" {
-  source  = "./clients/plr-lra"
-  PLR = module.PLR
+  source = "./clients/plr-lra"
+  PLR    = module.PLR
 }
 module "PLR-PRP" {
   source = "./clients/plr-prp"
