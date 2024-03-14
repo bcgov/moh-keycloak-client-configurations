@@ -25,6 +25,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:5173/*",
     "http://localhost:5174/*",
     "https://phlat-dev.hlth.gov.bc.ca/*",
+    "https://phlat-test.hlth.gov.bc.ca/*",
   ]
   web_origins = [
     "+",
