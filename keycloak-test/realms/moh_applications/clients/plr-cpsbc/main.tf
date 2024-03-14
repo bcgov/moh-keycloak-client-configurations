@@ -42,7 +42,7 @@ module "service-account-roles" {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
-    "PLR_IAT/CONSUMER" = {
+    "PLR_IAT/PRIMARY_SOURCE" = {
       "client_id" = var.PLR_IAT.CLIENT.id,
       "role_id"   = "PRIMARY_SOURCE"
     }
