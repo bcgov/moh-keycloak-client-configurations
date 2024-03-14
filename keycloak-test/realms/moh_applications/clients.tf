@@ -213,6 +213,10 @@ module "PIDP-WEBAPP" {
   account      = module.account
   PIDP-SERVICE = module.PIDP-SERVICE
 }
+module "PLR-CPSBC" {
+  source  = "./clients/plr-cpsbc"
+  PLR_IAT = module.PLR_IAT
+}
 module "PLR-LRA" {
   source  = "./clients/plr-lra"
   PLR_REV = module.PLR_REV
