@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "EDRD-PORTAL"
   consent_required                    = false
-  description                         = "Expensive Drugs for Rare Disease - Portal for Perscribers"
+  description                         = "Expensive Drugs for Rare Disease - Portal for Prescribers"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
