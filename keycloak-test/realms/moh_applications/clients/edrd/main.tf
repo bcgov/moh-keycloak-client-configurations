@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "EDRD"
   consent_required                    = false
-  description                         = "Expensive Drugs for Rare Disease"
+  description                         = "Expensive Drugs for Rare Disease - Case Management"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
@@ -20,11 +20,8 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = false
   valid_redirect_uris = [
     "https://bchealth--edrduat.sandbox.my.salesforce.com/*",
-    "https://bchealth--edrduat.sandbox.my.site.com/*",
-    "https://bchealth--edrddev.sandbox.my.site.com/edrdportal/*",
     "https://bchealth--edrddev.sandbox.my.salesforce.com/*",
     "https://bchealth--edrdqa.sandbox.my.salesforce.com/*",
-    "https://bchealth--edrdqa.sandbox.my.site.com/edrdportalQA/*",
   ]
   web_origins = [
   ]
