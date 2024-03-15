@@ -44,7 +44,7 @@ module "EACL_STG" {
   source = "./clients/eacl_stg"
 }
 module "EDRD" {
-  source = "./clients/edrd"
+  source         = "./clients/edrd"
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "EHPR" {
