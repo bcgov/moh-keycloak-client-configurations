@@ -36,6 +36,9 @@ module "HCIMWEB_HD2" {
 module "HCIM-SERVICE" {
   source = "./clients/hcim-service"
 }
+module "HDPBC" {
+  source = "./clients/hdpbc"
+}
 module "HEM" {
   source = "./clients/hem"
 }
