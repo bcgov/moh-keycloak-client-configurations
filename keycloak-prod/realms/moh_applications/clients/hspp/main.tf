@@ -92,6 +92,9 @@ module "client-roles" {
     "HSPP_Restricted_CVC" = {
       "name" = "HSPP_Restricted_CVC"
     },
+    "HSPP_Restricted_DAD" = {
+      "name" = "HSPP_Restricted_DAD"
+    },
     "HSPP_Restricted_ED" = {
       "name" = "HSPP_Restricted_ED"
     },
@@ -101,6 +104,12 @@ module "client-roles" {
     "HSPP_Restricted_MHAD" = {
       "name" = "HSPP_Restricted_MHAD"
     },
+    "HSPP_Restricted_MSCP" = {
+      "name" = "HSPP_Restricted_MSCP"
+    },
+    "HSPP_Restricted_NACRS" = {
+      "name" = "HSPP_Restricted_NACRS"
+    }
     "HSPP_Restricted_PCR" = {
       "name" = "HSPP_Restricted_PCR"
     },
@@ -109,6 +118,9 @@ module "client-roles" {
     },
     "HSPP_Restricted_PEP" = {
       "name" = "HSPP_Restricted_PEP"
+    },
+    "HSPP_Restricted_PublicISC" = {
+      "name" = "HSPP_Restricted_PublicISC"
     },
     "HSPP_Restricted_SAN" = {
       "name" = "HSPP_Restricted_SAN"
