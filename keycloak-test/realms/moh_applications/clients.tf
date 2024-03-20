@@ -171,6 +171,9 @@ module "LRA-TEST" {
 module "MAID" {
   source = "./clients/maid"
 }
+module "METASPACE" {
+  source = "./clients/metaspace"
+}
 module "MIWT" {
   source = "./clients/miwt"
 }
