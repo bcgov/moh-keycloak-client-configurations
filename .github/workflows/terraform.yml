@@ -20,10 +20,10 @@ jobs:
       TF_VAR_prod_client_secret: ${{ secrets.TF_VAR_PROD_CLIENT_SECRET }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: ~1.3.7
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
@@ -33,12 +33,12 @@ jobs:
         run: terraform fmt -check -recursive -diff
 
       - name: Terraform Format Error Details
-        uses: actions/github-script@v6
+        uses: actions/github-script@v7
         if: ${{ failure() }}
         with:
           script: |
             const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
-           
+
             <details><summary>Terraform formatting errors</summary>
 
             \`\`\`\n
@@ -86,7 +86,7 @@ jobs:
           echo "${plan}" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         if: github.event_name == 'pull_request'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
