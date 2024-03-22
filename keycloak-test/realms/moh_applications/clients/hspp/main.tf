@@ -106,6 +106,9 @@ module "client-roles" {
     "HSPP_Restricted_ACFT" = {
       "name" = "HSPP_Restricted_ACFT"
     },
+    "HSPP_Restricted_BCCStat" = {
+      "name" = "HSPP_Restricted_BCCStat"
+    },
     "HSPP_Restricted_CVC" = {
       "name" = "HSPP_Restricted_CVC"
     },
