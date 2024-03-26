@@ -2,7 +2,7 @@ resource "keycloak_openid_client" "CLIENT" {
   access_token_lifespan               = ""
   access_type                         = "CONFIDENTIAL"
   backchannel_logout_session_required = true
-  base_url                            = "https://metadev.healthideas.gov.bc.ca/"
+  base_url                            = "https://meta.healthideas.gov.bc.ca/"
   client_authenticator_type           = "client-secret"
   client_id                           = "METASPACE"
   consent_required                    = false
@@ -19,10 +19,9 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://metaspace.ddev.site/*",
-    "https://metadev.healthideas.gov.bc.ca/*",
-    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
-    "https://qa-sts.healthbc.org/adfs/ls/*",
+    "https://meta.healthideas.gov.bc.ca/*",
+    "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://sts.healthbc.org/adfs/ls/*",
   ]
   web_origins = [
   ]
