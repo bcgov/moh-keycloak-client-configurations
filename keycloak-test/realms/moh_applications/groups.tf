@@ -15,6 +15,11 @@ module "CGI-MIDTIER" {
   realm-management        = module.realm-management
 }
 
+module "CGI-SALESFORCE" {
+  source                  = "./groups/cgi-salesforce"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "CGI-QA" {
   source                  = "./groups/cgi-qa"
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
