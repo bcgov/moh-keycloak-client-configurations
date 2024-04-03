@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "HSIAR"
   consent_required                    = false
-  description                         = "HSIAR client represents HealthIdeas centralized information internal portal which is used to provide good user experience in viewing Power BI reports and other documents."
+  description                         = "HSIAR client represents HealthIdeas centralized information internal portal (HI-CLIIP) which is used to provide good user experience in viewing Power BI reports and other documents."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
@@ -21,7 +21,9 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://uathicliip.healthideas.gov.bc.ca/*"
+    "https://uathicliip.healthideas.gov.bc.ca/*",
+    "https://devhicliip.healthideas.gov.bc.ca/*",
+    "https://sithicliip.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
