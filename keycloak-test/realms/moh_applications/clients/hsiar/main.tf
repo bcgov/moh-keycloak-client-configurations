@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "HSIAR"
   consent_required                    = false
-  description                         = "HSIAR client represents HealthIdeas centralized information internal portal which is used to provide good user experience in viewing Power BI reports and other documents."
+  description                         = "HSIAR client represents HealthIdeas centralized information internal portal (HI-CLIIP) which is used to provide good user experience in viewing Power BI reports and other documents."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
