@@ -21,7 +21,9 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://uathicliip.healthideas.gov.bc.ca/*"
+    "https://uathicliip.healthideas.gov.bc.ca/*",
+    "https://devhicliip.healthideas.gov.bc.ca/*",
+    "https://sithicliip.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
