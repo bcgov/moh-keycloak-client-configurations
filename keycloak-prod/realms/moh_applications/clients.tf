@@ -59,6 +59,9 @@ module "HCAP-SERVICE" {
 module "HCIMWEB" {
   source = "./clients/hcimweb"
 }
+module "HCIMWEB_HS1" {
+  source = "./clients/hcimweb_hs1"
+}
 module "HCIM_LRA" {
   source = "./clients/hcim_lra"
 }

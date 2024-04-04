@@ -15,6 +15,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hamis"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcap-fe"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_hs1"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hem"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hscis"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hsiar"].id,
@@ -46,7 +47,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
     var.USER-MANAGEMENT.ROLES["user-management-admin"].id,
   ]
-  description = "Provides the roles required to manage users using the USER-MANAGEMENT application including roles for all applications. In PROD this role is not provided to specific teams."
+  description = "Provides the roles required to manage users using the USER-MANAGEMENT application including roles for all applications. In PROD this role is provided to CGI Developer and Mid-tier"
   name        = "Manage Users"
   realm_id    = "moh_applications"
 }
