@@ -48,7 +48,7 @@ module "payara-client" {
   use_refresh_tokens       = false
   valid_redirect_uris = [
     "https://hcimweb-cl-stg.hlth.gov.bc.ca/*",
-    "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
   ]
 }
