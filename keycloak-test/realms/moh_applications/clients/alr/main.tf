@@ -86,6 +86,14 @@ module "client-roles" {
       "name" : "ALR_Registrar",
       "description" : ""
     },
+    "ALR_Registrar_Leadership" : {
+      "name" : "ALR_Registrar_Leadership",
+      "description" : ""
+    },
+    "ALR_Registrar_Leadership_Data_Analyst" : {
+      "name" : "ALR_Registrar_Leadership_Data_Analyst",
+      "description" : ""
+    },
     "ALR_Leadership" : {
       "name" : "ALR_Leadership",
       "description" : ""
