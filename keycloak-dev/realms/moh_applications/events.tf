@@ -1,7 +1,7 @@
 resource "keycloak_realm_events" "realm_events" {
   realm_id = "moh_applications"
 
-  events_enabled    = true
+  events_enabled = true
   # There are 31,536,000 seconds in a year.
   events_expiration = 31536000
 
