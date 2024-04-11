@@ -21,6 +21,8 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "https://secure.healthideas.gov.bc.ca/*",
     "https://securet.healthideas.gov.bc.ca/*",
+    "https://external.healthideas.gov.bc.ca/*",
+    "https://externalt.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
 
