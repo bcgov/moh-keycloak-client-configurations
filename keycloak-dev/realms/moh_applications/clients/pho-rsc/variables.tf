@@ -1,0 +1,1 @@
+variable "PHO-RSC-GROUPS" {}
