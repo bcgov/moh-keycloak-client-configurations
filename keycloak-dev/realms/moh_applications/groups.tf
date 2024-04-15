@@ -32,6 +32,10 @@ module "ITSB-ACCESS-TEAM" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
   realm-management        = module.realm-management
 }
+module "PHO-RSC-MANAGEMENT" {
+  source                  = "./groups/pho-rsc-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
 module "PIDP-MANAGEMENT" {
   source                  = "./groups/pidp-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
