@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "PHO-RSC-GROUPS"
   consent_required                    = false
-  description                         = "PHO RStudio Connect Analytics Platform team groups, which are used for organizing users of the platform according to their respective teams. "
+  description                         = "PHO RStudio Connect Analytics Platform team groups, which are used for organizing users of the platform according to their respective teams."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
