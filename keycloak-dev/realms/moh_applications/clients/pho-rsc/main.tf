@@ -80,6 +80,16 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role" {
   add_to_userinfo             = false
   client_id_for_role_mappings = "PHO-RSC"
 }
+resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role-Groups" {
+  realm_id                    = keycloak_openid_client.CLIENT.realm_id
+  client_id                   = keycloak_openid_client.CLIENT.id
+  name                        = "PHO-RSC Role Groups"
+  claim_name                  = "pho-rsc_role_groups"
+  claim_value_type            = "String"
+  add_to_access_token         = false
+  add_to_userinfo             = false
+  client_id_for_role_mappings = "PHO-RSC-GROUPS"
+}
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
