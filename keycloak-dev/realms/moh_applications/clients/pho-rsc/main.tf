@@ -88,3 +88,15 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "profile"
   ]
 }
+module "scope-mappings" {
+  source    = "../../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "PHO-RSC-GROUPS/opho" = var.PHO-RSC-GROUPS.ROLES["opho"].id,
+    "PHO-RSC-GROUPS/hsiar_ppd" = var.PHO-RSC-GROUPS.ROLES["hsiar_ppd"].id,
+    "PHO-RSC-GROUPS/hsiar_dart" = var.PHO-RSC-GROUPS.ROLES["hsiar_dart"].id,
+    "PHO-RSC-GROUPS/hsiar_wfa" = var.PHO-RSC-GROUPS.ROLES["hsiar_wfa"].id,
+    "PHO-RSC-GROUPS/hsiar_phar" = var.PHO-RSC-GROUPS.ROLES["hsiar_phar"].id,
+  }
+}
