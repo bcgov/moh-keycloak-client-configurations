@@ -1,3 +1,25 @@
+locals {
+  event_types = [
+    "CLIENT_LOGIN",
+    "CLIENT_LOGIN_ERROR",
+    "CODE_TO_TOKEN",
+    "CODE_TO_TOKEN_ERROR",
+    "IMPERSONATE",
+    "INTROSPECT_TOKEN",
+    "INTROSPECT_TOKEN_ERROR",
+    "LOGIN",
+    "LOGIN_ERROR",
+    "LOGOUT",
+    "LOGOUT_ERROR",
+    "REFRESH_TOKEN",
+    "REFRESH_TOKEN_ERROR",
+    "REGISTER",
+    "USER_INFO_REQUEST",
+    "VALIDATE_ACCESS_TOKEN",
+    "VALIDATE_ACCESS_TOKEN_ERROR"
+  ]
+}
+
 ######################
 # APPLICATION REALMS #
 ######################
@@ -13,8 +35,7 @@ resource "keycloak_realm_events" "realm_events_bcerd" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -32,8 +53,7 @@ resource "keycloak_realm_events" "realm_events_lra" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -51,8 +71,7 @@ resource "keycloak_realm_events" "realm_events_master" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -70,8 +89,7 @@ resource "keycloak_realm_events" "realm_events_mhsu_foundry" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -89,8 +107,7 @@ resource "keycloak_realm_events" "realm_events_moh_applications" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -108,8 +125,7 @@ resource "keycloak_realm_events" "realm_events_moh_citizen" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -127,8 +143,7 @@ resource "keycloak_realm_events" "realm_events_pidp_sandbox" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -146,8 +161,7 @@ resource "keycloak_realm_events" "realm_events_v2_pos" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -169,8 +183,7 @@ resource "keycloak_realm_events" "realm_events_bceid_basic" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -188,8 +201,7 @@ resource "keycloak_realm_events" "realm_events_bceid_business" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -207,8 +219,7 @@ resource "keycloak_realm_events" "realm_events_bcprovider_aad" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -226,8 +237,7 @@ resource "keycloak_realm_events" "realm_events_bcproviderlab_aad" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -245,8 +255,7 @@ resource "keycloak_realm_events" "realm_events_bcsc" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -264,8 +273,7 @@ resource "keycloak_realm_events" "realm_events_fnha_aad" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -283,8 +291,7 @@ resource "keycloak_realm_events" "realm_events_idir" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -302,8 +309,7 @@ resource "keycloak_realm_events" "realm_events_idir_aad" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -321,8 +327,7 @@ resource "keycloak_realm_events" "realm_events_mhsu_ehs" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -340,8 +345,7 @@ resource "keycloak_realm_events" "realm_events_moh_idp" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -359,8 +363,7 @@ resource "keycloak_realm_events" "realm_events_phsa" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
@@ -378,8 +381,7 @@ resource "keycloak_realm_events" "realm_events_phsa_aad" {
   admin_events_details_enabled = true
 
   # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = [
-  ]
+  enabled_event_types = local.event_types
 
   events_listeners = [
     "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
