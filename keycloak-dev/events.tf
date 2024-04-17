@@ -17,7 +17,7 @@ locals {
     "USER_INFO_REQUEST",
     "VALIDATE_ACCESS_TOKEN",
     "VALIDATE_ACCESS_TOKEN_ERROR"
-  ],
+  ]
   seconds_in_a_year = 31536000
 }
 
