@@ -1,5 +1,6 @@
 resource "keycloak_openid_client" "CLIENT" {
-  access_token_lifespan               = ""
+  # Set token lifespan to TWO HOURS in TEST for ZAP scan.
+  access_token_lifespan               = "7200"
   access_type                         = "PUBLIC"
   backchannel_logout_session_required = true
   base_url                            = ""
