@@ -301,23 +301,6 @@ resource "keycloak_realm_events" "realm_events_idir_aad" {
   ]
 }
 
-resource "keycloak_realm_events" "realm_events_mhsu_ehs" {
-  realm_id = "mhsu_ehs"
-
-  events_enabled    = false
-  events_expiration = local.seconds_in_a_year
-
-  admin_events_enabled         = true
-  admin_events_details_enabled = true
-
-  # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = local.event_types
-
-  events_listeners = [
-    "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
-  ]
-}
-
 resource "keycloak_realm_events" "realm_events_moh_idp" {
   realm_id = "moh_idp"
 
