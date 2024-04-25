@@ -64,11 +64,20 @@ module "client-roles" {
     "HI_ReportProgram_CCHS" = {
       "name" = "HI_ReportProgram_CCHS"
     },
+    "HI_ReportProgram_HSIAR" = {
+      "name" = "HI_ReportProgram_HSIAR"
+    },
     "HI_ReportSection_CCHS" = {
       "name" = "HI_ReportSection_CCHS"
     },
+    "HI_ReportSection_HSIAR" = {
+      "name" = "HI_ReportSection_HSIAR"
+    },
     "HI_CCHS" = {
       "name" = "HI_CCHS"
+    },
+    "HI_HSIAR" = {
+      "name" = "HI_HSIAR"
     },
   }
 }
