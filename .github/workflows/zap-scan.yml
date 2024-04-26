@@ -17,6 +17,6 @@ jobs:
     permissions: write-all
     steps:
       - name: ZAP Baseline Scan
-        uses: zaproxy/action-baseline@v0.9.0
+        uses: zaproxy/action-baseline@v0.12.0
         with:
           target: ${{ vars.APPLICATION_URL }}
