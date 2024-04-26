@@ -20,6 +20,7 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://meta.healthideas.gov.bc.ca/*",
+    "https://meta-tmp.healthideas.gov.bc.ca/*",
     "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
   ]
