@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "HSIAR"
   consent_required                    = false
-  description                         = "HSIAR client represents HealthIdeas centralized information internal portal which is used to provide good user experience in viewing Power BI reports and other documents."
+  description                         = "HSIAR client represents HealthIdeas centralized information internal portal (HI-CLIIP) which is used to provide good user experience in viewing Power BI reports and other documents."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
@@ -21,7 +21,9 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://uathicliip.healthideas.gov.bc.ca/*"
+    "https://uathicliip.healthideas.gov.bc.ca/*",
+    "https://devhicliip.healthideas.gov.bc.ca/*",
+    "https://sithicliip.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
@@ -47,14 +49,14 @@ module "client-roles" {
     "HI_Administrator" = {
       "name" = "HI_Administrator"
     },
-    "HI_ReportProgram_All" = {
-      "name" = "HI_ReportProgram_All"
+    "HI_SUPPORT_ROLE_PROGRAM" = {
+      "name" = "HI_SUPPORT_ROLE_PROGRAM"
     },
-    "HI_ReportSection_All" = {
-      "name" = "HI_ReportSection_All"
+    "HI_SUPPORT_ROLE_SECTION" = {
+      "name" = "HI_SUPPORT_ROLE_SECTION"
     },
-    "HI_Consumer" = {
-      "name" = "HI_Consumer"
+    "HI_SUPPORT_ROLE" = {
+      "name" = "HI_SUPPORT_ROLE"
     },
     "HI_Operation" = {
       "name" = "HI_Operation"
@@ -62,11 +64,38 @@ module "client-roles" {
     "HI_ReportProgram_CCHS" = {
       "name" = "HI_ReportProgram_CCHS"
     },
+    "HI_ReportProgram_External" = {
+      "name" = "HI_ReportProgram_External"
+    },
+    "HI_ReportProgram_HSIAR" = {
+      "name" = "HI_ReportProgram_HSIAR"
+    },
+    "HI_ReportProgram_Secure" = {
+      "name" = "HI_ReportProgram_Secure"
+    },
     "HI_ReportSection_CCHS" = {
       "name" = "HI_ReportSection_CCHS"
     },
+    "HI_ReportSection_External" = {
+      "name" = "HI_ReportSection_External"
+    },
+    "HI_ReportSection_HSIAR" = {
+      "name" = "HI_ReportSection_HSIAR"
+    },
+    "HI_ReportSection_Secure" = {
+      "name" = "HI_ReportSection_Secure"
+    },
     "HI_CCHS" = {
       "name" = "HI_CCHS"
+    },
+    "HI_External" = {
+      "name" = "HI_External"
+    },
+    "HI_HSIAR" = {
+      "name" = "HI_HSIAR"
+    },
+    "HI_Secure" = {
+      "name" = "HI_Secure"
     },
   }
 }

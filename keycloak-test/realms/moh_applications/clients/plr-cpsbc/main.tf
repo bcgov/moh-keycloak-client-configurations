@@ -22,6 +22,15 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
   ]
 }
+resource "keycloak_openid_user_session_note_protocol_mapper" "PLR-Client-ID" {
+  add_to_id_token  = true
+  claim_name       = "clientId"
+  claim_value_type = "String"
+  client_id        = keycloak_openid_client.CLIENT.id
+  name             = "PLR Client ID"
+  realm_id         = keycloak_openid_client.CLIENT.realm_id
+  session_note     = "clientId"
+}
 resource "keycloak_openid_hardcoded_claim_protocol_mapper" "orgId" {
   add_to_access_token = true
   add_to_id_token     = true

@@ -45,14 +45,14 @@ module "client-roles" {
     "HI_Administrator" = {
       "name" = "HI_Administrator"
     },
-    "HI_ReportProgram_All" = {
-      "name" = "HI_ReportProgram_All"
+    "HI_SUPPORT_ROLE_PROGRAM" = {
+      "name" = "HI_SUPPORT_ROLE_PROGRAM"
     },
-    "HI_ReportSection_All" = {
-      "name" = "HI_ReportSection_All"
+    "HI_SUPPORT_ROLE_SECTION" = {
+      "name" = "HI_SUPPORT_ROLE_SECTION"
     },
-    "HI_Consumer" = {
-      "name" = "HI_Consumer"
+    "HI_SUPPORT_ROLE" = {
+      "name" = "HI_SUPPORT_ROLE"
     },
     "HI_Operation" = {
       "name" = "HI_Operation"
@@ -60,11 +60,38 @@ module "client-roles" {
     "HI_ReportProgram_CCHS" = {
       "name" = "HI_ReportProgram_CCHS"
     },
+    "HI_ReportProgram_External" = {
+      "name" = "HI_ReportProgram_External"
+    },
+    "HI_ReportProgram_HSIAR" = {
+      "name" = "HI_ReportProgram_HSIAR"
+    },
+    "HI_ReportProgram_Secure" = {
+      "name" = "HI_ReportProgram_Secure"
+    },
     "HI_ReportSection_CCHS" = {
       "name" = "HI_ReportSection_CCHS"
     },
+    "HI_ReportSection_External" = {
+      "name" = "HI_ReportSection_External"
+    },
+    "HI_ReportSection_HSIAR" = {
+      "name" = "HI_ReportSection_HSIAR"
+    },
+    "HI_ReportSection_Secure" = {
+      "name" = "HI_ReportSection_Secure"
+    },
     "HI_CCHS" = {
       "name" = "HI_CCHS"
+    },
+    "HI_External" = {
+      "name" = "HI_External"
+    },
+    "HI_HSIAR" = {
+      "name" = "HI_HSIAR"
+    },
+    "HI_Secure" = {
+      "name" = "HI_Secure"
     },
   }
 }

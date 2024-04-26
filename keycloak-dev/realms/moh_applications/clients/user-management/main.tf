@@ -70,6 +70,8 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-licence-status"            = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-licence-status"].id,
     "USER-MANAGEMENT-SERVICE/view-client-maid"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-maid"].id,
     "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-pho-rsc"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pho-rsc"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-pho-rsc-groups"            = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pho-rsc-groups"].id,
     "USER-MANAGEMENT-SERVICE/view-client-pidp-service"              = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
     "USER-MANAGEMENT-SERVICE/view-client-plr"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr"].id,
     "USER-MANAGEMENT-SERVICE/view-client-prp-service"               = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-prp-service"].id,

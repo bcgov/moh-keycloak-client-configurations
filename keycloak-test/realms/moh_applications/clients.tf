@@ -461,6 +461,9 @@ module "HCIM_BCMI" {
 module "HCIM_FHA" {
   source = "./clients/hcim_fha"
 }
+module "HCIM_FHA_DFD" {
+  source = "./clients/hcim_fha_dfd"
+}
 module "HCIM_HIBC" {
   source = "./clients/hcim_hibc"
 }
