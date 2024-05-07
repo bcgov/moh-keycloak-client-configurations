@@ -23,7 +23,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://hcapemployers.dev.freshworks.club/*",
     "https://www.hcapparticipants.dev.freshworks.club/*",
     "https://www.hcapemployers.dev.freshworks.club/*",
-    "http://localhost:4000",
+    "http://localhost:4000/*",
     "http://hcapemployers.local.freshworks.club:4000/*",
     "http://hcapparticipants.local.freshworks.club:4000/*",
     "https://hcapemployers.test.freshworks.club/*",
