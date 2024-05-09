@@ -32,7 +32,6 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "identity_provider"
   realm_id         = keycloak_openid_client.CLIENT.realm_id
   session_note     = "identity_provider"
 }
-
 resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccoutname" {
   add_to_id_token = true
   add_to_userinfo = true
@@ -42,12 +41,13 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccoutnam
   user_attribute  = "phsa_windowsaccoutname"
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
-resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccoutname" {
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccountname" {
   add_to_id_token = true
   add_to_userinfo = true
   claim_name      = "preferred_username"
   client_id       = keycloak_openid_client.CLIENT.id
-  name            = "phsa_windowsaccoutname"
-  user_attribute  = "phsa_windowsaccoutname"
+  name            = "phsa_windowsaccountname"
+  user_attribute  = "phsa_windowsaccountname"
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
