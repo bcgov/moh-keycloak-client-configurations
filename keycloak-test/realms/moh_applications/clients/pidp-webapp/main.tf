@@ -72,3 +72,13 @@ module "scope-mappings" {
     "account/view-profile"           = var.account.ROLES["view-profile"].id,
   }
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccoutname" {
+  add_to_id_token = true
+  add_to_userinfo = true
+  claim_name      = "preferred_username"
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "phsa_windowsaccoutname"
+  user_attribute  = "phsa_windowsaccoutname"
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+}

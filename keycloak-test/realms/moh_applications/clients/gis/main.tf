@@ -25,3 +25,13 @@ module "payara-client" {
     "https://gis.ynr9ed-test.nimbus.cloud.gov.bc.ca/gis/*",
   ]
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccoutname" {
+  add_to_id_token = false
+  add_to_userinfo = false
+  claim_name      = "preferred_username"
+  client_id       = module.payara-client.CLIENT.id
+  name            = "phsa_windowsaccoutname"
+  user_attribute  = "phsa_windowsaccoutname"
+  realm_id        = module.payara-client.CLIENT.realm_id
+}
