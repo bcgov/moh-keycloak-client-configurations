@@ -23,7 +23,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://localhost:*",
     "https://uathicliip.healthideas.gov.bc.ca/*",
     "https://devhicliip.healthideas.gov.bc.ca/*",
-    "https://sithicliip.healthideas.gov.bc.ca/*"
+    "https://sithicliip.healthideas.gov.bc.ca/*",
+    "https://uathsiar.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
