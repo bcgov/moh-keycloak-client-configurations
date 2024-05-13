@@ -86,13 +86,3 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
   realm_id         = module.payara-client.CLIENT.realm_id
   session_note     = "identity_provider"
 }
-
-resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccountname" {
-  add_to_id_token = false
-  add_to_userinfo = false
-  claim_name      = "preferred_username"
-  client_id       = module.payara-client.CLIENT.id
-  name            = "phsa_windowsaccountname"
-  user_attribute  = "phsa_windowsaccountname"
-  realm_id        = module.payara-client.CLIENT.realm_id
-}

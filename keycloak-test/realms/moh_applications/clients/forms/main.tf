@@ -70,13 +70,3 @@ resource "keycloak_openid_client_optional_scopes" "client_optional_scopes" {
     "phone"
   ]
 }
-
-resource "keycloak_openid_user_attribute_protocol_mapper" "phsa_windowsaccountname" {
-  add_to_id_token = true
-  add_to_userinfo = true
-  claim_name      = "preferred_username"
-  client_id       = keycloak_openid_client.CLIENT.id
-  name            = "phsa_windowsaccountname"
-  user_attribute  = "phsa_windowsaccountname"
-  realm_id        = keycloak_openid_client.CLIENT.realm_id
-}
