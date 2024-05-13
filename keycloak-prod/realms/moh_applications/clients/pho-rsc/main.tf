@@ -13,7 +13,7 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled              = false
   full_scope_allowed                       = false
   implicit_flow_enabled                    = false
-  name                                     = "PHO RStudio Connect"
+  name                                     = "OPHO Posit Connect"
   pkce_code_challenge_method               = ""
   realm_id                                 = "moh_applications"
   service_accounts_enabled                 = false
