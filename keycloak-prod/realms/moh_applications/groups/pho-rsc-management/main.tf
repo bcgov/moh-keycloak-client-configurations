@@ -12,6 +12,7 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pho-rsc"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pho-rsc-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
