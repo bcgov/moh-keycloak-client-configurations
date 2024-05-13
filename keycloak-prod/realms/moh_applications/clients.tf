@@ -148,6 +148,9 @@ module "ORGANIZATIONS-API" {
 module "PHO-RSC" {
   source = "./clients/pho-rsc"
 }
+module "PHO-RSC-GROUPS" {
+  source = "./clients/pho-rsc-groups"
+}
 module "PIDP-SERVICE" {
   source                  = "./clients/pidp-service"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE

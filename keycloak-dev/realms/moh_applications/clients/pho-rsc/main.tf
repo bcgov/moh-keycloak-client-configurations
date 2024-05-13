@@ -13,7 +13,7 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled              = false
   full_scope_allowed                       = false
   implicit_flow_enabled                    = false
-  name                                     = "PHO RStudio Connect"
+  name                                     = "OPHO Posit Connect"
   pkce_code_challenge_method               = ""
   realm_id                                 = "moh_applications"
   service_accounts_enabled                 = false
@@ -47,27 +47,7 @@ module "client-roles" {
     "publisher" = {
       "name"        = "publisher"
       "description" = ""
-    },
-    "opho" = {
-      "name"        = "opho"
-      "description" = ""
-    },
-    "hsiar_dart" = {
-      "name"        = "hsiar_dart"
-      "description" = ""
-    },
-    "hsiar_ppd" = {
-      "name"        = "hsiar_ppd"
-      "description" = ""
-    },
-    "hsiar_wfa" = {
-      "name"        = "hsiar_wfa"
-      "description" = ""
-    },
-    "hsiar_phar" = {
-      "name"        = "hsiar_phar"
-      "description" = ""
-    },
+    }
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role" {

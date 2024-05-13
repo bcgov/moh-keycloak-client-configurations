@@ -112,6 +112,9 @@ module "client-roles" {
     "view-client-pho-rsc" = {
       "name" = "view-client-pho-rsc"
     },
+    "view-client-pho-rsc-groups" = {
+      "name" = "view-client-pho-rsc-groups"
+    },
     "view-client-pidp-service" = {
       "name" = "view-client-pidp-service"
     },
