@@ -113,6 +113,9 @@ module "HEM" {
 module "HHSLibrary" {
   source = "./clients/hhs-library"
 }
+module "HIDES" {
+  source = "./clients/hides"
+}
 module "HLBC" {
   source = "./clients/hlbc"
 }
