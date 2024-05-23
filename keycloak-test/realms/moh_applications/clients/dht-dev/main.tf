@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "DHT-DEV"
   consent_required                    = false
-  description                         = "Digital Health Toolkit Dev Environment. The client is part of LRA integration."
+  description                         = "Digital Health Toolkit Dev Environment. The client is part of LRA integration. Client used to connect to LRA Authorization Server.  Referenced as DHT-Keycloak in Prod."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false

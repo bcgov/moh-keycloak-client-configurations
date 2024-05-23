@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "LRA-SANDBOX"
   consent_required                    = false
-  description                         = "Longitudinal Record Access. Sandbox Environment. LRA is a FHIR Server to access Longitudinal Health Records."
+  description                         = "Longitudinal Record Access. Sandbox Environment. LRA is a FHIR Server to access Longitudinal Health Records. Client used to connect to LRA Authorization Server. Referenced as DHT-Keycloak in Prod."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false

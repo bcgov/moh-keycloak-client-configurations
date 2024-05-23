@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "DHT-KEYCLOAK"
   consent_required                    = false
-  description                         = "Longitudinal Record Access. LRA is a FHIR Server to access Longitudinal Health Records. In Keycloak TEST we have this client as LRA-DEV, LRA-TEST. Client asked for a different ID."
+  description                         = "Longitudinal Record Access. LRA is a FHIR Server to access Longitudinal Health Records. Client used to connect to LRA Authorization Server. In Keycloak TEST we have this client as LRA-DEV, LRA-TEST, LRA-SANDBOX and DHT-DEV."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
