@@ -19,6 +19,11 @@ module "CMDB" {
 module "CONNECT" {
   source = "./clients/connect"
 }
+module "DHT-KEYCLOAK" {
+  source         = "./clients/dht-keycloak"
+  LICENCE-STATUS = module.LICENCE-STATUS
+
+}
 module "DMFT-SERVICE" {
   source       = "./clients/dmft-service"
   PIDP-SERVICE = module.PIDP-SERVICE
@@ -186,8 +191,9 @@ module "PPM-API-CGI-BC30550160" {
   source = "./clients/ppm-api-cgi-BC30550160"
 }
 module "PRIMARY-CARE" {
-  source         = "./clients/primary-care"
+  source = "./clients/primary-care"
   LICENCE-STATUS = module.LICENCE-STATUS
+
 }
 module "PRIME-APPLICATION" {
   source  = "./clients/prime-application"
