@@ -4,25 +4,22 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "LRA-SANDBOX"
+  client_id                           = "DHT-KEYCLOAK"
   consent_required                    = false
-  description                         = "Longitudinal Record Access. Sandbox Environment. LRA is a FHIR Server to access Longitudinal Health Records. Client used to connect to LRA Authorization Server. Referenced as DHT-Keycloak in Prod."
+  description                         = "Longitudinal Record Access. LRA is a FHIR Server to access Longitudinal Health Records. Client used to connect to LRA Authorization Server. In Keycloak TEST we have this client as LRA-DEV, LRA-TEST, LRA-SANDBOX and DHT-DEV."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = "LRA-SANDBOX"
+  name                                = "DHT-KEYCLOAK"
   pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "http://localhost:*",
-    "https://localhost:*",
-    "https://lra-sandbox.bchealthcloud.ca/*",
-    "https://sbx1.dev.api.healthcarebc.ca/*"
+    "https://auth.htk.healthcarebc.ca/realms/dht/broker/moh_applications/endpoint"
   ]
   web_origins = [
   ]
