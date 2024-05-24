@@ -78,7 +78,6 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-sa-dbaac-portal"           = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-dbaac-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sa-hibc-service-bc-portal" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-hibc-service-bc-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sa-sfdc"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-sfdc"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-pho-rsc"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pho-rsc"].id,
     "USER-MANAGEMENT-SERVICE/view-clients"                          = var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
     "USER-MANAGEMENT-SERVICE/view-events"                           = var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
     "USER-MANAGEMENT-SERVICE/view-groups"                           = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,

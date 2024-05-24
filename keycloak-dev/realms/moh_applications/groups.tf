@@ -7,20 +7,17 @@ module "CGI-DBA" {
 module "CGI-DEVELOPER" {
   source                  = "./groups/cgi-developer"
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
-  HEM                     = module.HEM
   MANAGE-USERS            = module.MANAGE-USERS
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "CGI-MID-TIER" {
   source                  = "./groups/cgi-mid-tier"
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
-  HEM                     = module.HEM
   MANAGE-USERS            = module.MANAGE-USERS
 }
 module "CGI-QA" {
   source                  = "./groups/cgi-qa"
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
-  HEM                     = module.HEM
   MANAGE-USERS            = module.MANAGE-USERS
 }
 module "EMCOD-HELP-DESK" {
