@@ -61,9 +61,6 @@ module "client-roles" {
     "view-client-hcimweb_hd2" = {
       "name" = "view-client-hcimweb_hd2"
     },
-    "view-client-hem" = {
-      "name" = "view-client-hem"
-    },
     "view-client-licence-status" = {
       "name" = "view-client-licence-status"
     },

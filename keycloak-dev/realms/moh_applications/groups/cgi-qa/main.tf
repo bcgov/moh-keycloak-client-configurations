@@ -9,7 +9,6 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
 
   role_ids = [
     var.CGI-APPLICATION-SUPPORT.REALM_ROLE.id,
-    var.HEM.ROLES["hem"].id,
     var.MANAGE-USERS.REALM_ROLE.id
   ]
 }

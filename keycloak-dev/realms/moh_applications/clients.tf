@@ -39,9 +39,6 @@ module "HCIM-SERVICE" {
 module "HDPBC" {
   source = "./clients/hdpbc"
 }
-module "HEM" {
-  source = "./clients/hem"
-}
 module "HLBC" {
   source = "./clients/hlbc"
 }

@@ -66,7 +66,6 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-emcod"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-emcod"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hcimweb"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hcimweb_hd2"               = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_hd2"].id,
-    "USER-MANAGEMENT-SERVICE/view-client-hem"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hem"].id,
     "USER-MANAGEMENT-SERVICE/view-client-licence-status"            = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-licence-status"].id,
     "USER-MANAGEMENT-SERVICE/view-client-maid"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-maid"].id,
     "USER-MANAGEMENT-SERVICE/view-client-mspdirect-service"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
