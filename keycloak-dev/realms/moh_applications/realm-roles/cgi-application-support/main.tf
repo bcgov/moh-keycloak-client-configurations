@@ -3,7 +3,6 @@ resource "keycloak_role" "REALM_ROLE" {
     var.BCER-CP.ROLES["bcer_admin"].id,
     var.HCIMWEB.ROLES["REG_ADMIN_HCIM"].id,
     var.HCIMWEB_HD2.ROLES["REG_ADMIN_HCIM"].id,
-    var.HEM.ROLES["hem"].id,
     var.MSPDIRECT-SERVICE.ROLES["E45"].id,
     var.MSPDIRECT-SERVICE.ROLES["TRAININGHEALTHAUTH"].id,
     var.PLR.ROLES["REG_ADMIN"].id,

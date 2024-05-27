@@ -3,7 +3,6 @@ module "CGI-APPLICATION-SUPPORT" {
   BCER-CP           = module.BCER-CP
   HCIMWEB           = module.HCIMWEB
   HCIMWEB_HD2       = module.HCIMWEB_HD2
-  HEM               = module.HEM
   MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
   PLR               = module.PLR
 }

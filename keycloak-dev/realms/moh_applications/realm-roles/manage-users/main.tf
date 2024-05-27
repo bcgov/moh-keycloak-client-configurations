@@ -10,7 +10,6 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-emcod"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_hd2"].id,
-    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hem"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-licence-status"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-maid"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-mspdirect-service"].id,
