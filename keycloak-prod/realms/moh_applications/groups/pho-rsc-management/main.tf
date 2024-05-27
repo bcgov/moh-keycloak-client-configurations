@@ -1,6 +1,6 @@
 resource "keycloak_group" "GROUP" {
   realm_id = "moh_applications"
-  name     = "PHO-RSC Management"
+  name     = "POSIT Management"
 }
 
 resource "keycloak_group_roles" "GROUP_ROLES" {
