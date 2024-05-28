@@ -94,6 +94,9 @@ module "client-roles" {
     "view-client-pho-rsc-groups" = {
       "name" = "view-client-pho-rsc-groups"
     },
+    "view-client-umc-e2e-tests" = {
+      "name" = "view-client-umc-e2e-tests"
+    },
     "view-client-ums-integration-tests" = {
       "name" = "view-client-ums-integration-tests"
     },
