@@ -141,6 +141,9 @@ module "USER-MANAGEMENT-SERVICE" {
   ORGANIZATIONS-API = module.ORGANIZATIONS-API
   MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
 }
+module "UMC-E2E-TESTS" {
+  source = "./clients/umc-e2e-tests"
+}
 module "UMS-INTEGRATION-TESTS" {
   source                  = "./clients/ums-integration-tests"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
