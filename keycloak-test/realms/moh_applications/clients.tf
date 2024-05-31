@@ -208,6 +208,7 @@ module "PANORAMA" {
 }
 module "PHLAT-SERVICE" {
   source = "./clients/phlat-service"
+    PLR_CONF = module.PLR_CONF
 }
 module "PHLAT-WEB" {
   source = "./clients/phlat-web"
