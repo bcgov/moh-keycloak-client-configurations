@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "PHLAT-SERVICE"
   consent_required                    = false
-  description                         = "PLR Health Service Delivery Site Data Load Assistant Tool - Service Account Used for PLR CONF communication"
+  description                         = "PLR Health Service Delivery Site Data Load Assistant Tool - Service Account Used for PLR MERGE(DEV) communication"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
@@ -43,8 +43,8 @@ module "service-account-roles" {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
   client_roles = {
-    "PLR_CONF/REG_ADMIN" = {
-      "client_id" = var.PLR_CONF.CLIENT.id,
+    "PLR/REG_ADMIN" = {
+      "client_id" = var.PLR.CLIENT.id,
       "role_id"   = "REG_ADMIN"
     }
   }
@@ -54,6 +54,6 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
-    "PLR_CONF/REG_ADMIN" = var.PLR_CONF.ROLES["REG_ADMIN"].id
+    "PLR/REG_ADMIN" = var.PLR.ROLES["REG_ADMIN"].id
   }
 }
