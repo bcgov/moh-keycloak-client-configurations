@@ -84,7 +84,7 @@ module "ORGANIZATIONS-API" {
 }
 module "PHLAT-SERVICE" {
   source = "./clients/phlat-service"
-  PLR = module.PLR
+  PLR    = module.PLR
 }
 module "PHO-RSC" {
   source         = "./clients/pho-rsc"
