@@ -82,6 +82,10 @@ module "MSPDIRECT-WEB" {
 module "ORGANIZATIONS-API" {
   source = "./clients/organizations-api"
 }
+module "PHLAT-SERVICE" {
+  source = "./clients/phlat-service"
+  PLR = module.PLR
+}
 module "PHO-RSC" {
   source         = "./clients/pho-rsc"
   PHO-RSC-GROUPS = module.PHO-RSC-GROUPS
