@@ -19,11 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "http://localhost:*",
-    "https://localhost:*",
-    "https://devsecure.healthideas.gov.bc.ca/hides/*",
-    "https://uatsecure.heaalthideas.gov.bc.ca/hidesuat/*",
-    "https://uatsecure.heaalthideas.gov.bc.ca/hidesacc/*"
+    "https://secure.healthideas.gov.bc.ca/hides/*"
   ]
   web_origins = [
     "+"
