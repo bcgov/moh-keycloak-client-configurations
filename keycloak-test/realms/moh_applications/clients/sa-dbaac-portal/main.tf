@@ -17,7 +17,8 @@ module "payara-client" {
   valid_redirect_uris = [
     "https://pwcdev-bchealth.cs142.force.com/DBAACEC/services/authcallback/Login_with_IDIR_DBAACEC",
     "https://staging-bchealth.cs148.force.com/DBAACEC/services/authcallback/Login_with_IDIR_DBAACEC",
-    "https://staging-bchealth.cs148.sandbox.my.site.com/DBAACEC/services/authcallback/Login_with_IDIR_DBAACEC"
+    "https://staging-bchealth.cs148.sandbox.my.site.com/DBAACEC/services/authcallback/Login_with_IDIR_DBAACEC",
+    "https://bchealth--satdevorg.sandbox.my.salesforce.com/*"
   ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
