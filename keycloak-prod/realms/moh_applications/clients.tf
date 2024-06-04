@@ -67,6 +67,9 @@ module "HCIMWEB" {
 module "HCIMWEB_HS1" {
   source = "./clients/hcimweb_hs1"
 }
+module "HCIM_FHA_DFD" {
+  source = "./clients/hcim_fha_dfd"
+}
 module "HCIM_LRA" {
   source = "./clients/hcim_lra"
 }
