@@ -155,6 +155,7 @@ module "ORGANIZATIONS-API" {
 }
 module "PHO-RSC" {
   source = "./clients/pho-rsc"
+  PHO-RSC-GROUPS = module.PHO-RSC-GROUPS
 }
 module "PHO-RSC-GROUPS" {
   source = "./clients/pho-rsc-groups"
