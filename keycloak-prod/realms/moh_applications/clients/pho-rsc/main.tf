@@ -46,27 +46,7 @@ module "client-roles" {
     "publisher" = {
       "name"        = "publisher"
       "description" = ""
-    },
-    "opho" = {
-      "name"        = "opho"
-      "description" = ""
-    },
-    "hsiar_dart" = {
-      "name"        = "hsiar_dart"
-      "description" = ""
-    },
-    "hsiar_ppd" = {
-      "name"        = "hsiar_ppd"
-      "description" = ""
-    },
-    "hsiar_wfa" = {
-      "name"        = "hsiar_wfa"
-      "description" = ""
-    },
-    "hsiar_phar" = {
-      "name"        = "hsiar_phar"
-      "description" = ""
-    },
+    }
   }
 }
 resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role" {
@@ -79,6 +59,16 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role" {
   add_to_userinfo             = false
   client_id_for_role_mappings = "PHO-RSC"
 }
+resource "keycloak_openid_user_client_role_protocol_mapper" "PHO-RSC-Role-Groups" {
+  realm_id                    = keycloak_openid_client.CLIENT.realm_id
+  client_id                   = keycloak_openid_client.CLIENT.id
+  name                        = "PHO-RSC Role Groups"
+  claim_name                  = "pho-rsc_role_groups"
+  claim_value_type            = "String"
+  add_to_access_token         = false
+  add_to_userinfo             = false
+  client_id_for_role_mappings = "PHO-RSC-GROUPS"
+}
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
@@ -86,4 +76,16 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "email",
     "profile"
   ]
+}
+module "scope-mappings" {
+  source    = "../../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "PHO-RSC-GROUPS/opho"       = var.PHO-RSC-GROUPS.ROLES["opho"].id,
+    "PHO-RSC-GROUPS/hsiar_ppd"  = var.PHO-RSC-GROUPS.ROLES["hsiar_ppd"].id,
+    "PHO-RSC-GROUPS/hsiar_dart" = var.PHO-RSC-GROUPS.ROLES["hsiar_dart"].id,
+    "PHO-RSC-GROUPS/hsiar_wfa"  = var.PHO-RSC-GROUPS.ROLES["hsiar_wfa"].id,
+    "PHO-RSC-GROUPS/hsiar_phar" = var.PHO-RSC-GROUPS.ROLES["hsiar_phar"].id,
+  }
 }
