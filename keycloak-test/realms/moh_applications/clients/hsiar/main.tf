@@ -102,5 +102,11 @@ module "client-roles" {
     "HI_Secure" = {
       "name" = "HI_Secure"
     },
+    "REPORTS_ADMIN_UAT" = {
+      "name" = "REPORTS_ADMIN_UAT"
+    },
+    "REPORTS_ADMIN_DEV" = {
+      "name" = "REPORTS_ADMIN_DEV"
+    }
   }
 }

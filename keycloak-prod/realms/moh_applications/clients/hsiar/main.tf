@@ -98,5 +98,8 @@ module "client-roles" {
     "HI_Secure" = {
       "name" = "HI_Secure"
     },
+    "REPORTS_ADMIN_PRD" = {
+      "name" = "REPORTS_ADMIN_PRD"
+    },
   }
 }
