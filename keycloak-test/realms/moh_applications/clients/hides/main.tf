@@ -22,8 +22,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "http://localhost:*",
     "https://localhost:*",
     "https://devsecure.healthideas.gov.bc.ca/hides/*",
-    "https://uatsecure.heaalthideas.gov.bc.ca/hidesuat/*",
-    "https://uatsecure.heaalthideas.gov.bc.ca/hidesacc/*"
+    "https://uatsecure.healthideas.gov.bc.ca/hidesuat/*",
+    "https://uatsecure.healthideas.gov.bc.ca/hidesacc/*"
   ]
   web_origins = [
     "+"
