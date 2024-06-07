@@ -73,11 +73,11 @@ resource "keycloak_openid_client_optional_scopes" "client_optional_scopes" {
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
   client_id       = keycloak_openid_client.CLIENT.id
-  name            = "phsa_windowsaccountname"
+   name            = "preferred_username"
   protocol        = "openid-connect"
   protocol_mapper = "oidc-override-usermodel-attribute-mapper"
   config = {
-    "userinfo.token.claim" : "true",
+    "userinfo.token.claim" : "false",
     "user.attribute" : "phsa_windowsaccountname",
     "id.token.claim" : "true",
     "access.token.claim" : "true",
