@@ -101,6 +101,36 @@ module "client-roles" {
     },
     "REPORTS_ADMIN_DEV" = {
       "name" = "REPORTS_ADMIN_DEV"
+    },
+    "HI_External_User" = {
+      "name" = "HI_External_User"
+    },
+    "HI_External_Tester" = {
+      "name" = "HI_External_Tester"
+    },
+    "HI_Secure_User" = {
+      "name" = "HI_Secure_User"
+    },
+    "HI_Secure_Integration_User" = {
+      "name" = "HI_Secure_Integration_User"
+    },
+    "HI_Secure_Tester" = {
+      "name" = "HI_Secure_Tester"
+    },
+    "HI_Developer" = {
+      "name" = "HI_Developer"
+    },
+    "HI_Management" = {
+      "name" = "HI_Management"
+    },
+    "HI_HIDES_User" = {
+      "name" = "HI_HIDES_User"
+    },
+    "HI_ReportProgram_Management" = {
+      "name" = "HI_ReportProgram_Management"
+    },
+    "HI_ReportSection_Management" = {
+      "name" = "HI_ReportSection_Management"
     }
   }
 }
