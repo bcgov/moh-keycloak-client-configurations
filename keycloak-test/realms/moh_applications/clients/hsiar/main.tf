@@ -93,14 +93,8 @@ module "client-roles" {
     "HI_CCHS" = {
       "name" = "HI_CCHS"
     },
-    "HI_External" = {
-      "name" = "HI_External"
-    },
     "HI_HSIAR" = {
       "name" = "HI_HSIAR"
-    },
-    "HI_Secure" = {
-      "name" = "HI_Secure"
     },
     "REPORTS_ADMIN_UAT" = {
       "name" = "REPORTS_ADMIN_UAT"
