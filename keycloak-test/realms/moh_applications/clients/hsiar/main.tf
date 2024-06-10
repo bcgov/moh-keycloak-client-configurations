@@ -54,15 +54,6 @@ module "client-roles" {
     "HI_Administrator" = {
       "name" = "HI_Administrator"
     },
-    "HI_SUPPORT_ROLE_PROGRAM" = {
-      "name" = "HI_SUPPORT_ROLE_PROGRAM"
-    },
-    "HI_SUPPORT_ROLE_SECTION" = {
-      "name" = "HI_SUPPORT_ROLE_SECTION"
-    },
-    "HI_SUPPORT_ROLE" = {
-      "name" = "HI_SUPPORT_ROLE"
-    },
     "HI_Operation" = {
       "name" = "HI_Operation"
     },
