@@ -9,10 +9,6 @@ module "CGI-APPLICATION-SUPPORT" {
   SFDS              = module.SFDS
   SWT               = module.SWT
 }
-module "MANAGE-REALM" {
-  source           = "./realm-roles/manage-realm"
-  realm-management = module.realm-management
-}
 module "MANAGE-USERS" {
   source                  = "./realm-roles/manage-users"
   USER-MANAGEMENT         = module.USER-MANAGEMENT

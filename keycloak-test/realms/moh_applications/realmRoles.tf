@@ -21,10 +21,6 @@ module "CGI-APPLICATION-SUPPORT" {
   SWT_STG               = module.SWT_STG
   TAP                   = module.TAP
 }
-module "MANAGE-REALM" {
-  source           = "./realm-roles/manage-realm"
-  realm-management = module.realm-management
-}
 module "MANAGE-USERS" {
   source                  = "./realm-roles/manage-users"
   USER-MANAGEMENT         = module.USER-MANAGEMENT
