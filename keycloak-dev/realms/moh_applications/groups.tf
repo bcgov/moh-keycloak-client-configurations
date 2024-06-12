@@ -1,6 +1,6 @@
 module "CGI-AM-TEAM" {
-  source                  = "./groups/cgi-am-team"
-  MANAGE-USERS            = module.MANAGE-USERS
+  source       = "./groups/cgi-am-team"
+  MANAGE-USERS = module.MANAGE-USERS
 }
 module "CGI-DBA" {
   source                  = "./groups/cgi-dba"
@@ -36,7 +36,7 @@ module "PIDP-MANAGEMENT" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 module "REGISTRIES-ACCESS-TEAM" {
-  source           = "./groups/registries-access-team"
+  source = "./groups/registries-access-team"
 }
 module "SAT-ACCESS-MANAGEMENT" {
   source                  = "./groups/sat-access-management"
