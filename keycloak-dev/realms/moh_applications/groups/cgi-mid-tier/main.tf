@@ -8,7 +8,6 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
   group_id = keycloak_group.GROUP.id
 
   role_ids = [
-    var.CGI-APPLICATION-SUPPORT.REALM_ROLE.id,
-    var.MANAGE-USERS.REALM_ROLE.id
+    var.CGI-APPLICATION-SUPPORT.REALM_ROLE.id
   ]
 }
