@@ -1,32 +1,21 @@
+module "CGI-AM-TEAM" {
+  source       = "./groups/cgi-am-team"
+  MANAGE-USERS = module.MANAGE-USERS
+}
+
 module "CGI-DBA" {
   source = "./groups/cgi-dba"
   HEM    = module.HEM
 }
 
 module "CGI-DEVELOPER" {
-  source                  = "./groups/cgi-developer"
-  FMDB                    = module.FMDB
-  GIS                     = module.GIS
-  HAMIS                   = module.HAMIS
-  HEM                     = module.HEM
-  HSCIS                   = module.HSCIS
-  MANAGE-USERS            = module.MANAGE-USERS
-  MIWT                    = module.MIWT
-  SFDS                    = module.SFDS
-  SWT                     = module.SWT
-  TAP                     = module.TAP
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-  realm-management        = module.realm-management
+  source = "./groups/cgi-developer"
+  HEM    = module.HEM
 }
 
 module "CGI-MID-TIER" {
-  source           = "./groups/cgi-mid-tier"
-  FMDB             = module.FMDB
-  HEM              = module.HEM
-  MANAGE-USERS     = module.MANAGE-USERS
-  MIWT             = module.MIWT
-  SWT              = module.SWT
-  realm-management = module.realm-management
+  source = "./groups/cgi-mid-tier"
+  HEM    = module.HEM
 }
 
 module "EMCOD-ACCESS-TEAM" {
@@ -57,7 +46,6 @@ module "HSPP-MANAGEMENT" {
 module "ITSB-ACCESS-TEAM" {
   source                  = "./groups/itsb-access-team"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-  realm-management        = module.realm-management
 }
 
 module "MAID-MANAGEMENT" {

@@ -1,10 +1,12 @@
+module "CGI-AM-TEAM" {
+  source       = "./groups/cgi-am-team"
+  MANAGE-USERS = module.MANAGE-USERS
+}
+
 module "CGI-DEVELOPER" {
   source                  = "./groups/cgi-developer"
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
-  HSCIS                   = module.HSCIS
   MANAGE-USERS            = module.MANAGE-USERS
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-  realm-management        = module.realm-management
 }
 
 module "CGI-MIDTIER" {
@@ -12,7 +14,6 @@ module "CGI-MIDTIER" {
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
   HEM                     = module.HEM
   MANAGE-USERS            = module.MANAGE-USERS
-  realm-management        = module.realm-management
 }
 
 module "CGI-SALESFORCE" {
@@ -148,5 +149,4 @@ module "TPL-MANAGEMENT" {
 module "WEBCAPS-USER-ADMIN" {
   source                  = "./groups/webcaps-user-admin"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-  realm-management        = module.realm-management
 }
