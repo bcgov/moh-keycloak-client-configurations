@@ -13,7 +13,6 @@ module "CGI-MIDTIER" {
   source                  = "./groups/cgi-midtier"
   CGI-APPLICATION-SUPPORT = module.CGI-APPLICATION-SUPPORT
   HEM                     = module.HEM
-  MANAGE-USERS            = module.MANAGE-USERS
 }
 
 module "CGI-SALESFORCE" {
