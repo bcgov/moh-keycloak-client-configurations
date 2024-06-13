@@ -44,6 +44,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-events"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
     var.USER-MANAGEMENT.ROLES["user-management-admin"].id,
   ]
