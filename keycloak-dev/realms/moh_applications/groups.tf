@@ -35,9 +35,6 @@ module "PIDP-MANAGEMENT" {
   source                  = "./groups/pidp-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
-module "REGISTRIES-ACCESS-TEAM" {
-  source = "./groups/registries-access-team"
-}
 module "SAT-ACCESS-MANAGEMENT" {
   source                  = "./groups/sat-access-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
