@@ -18,6 +18,11 @@ module "CGI-MID-TIER" {
   HEM    = module.HEM
 }
 
+module "CGI-REGISTRIES-ADMIN" {
+  source                  = "./groups/cgi-registries-admin"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "EMCOD-ACCESS-TEAM" {
   source                  = "./groups/emcod-access-team"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
