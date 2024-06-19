@@ -1,6 +1,6 @@
 resource "keycloak_group" "GROUP" {
   realm_id = "moh_applications"
-  name     = "Registries Admin"
+  name     = "CGI Registries Admin"
 }
 
 resource "keycloak_group_roles" "GROUP_ROLES" {
