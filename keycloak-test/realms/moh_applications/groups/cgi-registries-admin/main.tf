@@ -8,9 +8,6 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
   group_id = keycloak_group.GROUP.id
 
   role_ids = [
-    var.HCIMWEB_HIAT1.ROLES["REG_ADMIN_HCIM"].id,
-    var.HCIMWEB_HIAT2.ROLES["REG_ADMIN_HCIM"].id,
-    var.HCIMWEB_HIAT3.ROLES["REG_ADMIN_HCIM"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-own-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
