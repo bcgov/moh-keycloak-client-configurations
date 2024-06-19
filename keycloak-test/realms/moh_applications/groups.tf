@@ -28,7 +28,7 @@ module "CGI-QA" {
 }
 
 module "CGI-REGISTRIES-ADMIN" {
-  source                  = "groups/cgi-registries-admin"
+  source                  = "./groups/cgi-registries-admin"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
