@@ -27,14 +27,9 @@ module "CGI-QA" {
   MANAGE-USERS            = module.MANAGE-USERS
 }
 
-module "CGI-REGISTRIES" {
-  source        = "./groups/cgi-registries"
-  HCIMWEB_HIAT1 = module.HCIMWEB_HIAT1
-  HCIMWEB_HIAT2 = module.HCIMWEB_HIAT2
-  HCIMWEB_HIAT3 = module.HCIMWEB_HIAT3
-  HCIMWEB_HS1   = module.HCIMWEB_HS1
-  HCIMWEB_HSIT  = module.HCIMWEB_HSIT
-  HCIMWEB_HUAT  = module.HCIMWEB_HUAT
+module "CGI-REGISTRIES-ADMIN" {
+  source                  = "groups/cgi-registries-admin"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
 module "DHIPER-MANAGEMENT" {
@@ -119,14 +114,6 @@ module "PRP-USER-ADMIN" {
 
 module "PRIMARY-CARE-ACCESS-TEAM" {
   source                  = "./groups/primary-care-access-team"
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-}
-
-module "REGISTRIES-ADMIN" {
-  source                  = "./groups/registries-admin"
-  HCIMWEB_HIAT1           = module.HCIMWEB_HIAT1
-  HCIMWEB_HIAT2           = module.HCIMWEB_HIAT2
-  HCIMWEB_HIAT3           = module.HCIMWEB_HIAT3
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
