@@ -313,7 +313,102 @@ module "client-roles" {
     "ICY-qathet-Powell-River-Team-1-Clinical-Team-Member" = {
       "name" = "ICY-qathet-Powell-River-Team-1-Clinical-Team-Member"
     },
-
+    "ICY-Central-Coast-Team-Admin" = {
+      "name" = "ICY-Central-Coast-Team-Admin"
+    },
+    "ICY-Central-Coast-Team-Program-Leader" = {
+      "name" = "ICY-Central-Coast-Team-Program-Leader"
+    },
+    "ICY-Central-Coast-Team-1-Clinical-Member" = {
+      "name" = "ICY-Central-Coast-Team-1-Clinical-Member"
+    },
+    "ICY-Central-Coast-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Central-Coast-Team-1-Non-Clinical-Member"
+    },
+    "ICY-Cowichan-Valley-Team-Admin" = {
+      "name" = "ICY-Cowichan-Valley-Team-Admin"
+    },
+    "ICY-Cowichan-Valley-Team-Program-Leader" = {
+      "name" = "ICY-Cowichan-Valley-Team-Program-Leader"
+    },
+    "ICY-Cowichan-Valley-Team-1-Clinical-Member" = {
+      "name" = "ICY-Cowichan-Valley-Team-1-Clinical-Member"
+    },
+    "ICY-Cowichan-Valley-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Cowichan-Valley-Team-1-Non-Clinical-Member"
+    },
+    "ICY-Delta-Team-Admin" = {
+      "name" = "ICY-Delta-Team-Admin"
+    },
+    "ICY-Delta-Team-Program-Leader" = {
+      "name" = "ICY-Delta-Team-Program-Leader"
+    },
+    "ICY-Delta-Team-1-Clinical-Member" = {
+      "name" = "ICY-Delta-Team-1-Clinical-Member"
+    },
+    "ICY-Delta-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Delta-Team-1-Non-Clinical-Member"
+    },
+    "ICY-Gold-Trail-Team-Admin" = {
+      "name" = "ICY-Gold-Trail-Team-Admin"
+    },
+    "ICY-Gold-Trail-Team-Program-Leader" = {
+      "name" = "ICY-Gold-Trail-Team-Program-Leader"
+    },
+    "ICY-Gold-Trail-Team-1-Clinical-Member" = {
+      "name" = "ICY-Gold-Trail-Team-1-Clinical-Member"
+    },
+    "ICY-Gold-Trail-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Gold-Trail-Team-1-Non-Clinical-Member"
+    },
+    "ICY-Nicola-Similkameen-Team-Admin" = {
+      "name" = "ICY-Nicola-Similkameen-Team-Admin"
+    },
+    "ICY-Nicola-Similkameen-Team-Program-Leader" = {
+      "name" = "ICY-Nicola-Similkameen-Team-Program-Leader"
+    },
+    "ICY-Nicola-Similkameen-Team-1-Clinical-Member" = {
+      "name" = "ICY-Nicola-Similkameen-Team-1-Clinical-Member"
+    },
+    "ICY-Nicola-Similkameen-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Nicola-Similkameen-Team-1-Non-Clinical-Member"
+    },
+    "ICY-Peace-River-South-Team-Admin" = {
+      "name" = "ICY-Peace-River-South-Team-Admin"
+    },
+    "ICY-Peace-River-South-Team-Program-Leader" = {
+      "name" = "ICY-Peace-River-South-Team-Program-Leader"
+    },
+    "ICY-Peace-River-South-Team-1-Clinical-Member" = {
+      "name" = "ICY-Peace-River-South-Team-1-Clinical-Member"
+    },
+    "ICY-Peace-River-South-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Peace-River-South-Team-1-Non-Clinical-Member"
+    },
+    "ICY-Qualicum-Team-Admin" = {
+      "name" = "ICY-Qualicum-Team-Admin"
+    },
+    "ICY-Qualicum-Team-Program-Leader" = {
+      "name" = "ICY-Qualicum-Team-Program-Leader"
+    },
+    "ICY-Qualicum-Team-1-Clinical-Member" = {
+      "name" = "ICY-Qualicum-Team-1-Clinical-Member"
+    },
+    "ICY-Qualicum-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Qualicum-Team-1-Non-Clinical-Member"
+    },
+    "ICY-Surrey-Team-Admin" = {
+      "name" = "ICY-Surrey-Team-Admin"
+    },
+    "ICY-Surrey-Team-Program-Leader" = {
+      "name" = "ICY-Surrey-Team-Program-Leader"
+    },
+    "ICY-Surrey-Team-1-Clinical-Member" = {
+      "name" = "ICY-Surrey-Team-1-Clinical-Member"
+    },
+    "ICY-Surrey-Team-1-Non-Clinical-Member" = {
+      "name" = "ICY-Surrey-Team-1-Non-Clinical-Member"
+    }
   }
 }
 
