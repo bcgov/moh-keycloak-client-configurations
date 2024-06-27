@@ -19,7 +19,7 @@ locals {
     "VALIDATE_ACCESS_TOKEN_ERROR"
   ]
   seconds_in_a_year      = 31536000
-  seconds_in_three_years = seconds_in_a_year * 3
+  seconds_in_three_years = local.seconds_in_a_year * 3
 }
 
 ######################
