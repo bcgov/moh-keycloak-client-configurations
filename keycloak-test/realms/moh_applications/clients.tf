@@ -63,6 +63,9 @@ module "FMDB" {
 module "FORMS" {
   source = "./clients/forms"
 }
+module "GENESYS" {
+  source = "./clients/genesys"
+}
 module "GIS" {
   source = "./clients/gis"
 }
