@@ -49,6 +49,6 @@ resource "keycloak_saml_user_attribute_protocol_mapper" "saml_user_attribute_map
   name                       = "email"
   user_attribute             = "email"
   saml_attribute_name        = "email"
-  friendly_name = "email"
+  friendly_name              = "email"
   saml_attribute_name_format = "Basic"
 }
