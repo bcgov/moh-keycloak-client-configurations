@@ -23,7 +23,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://bcmohmaid--maidqa.my.salesforce.com/*",
     "https://bcmohmaid--maiduat.sandbox.my.salesforce.com/*",
     "https://bcmohmaid--maidqa.sandbox.my.salesforce.com/*",
-    "https://bcmohmaid--soseuat.sandbox.my.salesforce.com/*"
+    "https://bcmohmaid--soseuat.sandbox.my.salesforce.com/*",
+    "https://bcmohmaid--soseqa.sandbox.my.salesforce.com/*"
   ]
   web_origins = [
   ]
