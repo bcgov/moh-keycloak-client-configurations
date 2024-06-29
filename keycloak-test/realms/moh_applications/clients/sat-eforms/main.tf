@@ -66,3 +66,19 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "common_provider_numbe
   user_attribute      = "common_provider_number"
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
+
+resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "preferred_username"
+  protocol        = "openid-connect"
+  protocol_mapper = "oidc-override-usermodel-attribute-mapper"
+  config = {
+    "userinfo.token.claim" : "true",
+    "user.attribute" : "phsa_windowsaccountname",
+    "id.token.claim" : "true",
+    "access.token.claim" : "true",
+    "claim.name" : "preferred_username",
+    "jsonType.label" : "String"
+  }
+}
