@@ -20,6 +20,8 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://user-management-test.hlth.gov.bc.ca/*",
+    "https://dmz1.user-management-test.hlth.gov.bc.ca/*",
+    "https://dmz2.user-management-test.hlth.gov.bc.ca/*",
   ]
   web_origins = [
     "+",
