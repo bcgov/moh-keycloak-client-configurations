@@ -20,6 +20,7 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://public.healthideas.gov.bc.ca/*",
+    "https://publict.healthideas.gov.bc.ca/*"
   ]
   web_origins = [
   ]
