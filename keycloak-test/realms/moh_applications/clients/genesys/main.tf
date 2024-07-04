@@ -19,9 +19,10 @@ resource "keycloak_saml_client" "CLIENT" {
   full_scope_allowed        = false
 
   valid_redirect_uris = [
-    "https://login.cac1.pure.cloud/*"
+    "https://login.cac1.pure.cloud/*",
+    "https://apps.cac1.pure.cloud/*"
   ]
-  base_url = "https://login.cac1.pure.cloud"
+  base_url = "https://apps.cac1.pure.cloud/"
 
   assertion_consumer_redirect_url     = "https://login.cac1.pure.cloud/saml"
   assertion_consumer_post_url         = "https://login.cac1.pure.cloud/saml"
