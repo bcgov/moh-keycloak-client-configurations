@@ -27,19 +27,6 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
-resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper-EDRD" {
-  realm_id                    = keycloak_openid_client.CLIENT.realm_id
-  client_id                   = keycloak_openid_client.CLIENT.id
-  client_id_for_role_mappings = "EDRD"
-  name                        = "Client Role Mapper for EDRD"
-  claim_name                  = "roles"
-  multivalued                 = true
-  claim_value_type            = "String"
-  add_to_id_token             = true
-  add_to_access_token         = true
-  add_to_userinfo             = true
-}
-
 
 resource "keycloak_openid_user_attribute_protocol_mapper" "cpn" {
   add_to_id_token     = true
@@ -74,9 +61,5 @@ module "scope-mappings" {
     "LICENCE-STATUS/PRACTITIONER" = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
     "LICENCE-STATUS/MD"           = var.LICENCE-STATUS.ROLES["MD"].id
     "LICENCE-STATUS/RNP"          = var.LICENCE-STATUS.ROLES["RNP"].id
-    "EDRD/EDRD_PHSA_PSP_Staff"    = var.EDRD.ROLES["EDRD_PHSA_PSP_Staff"].id
-    "EDRD/EDRD_MoH_Staff"         = var.EDRD.ROLES["EDRD_MoH_Staff"].id
-    "EDRD/EDRD_Physicians"        = var.EDRD.ROLES["EDRD_Physicians"].id
-    "EDRD/EDRD_Super_Users"       = var.EDRD.ROLES["EDRD_Super_Users"].id
   }
 }
