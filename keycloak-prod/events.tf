@@ -135,7 +135,7 @@ resource "keycloak_realm_events" "realm_events_bceid_business" {
 resource "keycloak_realm_events" "realm_events_bcer" {
   realm_id = "bcer"
 
-  events_enabled    = false
+  events_enabled    = true
   events_expiration = local.seconds_in_three_years
 
   admin_events_enabled         = true
