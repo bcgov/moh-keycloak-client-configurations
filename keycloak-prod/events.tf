@@ -26,6 +26,23 @@ locals {
 # APPLICATION REALMS #
 ######################
 
+resource "keycloak_realm_events" "realm_events_bcer" {
+  realm_id = "bcer"
+
+  events_enabled    = true
+  events_expiration = local.seconds_in_three_years
+
+  admin_events_enabled         = true
+  admin_events_details_enabled = true
+
+  # When omitted or left empty, keycloak will enable all event types
+  enabled_event_types = local.event_types
+
+  events_listeners = [
+    "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
+  ]
+}
+
 resource "keycloak_realm_events" "realm_events_master" {
   realm_id = "master"
 
@@ -119,23 +136,6 @@ resource "keycloak_realm_events" "realm_events_bceid_business" {
   realm_id = "bceid_business"
 
   events_enabled    = false
-  events_expiration = local.seconds_in_three_years
-
-  admin_events_enabled         = true
-  admin_events_details_enabled = true
-
-  # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = local.event_types
-
-  events_listeners = [
-    "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
-  ]
-}
-
-resource "keycloak_realm_events" "realm_events_bcer" {
-  realm_id = "bcer"
-
-  events_enabled    = true
   events_expiration = local.seconds_in_three_years
 
   admin_events_enabled         = true
