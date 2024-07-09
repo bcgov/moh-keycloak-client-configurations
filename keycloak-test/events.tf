@@ -254,7 +254,7 @@ resource "keycloak_realm_events" "realm_events_moh_idp" {
 resource "keycloak_realm_events" "realm_events_phsa" {
   realm_id = "phsa"
 
-  events_enabled    = true
+  events_enabled    = false
   events_expiration = local.seconds_in_three_years
 
   admin_events_enabled         = true
