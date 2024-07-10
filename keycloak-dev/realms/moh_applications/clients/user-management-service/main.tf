@@ -28,6 +28,9 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
+    "bulk-removal" = {
+      "name" = "bulk-removal"
+    },
     "create-user" = {
       "name" = "create-user"
     },

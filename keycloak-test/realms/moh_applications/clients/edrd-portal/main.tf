@@ -27,6 +27,38 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+module "client-roles" {
+  source    = "../../../../../modules/client-roles"
+  client_id = keycloak_openid_client.CLIENT.id
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  roles = {
+    "EDRD_PHSA_PSP_Staff" = {
+      "name" = "EDRD_PHSA_PSP_Staff"
+    },
+    "EDRD_MoH_Staff" = {
+      "name" = "EDRD_MoH_Staff"
+    },
+    "EDRD_Physicians" = {
+      "name" = "EDRD_Physicians"
+    },
+    "EDRD_Super_Users" = {
+      "name" = "EDRD_Super_Users"
+    },
+  }
+}
+resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper" {
+  add_to_access_token         = true
+  add_to_id_token             = true
+  add_to_userinfo             = true
+  claim_name                  = "roles"
+  claim_value_type            = "String"
+  client_id                   = keycloak_openid_client.CLIENT.id
+  client_id_for_role_mappings = "EDRD-PORTAL"
+  multivalued                 = true
+  name                        = "client roles"
+  realm_id                    = keycloak_openid_client.CLIENT.realm_id
+}
+
 
 resource "keycloak_openid_user_attribute_protocol_mapper" "cpn" {
   add_to_id_token     = true

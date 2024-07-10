@@ -65,6 +65,7 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-eacl"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl"].id,
     "USER-MANAGEMENT-SERVICE/view-client-eacl_stg"                  = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl_stg"].id,
     "USER-MANAGEMENT-SERVICE/view-client-edrd"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-edrd"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-edrd-portal"               = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-edrd-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-emcod"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-emcod"].id,
     "USER-MANAGEMENT-SERVICE/view-client-fmdb"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-fmdb"].id,
     "USER-MANAGEMENT-SERVICE/view-client-gis"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-gis"].id,
