@@ -45,6 +45,7 @@ module "scope-mappings" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
   roles = {
+    "USER-MANAGEMENT-SERVICE/bulk-removal"                      = var.USER-MANAGEMENT-SERVICE.ROLES["bulk-removal"].id,
     "USER-MANAGEMENT-SERVICE/create-user"                       = var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
     "USER-MANAGEMENT-SERVICE/manage-user-details"               = var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     "USER-MANAGEMENT-SERVICE/manage-all-groups"                 = var.USER-MANAGEMENT-SERVICE.ROLES["manage-all-groups"].id,
@@ -75,6 +76,10 @@ module "service-account-roles" {
     "uma_authorization" = "uma_authorization",
   }
   client_roles = {
+    "USER-MANAGEMENT-SERVICE/bulk-removal" = {
+      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
+      "role_id"   = "bulk-removal"
+    }
     "USER-MANAGEMENT-SERVICE/create-user" = {
       "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
       "role_id"   = "create-user"
