@@ -12,6 +12,7 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-own-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-edrd"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-edrd-portal"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-clients"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id
