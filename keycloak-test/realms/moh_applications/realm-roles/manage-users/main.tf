@@ -12,6 +12,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-eacl_stg"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-edrd"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-edrd-portal"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-emcod"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-fmdb"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-gis"].id,
