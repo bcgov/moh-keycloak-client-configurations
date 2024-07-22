@@ -65,6 +65,9 @@ module "FORMS" {
 module "GENESYS" {
   source = "./clients/genesys"
 }
+module "GENESYS-TRAINING" {
+  source = "./clients/genesys-training"
+}
 module "GIS" {
   source = "./clients/gis"
 }

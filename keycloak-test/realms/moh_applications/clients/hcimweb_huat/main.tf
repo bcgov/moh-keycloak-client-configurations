@@ -45,7 +45,7 @@ module "payara-client" {
     },
   }
   service_accounts_enabled = false
-  use_refresh_tokens       = false
+  use_refresh_tokens       = true
   valid_redirect_uris = [
     "https://dmz1.hcimweb-cl-huat.hlth.gov.bc.ca/*",
     "https://hcimweb-cl-huat.hlth.gov.bc.ca/*",
