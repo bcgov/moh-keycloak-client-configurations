@@ -45,7 +45,7 @@ module "payara-client" {
     },
   }
   service_accounts_enabled = false
-  use_refresh_tokens       = false
+  use_refresh_tokens       = true
   valid_redirect_uris = [
     "https://hcimweb-cl-hiat2.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
