@@ -2,7 +2,7 @@ resource "keycloak_saml_client" "CLIENT" {
   realm_id                  = "moh_applications"
   client_id                 = "GENESYS-TRAINING"
   name                      = "GENESYS TRAINING"
-  description               = "Contact Center as a Service (CCaaS) Genesys CX Cloud contact center solution"
+  description               = "Contact Center as a Service (CCaaS) Genesys CX Cloud contact center solution. Training environment."
   enabled                   = true
   include_authn_statement   = true
   sign_documents            = true
