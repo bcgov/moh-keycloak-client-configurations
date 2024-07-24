@@ -142,6 +142,9 @@ module "client-roles" {
     "view-client-phlat-web" = {
       "name" = "view-client-phlat-web"
     },
+    "view-client-phlat-web-staging" = {
+      "name" = "view-client-phlat-web-staging"
+    },
     "view-client-pidp-service" = {
       "name" = "view-client-pidp-service"
     },

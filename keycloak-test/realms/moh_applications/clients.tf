@@ -215,8 +215,15 @@ module "PHLAT-SERVICE" {
   source   = "./clients/phlat-service"
   PLR_CONF = module.PLR_CONF
 }
+module "PHLAT-SERVICE-STAGING" {
+  source  = "./clients/phlat-service-staging"
+  PLR_STG = module.PLR_STG
+}
 module "PHLAT-WEB" {
   source = "./clients/phlat-web"
+}
+module "PHLAT-WEB-STAGING" {
+  source = "./clients/phlat-web-staging"
 }
 module "PIDP-SERVICE" {
   source                  = "./clients/pidp-service"
