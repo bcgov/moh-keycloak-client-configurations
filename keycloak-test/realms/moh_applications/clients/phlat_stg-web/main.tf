@@ -5,7 +5,7 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "PHLAT-WEB-STAGING"
+  client_id                           = "PHLAT_STG-WEB"
   consent_required                    = false
   description                         = "PLR Health Service Delivery Site Data Load Assistant Tool - Web Application. Staging Environment."
   direct_access_grants_enabled        = false
@@ -30,7 +30,7 @@ resource "keycloak_openid_client" "CLIENT" {
 resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper-PHLAT" {
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
   client_id                   = keycloak_openid_client.CLIENT.id
-  client_id_for_role_mappings = "PHLAT-WEB-STAGING"
+  client_id_for_role_mappings = "PHLAT_STG-WEB"
   name                        = "PHLAT Role Mapper"
   claim_name                  = "roles"
   multivalued                 = true
