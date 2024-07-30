@@ -17,6 +17,7 @@ resource "keycloak_saml_client" "CLIENT" {
   force_name_id_format      = false
   name_id_format            = "persistent"
   full_scope_allowed        = false
+  login_theme               = "idir_aad-phsa-bcprovider"
 
   valid_redirect_uris = [
     "https://login.cac1.pure.cloud/*",
