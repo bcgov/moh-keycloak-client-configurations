@@ -1,7 +1,7 @@
 resource "keycloak_saml_client" "CLIENT" {
   realm_id                  = "moh_applications"
   client_id                 = "GENESYS"
-  name                      = "GENESYS"
+  name                      = "GENESYS DEV"
   description               = "Contact Center as a Service (CCaaS) Genesys CX Cloud contact center solution"
   enabled                   = true
   include_authn_statement   = true
@@ -29,6 +29,21 @@ resource "keycloak_saml_client" "CLIENT" {
   assertion_consumer_post_url         = "https://login.cac1.pure.cloud/saml"
   logout_service_redirect_binding_url = "https://login.cac1.pure.cloud/saml/logout"
   logout_service_post_binding_url     = "https://login.cac1.pure.cloud/saml/logout"
+}
+
+#custom claim used to redirect to "apps" page instead of the "splash" screen
+resource "keycloak_generic_client_protocol_mapper" "saml_service_name_mapper" {
+  realm_id        = keycloak_saml_client.CLIENT.realm_id
+  client_id       = keycloak_saml_client.CLIENT.id
+  name            = "ServiceName"
+  protocol        = "saml"
+  protocol_mapper = "saml-hardcode-attribute-mapper"
+  config = {
+    "attribute.name"       = "ServiceName"
+    "attribute.nameformat" = "Basic"
+    "attribute.value"      = "directory"
+    "friendly.name"        = "ServiceName"
+  }
 }
 
 resource "keycloak_generic_client_protocol_mapper" "saml_hardcoded_attribute_mapper" {
