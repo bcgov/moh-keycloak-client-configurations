@@ -140,5 +140,8 @@ module "client-roles" {
     "HSPP_Restricted_UserStatistics" = {
       "name" = "HSPP_Restricted_UserStatistics"
     },
+    "HSPP_Restricted_PASED" = {
+      "name" = "HSPP_Restricted_PASED"
+    },
   }
 }
