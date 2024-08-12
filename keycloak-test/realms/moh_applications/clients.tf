@@ -68,9 +68,6 @@ module "GENESYS" {
 module "GENESYS-TRAINING" {
   source = "./clients/genesys-training"
 }
-module "GENESYS-PRODUCTION" {
-  source = "./clients/genesys-production"
-}
 module "GIS" {
   source = "./clients/gis"
 }

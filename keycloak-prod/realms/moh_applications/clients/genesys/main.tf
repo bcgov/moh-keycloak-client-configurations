@@ -1,8 +1,8 @@
 resource "keycloak_saml_client" "CLIENT" {
   realm_id                  = "moh_applications"
-  client_id                 = "GENESYS-PRODUCTION"
-  name                      = "GENESYS PRODUCTION"
-  description               = "Contact Center as a Service (CCaaS) Genesys CX Cloud contact center solution. Production environment. Temporarily connected to Keycloak Test instance."
+  client_id                 = "GENESYS"
+  name                      = "GENESYS"
+  description               = "Contact Center as a Service (CCaaS) Genesys CX Cloud contact center solution."
   enabled                   = true
   include_authn_statement   = true
   sign_documents            = true
