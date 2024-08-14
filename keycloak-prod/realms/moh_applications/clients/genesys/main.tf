@@ -31,21 +31,6 @@ resource "keycloak_saml_client" "CLIENT" {
   logout_service_post_binding_url     = "https://login.cac1.pure.cloud/saml/logout"
 }
 
-#custom claim used to redirect to "apps" page instead of the "splash" screen
-resource "keycloak_generic_client_protocol_mapper" "saml_service_name_mapper" {
-  realm_id        = keycloak_saml_client.CLIENT.realm_id
-  client_id       = keycloak_saml_client.CLIENT.id
-  name            = "ServiceName"
-  protocol        = "saml"
-  protocol_mapper = "saml-hardcode-attribute-mapper"
-  config = {
-    "attribute.name"       = "ServiceName"
-    "attribute.nameformat" = "Basic"
-    "attribute.value"      = "directory"
-    "friendly.name"        = "ServiceName"
-  }
-}
-
 resource "keycloak_generic_client_protocol_mapper" "saml_hardcoded_attribute_mapper" {
   realm_id        = keycloak_saml_client.CLIENT.realm_id
   client_id       = keycloak_saml_client.CLIENT.id
