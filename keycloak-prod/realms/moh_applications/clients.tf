@@ -97,6 +97,9 @@ module "HHSLibrary" {
 module "HIDES" {
   source = "./clients/hides"
 }
+module "HLBC" {
+  source = "./clients/hlbc"
+}
 module "hnsesb_api_gateway_client_manager" {
   source           = "./clients/hnsesb_api_gateway_client_manager"
   realm-management = module.realm-management
