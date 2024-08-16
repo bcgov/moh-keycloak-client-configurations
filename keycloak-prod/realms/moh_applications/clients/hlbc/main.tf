@@ -19,6 +19,7 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   valid_redirect_uris = [
     "https://www.healthlinkbc.ca/*",
+    "https://www-dev.healthlinkbc.ca/*",
     "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
   web_origins = [
