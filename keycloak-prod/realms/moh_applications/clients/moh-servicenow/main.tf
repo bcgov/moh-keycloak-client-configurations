@@ -5,13 +5,13 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type    = "client-secret"
   client_id                    = "MOH-SERVICENOW"
   consent_required             = false
-  description                  = "MoH Health eServices Portal"
+  description                  = "Health eServices Portal"
   direct_access_grants_enabled = false
   enabled                      = true
   frontchannel_logout_enabled  = false
   full_scope_allowed           = false
   implicit_flow_enabled        = false
-  name                         = "MoH ServiceNow"
+  name                         = "HLTH ServiceNow"
   pkce_code_challenge_method   = ""
   realm_id                     = "moh_applications"
   service_accounts_enabled     = false
