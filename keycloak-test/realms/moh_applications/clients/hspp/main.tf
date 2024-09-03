@@ -160,6 +160,9 @@ module "client-roles" {
     "HSPP_Restricted_PASED" = {
       "name" = "HSPP_Restricted_PASED"
     },
+    "HSPP_Restricted_DART" = {
+      "name" = "HSPP_Restricted_DART"
+    },
   }
 }
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
