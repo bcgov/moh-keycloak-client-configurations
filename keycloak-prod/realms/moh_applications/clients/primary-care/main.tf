@@ -173,6 +173,42 @@ module "client-roles" {
       "name"        = "PC_Reporting_User"
       "description" = ""
     },
+    "HealthlinkBC_IssueManager" = {
+      "name"        = "HealthlinkBC_IssueManager"
+      "description" = ""
+    },
+    "HealthlinkBC_CPS" = {
+      "name"        = "HealthlinkBC_CPS"
+      "description" = ""
+    },
+    "HealthlinkBC_Nurse" = {
+      "name"        = "HealthlinkBC_Nurse"
+      "description" = ""
+    },
+    "HealthlinkBC_NurseLead" = {
+      "name"        = "HealthlinkBC_NurseLead"
+      "description" = ""
+    },
+    "HealthlinkBC_Dietitian" = {
+      "name"        = "HealthlinkBC_Dietitian"
+      "description" = ""
+    },
+    "HealthlinkBC_DietitianLead" = {
+      "name"        = "HealthlinkBC_DietitianLead"
+      "description" = ""
+    },
+    "HealthlinkBC_Pharmacist" = {
+      "name"        = "HealthlinkBC_Pharmacist"
+      "description" = ""
+    },
+    "HealthlinkBC_QEP" = {
+      "name"        = "HealthlinkBC_QEP"
+      "description" = ""
+    },
+    "HealthlinkBC_QEPLead" = {
+      "name"        = "HealthlinkBC_QEPLead"
+      "description" = ""
+    }
   }
 }
 
