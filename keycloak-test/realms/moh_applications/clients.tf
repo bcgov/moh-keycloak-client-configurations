@@ -241,6 +241,11 @@ module "PLR-CPSBC" {
   source  = "./clients/plr-cpsbc"
   PLR_IAT = module.PLR_IAT
 }
+module "PLR-IHA" {
+  source  = "./clients/plr-iha"
+  PLR_REV = module.PLR_REV
+  PLR_IAT = module.PLR_IAT
+}
 module "PLR-LRA" {
   source  = "./clients/plr-lra"
   PLR_REV = module.PLR_REV
