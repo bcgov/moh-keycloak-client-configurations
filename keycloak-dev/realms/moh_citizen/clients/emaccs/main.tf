@@ -6,7 +6,7 @@ module "payara-client" {
   client_name                        = "EMACCS"
   client_role_mapper_add_to_id_token = false
   client_role_mapper_add_to_userinfo = false
-  description                        = "TODO"
+  description                        = "Emergency Medical Assistant Continuing Competency System"
   mapper_name                        = "EMACCS Role"
   roles = {
   }
