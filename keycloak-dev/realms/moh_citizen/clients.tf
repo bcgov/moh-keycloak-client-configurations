@@ -1,3 +1,3 @@
-module "EMACS" {
-  source = "./clients/emacs"
+module "EMACCS" {
+  source = "./clients/EMACCS"
 }
