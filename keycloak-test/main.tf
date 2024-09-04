@@ -11,6 +11,10 @@ module "moh_applications" {
   source = "./realms/moh_applications"
 }
 
+module "moh_citizen" {
+  source = "./realms/moh_citizen"
+}
+
 provider "keycloak" {
   realm         = "master"
   client_id     = var.client_id
