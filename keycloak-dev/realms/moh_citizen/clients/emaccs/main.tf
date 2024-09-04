@@ -13,6 +13,7 @@ module "payara-client" {
   service_accounts_enabled = true
   valid_redirect_uris = [
     "http://localhost:8080/*",
+    "https://emaccsd.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
 }

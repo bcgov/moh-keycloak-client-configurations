@@ -1,3 +1,3 @@
 module "EMACCS" {
-  source = "./clients/EMACCS"
+  source = "./clients/emaccs"
 }
