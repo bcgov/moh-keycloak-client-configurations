@@ -26,6 +26,11 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
     "*",
   ]
+  authentication_flow_binding_overrides {
+    # browser-idp-restriction flow
+    browser_id = "9caca0f9-1c0c-4def-85c6-637d1c8a4d24"
+  }
+  login_theme = "moh-app-realm-idp-restriction"
 }
 module "client-roles" {
   source    = "../../../../../modules/client-roles"
@@ -49,6 +54,14 @@ resource "keycloak_openid_group_membership_protocol_mapper" "Group-Membership" {
   add_to_userinfo = false
   add_to_id_token = false
   full_path       = false
+}
+resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  default_scopes = [
+    "idir_aad",
+    "moh_idp",
+  ]
 }
 module "scope-mappings" {
   source    = "../../../../../modules/scope-mappings"
