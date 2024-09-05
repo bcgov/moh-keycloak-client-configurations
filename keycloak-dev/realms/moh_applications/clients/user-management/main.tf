@@ -61,6 +61,10 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   default_scopes = [
     "idir_aad",
     "moh_idp",
+    "email",
+    "profile",
+    "roles",
+    "web-origins"
   ]
 }
 module "scope-mappings" {
