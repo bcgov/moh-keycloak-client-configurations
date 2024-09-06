@@ -19,9 +19,6 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
-    "https://bchealth--edrddev.sandbox.my.salesforce.com/*",
-    "https://bchealth--edrdqa.sandbox.my.salesforce.com/*",
-    "https://bchealth--staging.sandbox.my.salesforce.com/*",
     "https://bchealth--edrddata01.sandbox.my.salesforce.com/*"
   ]
   web_origins = [

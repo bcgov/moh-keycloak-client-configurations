@@ -24,7 +24,8 @@ module "payara-client" {
   }
   service_accounts_enabled = false
   valid_redirect_uris = [
-    "https://bchealth.my.salesforce.com/services/authcallback/Login_with_IDIR"
+    "https://bchealth.my.salesforce.com/services/authcallback/Login_with_IDIR",
+    "https://bchealth--edrddata01.sandbox.my.salesforce.com/*"
   ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
