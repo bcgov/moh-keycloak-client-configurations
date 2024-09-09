@@ -28,7 +28,7 @@ module "payara-client" {
       "name" = "SECONDARY_SOURCE"
     },
   }
-  service_accounts_enabled = true
+  service_accounts_enabled = false
   valid_redirect_uris = [
     "https://plrconf.hlth.gov.bc.ca/plr*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
@@ -82,22 +82,5 @@ module "service-account-roles" {
   realm_roles = {
     "default-roles-moh_applications" = "default-roles-moh_applications",
   }
-  client_roles = {
-    "USER-MANAGEMENT-SERVICE/view-client-plr_conf" = {
-      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-      "role_id"   = "view-client-plr_conf"
-    }
-    "USER-MANAGEMENT-SERVICE/view-clients" = {
-      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-      "role_id"   = "view-clients"
-    }
-    "USER-MANAGEMENT-SERVICE/view-users" = {
-      "client_id" = var.USER-MANAGEMENT-SERVICE.CLIENT.id,
-      "role_id"   = "view-users"
-    }
-    "realm-management/view-users" = {
-      "client_id" = var.realm-management.CLIENT.id,
-      "role_id"   = "view-users"
-    }
-  }
+  client_roles = {}
 }
