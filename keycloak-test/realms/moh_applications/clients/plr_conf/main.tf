@@ -74,13 +74,3 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-users"           = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
   }
 }
-module "service-account-roles" {
-  source                  = "../../../../../modules/service-account-roles"
-  realm_id                = module.payara-client.CLIENT.realm_id
-  client_id               = module.payara-client.CLIENT.id
-  service_account_user_id = module.payara-client.CLIENT.service_account_user_id
-  realm_roles = {
-    "default-roles-moh_applications" = "default-roles-moh_applications",
-  }
-  client_roles = {}
-}
