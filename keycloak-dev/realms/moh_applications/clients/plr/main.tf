@@ -8,6 +8,7 @@ module "payara-client" {
   client_role_mapper_add_to_userinfo = false
   description                        = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources, and available to authorized consumers, that facilitates the formal exchange of health information."
   mapper_name                        = "PLR Role"
+  browser_id                         = "9caca0f9-1c0c-4def-85c6-637d1c8a4d24"
   roles = {
     "DSR_USER" = {
       "name" = "DSR_USER"

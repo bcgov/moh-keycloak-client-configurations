@@ -63,6 +63,11 @@ variable "roles" {
   type = map(map(string))
 }
 
+variable "browser_id" {
+  type    = string
+  default = null
+}
+
 
 resource "keycloak_openid_client" "CLIENT" {
   access_type = "CONFIDENTIAL"
@@ -90,6 +95,9 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris      = var.valid_redirect_uris
   web_origins              = []
   admin_url                = ""
+  authentication_flow_binding_overrides {
+    browser_id = var.browser_id
+  }
 }
 
 resource "keycloak_role" "ROLES" {
