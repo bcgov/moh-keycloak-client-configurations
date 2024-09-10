@@ -66,7 +66,7 @@ variable "roles" {
 variable "authentication_flow_binding_overrides" {
   type        = map(string)
   default     = null
-  description = "Optional map for authentication flow binding overrides. Default is null."
+  description = "Authentication flow binding overrides - used by IDP restriction module."
 }
 
 
