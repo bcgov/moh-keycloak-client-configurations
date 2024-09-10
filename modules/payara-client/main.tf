@@ -63,9 +63,10 @@ variable "roles" {
   type = map(map(string))
 }
 
-variable "browser_flow_id" {
-  type = string
-  default = null
+variable "authentication_flow_binding_overrides" {
+  type        = map(string)
+  default     = null
+  description = "Optional map for authentication flow binding overrides. Default is null."
 }
 
 
@@ -95,8 +96,11 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris      = var.valid_redirect_uris
   web_origins              = []
   admin_url                = ""
-  authentication_flow_binding_overrides {
-    browser_id = var.browser_flow_id
+  dynamic "authentication_flow_binding_overrides" {
+    for_each = var.authentication_flow_binding_overrides != null ? [1] : []
+    content {
+      browser_id = lookup(var.authentication_flow_binding_overrides, "browser_id", null)
+    }
   }
 }
 
