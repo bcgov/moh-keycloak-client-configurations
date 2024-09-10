@@ -8,6 +8,9 @@ module "payara-client" {
   client_role_mapper_add_to_userinfo = false
   description                        = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources, and available to authorized consumers, that facilitates the formal exchange of health information."
   mapper_name                        = "PLR Role"
+  login_theme = "moh-app-realm-idp-restriction"
+  # browser-idp-restriction flow
+  browser_flow_id = "9caca0f9-1c0c-4def-85c6-637d1c8a4d24"
   roles = {
     "DSR_USER" = {
       "name" = "DSR_USER"
@@ -46,7 +49,11 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "email",
     "profile",
     "roles",
-    "web-origins"
+    "web-origins",
+    "bceid_business",
+    "idir",
+    "moh_idp",
+    "phsa"
   ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
