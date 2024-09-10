@@ -67,6 +67,30 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "common_provider_numbe
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_attribute_protocol_mapper" "pidp_email" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "pidpEmail"
+  claim_value_type    = "String"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "pidp_email"
+  user_attribute      = "pidp_email"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "pidp_phone" {
+  add_to_id_token     = false
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "pidpPhone"
+  claim_value_type    = "String"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "pidp_phone"
+  user_attribute      = "pidp_phone"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
   client_id       = keycloak_openid_client.CLIENT.id
