@@ -63,8 +63,8 @@ variable "roles" {
   type = map(map(string))
 }
 
-variable "authentication_flow_binding_overrides" {
-  type        = map(string)
+variable "authentication_flow_binding_override_browser_id" {
+  type        = string
   default     = null
   description = "Authentication flow binding overrides - used by IDP restriction module."
 }
@@ -97,9 +97,9 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins              = []
   admin_url                = ""
   dynamic "authentication_flow_binding_overrides" {
-    for_each = var.authentication_flow_binding_overrides != null ? [1] : []
+    for_each = var.authentication_flow_binding_override_browser_id != null ? [1] : []
     content {
-      browser_id = lookup(var.authentication_flow_binding_overrides, "browser_id", null)
+      browser_id = var.authentication_flow_binding_override_browser_id
     }
   }
 }

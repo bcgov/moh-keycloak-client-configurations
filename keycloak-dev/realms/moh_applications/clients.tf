@@ -106,9 +106,10 @@ module "PIDP-WEBAPP" {
   PIDP-SERVICE = module.PIDP-SERVICE
 }
 module "PLR" {
-  source                  = "./clients/plr"
-  realm-management        = module.realm-management
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+  source                       = "./clients/plr"
+  realm-management             = module.realm-management
+  USER-MANAGEMENT-SERVICE      = module.USER-MANAGEMENT-SERVICE
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"
@@ -205,4 +206,7 @@ module "HCIM_VIHA" {
 }
 module "HCIM_VPP" {
   source = "./clients/hcim_vpp"
+}
+locals {
+  browser_idp_restriction_flow = "9caca0f9-1c0c-4def-85c6-637d1c8a4d24"
 }
