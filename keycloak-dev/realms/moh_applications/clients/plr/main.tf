@@ -1,13 +1,15 @@
 module "payara-client" {
-  source                             = "../../../../../modules/payara-client"
-  base_url                           = "https://plrd.hlth.gov.bc.ca/plr"
-  claim_name                         = "plr_role"
-  client_id                          = "PLR"
-  client_name                        = "PLR"
-  client_role_mapper_add_to_id_token = false
-  client_role_mapper_add_to_userinfo = false
-  description                        = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources, and available to authorized consumers, that facilitates the formal exchange of health information."
-  mapper_name                        = "PLR Role"
+  source                                          = "../../../../../modules/payara-client"
+  base_url                                        = "https://plrd.hlth.gov.bc.ca/plr"
+  claim_name                                      = "plr_role"
+  client_id                                       = "PLR"
+  client_name                                     = "PLR"
+  client_role_mapper_add_to_id_token              = false
+  client_role_mapper_add_to_userinfo              = false
+  description                                     = "The Provider and Location Registry (PLR) is a standards-based repository of core provider data supplied by authorized sources, and available to authorized consumers, that facilitates the formal exchange of health information."
+  mapper_name                                     = "PLR Role"
+  login_theme                                     = "moh-app-realm-idp-restriction"
+  authentication_flow_binding_override_browser_id = var.browser_idp_restriction_flow
   roles = {
     "DSR_USER" = {
       "name" = "DSR_USER"
@@ -46,7 +48,11 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "email",
     "profile",
     "roles",
-    "web-origins"
+    "web-origins",
+    "bceid_business",
+    "idir",
+    "moh_idp",
+    "phsa"
   ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
