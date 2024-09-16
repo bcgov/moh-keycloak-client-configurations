@@ -41,6 +41,9 @@ module "client-roles" {
     "EDRD_Physicians" = {
       "name" = "EDRD_Physicians"
     },
+    "EDRD_Reviewers" = {
+      "name" = "EDRD_Reviewers"
+    },
     "EDRD_Super_Users" = {
       "name" = "EDRD_Super_Users"
     },
