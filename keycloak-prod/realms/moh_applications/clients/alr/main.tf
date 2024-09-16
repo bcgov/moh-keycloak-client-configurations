@@ -57,43 +57,39 @@ module "client-roles" {
   roles = {
     "ALR_Admin_Clerk" : {
       "name" : "ALR_Admin_Clerk",
-      "description" : ""
     },
     "ALR_Admin_Data_Analyst" : {
       "name" : "ALR_Admin_Data_Analyst",
-      "description" : ""
     },
     "ALR_Data_Analyst" : {
       "name" : "ALR_Data_Analyst",
-      "description" : ""
     },
     "ALR_Investigator" : {
       "name" : "ALR_Investigator",
-      "description" : ""
     },
     "ALR_Registrar" : {
       "name" : "ALR_Registrar",
-      "description" : ""
     },
     "ALR_Registrar_Leadership" : {
       "name" : "ALR_Registrar_Leadership",
-      "description" : ""
     },
     "ALR_Registrar_Leadership_Data_Analyst" : {
       "name" : "ALR_Registrar_Leadership_Data_Analyst",
-      "description" : ""
     },
     "ALR_Leadership" : {
       "name" : "ALR_Leadership",
-      "description" : ""
     },
     "ALR_Ops_Support_1" : {
       "name" : "ALR_Ops_Support_1",
-      "description" : ""
     },
     "ALR_Ops_Support_2" : {
       "name" : "ALR_Ops_Support_2",
-      "description" : ""
+    },
+    "ALR_SDPR" : {
+      "name" : "ALR_SDPR",
+    },
+    "ALR_MMHA" : {
+      "name" : "ALR_MMHA",
     }
   }
 }
