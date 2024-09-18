@@ -168,6 +168,13 @@ module "ORGANIZATIONS-API" {
 module "PANORAMA" {
   source = "./clients/panorama"
 }
+module "PHLAT-SERVICE" {
+  source = "./clients/phlat-service"
+  PLR    = module.PLR
+}
+module "PHLAT-WEB" {
+  source = "./clients/phlat-web"
+}
 module "PHO-RSC" {
   source         = "./clients/pho-rsc"
   PHO-RSC-GROUPS = module.PHO-RSC-GROUPS

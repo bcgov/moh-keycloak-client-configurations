@@ -109,6 +109,9 @@ module "client-roles" {
     "view-client-mspdirect-service" = {
       "name" = "view-client-mspdirect-service"
     },
+    "view-client-phlat-web" = {
+      "name" = "view-client-phlat-web"
+    },
     "view-client-pho-rsc" = {
       "name" = "view-client-pho-rsc"
     },
