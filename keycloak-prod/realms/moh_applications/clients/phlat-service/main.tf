@@ -6,7 +6,7 @@ resource "keycloak_openid_client" "CLIENT" {
   client_authenticator_type           = "client-secret"
   client_id                           = "PHLAT-SERVICE"
   consent_required                    = false
-  description                         = "PLR Health Service Delivery Site Data Load Assistant Tool - Service Account Used for PLR CONF communication"
+  description                         = "PLR Health Service Delivery Site Data Load Assistant Tool - Service Account Used for PLR communication"
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
