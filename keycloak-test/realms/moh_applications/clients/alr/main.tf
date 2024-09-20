@@ -101,6 +101,9 @@ module "client-roles" {
     },
     "ALR_MMHA" : {
       "name" : "ALR_MMHA",
+    },
+    "ALR_Data_Investigator" : {
+      "name" : "ALR_Data_Investigator",
     }
   }
 }
