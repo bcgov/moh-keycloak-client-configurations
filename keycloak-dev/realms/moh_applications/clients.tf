@@ -10,6 +10,10 @@ module "BCER-CP" {
 module "BCHCIM" {
   source = "./clients/bchcim"
 }
+module "BULK-USER-UPLOAD" {
+  source           = "./clients/bulk-user-upload"
+  realm-management = module.realm-management
+}
 module "CONNECT" {
   source = "./clients/connect"
 }
