@@ -23,6 +23,11 @@ module "CGI-REGISTRIES-ADMIN" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "EDRD-MANAGEMENT" {
+  source                  = "./groups/edrd-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "EMCOD-ACCESS-TEAM" {
   source                  = "./groups/emcod-access-team"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE

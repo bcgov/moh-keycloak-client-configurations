@@ -58,6 +58,9 @@ module "client-roles" {
     "view-client-eacl" = {
       "name" = "view-client-eacl"
     },
+    "view-client-edrd" = {
+      "name" = "view-client-edrd"
+    },
     "view-client-emcod" = {
       "name" = "view-client-emcod"
     },
