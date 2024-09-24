@@ -18,6 +18,12 @@ module "CGI-MID-TIER" {
   HEM    = module.HEM
 }
 
+module "CGI-SALESFORCE" {
+  source                  = "./groups/cgi-salesforce"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
+
 module "CGI-REGISTRIES-ADMIN" {
   source                  = "./groups/cgi-registries-admin"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
