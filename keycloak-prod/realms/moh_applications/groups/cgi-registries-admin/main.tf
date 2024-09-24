@@ -9,7 +9,6 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
 
   role_ids = [
     var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
-    var.USER-MANAGEMENT-SERVICE.ROLES["manage-own-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-details"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-user-roles"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hcimweb_hs1"].id,
