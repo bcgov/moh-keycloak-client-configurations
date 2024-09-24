@@ -1,5 +1,6 @@
 resource "keycloak_role" "REALM_ROLE" {
   composite_roles = [
+    var.USER-MANAGEMENT-SERVICE.ROLES["bulk-removal"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["create-user"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-all-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["manage-org"].id,
@@ -68,7 +69,7 @@ resource "keycloak_role" "REALM_ROLE" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
     var.USER-MANAGEMENT.ROLES["user-management-admin"].id,
   ]
-  description = "Provides the roles required to manage users using the USER-MANAGEMENT application including roles for all applications. In TEST this role is provided to the Developer and Midtier teams."
+  description = "Provides the roles required to manage users using the USER-MANAGEMENT application including roles for all applications. In TEST this role is provided to the Developer and AM teams."
   name        = "Manage Users"
   realm_id    = "moh_applications"
 }
