@@ -12,7 +12,7 @@ resource "keycloak_openid_client" "CLIENT" {
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = ""
+  name                                = "PNET-API-CLIENT-GENERATION"
   pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
   service_accounts_enabled            = true
