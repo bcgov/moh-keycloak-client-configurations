@@ -64,6 +64,9 @@ module "client-roles" {
     "view-client-edrd" = {
       "name" = "view-client-edrd"
     },
+    "view-client-edrd-portal" = {
+      "name" = "view-client-edrd-portal"
+    },
     "view-client-emcod" = {
       "name" = "view-client-emcod"
     },

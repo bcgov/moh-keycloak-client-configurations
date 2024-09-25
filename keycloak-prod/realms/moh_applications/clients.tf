@@ -42,6 +42,10 @@ module "EACL" {
 module "EDRD" {
   source = "./clients/edrd"
 }
+module "EDRD-PORTAL" {
+  source         = "./clients/edrd-portal"
+  LICENCE-STATUS = module.LICENCE-STATUS
+}
 module "EMCOD" {
   source = "./clients/emcod"
 }
