@@ -222,7 +222,7 @@ module "PLR-REGADMIN" {
   PLR    = module.PLR
 }
 module "PNET-API-CLIENT-GENERATION" {
-  source = "./clients/pnet-api-client-generation"
+  source           = "./clients/pnet-api-client-generation"
   realm-management = module.realm-management
 }
 module "PPM-API-CGI-BC30550160" {
