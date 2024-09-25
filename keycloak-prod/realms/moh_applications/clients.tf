@@ -221,6 +221,9 @@ module "PLR-REGADMIN" {
   source = "./clients/plr-regadmin"
   PLR    = module.PLR
 }
+module "PNET-API-CLIENT-GENERATION" {
+  source = "./clients/pnet-api-client-generation"
+}
 module "PPM-API-CGI-BC30550160" {
   source = "./clients/ppm-api-cgi-BC30550160"
 }
