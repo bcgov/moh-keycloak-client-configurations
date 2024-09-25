@@ -25,3 +25,19 @@ module "payara-client" {
     "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
   ]
 }
+
+resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
+  realm_id        = module.payara-client.CLIENT.realm_id
+  client_id       = module.payara-client.CLIENT.id
+  name            = "preferred_username"
+  protocol        = "openid-connect"
+  protocol_mapper = "oidc-override-usermodel-attribute-mapper"
+  config = {
+    "userinfo.token.claim" : "false",
+    "user.attribute" : "phsa_windowsaccountname",
+    "id.token.claim" : "true",
+    "access.token.claim" : "true",
+    "claim.name" : "preferred_username",
+    "jsonType.label" : "String"
+  }
+}
