@@ -49,7 +49,9 @@ module "scope-mappings" {
     "account/manage-account" = var.account.ROLES["manage-account"].id,
     "account/view-profile"   = var.account.ROLES["view-profile"].id,
   }
-}resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
+}
+
+resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
   client_id       = keycloak_openid_client.CLIENT.id
   name            = "preferred_username"

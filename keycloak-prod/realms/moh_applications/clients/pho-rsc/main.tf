@@ -88,7 +88,9 @@ module "scope-mappings" {
     "PHO-RSC-GROUPS/hsiar_wfa"  = var.PHO-RSC-GROUPS.ROLES["hsiar_wfa"].id,
     "PHO-RSC-GROUPS/hsiar_phar" = var.PHO-RSC-GROUPS.ROLES["hsiar_phar"].id,
   }
-}resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
+}
+
+resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
   client_id       = keycloak_openid_client.CLIENT.id
   name            = "preferred_username"
