@@ -89,6 +89,7 @@ module "scope-mappings" {
     "PRP-SERVICE/Physician"               = var.PRP-SERVICE.ROLES["Physician"].id,
     "PRP-SERVICE/Pharmacist"              = var.PRP-SERVICE.ROLES["Pharmacist"].id,
     "PRP-SERVICE/Pmp"                     = var.PRP-SERVICE.ROLES["Pmp"].id,
+    "PRP-SERVICE/PRP_LTC"                 = var.PRP-SERVICE.ROLES["PRP_LTC"].id,
     "PRP-SERVICE/PRP_MSPQI"               = var.PRP-SERVICE.ROLES["PRP_MSPQI"].id,
     "PRP-SERVICE/PRP_MSPQI_RLS"           = var.PRP-SERVICE.ROLES["PRP_MSPQI_RLS"].id,
     "PRP-SERVICE/PRP_PMP"                 = var.PRP-SERVICE.ROLES["PRP_PMP"].id,
@@ -97,6 +98,8 @@ module "scope-mappings" {
     "PRP-SERVICE/PRP_ReportSection_MSPQI" = var.PRP-SERVICE.ROLES["PRP_ReportSection_MSPQI"].id,
     "PRP-SERVICE/PRP_ReportProgram_PMP"   = var.PRP-SERVICE.ROLES["PRP_ReportProgram_PMP"].id,
     "PRP-SERVICE/PRP_ReportSection_PMP"   = var.PRP-SERVICE.ROLES["PRP_ReportSection_PMP"].id,
+    "PRP-SERVICE/PRP_ReportProgram_LTC"   = var.PRP-SERVICE.ROLES["PRP_ReportProgram_LTC"].id,
+    "PRP-SERVICE/PRP_ReportSection_LTC"   = var.PRP-SERVICE.ROLES["PRP_ReportSection_LTC"].id,
     "LICENCE-STATUS/MOA"                  = var.LICENCE-STATUS.ROLES["MOA"].id
     "LICENCE-STATUS/PRACTITIONER"         = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
     "LICENCE-STATUS/MD"                   = var.LICENCE-STATUS.ROLES["MD"].id

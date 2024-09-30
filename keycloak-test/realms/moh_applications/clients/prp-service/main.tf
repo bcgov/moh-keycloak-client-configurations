@@ -33,6 +33,9 @@ module "client-roles" {
     "Pmp" = {
       "name" = "Pmp"
     },
+    "PRP_LTC" = {
+      "name" = "PRP_LTC"
+    },
     "PRP_MSPQI" = {
       "name" = "PRP_MSPQI"
     },
@@ -57,5 +60,12 @@ module "client-roles" {
     "PRP_ReportSection_PMP" = {
       "name" = "PRP_ReportSection_PMP"
     },
+    "PRP_ReportProgram_LTC" = {
+      "name" = "PRP_ReportProgram_LTC"
+    },
+    "PRP_ReportSection_LTC" = {
+      "name" = "PRP_ReportSection_LTC"
+    },
+
   }
 }
