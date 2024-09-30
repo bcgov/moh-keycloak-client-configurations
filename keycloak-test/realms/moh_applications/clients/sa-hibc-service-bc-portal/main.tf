@@ -23,7 +23,9 @@ module "payara-client" {
     "https://staging-bchealth.cs148.sandbox.my.site.com/services/authcallback/Login_with_IDIR_HIBCSBC",
     "https://bchealth--satdevorg.sandbox.my.salesforce.com/*",
     "https://bchealth--satdevorg.sandbox.my.site.com/*",
-    "https://bchealth--staging.sandbox.my.salesforce.com/*"
+    "https://bchealth--staging.sandbox.my.salesforce.com/*",
+    "https://bchealth--satdev1.sandbox.my.salesforce.com/*",
+    "https://bchealth--satdev1.sandbox.my.site.com/*",
   ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
