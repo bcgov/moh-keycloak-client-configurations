@@ -19,5 +19,6 @@ module "payara-client" {
     "https://localhost:8081/*",
     "https://hemuat.hlth.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
+    "https://hemdev.hlth.gov.bc.ca/*",
   ]
 }
