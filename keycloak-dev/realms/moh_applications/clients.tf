@@ -162,6 +162,7 @@ module "UMS-INTEGRATION-TESTS" {
 module "USER-MANAGEMENT" {
   source                  = "./clients/user-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "HCIM_BCMI" {
   source = "./clients/hcim_bcmi"
