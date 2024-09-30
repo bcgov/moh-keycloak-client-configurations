@@ -532,3 +532,8 @@ module "HCIM_VCHA" {
 module "HCIM_VPP" {
   source = "./clients/hcim_vpp"
 }
+locals {
+  # ID of the browser-idp-restriction authentication flow in moh_applications DEV.
+  # Used by selected clients, overrides the default browser flow.
+  browser_idp_restriction_flow = "9e34841a-ef45-47d7-a08a-cb65bc9130e0"
+}
