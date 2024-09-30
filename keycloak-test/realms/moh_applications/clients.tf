@@ -376,6 +376,10 @@ module "PLR_UAT" {
   realm-management        = module.realm-management
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "PNET-API-CLIENT-GENERATION" {
+  source           = "./clients/pnet-api-client-generation"
+  realm-management = module.realm-management
+}
 module "PRIMARY-CARE" {
   source         = "./clients/primary-care"
   LICENCE-STATUS = module.LICENCE-STATUS
