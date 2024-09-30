@@ -128,23 +128,6 @@ resource "keycloak_realm_events" "realm_events_moh_citizen" {
   ]
 }
 
-resource "keycloak_realm_events" "realm_events_pidp_sandbox" {
-  realm_id = "pidp_sandbox"
-
-  events_enabled    = true
-  events_expiration = local.seconds_in_three_years
-
-  admin_events_enabled         = true
-  admin_events_details_enabled = true
-
-  # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = local.event_types
-
-  events_listeners = [
-    "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
-  ]
-}
-
 resource "keycloak_realm_events" "realm_events_v2_pos" {
   realm_id = "v2_pos"
 
@@ -202,23 +185,6 @@ resource "keycloak_realm_events" "realm_events_bceid_business" {
 
 resource "keycloak_realm_events" "realm_events_bcprovider_aad" {
   realm_id = "bcprovider_aad"
-
-  events_enabled    = false
-  events_expiration = local.seconds_in_three_years
-
-  admin_events_enabled         = true
-  admin_events_details_enabled = true
-
-  # When omitted or left empty, keycloak will enable all event types
-  enabled_event_types = local.event_types
-
-  events_listeners = [
-    "jboss-logging", # keycloak enables the 'jboss-logging' event listener by default.
-  ]
-}
-
-resource "keycloak_realm_events" "realm_events_bcproviderlab_aad" {
-  realm_id = "bcproviderlab_aad"
 
   events_enabled    = false
   events_expiration = local.seconds_in_three_years
