@@ -480,6 +480,7 @@ module "USER-MANAGEMENT-SERVICE" {
 module "USER-MANAGEMENT" {
   source                  = "./clients/user-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "WEBCAPS" {
   source = "./clients/webcaps"
