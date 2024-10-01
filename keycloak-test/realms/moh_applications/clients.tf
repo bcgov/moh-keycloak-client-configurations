@@ -10,7 +10,6 @@ module "ALR" {
 module "BCER-CP" {
   source                       = "./clients/bcer-cp"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
 }
 module "BCHCIM" {
   source = "./clients/bchcim"
@@ -22,13 +21,10 @@ module "BULK-USER-UPLOAD" {
 module "CONNECT" {
   source                       = "./clients/connect"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
-
 }
 module "CMDB" {
   source                       = "./clients/cmdb"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
 }
 module "DEMO-CLIENT" {
   source = "./clients/demo-client"
