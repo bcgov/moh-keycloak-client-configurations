@@ -34,6 +34,7 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   realm_id  = keycloak_openid_client.CMDB.realm_id
   client_id = keycloak_openid_client.CMDB.id
   default_scopes = [
+    "idir",
     "idir_aad",
     "email",
     "profile",
