@@ -20,6 +20,7 @@ resource "keycloak_openid_client" "CLIENT" {
   use_refresh_tokens                  = true
   valid_redirect_uris = [
     "https://phlat.hlth.gov.bc.ca/*",
+    "https://d2duvxno2t2us4.cloudfront.net/*",
   ]
   web_origins = [
     "+",
