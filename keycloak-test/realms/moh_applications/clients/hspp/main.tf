@@ -166,6 +166,15 @@ module "client-roles" {
     "HSPP_ReportSection_DART" = {
       "name" = "HSPP_ReportSection_DART"
     },
+    "PRP_LTC" = {
+      "name" = "PRP_LTC"
+    },
+    "PRP_ReportProgram_LTC" = {
+      "name" = "PRP_ReportProgram_LTC"
+    },
+    "PRP_ReportSection_LTC" = {
+      "name" = "PRP_ReportSection_LTC"
+    },
   }
 }
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
