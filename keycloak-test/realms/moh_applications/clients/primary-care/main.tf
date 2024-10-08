@@ -47,7 +47,11 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://healthbc--hlthbctrn.sandbox.my.salesforce.com/*",
     "https://healthbc--hlthbctrn.sandbox.my.site.com/*",
     "https://healthbc--hlthbctrnx.sandbox.my.salesforce.com/*",
-    "https://healthbc--hlthbcuatx.sandbox.lightning.force.com/*"
+    "https://healthbc--hlthbcuatx.sandbox.lightning.force.com/*",
+    "https://healthbc--hlthbcemr.sandbox.my.salesforce.com/*",
+    "https://healthbc--hlthbcemr.sandbox.my.site.com/*",
+    "https://healthbc--previewqa.sandbox.my.salesforce.com/*",
+    "https://healthbc--previewqa.sandbox.my.site.com/*"
   ]
   web_origins = [
   ]
