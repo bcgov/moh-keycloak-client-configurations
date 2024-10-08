@@ -166,14 +166,14 @@ module "client-roles" {
     "HSPP_ReportSection_DART" = {
       "name" = "HSPP_ReportSection_DART"
     },
-    "PRP_LTC" = {
-      "name" = "PRP_LTC"
+    "HSPP_LTC" = {
+      "name" = "HSPP_LTC"
     },
-    "PRP_ReportProgram_LTC" = {
-      "name" = "PRP_ReportProgram_LTC"
+    "HSPP_ReportProgram_LTC" = {
+      "name" = "HSPP_ReportProgram_LTC"
     },
-    "PRP_ReportSection_LTC" = {
-      "name" = "PRP_ReportSection_LTC"
+    "HSPP_ReportSection_LTC" = {
+      "name" = "HSPP_ReportSection_LTC"
     },
   }
 }
