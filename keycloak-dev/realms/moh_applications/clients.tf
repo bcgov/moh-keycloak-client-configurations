@@ -15,7 +15,8 @@ module "BULK-USER-UPLOAD" {
   realm-management = module.realm-management
 }
 module "CONNECT" {
-  source = "./clients/connect"
+  source                       = "./clients/connect"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "DMFT-SERVICE" {
   source       = "./clients/dmft-service"
@@ -29,7 +30,8 @@ module "EMCOD" {
   source = "./clients/emcod"
 }
 module "FORMS" {
-  source = "./clients/forms"
+  source                       = "./clients/forms"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "HCIMWEB" {
   source = "./clients/hcimweb"
