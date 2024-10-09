@@ -47,3 +47,15 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "bceid_user_guid" {
   user_attribute      = "bceid_user_guid"
   realm_id            = keycloak_openid_client.CLIENT.realm_id
 }
+
+module "client-roles" {
+  source    = "../../../../../modules/client-roles"
+  client_id = keycloak_openid_client.CLIENT.id
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  roles = {
+    "SYSADMIN" = {
+      "name"        = "SYSADMIN"
+      "description" = "System Administrator"
+    },
+  }
+}
