@@ -82,8 +82,10 @@ module "MSPDIRECT-SERVICE" {
   source = "./clients/mspdirect-service"
 }
 module "MSPDIRECT-WEB" {
-  source            = "./clients/mspdirect-web"
-  MSPDIRECT-SERVICE = module.MSPDIRECT-SERVICE
+  source                       = "./clients/mspdirect-web"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+  MSPDIRECT-SERVICE            = module.MSPDIRECT-SERVICE
+
 }
 module "ORGANIZATIONS-API" {
   source = "./clients/organizations-api"
@@ -107,9 +109,10 @@ module "PIDP-SERVICE-ACCOUNT" {
   source = "./clients/pidp-service-account"
 }
 module "PIDP-WEBAPP" {
-  source       = "./clients/pidp-webapp"
-  account      = module.account
-  PIDP-SERVICE = module.PIDP-SERVICE
+  source                       = "./clients/pidp-webapp"
+  account                      = module.account
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+  PIDP-SERVICE                 = module.PIDP-SERVICE
 }
 module "PLR" {
   source                       = "./clients/plr"
