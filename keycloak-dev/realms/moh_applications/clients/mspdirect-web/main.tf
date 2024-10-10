@@ -73,6 +73,7 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "bceid_business",
     "bcsc_mspdirect",
     "idir_aad",
+    "moh_idp",
     "phsa",
     "email",
     "profile",

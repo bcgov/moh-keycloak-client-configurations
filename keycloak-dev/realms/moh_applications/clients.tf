@@ -85,7 +85,6 @@ module "MSPDIRECT-WEB" {
   source                       = "./clients/mspdirect-web"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
   MSPDIRECT-SERVICE            = module.MSPDIRECT-SERVICE
-
 }
 module "ORGANIZATIONS-API" {
   source = "./clients/organizations-api"
