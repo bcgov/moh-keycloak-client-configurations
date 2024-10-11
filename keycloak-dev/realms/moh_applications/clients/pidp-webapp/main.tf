@@ -311,6 +311,10 @@ resource "keycloak_openid_client" "CLIENT" {
   web_origins = [
     "*",
   ]
+  authentication_flow_binding_overrides {
+    browser_id = var.browser_idp_restriction_flow
+  }
+  login_theme = "moh-app-realm-idp-restriction"
 }
 resource "keycloak_openid_audience_protocol_mapper" "PIDP-SERVICE-aud-mapper" {
   add_to_id_token          = false
@@ -369,4 +373,19 @@ resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
     "claim.name" : "preferred_username",
     "jsonType.label" : "String"
   }
+}
+
+resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  default_scopes = [
+    "bceid_business",
+    "bcsc",
+    "idir_aad",
+    "phsa",
+    "email",
+    "profile",
+    "roles",
+    "web-origins"
+  ]
 }
