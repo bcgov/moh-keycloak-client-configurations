@@ -94,8 +94,9 @@ module "PHLAT-SERVICE" {
   PLR    = module.PLR
 }
 module "PHO-RSC" {
-  source         = "./clients/pho-rsc"
-  PHO-RSC-GROUPS = module.PHO-RSC-GROUPS
+  source                       = "./clients/pho-rsc"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+  PHO-RSC-GROUPS               = module.PHO-RSC-GROUPS
 }
 module "PHO-RSC-GROUPS" {
   source = "./clients/pho-rsc-groups"
