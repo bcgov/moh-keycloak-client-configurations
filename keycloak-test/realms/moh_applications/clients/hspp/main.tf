@@ -175,6 +175,9 @@ module "client-roles" {
     "HSPP_ReportSection_LTC" = {
       "name" = "HSPP_ReportSection_LTC"
     },
+    "HSPP_Restricted_HAH" = {
+      "name" = "HSPP_Restricted_HAH"
+    },
   }
 }
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
