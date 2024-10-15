@@ -149,6 +149,9 @@ module "client-roles" {
     "HSPP_ReportSection_DART" = {
       "name" = "HSPP_ReportSection_DART"
     },
+    "HSPP_Restricted_HAH" = {
+      "name" = "HSPP_Restricted_HAH"
+    },
   }
 }
 
