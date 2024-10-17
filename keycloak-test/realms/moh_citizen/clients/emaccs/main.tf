@@ -57,5 +57,21 @@ module "client-roles" {
       "name"        = "SYSADMIN"
       "description" = "System Administrator"
     },
+    "CA" = {
+      "name"        = "CA"
+      "description" = ""
+    },
+    "CCA" = {
+      "name"        = "CCA"
+      "description" = ""
+    },
+    "DIRECTOR" = {
+      "name"        = "DIRECTOR"
+      "description" = ""
+    },
+    "READONLY" = {
+      "name"        = "READONLY"
+      "description" = ""
+    },
   }
 }
