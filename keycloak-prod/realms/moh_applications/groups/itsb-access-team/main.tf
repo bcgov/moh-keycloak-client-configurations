@@ -23,6 +23,7 @@ resource "keycloak_group_roles" "GROUP_ROLES" {
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-maid"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-miwt"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pho-rsc"].id,
+    var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pho-rsc-groups"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-dbaac-portal"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-hibc-service-bc-portal"].id,
     var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-sfdc"].id,
