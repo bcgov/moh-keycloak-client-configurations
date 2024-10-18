@@ -49,7 +49,8 @@ module "HLBC" {
   source = "./clients/hlbc"
 }
 module "IEN" {
-  source = "./clients/ien"
+  source                       = "./clients/ien"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "LDAP-ACC-TRANS" {
   source            = "./clients/ldap-acc-trans"
