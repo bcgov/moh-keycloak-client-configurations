@@ -4,6 +4,8 @@ resource "keycloak_openid_client" "CLIENT" {
   base_url                     = ""
   client_authenticator_type    = "client-secret"
   client_id                    = "PANORAMA"
+  client_session_idle_timeout  = 14400
+  client_session_max_lifespan  = 14400
   consent_required             = false
   description                  = "An eHealth system that allows authorized public health care providers to document and securely store all public health services and care programs in BC and Yukon."
   direct_access_grants_enabled = false
