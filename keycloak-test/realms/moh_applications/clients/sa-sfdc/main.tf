@@ -31,6 +31,7 @@ module "payara-client" {
     "https://bchealth--satqa.sandbox.my.salesforce.com/*",
     "https://bchealth--satdevorg.sandbox.my.salesforce.com/*",
     "https://bchealth--satdev1.sandbox.my.salesforce.com/*",
+    "https://bchealth--edrddev2.sandbox.my.salesforce.com/"
   ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
