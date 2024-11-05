@@ -178,6 +178,9 @@ module "client-roles" {
     "HSPP_Restricted_HAH" = {
       "name" = "HSPP_Restricted_HAH"
     },
+    "HSPP_Restricted_CDR" = {
+      "name" = "HSPP_Restricted_CDR"
+    },
   }
 }
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
