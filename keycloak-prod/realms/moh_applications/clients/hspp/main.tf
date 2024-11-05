@@ -152,6 +152,9 @@ module "client-roles" {
     "HSPP_Restricted_HAH" = {
       "name" = "HSPP_Restricted_HAH"
     },
+    "HSPP_Restricted_CDR" = {
+      "name" = "HSPP_Restricted_CDR"
+    },
   }
 }
 
