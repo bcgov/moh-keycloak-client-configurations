@@ -59,19 +59,19 @@ module "client-roles" {
     },
     "CA" = {
       "name"        = "CA"
-      "description" = ""
+      "description" = "Clinical Advisor"
     },
     "CCA" = {
       "name"        = "CCA"
-      "description" = ""
+      "description" = "Continuing Competence Analyst"
     },
     "DIRECTOR" = {
       "name"        = "DIRECTOR"
-      "description" = ""
+      "description" = "Director"
     },
     "READONLY" = {
       "name"        = "READONLY"
-      "description" = ""
+      "description" = "Read Only"
     },
   }
 }
