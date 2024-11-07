@@ -57,6 +57,10 @@ module "EDRD-PORTAL" {
 module "EHPR" {
   source = "./clients/ehpr"
 }
+module "EMACCS-UMS" {
+  source                  = "./clients/emaccs-ums"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
 module "EMCOD" {
   source = "./clients/emcod"
 }
