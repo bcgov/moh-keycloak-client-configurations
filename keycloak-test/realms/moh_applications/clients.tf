@@ -64,6 +64,9 @@ module "EMACCS-UMS" {
 module "EMCOD" {
   source = "./clients/emcod"
 }
+module "FLORIZEL" {
+  source = "./clients/florizel"
+}
 module "FMDB" {
   source = "./clients/fmdb"
 }
