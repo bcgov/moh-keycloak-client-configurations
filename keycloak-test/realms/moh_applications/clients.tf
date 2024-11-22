@@ -67,6 +67,9 @@ module "EMCOD" {
 module "FLORIZEL" {
   source = "./clients/florizel"
 }
+module "FLORIZEL-TRAINING" {
+  source = "./clients/florizel-training"
+}
 module "FMDB" {
   source = "./clients/fmdb"
 }
