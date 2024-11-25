@@ -95,9 +95,9 @@ resource "keycloak_generic_client_protocol_mapper" "saml_role_list_mapper" {
   protocol        = "saml"
   protocol_mapper = "saml-role-list-mapper"
   config = {
-    "attribute.name"       = "Roles"
+    "attribute.name"       = "Role"
     "attribute.nameformat" = "Basic"
-    "friendly.name"        = "Roles"
+    "friendly.name"        = "Role"
     "single"               = "true"
   }
 }
