@@ -1,8 +1,8 @@
 resource "keycloak_saml_client" "CLIENT" {
   realm_id                  = "moh_applications"
   client_id                 = "FLORIZEL"
-  name                      = "FLORIZEL TEST"
-  description               = "A health management platform providing medical triage services - test environment"
+  name                      = "FLORIZEL"
+  description               = "A health management platform providing medical triage services"
   enabled                   = true
   include_authn_statement   = true
   sign_documents            = true
