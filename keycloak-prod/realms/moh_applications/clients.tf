@@ -52,6 +52,9 @@ module "EMCOD" {
 module "EHPR" {
   source = "./clients/ehpr"
 }
+module "FLORIZEL" {
+  source = "./clients/florizel"
+}
 module "FMDB" {
   source = "./clients/fmdb"
 }

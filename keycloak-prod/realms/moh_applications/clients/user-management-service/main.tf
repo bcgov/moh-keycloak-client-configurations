@@ -70,6 +70,9 @@ module "client-roles" {
     "view-client-emcod" = {
       "name" = "view-client-emcod"
     },
+    "view-client-florizel" = {
+      "name" = "view-client-florizel"
+    },
     "view-client-fmdb" = {
       "name" = "view-client-fmdb"
     },
