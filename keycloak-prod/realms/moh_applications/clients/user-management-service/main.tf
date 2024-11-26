@@ -73,9 +73,6 @@ module "client-roles" {
     "view-client-florizel" = {
       "name" = "view-client-florizel"
     },
-    "view-client-florizel-training" = {
-      "name" = "view-client-florizel-training"
-    },
     "view-client-fmdb" = {
       "name" = "view-client-fmdb"
     },
