@@ -58,36 +58,6 @@ resource "keycloak_saml_user_property_protocol_mapper" "saml_user_first_name_map
   saml_attribute_name_format = "Basic"
 }
 
-resource "keycloak_role" "observer_role" {
-  realm_id  = keycloak_saml_client.CLIENT.realm_id
-  client_id = keycloak_saml_client.CLIENT.id
-  name      = "Observer"
-}
-
-resource "keycloak_role" "patient_role" {
-  realm_id  = keycloak_saml_client.CLIENT.realm_id
-  client_id = keycloak_saml_client.CLIENT.id
-  name      = "Patient"
-}
-
-resource "keycloak_role" "non_clinical_role" {
-  realm_id  = keycloak_saml_client.CLIENT.realm_id
-  client_id = keycloak_saml_client.CLIENT.id
-  name      = "Non-Clinical"
-}
-
-resource "keycloak_role" "clinical_role" {
-  realm_id  = keycloak_saml_client.CLIENT.realm_id
-  client_id = keycloak_saml_client.CLIENT.id
-  name      = "Clinical"
-}
-
-resource "keycloak_role" "clinical_manager_role" {
-  realm_id  = keycloak_saml_client.CLIENT.realm_id
-  client_id = keycloak_saml_client.CLIENT.id
-  name      = "Clinical Manager"
-}
-
 resource "keycloak_generic_client_protocol_mapper" "saml_role_list_mapper" {
   realm_id        = keycloak_saml_client.CLIENT.realm_id
   client_id       = keycloak_saml_client.CLIENT.id
@@ -100,4 +70,25 @@ resource "keycloak_generic_client_protocol_mapper" "saml_role_list_mapper" {
     "friendly.name"        = "Role"
     "single"               = "true"
   }
+}
+
+resource "keycloak_role" "HealthlinkBC_IssueManager" {
+  realm_id    = keycloak_saml_client.CLIENT.realm_id
+  client_id   = keycloak_saml_client.CLIENT.id
+  name        = "HealthlinkBC_IssueManager"
+  description = "Equivalent of Systems Administrator"
+}
+
+resource "keycloak_role" "HealthlinkBC_Nurse" {
+  realm_id    = keycloak_saml_client.CLIENT.realm_id
+  client_id   = keycloak_saml_client.CLIENT.id
+  name        = "HealthlinkBC_Nurse"
+  description = "Equivalent of Clinical"
+}
+
+resource "keycloak_role" "HealthlinkBC_NurseLead" {
+  realm_id    = keycloak_saml_client.CLIENT.realm_id
+  client_id   = keycloak_saml_client.CLIENT.id
+  name        = "HealthlinkBC_NurseLead"
+  description = "Equivalent of Clinical Manager"
 }
