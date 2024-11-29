@@ -17,6 +17,8 @@ resource "keycloak_saml_client" "CLIENT" {
   force_name_id_format      = true
   name_id_format            = "persistent"
   full_scope_allowed        = false
+  login_theme               = "idir_aad"
+
 
   valid_redirect_uris = [
     "https://hlbc-training.fonemedhms.com/*",
