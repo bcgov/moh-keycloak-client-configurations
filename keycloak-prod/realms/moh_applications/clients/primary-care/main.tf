@@ -208,7 +208,15 @@ module "client-roles" {
     "HealthlinkBC_QEPLead" = {
       "name"        = "HealthlinkBC_QEPLead"
       "description" = ""
-    }
+    },
+    "PC_NavigatorLead" = {
+      "name"        = "PC_NavigatorLead"
+      "description" = ""
+    },
+    "HealthlinkBC_PharmacistLead" = {
+      "name"        = "HealthlinkBC_PharmacistLead"
+      "description" = ""
+    },
   }
 }
 
