@@ -47,6 +47,11 @@ module "EMCOD-ACCESS-TEAM" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "FLORIZEL-MANAGEMENT" {
+  source                  = "./groups/florizel-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "HEALTH-IDEAS-MANAGEMENT" {
   source                  = "./groups/health-ideas-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
