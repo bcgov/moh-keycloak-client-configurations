@@ -46,6 +46,11 @@ module "EDRD-PORTAL" {
   source         = "./clients/edrd-portal"
   LICENCE-STATUS = module.LICENCE-STATUS
 }
+module "EMACCS-UMS" {
+  source                  = "./clients/emaccs-ums"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+
+}
 module "EMCOD" {
   source = "./clients/emcod"
 }
