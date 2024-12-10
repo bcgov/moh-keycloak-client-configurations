@@ -23,7 +23,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://bchealth--edrdqa.sandbox.my.salesforce.com/*",
     "https://bchealth--staging.sandbox.my.salesforce.com/*",
     "https://bchealth--edrddata01.sandbox.my.salesforce.com/*",
-    "https://bchealth--edrddev2.sandbox.my.salesforce.com/"
+    "https://bchealth--edrddev2.sandbox.my.salesforce.com/*",
+    "https://bchealth--edrduat.sandbox.my.salesforce.com/*"
   ]
   web_origins = [
   ]
