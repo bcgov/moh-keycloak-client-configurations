@@ -17,7 +17,7 @@ resource "keycloak_saml_client" "CLIENT" {
   force_name_id_format      = true
   name_id_format            = "persistent"
   full_scope_allowed        = false
-  login_theme               = "idir_aad"
+  login_theme               = "moh-app-realm"
 
   valid_redirect_uris = [
     "https://hlbc-test.fonemedhms.com/*",
