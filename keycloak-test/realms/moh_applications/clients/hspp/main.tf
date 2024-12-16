@@ -187,6 +187,9 @@ module "client-roles" {
     "HSPP_Restricted_MEDISLTC" = {
       "name" = "HSPP_Restricted_MEDISLTC"
     },
+    "HSPP_Restricted_CIHI" = {
+      "name" = "HSPP_Restricted_CIHI"
+    },
   }
 }
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
