@@ -45,5 +45,9 @@ module "client-roles" {
       "name"        = "RNP"
       "description" = ""
     },
+    "PHARM" = {
+      "name"        = "PHARM"
+      "description" = ""
+    },
   }
 }
