@@ -64,11 +64,16 @@ resource "keycloak_openid_client_scope" "bcsc_prime_openid_client_scope" {
   description = "Assign this scope to an OIDC client using IDP restriction module to allow logging in with BC Services Card for PRIME."
 }
 
-
 resource "keycloak_openid_client_scope" "moh_idp_openid_client_scope" {
   realm_id    = "moh_applications"
   name        = "moh_idp"
   description = "Assign this scope to an OIDC client using IDP restriction module to allow logging in with Keycloak."
+}
+
+resource "keycloak_openid_client_scope" "yukon_aad_client_scope" {
+  realm_id    = "moh_applications"
+  name        = "yukon_aad"
+  description = "Assign this scope to an OIDC client using IDP restriction module to allow logging in with Yukon MFA."
 }
 
 resource "keycloak_saml_client_scope" "idir_saml_client_scope" {
@@ -141,4 +146,10 @@ resource "keycloak_saml_client_scope" "moh_idp_openid_client_scope" {
   realm_id    = "moh_applications"
   name        = "moh_idp-saml"
   description = "Assign this scope to a SAML client using IDP restriction module to allow logging in with Keycloak."
+}
+
+resource "keycloak_saml_client_scope" "yukon_aad_saml_client_scope" {
+  realm_id    = "moh_applications"
+  name        = "yukon_aad-saml"
+  description = "Assign this scope to a SAML client using IDP restriction module to allow logging in with Yukon MFA."
 }
