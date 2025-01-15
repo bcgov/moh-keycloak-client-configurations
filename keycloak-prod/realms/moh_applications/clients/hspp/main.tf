@@ -164,6 +164,21 @@ module "client-roles" {
     "HSPP_Restricted_CIHI" = {
       "name" = "HSPP_Restricted_CIHI"
     },
+    "HSPP_Restricted_LTC_FHA" = {
+      "name" = "HSPP_Restricted_LTC_FHA"
+    },
+    "HSPP_Restricted_LTC_IHA" = {
+      "name" = "HSPP_Restricted_LTC_IHA"
+    },
+    "HSPP_Restricted_LTC_NHA" = {
+      "name" = "HSPP_Restricted_LTC_NHA"
+    },
+    "HSPP_Restricted_LTC_VCHA" = {
+      "name" = "HSPP_Restricted_LTC_VCHA"
+    },
+    "HSPP_Restricted_LTC_VIHA" = {
+      "name" = "HSPP_Restricted_LTC_VIHA"
+    }
   }
 }
 
