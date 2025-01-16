@@ -94,7 +94,6 @@ module "scope-mappings" {
     "LICENCE-STATUS/MD"                   = var.LICENCE-STATUS.ROLES["MD"].id
     "LICENCE-STATUS/RNP"                  = var.LICENCE-STATUS.ROLES["RNP"].id
     "LICENCE-STATUS/PHARM"                = var.LICENCE-STATUS.ROLES["PHARM"].id
-
   }
 }
 resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
