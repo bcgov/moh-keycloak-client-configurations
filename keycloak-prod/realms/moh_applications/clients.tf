@@ -131,11 +131,11 @@ module "HSCIS" {
   source = "./clients/hscis"
 }
 module "HSIAR" {
-  source = "./clients/hsiar"
+  source         = "./clients/hsiar"
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "HSPP" {
-  source = "./clients/hspp"
+  source         = "./clients/hspp"
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "ICY" {
