@@ -154,9 +154,11 @@ module "HSCIS" {
 }
 module "HSIAR" {
   source = "./clients/hsiar"
+  LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "HSPP" {
   source = "./clients/hspp"
+  LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "ICY" {
   source = "./clients/icy"
