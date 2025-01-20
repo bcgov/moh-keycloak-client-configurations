@@ -76,6 +76,31 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "idir_mailboxOrgCode" 
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_openid_user_client_role_protocol_mapper" "licence_status_role_mapper" {
+  add_to_access_token         = true
+  add_to_id_token             = true
+  claim_name                  = "licence_status"
+  claim_value_type            = "String"
+  client_id                   = keycloak_openid_client.CLIENT.id
+  client_id_for_role_mappings = "LICENCE-STATUS"
+  multivalued                 = true
+  name                        = "licence status"
+  realm_id                    = keycloak_openid_client.CLIENT.realm_id
+}
+
+module "scope-mappings" {
+  source    = "../../../../../modules/scope-mappings"
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  roles = {
+    "LICENCE-STATUS/MOA"          = var.LICENCE-STATUS.ROLES["MOA"].id
+    "LICENCE-STATUS/PRACTITIONER" = var.LICENCE-STATUS.ROLES["PRACTITIONER"].id
+    "LICENCE-STATUS/MD"           = var.LICENCE-STATUS.ROLES["MD"].id
+    "LICENCE-STATUS/RNP"          = var.LICENCE-STATUS.ROLES["RNP"].id
+    "LICENCE-STATUS/PHARM"        = var.LICENCE-STATUS.ROLES["PHARM"].id
+  }
+}
+
 module "client-roles" {
   source    = "../../../../../modules/client-roles"
   client_id = keycloak_openid_client.CLIENT.id
