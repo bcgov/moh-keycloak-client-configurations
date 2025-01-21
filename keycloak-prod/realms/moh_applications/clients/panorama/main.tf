@@ -38,7 +38,7 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://pan-reports-ps2.bchealthcloud.ca/*",
     "https://pan-reports-ps3.bchealthcloud.ca/*",
     "https://pan-reports-stg.bchealthcloud.ca/*",
-    "https://pan-reports-prd.bchealthcloud.ca/*",
+    "https://pan-reports.bchealthcloud.ca/*",
   ]
   web_origins = [
   ]
