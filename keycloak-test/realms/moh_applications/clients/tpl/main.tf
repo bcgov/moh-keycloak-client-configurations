@@ -22,7 +22,9 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://bcmohtpl--keycloak.sandbox.my.salesforce.com/*",
     "https://bcmohtpl--tplqaa.sandbox.my.salesforce.com/*",
     "https://bcmohtpl--tpluat.sandbox.my.salesforce.com/*",
-    "https://bcmohtpl--tpldata.sandbox.my.salesforce.com/*"
+    "https://bcmohtpl--tpldata.sandbox.my.salesforce.com/*",
+    "https://bcmohtpl--tplqa.sandbox.my.salesforce.com/*",
+    "https://bcmohtpl--tplstaging.sandbox.my.salesforce.com/*"
   ]
   web_origins = [
   ]
