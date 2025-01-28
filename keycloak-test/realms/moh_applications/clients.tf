@@ -166,6 +166,11 @@ module "ICY" {
 module "IEN" {
   source = "./clients/ien"
 }
+module "IVF-PORTAL" {
+  source                       = "./clients/ivf-portal"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
+}
 module "LDAP-ACC-TRANS" {
   source = "./clients/ldap-acc-trans"
 }
