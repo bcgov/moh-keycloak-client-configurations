@@ -17,7 +17,6 @@ resource "keycloak_saml_client" "CLIENT" {
   force_name_id_format      = true
   name_id_format            = "persistent"
   full_scope_allowed        = false
-  login_theme               = "moh-app-realm"
 
   valid_redirect_uris = [
     "https://hlbc-test.fonemedhms.com/*",
@@ -26,6 +25,12 @@ resource "keycloak_saml_client" "CLIENT" {
 
   assertion_consumer_redirect_url = "https://hlbc-test.fonemedhms.com/adminusers/auth/saml/callback"
   assertion_consumer_post_url     = "https://hlbc-test.fonemedhms.com/adminusers/auth/saml/callback"
+
+  authentication_flow_binding_overrides {
+    #browser-idp-restriction flow
+    browser_id = var.browser_idp_restriction_flow
+  }
+  login_theme = "moh-app-realm-idp-restriction"
 }
 
 
@@ -92,4 +97,13 @@ resource "keycloak_role" "HealthlinkBC_NurseLead" {
   client_id   = keycloak_saml_client.CLIENT.id
   name        = "HealthlinkBC_NurseLead"
   description = "Equivalent of Clinical Manager"
+}
+
+resource "keycloak_saml_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_saml_client.CLIENT.realm_id
+  client_id = keycloak_saml_client.CLIENT.id
+  default_scopes = [
+    "idir_aad-saml",
+    "moh_idp-saml"
+  ]
 }

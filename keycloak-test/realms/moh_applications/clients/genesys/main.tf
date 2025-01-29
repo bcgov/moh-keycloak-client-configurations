@@ -17,7 +17,6 @@ resource "keycloak_saml_client" "CLIENT" {
   force_name_id_format      = false
   name_id_format            = "persistent"
   full_scope_allowed        = false
-  login_theme               = "idir_aad-phsa-bcprovider"
 
   valid_redirect_uris = [
     "https://login.cac1.pure.cloud/*",
@@ -29,6 +28,12 @@ resource "keycloak_saml_client" "CLIENT" {
   assertion_consumer_post_url         = "https://login.cac1.pure.cloud/saml"
   logout_service_redirect_binding_url = "https://login.cac1.pure.cloud/saml/logout"
   logout_service_post_binding_url     = "https://login.cac1.pure.cloud/saml/logout"
+
+  authentication_flow_binding_overrides {
+    #browser-idp-restriction flow
+    browser_id = var.browser_idp_restriction_flow
+  }
+  login_theme = "moh-app-realm-idp-restriction"
 }
 
 resource "keycloak_generic_client_protocol_mapper" "saml_hardcoded_attribute_mapper" {
@@ -53,4 +58,14 @@ resource "keycloak_saml_user_attribute_protocol_mapper" "saml_user_attribute_map
   saml_attribute_name        = "email"
   friendly_name              = "email"
   saml_attribute_name_format = "Basic"
+}
+
+resource "keycloak_saml_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_saml_client.CLIENT.realm_id
+  client_id = keycloak_saml_client.CLIENT.id
+  default_scopes = [
+    "idir_aad-saml",
+    "bcprovider_aad-saml",
+    "phsa_aad-saml"
+  ]
 }
