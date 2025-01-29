@@ -118,7 +118,7 @@ resource "keycloak_saml_client_scope" "bcsc_mspdirect_saml_client_scope" {
   description = "Assign this scope to a SAML client using IDP restriction module to allow logging in with BC Services Card for MSPDirect."
 }
 
-resource "keycloak_saml_client_scope" "moh_idp_openid_client_scope" {
+resource "keycloak_saml_client_scope" "moh_idp_saml_client_scope" {
   realm_id    = "moh_applications"
   name        = "moh_idp-saml"
   description = "Assign this scope to a SAML client using IDP restriction module to allow logging in with Keycloak."
