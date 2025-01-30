@@ -70,7 +70,9 @@ module "FLORIZEL" {
 
 }
 module "FLORIZEL-TRAINING" {
-  source = "./clients/florizel-training"
+  source                       = "./clients/florizel-training"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "FMDB" {
   source = "./clients/fmdb"
@@ -84,7 +86,9 @@ module "GENESYS" {
 
 }
 module "GENESYS-TRAINING" {
-  source = "./clients/genesys-training"
+  source                       = "./clients/genesys-training"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "GIS" {
   source = "./clients/gis"
