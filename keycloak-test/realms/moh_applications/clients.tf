@@ -67,12 +67,10 @@ module "EMCOD" {
 module "FLORIZEL" {
   source                       = "./clients/florizel"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
 }
 module "FLORIZEL-TRAINING" {
   source                       = "./clients/florizel-training"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
 }
 module "FMDB" {
   source = "./clients/fmdb"
@@ -83,12 +81,10 @@ module "FORMS" {
 module "GENESYS" {
   source                       = "./clients/genesys"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
 }
 module "GENESYS-TRAINING" {
   source                       = "./clients/genesys-training"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
 }
 module "GIS" {
   source = "./clients/gis"
