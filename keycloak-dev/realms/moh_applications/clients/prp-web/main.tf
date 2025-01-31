@@ -55,18 +55,3 @@ module "scope-mappings" {
     "PRP-SERVICE/MSPQI"      = var.PRP-SERVICE.ROLES["MSPQI"].id,
   }
 }
-resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
-  realm_id        = keycloak_openid_client.CLIENT.realm_id
-  client_id       = keycloak_openid_client.CLIENT.id
-  name            = "preferred_username"
-  protocol        = "openid-connect"
-  protocol_mapper = "oidc-override-usermodel-attribute-mapper"
-  config = {
-    "userinfo.token.claim" : "true",
-    "user.attribute" : "phsa_windowsaccountname",
-    "id.token.claim" : "true",
-    "access.token.claim" : "true",
-    "claim.name" : "preferred_username",
-    "jsonType.label" : "String"
-  }
-}
