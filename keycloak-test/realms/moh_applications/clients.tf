@@ -515,6 +515,9 @@ module "HCIM_FHA" {
 module "HCIM_FHA_DFD" {
   source = "./clients/hcim_fha_dfd"
 }
+module "HCIM_FHA_TEST" {
+  source = "./clients/hcim_fha_test"
+}
 module "HCIM_HIBC" {
   source = "./clients/hcim_hibc"
 }
