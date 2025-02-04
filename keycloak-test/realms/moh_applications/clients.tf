@@ -497,7 +497,8 @@ module "TBCM" {
   source = "./clients/tbcm"
 }
 module "TPL" {
-  source = "./clients/tpl"
+  source                       = "./clients/tpl"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "USAM" {
   source = "./clients/usam"
