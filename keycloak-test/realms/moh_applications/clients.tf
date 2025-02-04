@@ -168,7 +168,8 @@ module "HSPP" {
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "ICY" {
-  source = "./clients/icy"
+  source                       = "./clients/icy"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "IEN" {
   source = "./clients/ien"
