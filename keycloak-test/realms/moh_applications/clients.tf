@@ -465,7 +465,9 @@ module "SAT-EFORMS" {
   source = "./clients/sat-eforms"
 }
 module "SA-DBAAC-PORTAL" {
-  source = "./clients/sa-dbaac-portal"
+  source                       = "./clients/sa-dbaac-portal"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "SA-HIBC-SERVICE-BC-PORTAL" {
   source = "./clients/sa-hibc-service-bc-portal"
