@@ -27,6 +27,8 @@ module "payara-client" {
     "https://bchealth--satdev1.sandbox.my.salesforce.com/*",
     "https://bchealth--satdev1.sandbox.my.site.com/*",
   ]
+  authentication_flow_binding_override_browser_id = var.browser_idp_restriction_flow
+  login_theme                                     = "moh-app-realm-idp-restriction"
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
   add_to_id_token  = true
@@ -36,4 +38,12 @@ resource "keycloak_openid_user_session_note_protocol_mapper" "IDP" {
   name             = "IDP"
   realm_id         = module.payara-client.CLIENT.realm_id
   session_note     = "identity_provider"
+}
+
+resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  default_scopes = [
+    "idir_aad"
+  ]
 }

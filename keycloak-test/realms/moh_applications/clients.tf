@@ -470,7 +470,9 @@ module "SA-DBAAC-PORTAL" {
 
 }
 module "SA-HIBC-SERVICE-BC-PORTAL" {
-  source = "./clients/sa-hibc-service-bc-portal"
+  source                       = "./clients/sa-hibc-service-bc-portal"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "SA-SFDC" {
   source = "./clients/sa-sfdc"
