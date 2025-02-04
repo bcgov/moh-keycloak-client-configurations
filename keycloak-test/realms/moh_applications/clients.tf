@@ -475,7 +475,8 @@ module "SA-HIBC-SERVICE-BC-PORTAL" {
 
 }
 module "SA-SFDC" {
-  source = "./clients/sa-sfdc"
+  source                       = "./clients/sa-sfdc"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "SAT-EFORMS_QA" {
   source = "./clients/sat-eforms_qa"
