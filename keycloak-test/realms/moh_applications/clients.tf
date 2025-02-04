@@ -206,7 +206,9 @@ module "LRA-TEST" {
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "MAID" {
-  source = "./clients/maid"
+  source                       = "./clients/maid"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "METASPACE" {
   source = "./clients/metaspace"
