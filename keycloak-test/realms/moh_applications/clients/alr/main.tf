@@ -35,6 +35,11 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
   web_origins = [
   ]
+  authentication_flow_binding_overrides {
+    #browser-idp-restriction flow
+    browser_id = var.browser_idp_restriction_flow
+  }
+  login_theme = "moh-app-realm-idp-restriction"
 }
 
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
@@ -44,7 +49,8 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "email",
     "profile",
     "roles",
-    "web-origins"
+    "web-origins",
+    "idir_aad"
   ]
 }
 

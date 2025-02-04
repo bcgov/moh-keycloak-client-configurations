@@ -5,7 +5,8 @@ module "realm-management" {
   source = "../../../modules/realm-management"
 }
 module "ALR" {
-  source = "./clients/alr"
+  source                       = "./clients/alr"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "BCER-CP" {
   source = "./clients/bcer-cp"
