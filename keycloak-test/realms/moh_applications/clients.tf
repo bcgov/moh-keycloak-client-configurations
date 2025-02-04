@@ -49,11 +49,13 @@ module "EACL_STG" {
   source = "./clients/eacl_stg"
 }
 module "EDRD" {
-  source = "./clients/edrd"
+  source                       = "./clients/edrd"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "EDRD-PORTAL" {
-  source         = "./clients/edrd-portal"
-  LICENCE-STATUS = module.LICENCE-STATUS
+  source                       = "./clients/edrd-portal"
+  LICENCE-STATUS               = module.LICENCE-STATUS
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "EHPR" {
   source = "./clients/ehpr"

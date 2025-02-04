@@ -28,6 +28,11 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
   web_origins = [
   ]
+  authentication_flow_binding_overrides {
+    #browser-idp-restriction flow
+    browser_id = var.browser_idp_restriction_flow
+  }
+  login_theme = "moh-app-realm-idp-restriction"
 }
 module "client-roles" {
   source    = "../../../../../modules/client-roles"
@@ -59,4 +64,13 @@ resource "keycloak_openid_user_client_role_protocol_mapper" "client_role_mapper"
   multivalued                 = true
   name                        = "client roles"
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  default_scopes = [
+    "idir_aad",
+    "phsa"
+  ]
 }
