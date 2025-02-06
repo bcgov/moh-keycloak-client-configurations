@@ -5,7 +5,8 @@ module "realm-management" {
   source = "../../../modules/realm-management"
 }
 module "ALR" {
-  source = "./clients/alr"
+  source                       = "./clients/alr"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "BCER-CP" {
   source = "./clients/bcer-cp"
@@ -48,11 +49,13 @@ module "EACL_STG" {
   source = "./clients/eacl_stg"
 }
 module "EDRD" {
-  source = "./clients/edrd"
+  source                       = "./clients/edrd"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "EDRD-PORTAL" {
-  source         = "./clients/edrd-portal"
-  LICENCE-STATUS = module.LICENCE-STATUS
+  source                       = "./clients/edrd-portal"
+  LICENCE-STATUS               = module.LICENCE-STATUS
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "EHPR" {
   source = "./clients/ehpr"
@@ -165,7 +168,8 @@ module "HSPP" {
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "ICY" {
-  source = "./clients/icy"
+  source                       = "./clients/icy"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "IEN" {
   source = "./clients/ien"
@@ -202,7 +206,9 @@ module "LRA-TEST" {
   LICENCE-STATUS = module.LICENCE-STATUS
 }
 module "MAID" {
-  source = "./clients/maid"
+  source                       = "./clients/maid"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "METASPACE" {
   source = "./clients/metaspace"
@@ -459,13 +465,18 @@ module "SAT-EFORMS" {
   source = "./clients/sat-eforms"
 }
 module "SA-DBAAC-PORTAL" {
-  source = "./clients/sa-dbaac-portal"
+  source                       = "./clients/sa-dbaac-portal"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "SA-HIBC-SERVICE-BC-PORTAL" {
-  source = "./clients/sa-hibc-service-bc-portal"
+  source                       = "./clients/sa-hibc-service-bc-portal"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+
 }
 module "SA-SFDC" {
-  source = "./clients/sa-sfdc"
+  source                       = "./clients/sa-sfdc"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "SAT-EFORMS_QA" {
   source = "./clients/sat-eforms_qa"
@@ -486,7 +497,8 @@ module "TBCM" {
   source = "./clients/tbcm"
 }
 module "TPL" {
-  source = "./clients/tpl"
+  source                       = "./clients/tpl"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "USAM" {
   source = "./clients/usam"
