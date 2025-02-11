@@ -82,6 +82,11 @@ module "ITSB-ACCESS-TEAM" {
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
 
+module "IVF-PORTAL-MANAGEMENT" {
+  source                  = "./groups/ivf-portal-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
+
 module "MAID-ACCESS-MANAGEMENT" {
   source                  = "./groups/maid-access-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
