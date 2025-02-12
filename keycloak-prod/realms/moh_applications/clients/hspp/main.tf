@@ -224,6 +224,24 @@ module "client-roles" {
     },
     "HSPP_Restricted_LTC_VIHA" = {
       "name" = "HSPP_Restricted_LTC_VIHA"
+    },
+    "HSPP_ReportProgram_Operations" = {
+      "name" = "HSPP_ReportProgram_Operations"
+    },
+    "HSPP_ReportSection_Operations" = {
+      "name" = "HSPP_ReportSection_Operations"
+    },
+    "HSPP_Operations_PPM_PPD" = {
+      "name" = "HSPP_Operations_PPM_PPD"
+    },
+    "HSPP_Operations_CCS_PA" = {
+      "name" = "HSPP_Operations_CCA_PA"
+    }
+    "HSPP_Operations_CCS_SDA" = {
+      "name" = "HSPP_Operations_CCS_SDA"
+    }
+    "HSPP_Operations_PAW_HA" = {
+      "name" = "HSPP_Operations_PAW_HA"
     }
   }
 }
