@@ -225,7 +225,7 @@ module "client-roles" {
     "HSPP_Restricted_LTC_VIHA" = {
       "name" = "HSPP_Restricted_LTC_VIHA"
     },
-       "HSPP_ReportProgram_Operations" = {
+    "HSPP_ReportProgram_Operations" = {
       "name" = "HSPP_ReportProgram_Operations"
     },
     "HSPP_ReportSection_Operations" = {
