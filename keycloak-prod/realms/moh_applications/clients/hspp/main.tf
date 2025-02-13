@@ -245,6 +245,6 @@ module "client-roles" {
     },
     "HSPP_Operations_PMP" = {
       "name" = "HSPP_Operations_PMP"
-    },
+    }
   }
 }
