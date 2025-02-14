@@ -19,11 +19,11 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://dev.tbcm.freshworks.club/*",
     "http://localhost:3000/*",
     "https://d3qshnmydybt5m.cloudfront.net/*",
-    "https://test.tbcm.freshworks.club/*",
     "https://d1xxd26qe80lqw.cloudfront.net/*",
+    "https://test.moc.gov.bc.ca/*",
+    "https://dev.moc.gov.bc.ca/*"
   ]
   web_origins = [
   ]

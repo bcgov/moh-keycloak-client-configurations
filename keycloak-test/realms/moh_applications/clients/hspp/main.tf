@@ -252,12 +252,15 @@ module "client-roles" {
     },
     "HSPP_Operations_CCS_PA" = {
       "name" = "HSPP_Operations_CCA_PA"
-    }
+    },
     "HSPP_Operations_CCS_SDA" = {
       "name" = "HSPP_Operations_CCS_SDA"
-    }
+    },
     "HSPP_Operations_PAW_HA" = {
       "name" = "HSPP_Operations_PAW_HA"
+    },
+    "HSPP_Operations_PMP" = {
+      "name" = "HSPP_Operations_PMP"
     }
   }
 }
