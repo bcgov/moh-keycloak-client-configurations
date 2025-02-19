@@ -261,6 +261,12 @@ module "client-roles" {
     },
     "HSPP_Operations_PMP" = {
       "name" = "HSPP_Operations_PMP"
+    },
+    "HSPP_Operations_IDU" = {
+      "name" = "HSPP_Operations_IDU"
+    },
+    "HSPP_Operations_PLA" = {
+      "name" = "HSPP_Operations_PLA"
     }
   }
 }
