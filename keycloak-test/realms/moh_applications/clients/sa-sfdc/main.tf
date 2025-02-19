@@ -31,7 +31,9 @@ module "payara-client" {
     "https://bchealth--satqa.sandbox.my.salesforce.com/*",
     "https://bchealth--satdevorg.sandbox.my.salesforce.com/*",
     "https://bchealth--satdev1.sandbox.my.salesforce.com/*",
-    "https://bchealth--edrddev2.sandbox.my.salesforce.com/"
+    "https://bchealth--edrddev2.sandbox.my.salesforce.com/*",
+    "https://bchealth--phqa1.sandbox.my.salesforce.com/*",
+    "https://bchealth--phqa1.sandbox.my.site.com/*"
   ]
   authentication_flow_binding_override_browser_id = var.browser_idp_restriction_flow
   login_theme                                     = "moh-app-realm-idp-restriction"
