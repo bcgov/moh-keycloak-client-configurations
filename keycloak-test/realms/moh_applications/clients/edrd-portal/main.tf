@@ -23,7 +23,9 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://bchealth--edrdqa.sandbox.my.site.com/*",
     "https://bchealth--staging.sandbox.my.site.com/edrdportal/*",
     "https://bchealth--edrddev2.sandbox.my.salesforce.com/",
-    "https://bchealth--edrddev2.sandbox.my.site.com/edrdportal/*"
+    "https://bchealth--edrddev2.sandbox.my.site.com/edrdportal/*",
+    "https://bchealth--phqa1.sandbox.my.salesforce.com/*",
+    "https://bchealth--phqa1.sandbox.my.site.com/*"
   ]
   web_origins = [
   ]
