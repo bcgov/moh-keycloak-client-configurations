@@ -49,7 +49,6 @@ module "EDRD-PORTAL" {
 module "EMACCS-UMS" {
   source                  = "./clients/emaccs-ums"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-
 }
 module "EMCOD" {
   source = "./clients/emcod"
@@ -89,14 +88,164 @@ module "HCIMWEB" {
 module "HCIMWEB_HS1" {
   source = "./clients/hcimweb_hs1"
 }
+module "HCIM_ADE_STAGE" {
+  source = "./clients/hcim_ade_stage"
+}
+module "HCIM_BCAS_STAGE" {
+  source = "./clients/hcim_bcas_stage"
+}
+module "HCIM_BCAS_PCDES_STAGE" {
+  source = "./clients/hcim_bcas_pcdes_stage"
+}
+module "HCIM_BCC_RX_STAGE" {
+  source = "./clients/hcim_bcc_rx_stage"
+}
+module "HCIM_BCMI_STAGE" {
+  source = "./clients/hcim_bcmi_stage"
+}
+module "HCIM_BCPSLS_STAGE" {
+  source = "./clients/hcim_bcpsls_stage"
+}
+module "HCIM_BCPTN_STAGE" {
+  source = "./clients/hcim_bcptn_stage"
+}
+module "HCIM_BCVAX_HC_STAGE" {
+  source = "./clients/hcim_bcvax_hc_stage"
+}
+module "HCIM_CASC_STAGE" {
+  source = "./clients/hcim_casc_stage"
+}
+module "HCIM_ELMS_STAGE" {
+  source = "./clients/hcim_elms_stage"
+}
 module "HCIM_FHA_DFD" {
   source = "./clients/hcim_fha_dfd"
+}
+module "HCIM_FHA_STAGE" {
+  source = "./clients/hcim_fha_stage"
+}
+module "HCIM_FHA_DFD_STAGE" {
+  source = "./clients/hcim_fha_dfd_stage"
+}
+module "HCIM_HGWAY_STAGE" {
+  source = "./clients/hcim_hgway_stage"
+}
+module "HCIM_HIAL_STAGE" {
+  source = "./clients/hcim_hial_stage"
+}
+module "HCIM_HIBC_STAGE" {
+  source = "./clients/hcim_hibc_stage"
+}
+module "HCIM_HIDEAS_STAGE" {
+  source = "./clients/hcim_hideas_stage"
+}
+module "HCIM_HLNK_STAGE" {
+  source = "./clients/hcim_hlnk_stage"
+}
+module "HCIM_HOOPC_STAGE" {
+  source = "./clients/hcim_hoopc_stage"
+}
+module "HCIM_ICBC_STAGE" {
+  source = "./clients/hcim_icbc_stage"
+}
+module "HCIM_IEHR_USER_STAGE" {
+  source = "./clients/hcim_iehr_user_stage"
+}
+module "HCIM_IHA_STAGE" {
+  source = "./clients/hcim_iha_stage"
+}
+module "HCIM_IMMS_SERVICEBC_STAGE" {
+  source = "./clients/hcim_imms_servicebc_stage"
+}
+module "HCIM_LCTZ_STAGE" {
+  source = "./clients/hcim_lctz_stage"
 }
 module "HCIM_LRA" {
   source = "./clients/hcim_lra"
 }
+module "HCIM_MELS_FAMS_STAGE" {
+  source = "./clients/hcim_mels_fams_stage"
+}
+module "HCIM_MOF_STAGE" {
+  source = "./clients/hcim_mof_stage"
+}
 module "HCIM_MOH_CRS" {
   source = "./clients/hcim_moh_crs"
+}
+module "HCIM_MOH_CRS_STAGE" {
+  source = "./clients/hcim_moh_crs_stage"
+}
+module "HCIM_MOH_VSA_STAGE" {
+  source = "./clients/hcim_moh_vsa_stage"
+}
+module "HCIM_MOJ_STAGE" {
+  source = "./clients/hcim_moj_stage"
+}
+module "HCIM_MSPD_STAGE" {
+  source = "./clients/hcim_mspd_stage"
+}
+module "HCIM_NHA_STAGE" {
+  source = "./clients/hcim_nha_stage"
+}
+module "HCIM_OCABC_STAGE" {
+  source = "./clients/hcim_ocabc_stage"
+}
+module "HCIM_PAS_STAGE" {
+  source = "./clients/hcim_pas_stage"
+}
+module "HCIM_PHARM_STAGE" {
+  source = "./clients/hcim_pharm_stage"
+}
+module "HCIM_PHARM_SA_STAGE" {
+  source = "./clients/hcim_pharm_sa_stage"
+}
+module "HCIM_PHSA_STAGE" {
+  source = "./clients/hcim_phsa_stage"
+}
+module "HCIM_PHSACSBC_STAGE" {
+  source = "./clients/hcim_phsacsbc_stage"
+}
+module "HCIM_PHSA_EFORMS_STAGE" {
+  source = "./clients/hcim_phsa_eforms_stage"
+}
+module "HCIM_PLIS_STAGE" {
+  source = "./clients/hcim_plis_stage"
+}
+module "HCIM_PPHIS_STAGE" {
+  source = "./clients/hcim_pphis_stage"
+}
+module "HCIM_PUBH_STAGE" {
+  source = "./clients/hcim_pubh_stage"
+}
+module "HCIM_REACH_STAGE" {
+  source = "./clients/hcim_reach_stage"
+}
+module "HCIM_SBCHCCS_STAGE" {
+  source = "./clients/hcim_sbchccs_stage"
+}
+module "HCIM_SDM_STAGE" {
+  source = "./clients/hcim_sdm_stage"
+}
+module "HCIM_SDPR_STAGE" {
+  source = "./clients/hcim_sdpr_stage"
+}
+module "HCIM_VCHA_STAGE" {
+  source = "./clients/hcim_vcha_stage"
+}
+module "HCIM_VIHA_STAGE" {
+  source = "./clients/hcim_viha_stage"
+}
+module "HCIM_VIHAGH_STAGE" {
+  source = "./clients/hcim_vihagh_stage"
+}
+module "HCIM_VPP_STAGE" {
+  source = "./clients/hcim_vpp_stage"
+}
+module "HCIM_VSA_STAGE" {
+  source = "./clients/hcim_vsa_stage"
+}
+module "HCIM_WARO_STAGE" {
+  source = "./clients/hcim_waro_stage"
 }
 module "HDPBC" {
   source = "./clients/hdpbc"
