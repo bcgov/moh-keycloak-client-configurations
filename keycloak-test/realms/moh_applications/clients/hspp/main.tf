@@ -267,6 +267,9 @@ module "client-roles" {
     },
     "HSPP_Operations_PLA" = {
       "name" = "HSPP_Operations_PLA"
+    },
+    "HSPP_ReportProgram_DART" = {
+      "name" = "HSPP_ReportProgram_DART"
     }
   }
 }
