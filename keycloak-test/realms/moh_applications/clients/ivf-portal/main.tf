@@ -81,3 +81,39 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "email"
   ]
 }
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "endorser_data" {
+  add_to_id_token     = true
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "endorser_data"
+  claim_value_type    = "JSON"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "endorser_data"
+  user_attribute      = "endorser_data"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_attribute_protocol_mapper" "cpn" {
+  add_to_id_token     = true
+  add_to_userinfo     = true
+  add_to_access_token = true
+  claim_name          = "common_provider_number"
+  client_id           = keycloak_openid_client.CLIENT.id
+  name                = "cpn"
+  user_attribute      = "common_provider_number"
+  realm_id            = keycloak_openid_client.CLIENT.realm_id
+}
+
+resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper-LICENCE-STATUS" {
+  realm_id                    = keycloak_openid_client.CLIENT.realm_id
+  client_id                   = keycloak_openid_client.CLIENT.id
+  client_id_for_role_mappings = "LICENCE-STATUS"
+  name                        = "Client Role Mapper for LICENCE-STATUS"
+  claim_name                  = "roles"
+  multivalued                 = true
+  claim_value_type            = "String"
+  add_to_id_token             = true
+  add_to_access_token         = true
+  add_to_userinfo             = true
+}
