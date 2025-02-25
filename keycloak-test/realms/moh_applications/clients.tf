@@ -177,7 +177,7 @@ module "IEN" {
 module "IVF-PORTAL" {
   source                       = "./clients/ivf-portal"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
-
+  LICENCE-STATUS               = module.LICENCE-STATUS
 }
 module "LDAP-ACC-TRANS" {
   source = "./clients/ldap-acc-trans"
