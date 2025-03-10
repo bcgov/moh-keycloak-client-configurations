@@ -63,7 +63,8 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "email",
     "profile",
     "roles",
-    "web-origins"
+    "web-origins",
+    "basic"
   ]
 }
 module "scope-mappings" {

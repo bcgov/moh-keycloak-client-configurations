@@ -53,6 +53,8 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "profile",
     "roles",
     "web-origins",
+    "basic",
+    "service_account"
   ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
