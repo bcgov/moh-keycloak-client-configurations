@@ -25,6 +25,7 @@ module "payara-client" {
     "https://hamis.hlth.gov.bc.ca/*",
     "https://logon7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
+    "https://hamis-flvr.hlth.gov.bc.ca/*"
   ]
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {
