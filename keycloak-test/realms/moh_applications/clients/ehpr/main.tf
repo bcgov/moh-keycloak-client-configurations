@@ -19,8 +19,8 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://dev.ehpr.freshworks.club/*",
-    "https://test.ehpr.freshworks.club/*",
+    "https://dev.ehpr.gov.bc.ca/*",
+    "https://test.ehpr.gov.bc.ca/*",
     "https://logontest7.gov.bc.ca/clp-cgi/logoff.cgi*",
     "https://sts.healthbc.org/adfs/ls/*",
     "http://localhost:3000/*",
