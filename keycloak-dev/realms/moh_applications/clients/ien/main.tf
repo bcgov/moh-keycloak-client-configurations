@@ -21,7 +21,7 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://localhost:*",
-    "https://dev.ien.gov.bc.ca/*"
+    "https://dev.ien.gov.bc.ca/*",
   ]
   web_origins = [
     "*",
