@@ -82,7 +82,8 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "idir_aad",
     "phsa",
     "email",
-    "profile"
+    "profile",
+    "basic"
   ]
 }
 module "scope-mappings" {
