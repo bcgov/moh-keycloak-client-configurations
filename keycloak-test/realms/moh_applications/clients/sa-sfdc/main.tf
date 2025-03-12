@@ -21,6 +21,18 @@ module "payara-client" {
     "SA_REPORTS_DASHBOARD" = {
       "name" = "SA_REPORTS_DASHBOARD"
     },
+    "SA_STAFF" = {
+      "name" = "SA_STAFF"
+    },
+    "SA_TEAM_LEAD" = {
+      "name" = "SA_TEAM_LEAD"
+    },
+    "SA_MANAGER" = {
+      "name" = "SA_MANAGER"
+    },
+    "SA_PHARMACISTS" = {
+      "name" = "SA_PHARMACISTS"
+    }
   }
   service_accounts_enabled = false
   valid_redirect_uris = [
