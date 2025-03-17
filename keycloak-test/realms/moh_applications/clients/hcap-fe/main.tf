@@ -30,7 +30,8 @@ resource "keycloak_openid_client" "CLIENT" {
     "https://www.hcapemployers.test.freshworks.club/*",
     "https://hcapparticipants.test.freshworks.club/*",
     "http://hcapparticipants.localhost:4000/*",
-    "http://hcapemployers.localhost:4000/*"
+    "http://hcapemployers.localhost:4000/*",
+    "http://localhost:8080/*"
   ]
   web_origins = [
     "*",
