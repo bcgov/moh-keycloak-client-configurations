@@ -13,25 +13,13 @@ resource "keycloak_openid_client" "CLIENT" {
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
   name                                = "HCAP"
-  pkce_code_challenge_method          = "S256"
+  pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false
   standard_flow_enabled               = true
   use_refresh_tokens                  = true
   valid_redirect_uris = [
-    "https://hcapparticipants.dev.freshworks.club/*",
-    "https://hcapemployers.dev.freshworks.club/*",
-    "https://www.hcapparticipants.dev.freshworks.club/*",
-    "https://www.hcapemployers.dev.freshworks.club/*",
-    "http://localhost:4000/*",
-    "http://hcapemployers.local.freshworks.club:4000/*",
-    "http://hcapparticipants.local.freshworks.club:4000/*",
-    "https://hcapemployers.test.freshworks.club/*",
-    "https://www.hcapemployers.test.freshworks.club/*",
-    "https://hcapparticipants.test.freshworks.club/*",
-    "http://hcapparticipants.localhost:4000/*",
-    "http://hcapemployers.localhost:4000/*",
-    "http://localhost:8080/*"
+    "*"
   ]
   web_origins = [
     "*",
