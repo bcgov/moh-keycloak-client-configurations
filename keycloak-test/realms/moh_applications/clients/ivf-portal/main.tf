@@ -78,7 +78,8 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "bcprovider_aad",
     "idir_aad",
     "profile",
-    "email"
+    "email",
+    "basic"
   ]
 }
 

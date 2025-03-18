@@ -42,7 +42,8 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "email",
     "profile",
     "roles",
-    "web-origins"
+    "web-origins",
+    "basic"
   ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
@@ -87,6 +88,7 @@ resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
     "id.token.claim" : "true",
     "access.token.claim" : "true",
     "claim.name" : "preferred_username",
-    "jsonType.label" : "String"
+    "jsonType.label" : "String",
+    "introspection.token.claim" = "false"
   }
 }
