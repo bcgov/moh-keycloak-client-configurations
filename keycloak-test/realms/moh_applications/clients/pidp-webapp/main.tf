@@ -85,6 +85,7 @@ resource "keycloak_generic_client_protocol_mapper" "phsa_windowsaccountname" {
     "id.token.claim" : "true",
     "access.token.claim" : "true",
     "claim.name" : "preferred_username",
-    "jsonType.label" : "String"
+    "jsonType.label" : "String",
+    "introspection.token.claim" = "false"
   }
 }
