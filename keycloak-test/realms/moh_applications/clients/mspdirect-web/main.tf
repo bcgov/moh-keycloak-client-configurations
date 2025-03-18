@@ -20,7 +20,8 @@ resource "keycloak_openid_client" "CLIENT" {
   valid_redirect_uris = [
     "http://localhost:*",
     "https://mspdirect-test.apps.silver.devops.gov.bc.ca/*",
-    "https://logontest7.gov.bc.ca/clp-cgi/*"
+    "https://logontest7.gov.bc.ca/clp-cgi/*",
+    "https://qa-sts.healthbc.org/adfs/ls/*"
   ]
   web_origins = [
     "+",
