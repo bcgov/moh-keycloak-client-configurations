@@ -19,9 +19,10 @@ resource "keycloak_openid_client" "CLIENT" {
   standard_flow_enabled               = true
   valid_redirect_uris = [
     "https://mspdirect-uat.apps.silver.devops.gov.bc.ca/*",
+    "https://logontest7.gov.bc.ca/clp-cgi/*"
   ]
   web_origins = [
-    "*",
+    "+",
   ]
 }
 resource "keycloak_openid_user_attribute_protocol_mapper" "org_details" {
