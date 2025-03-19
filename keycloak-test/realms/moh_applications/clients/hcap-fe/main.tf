@@ -18,7 +18,7 @@ resource "keycloak_openid_client" "CLIENT" {
   service_accounts_enabled              = false
   standard_flow_enabled                 = true
   use_refresh_tokens                    = true
-  use_refresh_tokens_client_credentials = false
+  use_refresh_tokens_client_credentials = true
   valid_redirect_uris = [
     "*"
   ]
