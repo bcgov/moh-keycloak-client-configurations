@@ -125,6 +125,48 @@ module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"
   PLR    = module.PLR
 }
+module "PRIME-DOCUMENT-MANAGER" {
+  source = "./clients/prime-document-manager"
+}
+module "PRIME-APPLICATION-DEV" {
+  source = "./clients/prime-application-dev"
+}
+module "PRIME-APPLICATION-LOCAL" {
+  source  = "./clients/prime-application-local"
+  account = module.account
+}
+module "PRIME-APPLICATION-TEST" {
+  source  = "./clients/prime-application-test"
+  account = module.account
+}
+module "PRIME-APPLICATION-SERVICE-ACCOUNT" {
+  source                  = "./clients/prime-application-service-account"
+  PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
+  PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
+}
+module "PRIME-MEDINET-ACCESS" {
+  source                  = "./clients/prime-medinet-access"
+  PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
+  PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
+}
+module "PRIME-CARECONNECT-ACCESS" {
+  source                  = "./clients/prime-careconnect-access"
+  PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
+  PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
+}
+module "PRIME-VIHACERNER-ACCESS" {
+  source                  = "./clients/prime-vihacerner-access"
+  PRIME-APPLICATION-LOCAL = module.PRIME-APPLICATION-LOCAL
+  PRIME-APPLICATION-TEST  = module.PRIME-APPLICATION-TEST
+}
+module "PRIME-WEBAPP-ENROLLMENT" {
+  source  = "./clients/prime-webapp-enrollment"
+  account = module.account
+}
+module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
+  source                  = "./clients/prime-webapp-enrollment-service"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
 module "PRP-SERVICE" {
   source = "./clients/prp-service"
 }
