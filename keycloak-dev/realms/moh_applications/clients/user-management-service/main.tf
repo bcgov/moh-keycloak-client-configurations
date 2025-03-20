@@ -58,6 +58,9 @@ module "client-roles" {
     "view-client-emcod" = {
       "name" = "view-client-emcod"
     },
+    "view-client-gis" = {
+      "name" = "view-client-gis"
+    },
     "view-client-hcimweb" = {
       "name" = "view-client-hcimweb"
     },

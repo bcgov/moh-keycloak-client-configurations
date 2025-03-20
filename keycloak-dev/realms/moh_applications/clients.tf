@@ -33,6 +33,9 @@ module "FORMS" {
   source                       = "./clients/forms"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
+module "GIS" {
+  source = "./clients/gis"
+}
 module "HCIMWEB" {
   source = "./clients/hcimweb"
 }
