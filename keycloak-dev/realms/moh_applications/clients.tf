@@ -36,6 +36,13 @@ module "FORMS" {
 module "GIS" {
   source = "./clients/gis"
 }
+module "HCAP-FE" {
+  source = "./clients/hcap-fe"
+}
+module "HCAP-SERVICE" {
+  source                  = "./clients/hcap-service"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
 module "HCIMWEB" {
   source = "./clients/hcimweb"
 }
