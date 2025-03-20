@@ -61,6 +61,9 @@ module "client-roles" {
     "view-client-gis" = {
       "name" = "view-client-gis"
     },
+    "view-client-hcap-fe" = {
+      "name" = "view-client-hcap-fe"
+    },
     "view-client-hcimweb" = {
       "name" = "view-client-hcimweb"
     },
