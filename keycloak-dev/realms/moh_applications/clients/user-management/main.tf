@@ -93,6 +93,8 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-pidp-service"              = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-pidp-service"].id,
     "USER-MANAGEMENT-SERVICE/view-client-plr"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-plr"].id,
     "USER-MANAGEMENT-SERVICE/view-client-prp-service"               = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-prp-service"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-prime-application-local"   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-prime-application-local"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-prime-application-test"    = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-prime-application-test"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sa-dbaac-portal"           = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-dbaac-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sa-hibc-service-bc-portal" = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-hibc-service-bc-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-sa-sfdc"                   = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-sa-sfdc"].id,
