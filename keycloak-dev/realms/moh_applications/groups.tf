@@ -35,6 +35,10 @@ module "PIDP-MANAGEMENT" {
   source                  = "./groups/pidp-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
 }
+module "PRIME-MANAGEMENT" {
+  source                  = "./groups/prime-management"
+  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
+}
 module "SAT-ACCESS-MANAGEMENT" {
   source                  = "./groups/sat-access-management"
   USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
