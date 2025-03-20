@@ -125,14 +125,6 @@ module "PLR-SHOPPERS" {
   source = "./clients/plr-shoppers"
   PLR    = module.PLR
 }
-module "PRIME-WEBAPP-ENROLLMENT" {
-  source  = "./clients/prime-webapp-enrollment"
-  account = module.account
-}
-module "PRIME-WEBAPP-ENROLLMENT-SERVICE" {
-  source                  = "./clients/prime-webapp-enrollment-service"
-  USER-MANAGEMENT-SERVICE = module.USER-MANAGEMENT-SERVICE
-}
 module "PRP-SERVICE" {
   source = "./clients/prp-service"
 }

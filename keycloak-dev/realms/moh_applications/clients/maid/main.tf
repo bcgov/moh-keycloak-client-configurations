@@ -73,6 +73,6 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
     "profile",
     "roles",
     "web-origins",
-    "basic"
+
   ]
 }
