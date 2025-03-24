@@ -334,6 +334,7 @@ module "ORGANIZATIONS-API" {
 }
 module "PANORAMA" {
   source = "./clients/panorama"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "PHLAT-SERVICE" {
   source = "./clients/phlat-service"
@@ -474,4 +475,9 @@ module "USER-MANAGEMENT" {
 }
 module "WEBCAPS" {
   source = "./clients/webcaps"
+}
+locals {
+  # ID of the browser-idp-restriction authentication flow in moh_applications PROD.
+  # Used by selected clients, overrides the default browser flow.
+  browser_idp_restriction_flow = "d8cbd7e8-29d3-4947-93bb-caf1ddd27927"
 }
