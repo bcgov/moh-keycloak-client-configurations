@@ -333,7 +333,7 @@ module "ORGANIZATIONS-API" {
   source = "./clients/organizations-api"
 }
 module "PANORAMA" {
-  source = "./clients/panorama"
+  source                       = "./clients/panorama"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
 }
 module "PHLAT-SERVICE" {
