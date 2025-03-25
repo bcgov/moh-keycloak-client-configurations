@@ -46,10 +46,22 @@ resource "keycloak_openid_client_scope" "bcsc_openid_client_scope" {
   description = "Assign this scope to an OIDC client using IDP restriction module to allow logging in with BC Services Card for PIdP."
 }
 
+resource "keycloak_openid_client_scope" "bcsc_hcap_openid_client_scope" {
+  realm_id    = "moh_applications"
+  name        = "bcsc_hcap"
+  description = "Assign this scope to an OIDC client using IDP restriction module to allow logging in with BC Services Card for HCAP."
+}
+
 resource "keycloak_openid_client_scope" "bcsc_mspdirect_openid_client_scope" {
   realm_id    = "moh_applications"
   name        = "bcsc_mspdirect"
   description = "Assign this scope to an OIDC client using IDP restriction module to allow logging in with BC Services Card for MSPDirect."
+}
+
+resource "keycloak_openid_client_scope" "bcsc_prime_openid_client_scope" {
+  realm_id    = "moh_applications"
+  name        = "bcsc_prime"
+  description = "Assign this scope to an OIDC client using IDP restriction module to allow logging in with BC Services Card for PRIME."
 }
 
 resource "keycloak_openid_client_scope" "moh_idp_openid_client_scope" {
