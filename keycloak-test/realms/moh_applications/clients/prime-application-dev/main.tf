@@ -26,6 +26,19 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
+  realm_id  = keycloak_openid_client.CLIENT.realm_id
+  client_id = keycloak_openid_client.CLIENT.id
+  default_scopes = [
+    "acr",
+    "address",
+    "email",
+    "profile",
+    "roles",
+    "web-origins",
+  ]
+}
+
 resource "keycloak_openid_user_attribute_protocol_mapper" "birthdate" {
   claim_name     = "birthdate"
   client_id      = keycloak_openid_client.CLIENT.id
