@@ -32,6 +32,7 @@ resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   default_scopes = [
     "acr",
     "address",
+    "basic",
     "email",
     "profile",
     "roles",
