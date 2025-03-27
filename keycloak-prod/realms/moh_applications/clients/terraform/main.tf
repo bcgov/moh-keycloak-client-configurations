@@ -8,7 +8,7 @@ resource "keycloak_openid_client" "CLIENT" {
   consent_required                    = false
   description                         = ""
   direct_access_grants_enabled        = false
-  enabled                             = true
+  enabled                             = false
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
