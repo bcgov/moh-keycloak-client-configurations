@@ -130,6 +130,9 @@ module "client-roles" {
     "view-client-icy" = {
       "name" = "view-client-icy"
     },
+    "view-client-ivf-clinic-portal" = {
+      "name" = "view-client-ivf-clinic-portal"
+    },
     "view-client-ivf-portal" = {
       "name" = "view-client-ivf-portal"
     },

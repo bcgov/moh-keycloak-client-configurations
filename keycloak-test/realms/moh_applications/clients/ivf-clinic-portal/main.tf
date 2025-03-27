@@ -4,24 +4,24 @@ resource "keycloak_openid_client" "CLIENT" {
   backchannel_logout_session_required = true
   base_url                            = ""
   client_authenticator_type           = "client-secret"
-  client_id                           = "IVF-PORTAL"
+  client_id                           = "IVF-CLINIC-PORTAL"
   consent_required                    = false
-  description                         = "IVF Portal is an application management system to effectively handle IVF application volumes"
+  description                         = "IVF Portal is an application management system to effectively handle IVF application volumes. This client is dedicated for clinic personel."
   direct_access_grants_enabled        = false
   enabled                             = true
   frontchannel_logout_enabled         = false
   full_scope_allowed                  = false
   implicit_flow_enabled               = false
-  name                                = "IVF Portal"
+  name                                = "IVF Clinic Portal"
   pkce_code_challenge_method          = ""
   realm_id                            = "moh_applications"
   service_accounts_enabled            = false
   standard_flow_enabled               = true
   use_refresh_tokens                  = false
   valid_redirect_uris = [
-    "https://bcministryofhealth-ivfportal--ivfdev.sandbox.my.salesforce.com/*",
-    "https://bcministryofhealth-ivfportal--ivfqa.sandbox.my.salesforce.com/*",
-    "https://bcministryofhealth-ivfportal--ivfuat.sandbox.my.salesforce.com/*"
+    "https://bcministryofhealth-ivfportal--ivfdev.sandbox.my.site.com/*",
+    "https://bcministryofhealth-ivfportal--ivfqa.sandbox.my.site.com/*",
+    "https://bcministryofhealth-ivfportal--ivfuat.sandbox.my.site.com/*"
   ]
   web_origins = [
   ]
@@ -61,10 +61,10 @@ module "client-roles" {
   client_id = keycloak_openid_client.CLIENT.id
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   roles = {
-    "bdsb-admin" = {
-      "name"        = "bdsb-admin"
+    "clinic-admin" = {
+      "name"        = "clinic-admin"
       "description" = ""
-    },
+    }
   }
 }
 
