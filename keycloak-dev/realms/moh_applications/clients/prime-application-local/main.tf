@@ -154,6 +154,23 @@ module "client-roles" {
   }
 }
 
+resource "keycloak_role" "client_role" {
+  realm_id    = keycloak_openid_client.CLIENT.realm_id
+  client_id   = keycloak_openid_client.CLIENT.id
+  name        = "prime_manager_composite_role2"
+
+  composite_roles = [
+    module.client-roles.ROLES["enrollee_elevated_management"].id,
+    module.client-roles.ROLES["enrollee_triage"].id,
+    module.client-roles.ROLES["enrollee_approve"].id,
+    module.client-roles.ROLES["prime_administrant"].id,
+    module.client-roles.ROLES["site_view"].id,
+    module.client-roles.ROLES["enrollee_view"].id,
+    module.client-roles.ROLES["site_edit"].id
+  ]
+}
+
+
 module "scope-mappings" {
   source    = "../../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
