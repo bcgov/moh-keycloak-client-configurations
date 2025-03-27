@@ -154,10 +154,10 @@ module "client-roles" {
   }
 }
 
-resource "keycloak_role" "client_role" {
+resource "keycloak_role" "prime_manager_composite_role" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
   client_id = keycloak_openid_client.CLIENT.id
-  name      = "prime_manager_composite_role2"
+  name      = "prime_manager_composite_role"
 
   composite_roles = [
     module.client-roles.ROLES["enrollee_elevated_management"].id,
