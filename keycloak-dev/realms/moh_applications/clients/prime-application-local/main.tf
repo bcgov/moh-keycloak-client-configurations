@@ -170,7 +170,6 @@ resource "keycloak_role" "prime_manager_composite_role" {
   ]
 }
 
-
 module "scope-mappings" {
   source    = "../../../../../modules/scope-mappings"
   realm_id  = keycloak_openid_client.CLIENT.realm_id
