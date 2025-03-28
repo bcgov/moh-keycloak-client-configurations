@@ -102,6 +102,7 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-client-hsiar"                     = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hsiar"].id,
     "USER-MANAGEMENT-SERVICE/view-client-hspp"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-hspp"].id,
     "USER-MANAGEMENT-SERVICE/view-client-icy"                       = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-icy"].id,
+    "USER-MANAGEMENT-SERVICE/view-client-ivf-clinic-portal"         = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-ivf-clinic-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-ivf-portal"                = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-ivf-portal"].id,
     "USER-MANAGEMENT-SERVICE/view-client-licence-status"            = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-licence-status"].id,
     "USER-MANAGEMENT-SERVICE/view-client-maid"                      = var.USER-MANAGEMENT-SERVICE.ROLES["view-client-maid"].id,

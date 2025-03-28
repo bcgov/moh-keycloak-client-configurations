@@ -174,6 +174,11 @@ module "ICY" {
 module "IEN" {
   source = "./clients/ien"
 }
+module "IVF-CLINIC-PORTAL" {
+  source                       = "./clients/ivf-clinic-portal"
+  browser_idp_restriction_flow = local.browser_idp_restriction_flow
+  LICENCE-STATUS               = module.LICENCE-STATUS
+}
 module "IVF-PORTAL" {
   source                       = "./clients/ivf-portal"
   browser_idp_restriction_flow = local.browser_idp_restriction_flow
