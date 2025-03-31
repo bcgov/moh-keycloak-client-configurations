@@ -28,6 +28,8 @@ resource "keycloak_openid_client" "CLIENT" {
   ]
 }
 
+# TODO: prime_manager_composite_role is managed in DEV, but not TEST or PROD. It was manually added in TEST and PROD.
+
 resource "keycloak_openid_audience_protocol_mapper" "prime-web-api" {
   add_to_id_token          = false
   client_id                = keycloak_openid_client.CLIENT.id

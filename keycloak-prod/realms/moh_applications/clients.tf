@@ -452,10 +452,6 @@ module "TAP" {
 module "TBCM" {
   source = "./clients/tbcm"
 }
-module "terraform" {
-  source           = "./clients/terraform"
-  realm-management = module.realm-management
-}
 module "TPL" {
   source = "./clients/tpl"
 }
