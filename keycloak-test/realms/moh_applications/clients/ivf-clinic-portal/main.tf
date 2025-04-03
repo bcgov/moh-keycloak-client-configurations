@@ -31,11 +31,11 @@ resource "keycloak_openid_client" "CLIENT" {
   login_theme = "moh-app-realm-idp-restriction"
 }
 
-resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper-IVF" {
+resource "keycloak_openid_user_client_role_protocol_mapper" "Client-Role-Mapper-IVF-CLINIC" {
   realm_id                    = keycloak_openid_client.CLIENT.realm_id
   client_id                   = keycloak_openid_client.CLIENT.id
-  client_id_for_role_mappings = "IVF-PORTAL"
-  name                        = "Client Role Mapper for IVF"
+  client_id_for_role_mappings = "IVF-CLINIC-PORTAL"
+  name                        = "Client Role Mapper for IVF-CLINIC"
   claim_name                  = "roles"
   multivalued                 = true
   claim_value_type            = "String"
