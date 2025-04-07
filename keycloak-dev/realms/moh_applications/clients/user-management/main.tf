@@ -103,5 +103,6 @@ module "scope-mappings" {
     "USER-MANAGEMENT-SERVICE/view-groups"                           = var.USER-MANAGEMENT-SERVICE.ROLES["view-groups"].id,
     "USER-MANAGEMENT-SERVICE/view-metrics"                          = var.USER-MANAGEMENT-SERVICE.ROLES["view-metrics"].id,
     "USER-MANAGEMENT-SERVICE/view-users"                            = var.USER-MANAGEMENT-SERVICE.ROLES["view-users"].id,
+    "USER-MANAGEMENT-SERVICE/read-only-umc-e2e-tests"               = var.USER-MANAGEMENT-SERVICE.ROLES["read-only-umc-e2e-tests"].id,
   }
 }

@@ -112,6 +112,9 @@ module "client-roles" {
     "view-client-umc-e2e-tests" = {
       "name" = "view-client-umc-e2e-tests"
     },
+    "read-only-umc-e2e-tests" = {
+      "name" = "read-only-umc-e2e-tests"
+    },
     "view-client-ums-integration-tests" = {
       "name" = "view-client-ums-integration-tests"
     },
