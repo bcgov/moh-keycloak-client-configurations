@@ -270,6 +270,12 @@ module "client-roles" {
     },
     "HSPP_ReportProgram_DART" = {
       "name" = "HSPP_ReportProgram_DART"
+    },
+    "HSPP_Operations_SSAR" = {
+      "name" = "HSPP_Operations_SSAR"
+    },
+    "HSPP_Operations_HAMIS" = {
+      "name" = "HSPP_Operations_HAMIS"
     }
   }
 }
