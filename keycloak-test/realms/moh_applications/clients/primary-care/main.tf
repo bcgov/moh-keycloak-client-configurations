@@ -246,6 +246,10 @@ module "client-roles" {
       "name"        = "HealthlinkBC_PharmacistLead"
       "description" = ""
     },
+    "HealthLinkBC_BusinessInformationTeam" = {
+      "name"        = "HealthLinkBC_BusinessInformationTeam"
+      "description" = ""
+    },
   }
 }
 
