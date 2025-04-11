@@ -130,71 +130,71 @@ module "client-roles" {
     "view-users" = {
       "name" = "view-users"
     },
-    "read-only-bcer-cp" = {
-      "name" = "read-only-bcer-cp"
+    "read-only-client-bcer-cp" = {
+      "name" = "read-only-client-bcer-cp"
     },
-    "read-only-dmft-webapp" = {
-      "name" = "read-only-dmft-webapp"
+    "read-only-client-dmft-webapp" = {
+      "name" = "read-only-client-dmft-webapp"
     },
-    "read-only-emcod" = {
-      "name" = "read-only-emcod"
+    "read-only-client-emcod" = {
+      "name" = "read-only-client-emcod"
     },
-    "read-only-gis" = {
-      "name" = "read-only-gis"
+    "read-only-client-gis" = {
+      "name" = "read-only-client-gis"
     },
-    "read-only-hcap-fe" = {
-      "name" = "read-only-hcap-fe"
+    "read-only-client-hcap-fe" = {
+      "name" = "read-only-client-hcap-fe"
     },
-    "read-only-hcimweb" = {
-      "name" = "read-only-hcimweb"
+    "read-only-client-hcimweb" = {
+      "name" = "read-only-client-hcimweb"
     },
-    "read-only-hcimweb_hd2" = {
-      "name" = "read-only-hcimweb_hd2"
+    "read-only-client-hcimweb_hd2" = {
+      "name" = "read-only-client-hcimweb_hd2"
     },
-    "read-only-licence-status" = {
-      "name" = "read-only-licence-status"
+    "read-only-client-licence-status" = {
+      "name" = "read-only-client-licence-status"
     },
-    "read-only-maid" = {
-      "name" = "read-only-maid"
+    "read-only-client-maid" = {
+      "name" = "read-only-client-maid"
     },
-    "read-only-mspdirect-service" = {
-      "name" = "read-only-mspdirect-service"
+    "read-only-client-mspdirect-service" = {
+      "name" = "read-only-client-mspdirect-service"
     },
-    "read-only-pidp-service" = {
-      "name" = "read-only-pidp-service"
+    "read-only-client-pidp-service" = {
+      "name" = "read-only-client-pidp-service"
     },
-    "read-only-plr" = {
-      "name" = "read-only-plr"
+    "read-only-client-plr" = {
+      "name" = "read-only-client-plr"
     },
-    "read-only-prime-application-local" = {
-      "name" = "read-only-prime-application-local"
+    "read-only-client-prime-application-local" = {
+      "name" = "read-only-client-prime-application-local"
     },
-    "read-only-prime-application-test" = {
-      "name" = "read-only-prime-application-test"
+    "read-only-client-prime-application-test" = {
+      "name" = "read-only-client-prime-application-test"
     },
-    "read-only-prp-service" = {
-      "name" = "read-only-prp-service"
+    "read-only-client-prp-service" = {
+      "name" = "read-only-client-prp-service"
     },
-    "read-only-sa-dbaac-portal" = {
-      "name" = "read-only-sa-dbaac-portal"
+    "read-only-client-sa-dbaac-portal" = {
+      "name" = "read-only-client-sa-dbaac-portal"
     },
-    "read-only-sa-hibc-service-bc-portal" = {
-      "name" = "read-only-sa-hibc-service-bc-portal"
+    "read-only-client-sa-hibc-service-bc-portal" = {
+      "name" = "read-only-client-sa-hibc-service-bc-portal"
     },
-    "read-only-sa-sfdc" = {
-      "name" = "read-only-sa-sfdc"
+    "read-only-client-sa-sfdc" = {
+      "name" = "read-only-client-sa-sfdc"
     },
-    "read-only-pho-rsc" = {
-      "name" = "read-only-pho-rsc"
+    "read-only-client-pho-rsc" = {
+      "name" = "read-only-client-pho-rsc"
     },
-    "read-only-pho-rsc-groups" = {
-      "name" = "read-only-pho-rsc-groups"
+    "read-only-client-pho-rsc-groups" = {
+      "name" = "read-only-client-pho-rsc-groups"
     },
-    "read-only-umc-e2e-tests" = {
-      "name" = "read-only-umc-e2e-tests"
+    "read-only-client-umc-e2e-tests" = {
+      "name" = "read-only-client-umc-e2e-tests"
     },
-    "read-only-ums-integration-tests" = {
-      "name" = "read-only-ums-integration-tests"
+    "read-only-client-ums-integration-tests" = {
+      "name" = "read-only-client-ums-integration-tests"
     },
   }
 }
