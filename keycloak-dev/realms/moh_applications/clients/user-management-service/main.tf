@@ -130,6 +130,72 @@ module "client-roles" {
     "view-users" = {
       "name" = "view-users"
     },
+    "read-only-client-bcer-cp" = {
+      "name" = "read-only-client-bcer-cp"
+    },
+    "read-only-client-dmft-webapp" = {
+      "name" = "read-only-client-dmft-webapp"
+    },
+    "read-only-client-emcod" = {
+      "name" = "read-only-client-emcod"
+    },
+    "read-only-client-gis" = {
+      "name" = "read-only-client-gis"
+    },
+    "read-only-client-hcap-fe" = {
+      "name" = "read-only-client-hcap-fe"
+    },
+    "read-only-client-hcimweb" = {
+      "name" = "read-only-client-hcimweb"
+    },
+    "read-only-client-hcimweb_hd2" = {
+      "name" = "read-only-client-hcimweb_hd2"
+    },
+    "read-only-client-licence-status" = {
+      "name" = "read-only-client-licence-status"
+    },
+    "read-only-client-maid" = {
+      "name" = "read-only-client-maid"
+    },
+    "read-only-client-mspdirect-service" = {
+      "name" = "read-only-client-mspdirect-service"
+    },
+    "read-only-client-pidp-service" = {
+      "name" = "read-only-client-pidp-service"
+    },
+    "read-only-client-plr" = {
+      "name" = "read-only-client-plr"
+    },
+    "read-only-client-prime-application-local" = {
+      "name" = "read-only-client-prime-application-local"
+    },
+    "read-only-client-prime-application-test" = {
+      "name" = "read-only-client-prime-application-test"
+    },
+    "read-only-client-prp-service" = {
+      "name" = "read-only-client-prp-service"
+    },
+    "read-only-client-sa-dbaac-portal" = {
+      "name" = "read-only-client-sa-dbaac-portal"
+    },
+    "read-only-client-sa-hibc-service-bc-portal" = {
+      "name" = "read-only-client-sa-hibc-service-bc-portal"
+    },
+    "read-only-client-sa-sfdc" = {
+      "name" = "read-only-client-sa-sfdc"
+    },
+    "read-only-client-pho-rsc" = {
+      "name" = "read-only-client-pho-rsc"
+    },
+    "read-only-client-pho-rsc-groups" = {
+      "name" = "read-only-client-pho-rsc-groups"
+    },
+    "read-only-client-umc-e2e-tests" = {
+      "name" = "read-only-client-umc-e2e-tests"
+    },
+    "read-only-client-ums-integration-tests" = {
+      "name" = "read-only-client-ums-integration-tests"
+    },
   }
 }
 resource "keycloak_openid_user_session_note_protocol_mapper" "Client-Host" {
