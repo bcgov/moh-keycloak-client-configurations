@@ -77,7 +77,7 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "bceid_business_legalN
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
 
-resource "keycloak_generic_client_protocol_mapper" "saml_hardcode_attribute_mapper" {
+resource "keycloak_generic_client_protocol_mapper" "session_state" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
   client_id       = keycloak_openid_client.CLIENT.id
   name            = "session_state"
