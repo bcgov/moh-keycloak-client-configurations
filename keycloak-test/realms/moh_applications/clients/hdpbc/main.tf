@@ -37,6 +37,20 @@ resource "keycloak_openid_user_attribute_protocol_mapper" "idir_company" {
   realm_id        = keycloak_openid_client.CLIENT.realm_id
 }
 
+resource "keycloak_generic_client_protocol_mapper" "session_state" {
+  realm_id        = keycloak_openid_client.CLIENT.realm_id
+  client_id       = keycloak_openid_client.CLIENT.id
+  name            = "session_state"
+  protocol        = "openid-connect"
+  protocol_mapper = "oidc-session-state-mapper"
+  config = {
+    "id.token.claim" : "true",
+    "lightweight.claim" : "false",
+    "access.token.claim" : "true",
+    "introspection.token.claim" : "true",
+    "userinfo.token.claim" : "true"
+  }
+}
 
 resource "keycloak_openid_client_default_scopes" "client_default_scopes" {
   realm_id  = keycloak_openid_client.CLIENT.realm_id
