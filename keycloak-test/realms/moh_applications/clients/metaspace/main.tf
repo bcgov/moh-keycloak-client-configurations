@@ -84,11 +84,11 @@ resource "keycloak_generic_client_protocol_mapper" "saml_hardcode_attribute_mapp
   protocol        = "openid-connect"
   protocol_mapper = "oidc-session-state-mapper"
   config = {
-    "id.token.claim":"true",
-    "lightweight.claim":"false",
-    "access.token.claim":"true",
-    "introspection.token.claim":"true",
-    "userinfo.token.claim":"true"
+    "id.token.claim" : "true",
+    "lightweight.claim" : "false",
+    "access.token.claim" : "true",
+    "introspection.token.claim" : "true",
+    "userinfo.token.claim" : "true"
   }
 }
 
